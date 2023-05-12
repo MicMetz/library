@@ -90,26 +90,12 @@ const GlobalStyles = createGlobalStyle`
 
 
   body {
-    background-color: white;
+    background-color: #dfdfdf;
     line-height: 24px;
     padding: 0;
-    margin: 0 2rem;
     color: #333;
     font-family: Lyon, Georgia, serif;
-    margin-bottom: 5rem
-  }
-
-
-  body#homepage {
-    background: #dfdfdf repeat;
-    background-size: 100px 100px;
-    background-blend-mode: multiply
-  }
-
-
-  body#homepage footer {
-    border-top: none;
-    margin: 0 auto
+    margin: 0 2rem 5rem;
   }
 
 
@@ -161,50 +147,6 @@ const GlobalStyles = createGlobalStyle`
   }
 
 
-  article {
-    margin: 2rem auto;
-    padding: 0 2rem
-  }
-
-
-  article p, article h2, article h3 {
-    margin: 0 auto;
-    max-width: 30em;
-    font-size: 20px;
-    line-height: 30px;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    letter-spacing: 0.001em;
-    word-spacing: 0.005em
-  }
-
-
-  article h2 {
-    margin: 4rem auto;
-    color: #b95b23
-  }
-
-
-  article h2 span {
-    display: block;
-    color: #333;
-    font-family: Courier, monospace;
-    font-size: 1rem;
-    -webkit-font-smoothing: subpixel-antialiased;
-    -moz-osx-font-smoothing: auto
-  }
-
-
-  article h3 {
-    margin-bottom: 0
-  }
-
-
-  article > p + p {
-    text-indent: 1.5em
-  }
-
-
   p.block {
     text-indent: 0;
     margin-top: 2rem;
@@ -222,52 +164,6 @@ const GlobalStyles = createGlobalStyle`
 
   p.backers {
     text-align: center
-  }
-
-
-  article img {
-    width: 100%
-  }
-
-
-  article img:first-child {
-    mix-blend-mode: multiply
-  }
-
-
-  article blockquote {
-    margin: 4rem auto;
-    font-style: italic
-  }
-
-
-  article blockquote cite {
-    display: block;
-    font-style: normal;
-    text-transform: uppercase;
-    font-size: 80%;
-    letter-spacing: 0.05em
-  }
-
-
-  article ul {
-    list-style: disc;
-    max-width: 35rem;
-    margin: 3rem auto;
-    font-family: Courier, monospace;
-    font-size: 1rem;
-    -webkit-font-smoothing: subpixel-antialiased;
-    -moz-osx-font-smoothing: auto
-  }
-
-
-  article ul li {
-    padding-left: 1rem
-  }
-
-
-  article h3 + ul {
-    margin-top: 1rem
   }
 
 
@@ -527,8 +423,6 @@ const GlobalStyles = createGlobalStyle`
   }
 
 
-
-
   main#home blockquote {
     text-align: center;
     margin: 2rem auto;
@@ -639,7 +533,7 @@ const GlobalStyles = createGlobalStyle`
       padding: 4rem 1rem 0
     }
 
-   
+
     main#home div.cover {
       width: calc(40% + 4rem);
       order: 2;

@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 
 export const HomeBody = styled.section`
-  background-color: white;
+  //background-color: white;
   line-height: 24px;
   padding: 0;
   font-family: Lyon, Georgia, serif;

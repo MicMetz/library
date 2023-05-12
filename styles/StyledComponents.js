@@ -19,23 +19,45 @@ export const ArticleCover = styled.div`
 
 `
 
-export const SideMenu = styled.nav`
-  position: fixed;
+export const SideMenuClose = styled.header`
+  position: absolute;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: white;
+  z-index: 100;
+
+
+  h1 {
+    text-transform: uppercase;
+  }
+
+  h2 {
+    display: none;
+  }
+
+  h1, h2 {
+    font-size: 1rem;
+    font-weight: normal;
+    display: inline;
+    margin: 0;
+  }
+
+`
+
+export const SideMenuOpen = styled.nav`
+  position: absolute;
   top: 0;
-  bottom: 0;
-  left: calc(5rem - 300px);
-  margin: 0;
-  max-width: 300px;
-  z-index: 4;
-  transition: all .3s ease-in-out;
-  border-right: 1px solid #f0f0f0;
-  border-top: none;
-  border-bottom: none;
-  overflow-y: auto;
+  left: 0;
+  width: fit-content;
+  height: 100vh;
+  z-index: 100;
+  transform: translateX(50%);
+  transition: transform 0.3s ease-in-out;
+
 
   h3 {
     font-family: Courier, monospace;
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: auto
@@ -51,49 +73,12 @@ export const SideMenu = styled.nav`
 `
 
 export const SidebarMenuButton = styled.button`
-  display: none;
-  width: 40px;
-  height: 40px;
-  top: 20px;
-  left: 46px;
   position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  border: none;
 
-  :hover {
-    cursor: pointer;
-  }
-
-  :before, :after {
-    content: '';
-    width: 21px;
-    height: 1px;
-    background: #333;
-    display: block;
-    position: absolute;
-    left: 5px;
-    transition: all .2s ease-in-out;
-  }
-
-  :before {
-    top: 4rem;
-  }
-
-  :after {
-    top: 7rem;
-  }
-
-  &open {
-    :before {
-      transform: rotate(45deg);
-      top: 4rem;
-    }
-  }
-
-  &open {
-    :after {
-      transform: rotate(-45deg);
-      top: 4rem;
-    }
-  }
 `
 
 export const ToC = styled.ul`
@@ -118,20 +103,45 @@ export const ToC = styled.ul`
     font-family: Courier, monospace;
     color: rgba(0, 0, 0, 0.5);
   }
+`
 
+export const ArticleSidebarHeader = styled.div`
+  font-weight: 600;
+  text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-after-overflow: '...';
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  max-height: 3rem;
+  height: fit-content;
+  cursor: none;
+  margin: 0 1rem;
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
 `
 
 export const SidebarHeader = styled.h3`
   font-family: Courier, monospace;
-  font-size: 1rem;
+  font-size: 2rem;
   text-transform: uppercase;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
 `
 
 export const ToCItem = styled.li`
-  margin: 2.5rem 1rem
+  margin: 2.5rem 1rem;
 
+  h3 {
+    font-size: 1.125rem;
+    line-height: 0.75rem;
+  }
 `
 
 export const ArticleContainer = styled.article`

@@ -20,7 +20,7 @@ const nextConfig = async () => {
     basePath       : process.env.NODE_ENV === 'production' ? '/Library' : '',
     baseUrl        : process.env.NODE_ENV === 'production' ? '/Library' : '',
     url            : process.env.NODE_ENV === 'production' ? '/Library' : '',
-    hostnames      : ['micmetz.github.io', 'localhost', 'raw.githubusercontent.com', 'github.com'],
+    hostnames      : ['micmetz.github.io/Library', 'localhost', 'raw.githubusercontent.com', 'github.com'],
     types          : ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'ico', 'bmp', 'tiff', 'glb', 'gltf'],
     loader         : 'file-loader',
     options        : {
@@ -30,7 +30,7 @@ const nextConfig = async () => {
     images         : {
       loader     : 'custom',
       loaderFile : 'src/utilities/imageLoader.js',
-      unoptimized: true,
+      unoptimized: false,
       loading    : 'eager',
       types      : ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'ico', 'bmp', 'tiff']
     }

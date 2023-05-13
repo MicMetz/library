@@ -27,20 +27,15 @@ const nextConfig = async () => {
       publicPath: '/_next/static/images', // the path access the assets via url
       outputPath: 'static/images/', // where to store on disk
     },
-    
-
-    webpack: (config, { isServer }) => {
-
-        if (!isServer) {
-          config.node = {
-            fs: 'empty'
-          }
-        }
-
-        return config
+    images         : {
+      loader     : 'custom',
+      loaderFile : 'src/utilities/imageLoader.js',
+      unoptimized: true,
+      types      : ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'ico', 'bmp', 'tiff']
     }
 
   }
+
 }
 
 module.exports = withMDX(nextConfig)

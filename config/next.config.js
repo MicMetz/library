@@ -17,8 +17,8 @@ const nextConfig = async () => {
   return {
     reactStrictMode: true,
 
-    assetPrefix: process.env.NODE_ENV === 'production' ? '/Library' : '',
-    basePath   : process.env.NODE_ENV === 'production' ? '/Library' : '',
+    assetPrefix: process.env.NODE_ENV === 'production' ? 'micmetz.github.io/Library' : '',
+    basePath   : process.env.NODE_ENV === 'production' ? 'micmetz.github.io/Library' : '',
   }
 }
 

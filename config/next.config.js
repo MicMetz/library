@@ -16,9 +16,14 @@ const nextConfig = async () => {
 
   return {
     reactStrictMode: true,
+    assetPrefix    : process.env.NODE_ENV === 'production' ? 'micmetz.github.io/Library' : '',
+    basePath       : process.env.NODE_ENV === 'production' ? 'micmetz.github.io/Library' : '',
 
-    assetPrefix: process.env.NODE_ENV === 'production' ? 'micmetz.github.io/Library' : '',
-    basePath   : process.env.NODE_ENV === 'production' ? 'micmetz.github.io/Library' : '',
+    images: {
+      loader: 'imgix',
+      path  : 'https://micmetz.github.io/Library',
+
+    },
   }
 }
 

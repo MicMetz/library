@@ -119,8 +119,16 @@ export const SideMenuHeader = styled(SidebarHeader)`
 export const SidebarMenuButtonOverlay = styled.button`
   position: absolute;
   width: fit-content;
-  height: 100vh;
-  transition: opacity 0.3s ease-in-out;
+  height: fit-content;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
 `
 
 export const ToC = styled.ul`

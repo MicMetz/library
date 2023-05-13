@@ -31,8 +31,6 @@ export const SideBar = ({ title, chapters }) => {
     return () => window.removeEventListener('scroll', onScroll)
   }, [scrollTop])
 
-
-
   return (
     <>
       <SidebarMenuButtonOverlay onClick = {() => setMenu(!menu)}>

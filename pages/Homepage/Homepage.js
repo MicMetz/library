@@ -29,9 +29,6 @@ export default function Homepage () {
         ]}
       />
       <HomeMain >
-        {/* <PageHeader > */}
-        {/*   <PageHeaderTitle >Currently Reading</PageHeaderTitle > */}
-        {/* </PageHeader > */}
 
         <HomeArticleFeatured >
 

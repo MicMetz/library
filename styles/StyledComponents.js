@@ -142,7 +142,7 @@ export const ToC = styled.ul`
   a span {
     display: block;
     font-size: 0.75rem;
-    font-family: Courier, monospace;
+    font-family: "PitchWeb", Courier, monospace;
     color: rgba(0, 0, 0, 0.5);
   }
 `
@@ -171,7 +171,7 @@ export const MenuHeader = styled.div`
 
 export const SideMenuHeaderOpen = styled.header`
   display: none;
-  font-family: Courier, monospace;
+  font-family: "PitchWeb", Courier, monospace;
   font-size: 2rem;
   text-transform: uppercase;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -180,7 +180,7 @@ export const SideMenuHeaderOpen = styled.header`
 
 export const ToCItem = styled.li`
   margin: 2.5rem 1rem;
-  
+
 
   a {
     font-size: 1.125rem;
@@ -194,11 +194,10 @@ export const ToCItem = styled.li`
   a span {
     display: block;
     font-size: 0.75rem;
-    font-family: Courier, monospace;
+    font-family: "PitchWeb", Courier, monospace;
     color: rgba(0, 0, 0, 0.5);
   }
 `
-
 
 export const ArticleContainer = styled.article`
   margin: 2rem auto;
@@ -218,7 +217,7 @@ export const ArticleContainer = styled.article`
   }
 
   ul {
-    font-family: Courier, monospace;
+    font-family: "PitchWeb", Courier, monospace;
     list-style: disc;
     max-width: 30rem;
     margin: 3rem auto;
@@ -250,7 +249,7 @@ export const ArticleContainer = styled.article`
     color: #374151;
     display: block;
     font-size: 1.05rem;
-    font-family: Courier, monospace;
+    font-family: "PitchWeb", Courier, monospace;
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: auto;
   }
@@ -270,9 +269,28 @@ export const ArticleContainer = styled.article`
     letter-spacing: 0.001em;
     word-spacing: 0.005em
   }
-
 `
 
+export const PageHeader = styled.header`
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  max-width: 30rem;
+  text-align: center;
+`
+
+export const PageHeaderTitle = styled.h1`
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 auto;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+`
 
 
 

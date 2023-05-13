@@ -13,27 +13,25 @@ function NavLink (props) {
 export const SideBar = ({ title, chapters }) => {
   const [menu, setMenu]                   = useState(false)
   const [activeChapter, setActiveChapter] = useState()
+  const [scroll, setScrolling]            = useState(false)
+  const [scrollTop, setScrollTop]         = useState(0)
+
+  const onScroll = (eve) => {
+    setScrollTop(eve.target.documentElement.scrollTop)
+    setScrolling(eve.target.documentElement.scrollTop > scrollTop)
+  }
 
   useEffect(() => {
-    const handleScroll = () => {
-      const chapterHeadings = chapters.map(({ id }) => ( {
-        id,
-        offset: document.getElementById(id).offsetTop
-      } ))
-      const scrollPosition  = window.scrollY + 100
-      const active          = chapterHeadings.find(({ offset }, index) => {
-        const nextChapter = chapterHeadings[ index + 1 ]
-        return scrollPosition < offset || !nextChapter
-      })
-      if (activeChapter !== active.id) {
-        setActiveChapter(active.id)
-      }
+    const onScroll = (eve) => {
+      setScrollTop(eve.target.documentElement.scrollTop)
+      setScrolling(eve.target.documentElement.scrollTop > scrollTop)
     }
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [activeChapter, setActiveChapter, chapters])
+    window.addEventListener('scroll', onScroll)
+
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [scrollTop])
+
+
 
   return (
     <>

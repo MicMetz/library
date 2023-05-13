@@ -20,7 +20,8 @@ export const HomeMain = styled.main`
   justify-content: space-around;
   height: calc(100vh - 9rem);
   margin: 0 auto;
-  max-width: 70rem;
+  max-width: 100vw;
+  width: 100%;
 `
 
 export const HomeBlockQuote = styled.blockquote`
@@ -51,7 +52,12 @@ export const HomeFooter = styled.footer`
 
 `
 
-export const HomeArticleFeatured = styled.div`
+export const HomeArticleFeatured = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  position: relative;
   width: calc(40% + 4rem);
   order: 2;
   padding: 0 2rem;

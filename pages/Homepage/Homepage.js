@@ -2,9 +2,12 @@ import Link from 'next/link'
 import React, { useEffect, useRef, useState } from 'react'
 import { Layout } from '../../components/Layout.js'
 import { SideBar } from '../../components/SideBar.js'
+import { ArticleByline, ArticleSubtitle, ArticleTitle } from '../../styles/ArticleComponents.js'
+import { PageHeader, PageHeaderTitle } from '../../styles/StyledComponents.js'
 import { HomeArticleFeatured, HomeArticleFeaturedCover, HomeArticleFeaturedCoverImage, HomeBody, HomeFooter, HomeMain } from './HomepageStyles.js'
 
 import Image from 'next/image'
+import KillAnythingThatMovesCover from '../../public/images/KillAnythingThatMoves.jpg'
 
 
 
@@ -14,24 +17,32 @@ export default function Homepage () {
   return (
     <HomeBody >
       <SideBar
-        title = "The Shape of Design"
+        title = "Kill Anything That Moves"
         chapters = {[
-          { id: 1, chapterTitle: 'Introduction' },
-          { id: 2, chapterTitle: 'The Shape of the Network' },
-          { id: 3, chapterTitle: 'The Shape of the Words' },
-          { id: 4, chapterTitle: 'The Shape of the Page' },
-          { id: 5, chapterTitle: 'The Shape of the Screen' },
-          { id: 6, chapterTitle: 'The Shape of the Experience' },
-          { id: 7, chapterTitle: 'The Shape of the Story' },
-          { id: 8, chapterTitle: 'The Shape of Change' },
-          { id: 9, chapterTitle: 'The Shape of Time' },
-          { id: 10, chapterTitle: 'The Shape of the Work' },
-          { id: 11, chapterTitle: 'The Shape of the Future' }
+          { id: 1, chapterTitle: 'The Massacre at Trieu Ai' },
+          { id: 2, chapterTitle: 'A System of Suffering' },
+          { id: 3, chapterTitle: 'Overkill' },
+          { id: 4, chapterTitle: 'A litany of atrocities' },
+          { id: 5, chapterTitle: 'Unbounded misery' },
+          { id: 6, chapterTitle: 'The bummer, the "Gook-Hunting" General, and the Butcher of the Delta' },
+          { id: 6, chapterTitle: 'Where Have All the War Crimes Gone?' }
         ]}
       />
       <HomeMain >
+        {/* <PageHeader > */}
+        {/*   <PageHeaderTitle >Currently Reading</PageHeaderTitle > */}
+        {/* </PageHeader > */}
+
+        <HomeArticleFeatured >
+
+          <ArticleTitle >Kill Anything That Moves</ArticleTitle >
+          <ArticleSubtitle >The Real American War in Vietnam</ArticleSubtitle >
+          <ArticleByline >Nick Turse</ArticleByline >
+
+        </HomeArticleFeatured >
+
         <HomeArticleFeaturedCover >
-          <HomeArticleFeaturedCoverImage src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/884633/cover.svg" alt = "The Shape of Design cover" width = {500} height = {500}/>
+          <HomeArticleFeaturedCoverImage src = {KillAnythingThatMovesCover} alt = "Kill Anything That Moves" width = {500} height = {500}/>
         </HomeArticleFeaturedCover >
       </HomeMain >
 

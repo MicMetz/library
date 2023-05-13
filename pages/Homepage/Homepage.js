@@ -7,26 +7,22 @@ import { PageHeader, PageHeaderTitle } from '../../styles/StyledComponents.js'
 import { HomeArticleFeatured, HomeArticleFeaturedCover, HomeArticleFeaturedCoverImage, HomeBody, HomeFooter, HomeMain } from '../../styles/HomepageStyles.js'
 
 import Image from 'next/image'
-import KillAnythingThatMovesCover from '../../public/images/KillAnythingThatMoves.jpg'
+import KillAnythingThatMovesCover from '/public/images/KillAnythingThatMoves.jpg'
+import { Readings } from '/public/datasets/Reads.js'
 
 
 
 
 export default function Homepage () {
 
+  console.log(Readings)
+
   return (
     <HomeBody >
       <SideBar
         title = "Kill Anything That Moves"
-        chapters = {[
-          { id: 1, chapterTitle: 'The Massacre at Trieu Ai' },
-          { id: 2, chapterTitle: 'A System of Suffering' },
-          { id: 3, chapterTitle: 'Overkill' },
-          { id: 4, chapterTitle: 'A litany of atrocities' },
-          { id: 5, chapterTitle: 'Unbounded misery' },
-          { id: 6, chapterTitle: 'The bummer, the "Gook-Hunting" General, and the Butcher of the Delta' },
-          { id: 6, chapterTitle: 'Where Have All the War Crimes Gone?' }
-        ]}
+        chapters = {Readings[ 0 ].chapters}
+
       />
       <HomeMain >
 
@@ -39,11 +35,13 @@ export default function Homepage () {
         </HomeArticleFeatured >
 
         <HomeArticleFeaturedCover >
-          <HomeArticleFeaturedCoverImage src = {KillAnythingThatMovesCover} alt = "Kill Anything That Moves" width = {500} height = {500}/>
+          <HomeArticleFeaturedCoverImage src = {Readings[ 0 ].cover} alt = "Kill Anything That Moves" width = {400} height = {600}/>
         </HomeArticleFeaturedCover >
       </HomeMain >
 
-      <HomeFooter > </HomeFooter >
+      <HomeFooter >
+
+      </HomeFooter >
     </HomeBody >
   )
 }

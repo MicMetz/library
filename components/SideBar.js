@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { SidebarHeader, SidebarMenuButton, ToC, ToCItem, ArticleSidebarHeader, SideMenuClose, SideMenuOpen } from '../styles/StyledComponents.js'
+import { SidebarHeader, SidebarMenuButtonOverlay, ToC, ToCItem, SideMenuClosed, SideMenuOpened, SideMenuHeader } from '../styles/StyledComponents.js'
 
 
 
@@ -11,58 +11,56 @@ function NavLink (props) {
 
 
 export const SideBar = ({ title, chapters }) => {
-  const [activeMenu, setActiveMenu]       = useState(false)
+  const [menu, setMenu]                   = useState(false)
   const [activeChapter, setActiveChapter] = useState()
 
-  const Menu = ({ chapters }) => {
-    useEffect(() => {
-      const handleScroll = () => {
-        const scrollPosition = window.scrollY
-        const activeChapter  = chapters?.find(({ slug }) => {
-          const element = document.querySelector(slug)
-          if (element) {
-            const { offsetTop, offsetHeight } = element
-            return scrollPosition >= offsetTop - offsetHeight / 2 && scrollPosition < offsetTop + offsetHeight / 2
-          }
-        })
-        if (activeChapter) {
-          setActiveChapter(activeChapter.id)
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY
+      const activeChapter  = chapters?.find(({ slug }) => {
+        const element = document.querySelector(slug)
+        if (element) {
+          const { offsetTop, offsetHeight } = element
+          return scrollPosition >= offsetTop - offsetHeight / 2 && scrollPosition < offsetTop + offsetHeight / 2
         }
+      })
+      if (activeChapter) {
+        setActiveChapter(activeChapter.id)
       }
-      window.addEventListener('scroll', handleScroll)
-      return () => window.removeEventListener('scroll', handleScroll)
-    }, [chapters])
-
-    return (
-      <SideMenuOpen >
-        <SidebarHeader >{title}</SidebarHeader >
-        <ToC >
-          {chapters.map(({ id, title, slug }) => (
-            <ToCItem key = {id}>
-              <Link href = {slug}>
-                <h3 >
-                  {title}
-                </h3 >
-              </Link >
-            </ToCItem >
-          ))}
-        </ToC >
-        <SidebarMenuButton onClick = {() => setActiveMenu(!activeMenu)}/>
-
-      </SideMenuOpen >
-    )
-  }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [chapters])
 
   return (
-    <SideMenuClose >
-      {activeMenu ? <Menu chapters = {chapters}/> :
-        <ArticleSidebarHeader >
-          <h1 className = "text-6xl font-bold">{title}</h1 >
-          <h2 className = "text-2xl font-bold">{chapters}</h2 >
-        </ArticleSidebarHeader >
+    <>
+      <SidebarMenuButtonOverlay onClick = {() => setMenu(!menu)}>
+      {menu ?
+        <SideMenuOpened >
+          <SideMenuHeader >
+            <h1 className = "text-6xl font-bold">{title}</h1 >
+            <h2 className = "text-2xl font-bold">{chapters}</h2 >
+          </SideMenuHeader >
+          <ToC >
+            {chapters.map(({ id, title, slug }) => (
+              <ToCItem key = {id} active = {activeChapter === id}>
+                <Link href = {slug}>
+                  <a >{title}</a >
+                </Link >
+              </ToCItem >
+            ))}
+          </ToC >
+        </SideMenuOpened >
+        :
+        <SideMenuClosed >
+          <SidebarHeader >
+            <h1 className = "text-6xl font-bold">{title}</h1 >
+            <h2 className = "text-2xl font-bold">{chapters}</h2 >
+          </SidebarHeader >
+        </SideMenuClosed >
+        // </SideMenu >
       }
-      <SidebarMenuButton onClick = {() => setActiveMenu(!activeMenu)}/>
-
-    </SideMenuClose >
+      </SidebarMenuButtonOverlay >
+      </>
   )
 }

@@ -244,7 +244,6 @@ const GlobalStyles = createGlobalStyle`
   header {
     text-align: center;
     padding: 1.5rem 1rem;
-    text-align: center;
     background-color: white;
     z-index: 100
   }

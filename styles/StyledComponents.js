@@ -19,66 +19,94 @@ export const ArticleCover = styled.div`
 
 `
 
-export const SideMenuClose = styled.header`
-  position: absolute;
-  text-align: center;
+export const SideMenuClosed = styled.div`
   padding: 1.5rem 1rem;
   background-color: white;
   z-index: 100;
+  position: fixed;
+  top: 0;
+  left: -2rem;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  width: 7rem;
+  border-right: 1px solid #eee;
+  height: 100vh;
+`
+
+export const SidebarHeader = styled.header`
+  transform: rotate(90deg);
+  transform-origin: top left;
+  left: 4rem;
+  top: calc(50vh - 12rem);
+  line-height: 1;
+  height: 2em;
+  width: 25rem;
+
+  align-items: center;
+  justify-content: center;
 
 
   h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
     text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-after-overflow: '...';
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
   }
 
   h2 {
-    display: none;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-after-overflow: '...';
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
   }
-
-  h1, h2 {
-    font-size: 1rem;
-    font-weight: normal;
-    display: inline;
-    margin: 0;
-  }
-
 `
 
-export const SideMenuOpen = styled.nav`
-  position: absolute;
-  top: 0;
+export const SideMenuOpened = styled(SideMenuClosed)`
   left: 0;
+  width: 300px;
+  padding: 1.5rem 2rem;
+  border-right: 1px solid #f0f0f0;
+  border-top: none;
+  border-bottom: none;
+  overflow-y: auto;
+
+  transition: all 0.7s ease-in-out;
+`
+
+export const SideMenuHeader = styled(SidebarHeader)`
+  transform: rotate(0deg);
+  translate: origin(0, 0);
+  position: relative;
+  top: 0;  
+  left: 0;
+  width: 100%;
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+
+  }
+`
+
+export const SidebarMenuButtonOverlay = styled.button`
+  position: absolute;
   width: fit-content;
   height: 100vh;
-  z-index: 100;
-  transform: translateX(50%);
-  transition: transform 0.3s ease-in-out;
-
-
-  h3 {
-    font-family: Courier, monospace;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    -webkit-font-smoothing: subpixel-antialiased;
-    -moz-osx-font-smoothing: auto
-  }
-
-  h3:after {
-    content: '';
-    display: block;
-    width: 4rem;
-    border-bottom: 1px solid #ddd;
-    margin: 2rem auto
-  }
-`
-
-export const SidebarMenuButton = styled.button`
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  background-color: transparent;
-  border: none;
-
+  transition: opacity 0.3s ease-in-out;
 `
 
 export const ToC = styled.ul`
@@ -105,7 +133,7 @@ export const ToC = styled.ul`
   }
 `
 
-export const ArticleSidebarHeader = styled.div`
+export const MenuHeader = styled.div`
   font-weight: 600;
   text-transform: uppercase;
   overflow: hidden;
@@ -127,7 +155,8 @@ export const ArticleSidebarHeader = styled.div`
   }
 `
 
-export const SidebarHeader = styled.h3`
+export const SideMenuHeaderOpen = styled.header`
+  display: none;
   font-family: Courier, monospace;
   font-size: 2rem;
   text-transform: uppercase;

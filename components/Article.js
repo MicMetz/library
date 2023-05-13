@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function ArticleCover ({ article }) {
   return (
     <div className = "Cover">
-      <Link href = {`/articles/${article.slug}`}>
+      <Link href = {`/articles/${article.sug}`}>
         <a >
           <img src = {article.coverImage} alt = {article.title}/>
         </a >

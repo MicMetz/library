@@ -9,8 +9,8 @@ import ReadingRoom from './ReadingRoom/ReadingRoom.js'
 const Index = ({ page, navigation, settings }) => {
   return (
     <Layout >
-      <ReadingRoom />
-      {/* <Homepage /> */}
+      {/* <ReadingRoom /> */}
+      <Homepage />
     </Layout >
   )
 }

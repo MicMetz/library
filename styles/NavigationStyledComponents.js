@@ -64,11 +64,11 @@ export const NavigationListItem = styled.li`
 export const NavigationBar = styled.nav`
   display: flex;
   position: fixed;
-  z-index: 100;
+  z-index: 110;
   top: 0;
   left: 0;
   width: 100vw;
-  min-height: 1.5rem;
+  min-height: 3rem;
   background: #1A1E23 !important;
 
   align-items: center;

@@ -52,7 +52,6 @@ const GlobalStyles = createGlobalStyle`
   blockquote:before, blockquote:after,
   q:before, q:after {
     content: "";
-    content: none;
   }
 
 
@@ -89,12 +88,14 @@ const GlobalStyles = createGlobalStyle`
 
 
   body {
-    background-color: #dfdfdf;
+    //background-color: #dfdfdf;
     line-height: 24px;
     padding: 0;
     color: #333;
     font-family: Lyon, Georgia, serif;
     margin: 0 2rem 5rem;
+    background-repeat: no-repeat
+
   }
 
 
@@ -137,7 +138,7 @@ const GlobalStyles = createGlobalStyle`
 
 
   a:hover {
-    
+
   }
 
 
@@ -146,14 +147,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   a {
-    
-  }
 
-  header {
-    text-align: center;
-    padding: 1.5rem 1rem;
-    background-color: white;
-    z-index: 100
   }
 
 

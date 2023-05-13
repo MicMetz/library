@@ -3,21 +3,7 @@ import styled from 'styled-components'
 
 
 
-export const ArticleCover = styled.div`
-  width: calc(40% + 4rem);
-  order: 2;
-  padding: 0 2rem;
 
-  img {
-    display: block;
-    margin: 0 auto;
-    width: auto;
-    max-width: 28vw;
-    max-height: calc(100vh - 12rem);
-    object-fit: contain
-  }
-
-`
 
 export const SideMenuClosed = styled.div`
   padding: 1.5rem 1rem;
@@ -45,7 +31,9 @@ export const SidebarHeader = styled.header`
   line-height: 1;
   height: 2em;
   width: 25rem;
-
+  
+  padding: 1.5rem 1rem;
+  z-index: 100;
   align-items: center;
   justify-content: center;
 

@@ -64,6 +64,22 @@ export const ArticleFeatured = styled.section`
   padding: 0 2rem;
 `
 
+export const ArticleCover = styled.div`
+  width: calc(40% + 4rem);
+  order: 2;
+  padding: 0 2rem;
+
+  img {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    max-width: 28vw;
+    max-height: calc(100vh - 12rem);
+    object-fit: contain
+  }
+
+`
+
 export const ArticleFeaturedCoverImage = styled(Image)`
   display: block;
   margin: 0 auto;

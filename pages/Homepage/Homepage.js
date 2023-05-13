@@ -15,7 +15,19 @@ export default function Homepage () {
     <HomeBody >
       <SideBar
         title = "The Shape of Design"
-        chapters = {[]}
+        chapters = {[
+          { id: 1, chapterTitle: 'Introduction' },
+          { id: 2, chapterTitle: 'The Shape of the Network' },
+          { id: 3, chapterTitle: 'The Shape of the Words' },
+          { id: 4, chapterTitle: 'The Shape of the Page' },
+          { id: 5, chapterTitle: 'The Shape of the Screen' },
+          { id: 6, chapterTitle: 'The Shape of the Experience' },
+          { id: 7, chapterTitle: 'The Shape of the Story' },
+          { id: 8, chapterTitle: 'The Shape of Change' },
+          { id: 9, chapterTitle: 'The Shape of Time' },
+          { id: 10, chapterTitle: 'The Shape of the Work' },
+          { id: 11, chapterTitle: 'The Shape of the Future' }
+        ]}
       />
       {/*  <ArticleContainer >
        <div className = "cover">

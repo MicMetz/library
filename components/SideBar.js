@@ -16,21 +16,24 @@ export const SideBar = ({ title, chapters }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY
-      const activeChapter  = chapters?.find(({ slug }) => {
-        const element = document.querySelector(slug)
-        if (element) {
-          const { offsetTop, offsetHeight } = element
-          return scrollPosition >= offsetTop - offsetHeight / 2 && scrollPosition < offsetTop + offsetHeight / 2
-        }
+      const chapterHeadings = chapters.map(({ id }) => ( {
+        id,
+        offset: document.getElementById(id).offsetTop
+      } ))
+      const scrollPosition  = window.scrollY + 100
+      const active          = chapterHeadings.find(({ offset }, index) => {
+        const nextChapter = chapterHeadings[ index + 1 ]
+        return scrollPosition < offset || !nextChapter
       })
-      if (activeChapter) {
-        setActiveChapter(activeChapter.id)
+      if (activeChapter !== active.id) {
+        setActiveChapter(active.id)
       }
     }
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [chapters])
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [activeChapter, setActiveChapter, chapters])
 
   return (
     <>
@@ -39,14 +42,14 @@ export const SideBar = ({ title, chapters }) => {
         <SideMenuOpened >
           <SideMenuHeader >
             <h1 className = "text-6xl font-bold">{title}</h1 >
-            <h2 className = "text-2xl font-bold">{chapters}</h2 >
           </SideMenuHeader >
           <ToC >
-            {chapters.map(({ id, title, slug }) => (
+            {chapters.map(({ id, chapterTitle }) => (
               <ToCItem key = {id} active = {activeChapter === id}>
-                <Link href = {slug}>
-                  <a >{title}</a >
-                </Link >
+                <a href = {`#${id}`}>
+                  <span ></span >
+                  {chapterTitle}
+                </a >
               </ToCItem >
             ))}
           </ToC >
@@ -55,10 +58,8 @@ export const SideBar = ({ title, chapters }) => {
         <SideMenuClosed >
           <SidebarHeader >
             <h1 className = "text-6xl font-bold">{title}</h1 >
-            <h2 className = "text-2xl font-bold">{chapters}</h2 >
           </SidebarHeader >
         </SideMenuClosed >
-        // </SideMenu >
       }
       </SidebarMenuButtonOverlay >
       </>

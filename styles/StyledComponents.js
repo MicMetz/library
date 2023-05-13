@@ -88,9 +88,10 @@ export const SideMenuHeader = styled(SidebarHeader)`
   transform: rotate(0deg);
   translate: origin(0, 0);
   position: relative;
-  top: 0;  
+  top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
 
   h1 {
     font-size: 2.5rem;
@@ -166,12 +167,25 @@ export const SideMenuHeaderOpen = styled.header`
 
 export const ToCItem = styled.li`
   margin: 2.5rem 1rem;
+  
 
-  h3 {
+  a {
     font-size: 1.125rem;
-    line-height: 0.75rem;
+    background-image: none;
+  }
+
+  a:hover {
+
+  }
+
+  a span {
+    display: block;
+    font-size: 0.75rem;
+    font-family: Courier, monospace;
+    color: rgba(0, 0, 0, 0.5);
   }
 `
+
 
 export const ArticleContainer = styled.article`
   margin: 2rem auto;

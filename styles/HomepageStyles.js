@@ -20,7 +20,7 @@ export const HomeMain = styled.main`
   justify-content: space-around;
   height: calc(100vh - 9rem);
   margin: 0 auto;
-  max-width: 100vw;
+  max-width: 70vw;
   width: 100%;
 `
 
@@ -53,7 +53,6 @@ export const HomeFooter = styled.footer`
 `
 
 export const HomeArticleFeatured = styled.section`
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: left;
@@ -63,20 +62,32 @@ export const HomeArticleFeatured = styled.section`
   padding: 0 2rem;
 `
 
-export const HomeArticleFeaturedCoverImage = styled(Image)`
+export const HomeArticleFeaturedCoverImage = styled.img`
   display: block;
   margin: 0 auto;
   width: auto;
   height: 100%;
-  max-width: 28vw;
+  max-width: 25vw;
   max-height: calc(100vh - 12rem);
   border-radius: 2px 1px 1px 2px;
   mix-blend-mode: normal;
   box-shadow: 0 0 10px 0 rgba(40, 42, 47, 0.1), -10px 10px 24px 10px rgba(40, 42, 47, 0.05), -30px 40px 30px 0 rgba(40, 42, 47, 0.1), -10px 10px 10px -5px rgba(40, 42, 47, 0.1);
 `
+//
+// export const HomeArticleFeaturedCoverImage = styled(Image)`
+//   display: block;
+//   margin: 0 auto;
+//   width: auto;
+//   height: 100%;
+//   max-width: 28vw;
+//   max-height: calc(100vh - 12rem);
+//   border-radius: 2px 1px 1px 2px;
+//   mix-blend-mode: normal;
+//   box-shadow: 0 0 10px 0 rgba(40, 42, 47, 0.1), -10px 10px 24px 10px rgba(40, 42, 47, 0.05), -30px 40px 30px 0 rgba(40, 42, 47, 0.1), -10px 10px 10px -5px rgba(40, 42, 47, 0.1);
+// `
 
 export const HomeArticleFeaturedCover = styled.section`
   width: calc(40% + 4rem);
-  order: 2;
+  order: 1;
   padding: 0 2rem
 `

@@ -32,9 +32,9 @@ export default function Homepage () {
 
         </HomeArticleFeatured >
 
-        <HomeArticleFeaturedCover >
-          <HomeArticleFeaturedCoverImage src = {Readings[ 0 ].cover} alt = "Kill Anything That Moves" width = {400} height = {600}/>
-        </HomeArticleFeaturedCover >
+        {/* <HomeArticleFeaturedCover > */}
+          <HomeArticleFeaturedCoverImage src = {Readings[ 0 ].cover} alt = "Kill Anything That Moves" width = {300} height = {400}/>
+        {/* </HomeArticleFeaturedCover > */}
       </HomeMain >
 
       <HomeFooter >

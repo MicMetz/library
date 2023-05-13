@@ -15,8 +15,6 @@ import { Readings } from '/public/datasets/Reads.js'
 
 export default function Homepage () {
 
-  console.log(Readings)
-
   return (
     <HomeBody >
       <SideBar

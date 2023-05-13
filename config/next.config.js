@@ -27,10 +27,11 @@ const nextConfig = async () => {
       publicPath: '/_next/static/images', // the path access the assets via url
       outputPath: 'static/images/', // where to store on disk
     },
-    images         : {
-      loader: 'imgix',
-      path  : 'https://micmetz.github.io/Library',
-
+    images: {
+      loader     : 'custom',
+      loaderFile : 'src/utilities/imageLoader.js',
+      unoptimized: true,
+      types      : ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'ico', 'bmp', 'tiff']
     },
   }
 }

@@ -1,7 +1,62 @@
 import Image from 'next/image'
 import styled from 'styled-components'
 
-// export const ArticleByline = styled.
+
+
+
+export const ArticlePage = styled.section`
+  display: flex;
+  position: relative;
+  max-width: 60rem;
+  top: calc(100vh - 50rem);
+  min-height: 100vh;
+  width: 100%;
+  margin-bottom: 9rem;
+  padding: 4rem 0 4rem 0;
+  background-color: white;
+  border-radius: 2rem;
+  box-shadow: 0 0 10px 0 transparentization(black, 0.9), 0 0 0 4px transparentization(black, 0.85);
+  $zease: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+
+  [data-scroll] {
+    opacity: 0;
+    transform: translateY(4rem) scale(0.95);
+    //transition: transform 0.5s, opacity 0.5s;
+    transition: all 0.5s $zease;
+    will-change: transform, scale, opacity;
+  }
+
+  [data-scroll="in"] {
+    .content:after {
+      transform: scaleY(0);
+      opacity: 1;
+    }
+
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  [data-scroll-direction="up"] {
+    [data-scroll="in"] {
+      transform: translateY(-4rem) scale(0.95);
+
+      .content:after {
+        transform: scaleY(1);
+        opacity: 0;
+      }
+
+      opacity: 0;
+
+    }
+  }
+
+  transparentization($color, $amount) {
+  rgba($color, $amount);
+}
+
+
+`
 
 export const ArticleFeatured = styled.section`
   width: calc(40% + 4rem);

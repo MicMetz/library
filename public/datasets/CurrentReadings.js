@@ -1,9 +1,10 @@
-export const Readings =
+export const CurrentReadings =
                {
                  0: {
 
                    id       : 1,
                    title    : 'Kill Anything That Moves',
+                    subtitle : 'The Real American War in Vietnam',
                    author   : 'Nick Turse',
                    date     : '2013',
                    publisher: 'Picador',
@@ -43,3 +44,4 @@ export const Readings =
                    ]
                  }
                }
+

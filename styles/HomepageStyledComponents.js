@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 
 
-export const HomeBody = styled.section`
+export const HomeBody = styled.div`
   //background-color: white;
   line-height: 24px;
   padding: 0;

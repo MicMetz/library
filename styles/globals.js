@@ -22,7 +22,6 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     font: inherit;
     vertical-align: baseline;
   }
@@ -138,7 +137,7 @@ const GlobalStyles = createGlobalStyle`
 
 
   a:hover {
-    color: #b95b23
+    
   }
 
 
@@ -146,6 +145,9 @@ const GlobalStyles = createGlobalStyle`
     font-style: italic
   }
 
+  a {
+    
+  }
 
   header {
     text-align: center;
@@ -176,24 +178,6 @@ const GlobalStyles = createGlobalStyle`
   header h2 {
     display: none
   }
-
-
-  nav > a {
-    font-family: Courier, monospace;
-    -webkit-font-smoothing: subpixel-antialiased;
-    -moz-osx-font-smoothing: auto
-  }
-
-
-  nav {
-    text-align: center;
-    background-color: white;
-    margin: 4rem 0;
-    padding: 3rem;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee
-  }
-
 
 
   @media (max-width: 800px) {
@@ -274,7 +258,7 @@ const GlobalStyles = createGlobalStyle`
       padding: 4rem 1rem 0
     }
 
- 
+
   }
 `
 

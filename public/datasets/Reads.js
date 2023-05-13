@@ -7,7 +7,7 @@ export const Readings =
                    author   : 'Nick Turse',
                    date     : '2013',
                    publisher: 'Picador',
-                   cover    : '/images/KillAnythingThatMoves.jpg',
+                   cover    : '/public/images/KillAnythingThatMoves.jpg',
                    link     : 'http://www.amazon.com/Kill-Anything-That-Moves-American/dp/1250045061/ref=sr_1_1?ie=UTF8&qid=1452120004&sr=8-1&keywords=kill+anything+that+moves',
                    chapters : [
                      {

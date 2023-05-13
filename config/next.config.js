@@ -27,12 +27,7 @@ const nextConfig = async () => {
       publicPath: '/_next/static/images', // the path access the assets via url
       outputPath: 'static/images/', // where to store on disk
     },
-    images: {
-      loader     : 'custom',
-      loaderFile : 'src/utilities/imageLoader.js',
-      unoptimized: false,
-      types      : ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'ico', 'bmp', 'tiff']
-    },
+    
 
     webpack: (config, { isServer }) => {
 

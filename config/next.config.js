@@ -31,6 +31,7 @@ const nextConfig = async () => {
       loader     : 'custom',
       loaderFile : 'src/utilities/imageLoader.js',
       unoptimized: true,
+      loading    : 'eager',
       types      : ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'ico', 'bmp', 'tiff']
     }
 

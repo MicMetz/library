@@ -32,6 +32,7 @@ export const SideMenuClosed = styled.div`
   text-align: center;
 
   width: 7rem;
+  max-width: 20vw;
   border-right: 1px solid #eee;
   height: 100vh;
 `
@@ -74,7 +75,8 @@ export const SidebarHeader = styled.header`
 
 export const SideMenuOpened = styled(SideMenuClosed)`
   left: 0;
-  width: 300px;
+  max-width: 50vw;
+  width: fit-content;
   padding: 1.5rem 2rem;
   border-right: 1px solid #f0f0f0;
   border-top: none;
@@ -85,21 +87,32 @@ export const SideMenuOpened = styled(SideMenuClosed)`
 `
 
 export const SideMenuHeader = styled(SidebarHeader)`
+  transition: all 0.7s ease-in-out;
   transform: rotate(0deg);
-  translate: origin(0, 0);
   position: relative;
-  top: 0;
   left: 0;
+  top: 0;
+  line-height: 1;
   width: 100%;
-  height: 100%;
+  height: 3rem;
+  margin: 0 1em;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+
   }
 
   h2 {
-    font-size: 1.8rem;
-
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
   }
 `
 

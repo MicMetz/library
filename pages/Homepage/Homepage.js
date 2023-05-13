@@ -4,7 +4,7 @@ import { Layout } from '../../components/Layout.js'
 import { SideBar } from '../../components/SideBar.js'
 import { ArticleByline, ArticleSubtitle, ArticleTitle } from '../../styles/ArticleComponents.js'
 import { PageHeader, PageHeaderTitle } from '../../styles/StyledComponents.js'
-import { HomeArticleFeatured, HomeArticleFeaturedCover, HomeArticleFeaturedCoverImage, HomeBody, HomeFooter, HomeMain } from './HomepageStyles.js'
+import { HomeArticleFeatured, HomeArticleFeaturedCover, HomeArticleFeaturedCoverImage, HomeBody, HomeFooter, HomeMain } from '../../styles/HomepageStyles.js'
 
 import Image from 'next/image'
 import KillAnythingThatMovesCover from '../../public/images/KillAnythingThatMoves.jpg'

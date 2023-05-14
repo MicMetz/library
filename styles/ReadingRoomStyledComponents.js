@@ -19,10 +19,7 @@ export const ReadingRoomBody = styled.div`
   line-height: 24px;
   //background-size: 100px 100px;
   background-blend-mode: multiply;
-
 `
-
-
 
 export const ReadingRoomMain = styled.main`
   display: flex;
@@ -34,6 +31,6 @@ export const ReadingRoomMain = styled.main`
   justify-content: center;
   align-items: center;
   justify-items: center;
-  
+
 
 `

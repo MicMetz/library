@@ -40,7 +40,7 @@ export const SideBar = ({ title, chapters }) => {
             <h1 className = "text-6xl font-bold">{title}</h1 >
           </SideMenuHeader >
           <ToC >
-            {chapters.map(({ id, chapterTitle }) => (
+            {chapters?.map(({ id, chapterTitle }) => (
               <ToCItem key = {id} active = {activeChapter === id}>
                 <a href = {`#${id}`}>
                   <span ></span >

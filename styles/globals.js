@@ -6,6 +6,29 @@ import normalize from 'styled-normalize'
 
 const GlobalStyles = createGlobalStyle`
   ${normalize}
+  
+  
+  :root {
+    --color-primary: #1A1E23FF;
+    --color-secondary: #F2F2F2FF;
+    --color-tertiary: #333333FF;
+    --color-quaternary: #FFD803FF;
+    --color-quinary: #FFA803FF;
+    --color-senary: #FFD803FF;
+    
+    --color-text: #333333FF;
+    
+    --nav-height: 4vh;
+    --nav-width: 100vw;
+    
+    --footer-height: 20rem;
+    --footer-width: 100vw;
+    
+    --main-height: calc(100vh - var(--nav-height));
+    
+  }
+  
+  
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
@@ -24,6 +47,24 @@ const GlobalStyles = createGlobalStyle`
     border: 0;
     font: inherit;
     vertical-align: baseline;
+  }
+
+
+  body {
+    color: #333;
+    font-family: Lyon, Georgia, serif;
+
+    background-repeat: no-repeat
+
+  }
+
+
+  footer {
+    margin: 4rem 2rem 0 !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+    text-align: center !important;
+    padding: 4rem 1rem 0 !important;
+    
   }
 
 
@@ -84,18 +125,6 @@ const GlobalStyles = createGlobalStyle`
     -webkit-font-feature-settings: "kern" 1, "onum" 1;
     font-feature-settings: "kern" 1, "onum" 1;
     font-kerning: normal
-  }
-
-
-  body {
-    //background-color: #dfdfdf;
-    line-height: 24px;
-    padding: 0;
-    color: #333;
-    font-family: Lyon, Georgia, serif;
-    margin: 0 2rem 5rem;
-    background-repeat: no-repeat
-
   }
 
 
@@ -239,18 +268,18 @@ const GlobalStyles = createGlobalStyle`
 
 
   @media (min-width: 1200px) {
-    body {
-      margin-left: calc(50vw - 5rem);
-      padding: 4rem 2rem 0
-    }
-
-
-    footer {
-      margin: 4rem 2rem 0;
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
-      text-align: center;
-      padding: 4rem 1rem 0
-    }
+    //body {
+    //  margin-left: calc(50vw - 5rem);
+    //  padding: 4rem 2rem 0
+    //}
+    //
+    //
+    //footer {
+    //  margin: 4rem 2rem 0;
+    //  border-top: 1px solid rgba(0, 0, 0, 0.1);
+    //  text-align: center;
+    //  padding: 4rem 1rem 0
+    //}
 
 
   }

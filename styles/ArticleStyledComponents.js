@@ -108,6 +108,7 @@ export const ArticleTitle = styled.h1`
   -moz-osx-font-smoothing: auto;
 `
 
+
 export const ArticleSubtitle = styled.h2`
   font-size: 2rem;
   margin: 2rem 0;

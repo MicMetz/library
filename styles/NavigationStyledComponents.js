@@ -68,8 +68,10 @@ export const NavigationBar = styled.nav`
   top: 0;
   left: 0;
   width: 100vw;
-  min-height: 3rem;
-  background: #1A1E23 !important;
+  height: 100%;
+  max-height: 4vh;
+  margin-bottom: 4rem;
+  background: #1A1E23FF !important;
 
   align-items: center;
   justify-content: center;

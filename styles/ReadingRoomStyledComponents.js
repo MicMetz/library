@@ -11,7 +11,7 @@ export const ReadingRoomBody = styled.div`
   width: 100vw;
   height: 100vh;
   overflow-y: scroll;
-  background: #1A1E23 !important;
+  background: #1A1E23FF !important;
 
   align-content: center;
   justify-content: center;

@@ -4,7 +4,7 @@ import { Layout } from '../../components/Layout.js'
 import { SideBar } from '../../components/SideBar.js'
 import { ArticleByline, ArticleSubtitle, ArticleTitle } from '../../styles/ArticleStyledComponents.js'
 import { PageHeader, PageHeaderTitle } from '../../styles/StyledComponents.js'
-import { HomeArticleFeatured, HomeArticleFeaturedCover, HomeArticleFeaturedCoverImage, HomeBody, HomeFooter, HomeMain } from '../../styles/HomepageStyledComponents.js'
+import { HomeArticleFeatured, HomeArticleFeaturedAtrribution, HomeArticleFeaturedCover, HomeArticleFeaturedCoverImage, HomeArticleFeaturedDetails, HomeBody, HomeFooter, HomeMain } from '../../styles/HomepageStyledComponents.js'
 
 import Image from 'next/image'
 import KillAnythingThatMovesCover from '/public/images/KillAnythingThatMoves.jpg'
@@ -24,16 +24,36 @@ export default function Homepage () {
       />
       <HomeMain >
 
-        <HomeArticleFeatured >
+
+        <HomeArticleFeaturedDetails >
+          {CurrentReadings[ 0 ].description.map((paragraph, index) => {
+              return (
+                <p key = {index}>{paragraph.split('\n').map((item, key) => {
+                  return (
+                    <span key = {key}>
+                      {item}
+                      <br />
+                    </span >
+                  )
+                })}</p >
+              )
+            }
+          )}
+        </HomeArticleFeaturedDetails >
+
+
+        <HomeArticleFeaturedAtrribution >
+
+
 
           <ArticleTitle >{CurrentReadings[ 0 ].title}</ArticleTitle >
           <ArticleSubtitle >{CurrentReadings[ 0 ].subtitle}</ArticleSubtitle >
           <ArticleByline >{CurrentReadings[ 0 ].author}</ArticleByline >
 
-        </HomeArticleFeatured >
+        </HomeArticleFeaturedAtrribution >
 
         {/* <HomeArticleFeaturedCover > */}
-        <HomeArticleFeaturedCoverImage src = {CurrentReadings[ 0 ].cover} alt = {CurrentReadings[ 0 ].title} width = {300} height = {400}/>
+        <HomeArticleFeaturedCoverImage src = {CurrentReadings[ 0 ].cover} alt = {CurrentReadings[ 0 ].title} width = {300} height = {350}/>
         {/* </HomeArticleFeaturedCover > */}
       </HomeMain >
 

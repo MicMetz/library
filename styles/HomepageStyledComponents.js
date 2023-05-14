@@ -41,7 +41,7 @@ export const HomeHeader = styled.header`
 `
 
 export const HomeFooter = styled.footer`
-  max-width: 43rem;
+  max-width: 100%;
   margin: 0 auto;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -50,7 +50,6 @@ export const HomeFooter = styled.footer`
   font-family: 'PitchWeb', Courier, monospace
 
 `
-
 
 export const HomeArticleFeaturedDetails = styled.section`
   display: flex;
@@ -64,6 +63,7 @@ export const HomeArticleFeaturedDetails = styled.section`
   padding: 0 2rem;
   margin-top: 6rem;
   text-align: left;
+  top: calc(10% - 3rem);
 
   p {
     font-size: 1.2em;
@@ -92,22 +92,4 @@ export const HomeArticleFeaturedCoverImage = styled.img`
   mix-blend-mode: normal;
   box-shadow: 0 0 10px 0 rgba(40, 42, 47, 0.1), -10px 10px 24px 10px rgba(40, 42, 47, 0.05), -30px 40px 30px 0 rgba(40, 42, 47, 0.1), -10px 10px 10px -5px rgba(40, 42, 47, 0.1);
   order: 2;
-
-`
-//
-// export const HomeArticleFeaturedCoverImage = styled(Image)`
-//   display: block;
-//   margin: 0 auto;
-//   width: auto;
-//   height: 100%;
-//   max-width: 28vw;
-//   max-height: calc(100vh - 12rem);
-//   border-radius: 2px 1px 1px 2px;
-//   mix-blend-mode: normal;
-//   box-shadow: 0 0 10px 0 rgba(40, 42, 47, 0.1), -10px 10px 24px 10px rgba(40, 42, 47, 0.05), -30px 40px 30px 0 rgba(40, 42, 47, 0.1), -10px 10px 10px -5px rgba(40, 42, 47, 0.1);
-// `
-
-export const HomeArticleFeaturedCover = styled.section`
-  width: calc(40% + 4rem);
-  padding: 0 2rem
 `

@@ -44,17 +44,14 @@ export default function Homepage () {
 
         <HomeArticleFeaturedAtrribution >
 
-
-
           <ArticleTitle >{CurrentReadings[ 0 ].title}</ArticleTitle >
           <ArticleSubtitle >{CurrentReadings[ 0 ].subtitle}</ArticleSubtitle >
           <ArticleByline >{CurrentReadings[ 0 ].author}</ArticleByline >
 
         </HomeArticleFeaturedAtrribution >
 
-        {/* <HomeArticleFeaturedCover > */}
         <HomeArticleFeaturedCoverImage src = {CurrentReadings[ 0 ].cover} alt = {CurrentReadings[ 0 ].title} width = {300} height = {350}/>
-        {/* </HomeArticleFeaturedCover > */}
+
       </HomeMain >
 
       <HomeFooter >

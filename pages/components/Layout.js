@@ -9,6 +9,7 @@ export const Layout = ({ children }) => {
     <>
     <div className = "text-slate-800">
     <Navigation />
+
       <main >{children}</main >
     </div >
     </>

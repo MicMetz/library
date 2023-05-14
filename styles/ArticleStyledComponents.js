@@ -7,7 +7,7 @@ import styled from 'styled-components'
 export const ArticlePage = styled.section`
   display: flex;
   position: relative;
-  max-width: 60rem;
+  max-width: 70rem;
   top: calc(100vh - 50rem);
   min-height: 100vh;
   width: 100%;

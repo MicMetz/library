@@ -14,6 +14,7 @@ export default function ReadingRoom () {
   const [activeReading, setActiveReading] = useState(0)
 
   return (
+    <Layout >
     <ReadingRoomBody >
       <SideBar
         title = {activeReading.title}
@@ -31,6 +32,7 @@ export default function ReadingRoom () {
 
       {/* </ReadingRoomFooter > */}
     </ReadingRoomBody >
+    </Layout >
   )
 }
 

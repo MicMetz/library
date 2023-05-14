@@ -16,48 +16,50 @@ import { CurrentReadings } from '/public/datasets/CurrentReadings.js'
 export default function Homepage () {
 
   return (
-    <HomeBody >
-      <SideBar
-        title = {CurrentReadings[ 0 ].title}
-        chapters = {CurrentReadings[ 0 ].chapters}
+    <Layout >
+      <HomeBody >
+        <SideBar
+          title = {CurrentReadings[ 0 ].title}
+          chapters = {CurrentReadings[ 0 ].chapters}
 
-      />
-      <HomeMain >
-
-
-        <HomeArticleFeaturedDetails >
-          {CurrentReadings[ 0 ].description.map((paragraph, index) => {
-              return (
-                <p key = {index}>{paragraph.split('\n').map((item, key) => {
-                  return (
-                    <span key = {key}>
-                      {item}
-                      <br />
-                    </span >
-                  )
-                })}</p >
-              )
-            }
-          )}
-        </HomeArticleFeaturedDetails >
+        />
+        <HomeMain >
 
 
-        <HomeArticleFeaturedAtrribution >
+          <HomeArticleFeaturedDetails >
+            {CurrentReadings[ 0 ].description.map((paragraph, index) => {
+                return (
+                  <p key = {index}>{paragraph.split('\n').map((item, key) => {
+                    return (
+                      <span key = {key}>
+                        {item}
+                        <br />
+                      </span >
+                    )
+                  })}</p >
+                )
+              }
+            )}
+          </HomeArticleFeaturedDetails >
 
-          <ArticleTitle >{CurrentReadings[ 0 ].title}</ArticleTitle >
-          <ArticleSubtitle >{CurrentReadings[ 0 ].subtitle}</ArticleSubtitle >
-          <ArticleByline >{CurrentReadings[ 0 ].author}</ArticleByline >
 
-        </HomeArticleFeaturedAtrribution >
+          <HomeArticleFeaturedAtrribution >
 
-        <HomeArticleFeaturedCoverImage src = {CurrentReadings[ 0 ].cover} alt = {CurrentReadings[ 0 ].title} width = {300} height = {350}/>
+            <ArticleTitle >{CurrentReadings[ 0 ].title}</ArticleTitle >
+            <ArticleSubtitle >{CurrentReadings[ 0 ].subtitle}</ArticleSubtitle >
+            <ArticleByline >{CurrentReadings[ 0 ].author}</ArticleByline >
 
-      </HomeMain >
+          </HomeArticleFeaturedAtrribution >
 
-      <HomeFooter >
+          <HomeArticleFeaturedCoverImage src = {CurrentReadings[ 0 ].cover} alt = {CurrentReadings[ 0 ].title} width = {300} height = {350}/>
 
-      </HomeFooter >
-    </HomeBody >
+        </HomeMain >
+
+        <HomeFooter >
+
+        </HomeFooter >
+      </HomeBody >
+    </Layout >
   )
 }
 

@@ -4,11 +4,8 @@ import styled from 'styled-components'
 
 
 export const ReadingRoomBody = styled.div`
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
+  position: relative;
+  width: 100%;
   height: 100vh;
   overflow-y: scroll;
   background: #1A1E23FF !important;
@@ -18,6 +15,10 @@ export const ReadingRoomBody = styled.div`
   align-items: center;
   justify-items: center;
 
+  padding: 4rem 2rem 0 !important;
+  line-height: 24px;
+  //background-size: 100px 100px;
+  background-blend-mode: multiply;
 
 `
 

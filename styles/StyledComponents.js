@@ -63,7 +63,7 @@ export const SidebarHeader = styled.header`
 
 export const SideMenuOpened = styled(SideMenuClosed)`
   left: 0;
-  max-width: 45vw;
+  max-width: 50vw;
   width: fit-content;
   padding: 1.5rem 2rem;
   border-right: 1px solid #f0f0f0;

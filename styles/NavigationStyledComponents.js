@@ -18,7 +18,7 @@ export const NavigationList = styled.ul`
 export const NavigationListItem = styled.li`
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   will-change: width, margin;
-  margin: 0 3rem 0 0;
+  margin: 0 9rem 0 0;
   padding: 0;
   cursor: pointer;
   opacity: 0.5;

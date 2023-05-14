@@ -43,14 +43,14 @@ export const Navigation = () => {
               <span >Reading Room</span >
             </Link >
           </NavigationListItem >
-          <NavigationListItem active = {active === 'About'}>
-            <Link href = "/About">
-              <span >About</span >
+          <NavigationListItem active = {active === 'Articles'}>
+            <Link href = "/Articles">
+              <span >Articles</span >
             </Link >
           </NavigationListItem >
-          <NavigationListItem active = {active === 'Contact'}>
-            <Link href = "/Contact">
-              <span >Contact</span >
+          <NavigationListItem active = {active === 'Wall'}>
+            <Link href = "/Wall">
+              <span >Wall</span >
             </Link >
           </NavigationListItem >
         </NavigationList >

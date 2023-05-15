@@ -1,12 +1,12 @@
 import React from 'react'
 import Head from 'next/head'
-import Homepage from './Homepage/Homepage.js'
-import ReadingRoom from './ReadingRoom/ReadingRoom.js'
+import Homepage from './Homepage.js'
+import ReadingRoom from './ReadingRoom.js'
 
 
 
 
-const Index = ({ page, navigation, settings }) => {
+export default function Index ({ page, navigation, settings }) {
   return (
     <>
       <Homepage />
@@ -14,6 +14,5 @@ const Index = ({ page, navigation, settings }) => {
   )
 }
 
-export default Index
 
 

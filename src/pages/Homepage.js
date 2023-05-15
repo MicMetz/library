@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import React, { useEffect, useRef, useState } from 'react'
-import { Layout } from '../../components/Layout.js'
-import { SideBar } from '../../components/SideBar.js'
-import { ArticleByline, ArticleSubtitle, ArticleTitle } from '../../styles/ArticleStyledComponents.js'
+import DefaultLayout  from '../components/layouts/DefaultLayout.js'
+import { SideBar } from '../components/SideBar.js'
+import { ArticleByline, ArticleSubtitle, ArticleTitle } from '../styles/ArticleStyledComponents.js'
 
-import { HomeArticleFeaturedAtrribution, HomeArticleFeaturedCoverImage, HomeArticleFeaturedDetails, HomeBody, HomeFooter, HomeMain } from '../../styles/HomepageStyledComponents.js'
+import { HomeArticleFeaturedAtrribution, HomeArticleFeaturedCoverImage, HomeArticleFeaturedDetails, HomeBody, HomeFooter, HomeMain } from '../styles/HomepageStyledComponents.js'
 import KillAnythingThatMovesCover from '/public/images/KillAnythingThatMoves.jpg'
 import { CurrentReadings } from '/public/datasets/CurrentReadings.js'
 
@@ -15,7 +15,7 @@ import { CurrentReadings } from '/public/datasets/CurrentReadings.js'
 export default function Homepage () {
 
   return (
-    <Layout >
+    <DefaultLayout >
       <Head >
         <title >Home</title >
         <meta name = "description" content = "initial-scale=1.0, width=device-width"/>
@@ -62,7 +62,7 @@ export default function Homepage () {
 
         </HomeFooter >
       </HomeBody >
-    </Layout >
+    </DefaultLayout >
   )
 }
 

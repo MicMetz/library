@@ -29,6 +29,19 @@ const GlobalStyles = createGlobalStyle`
   }
   
   
+  .article-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search-layout,
+  .article-layout,
+  .article-list {
+    max-width: 740px;
+    padding: 40px 20px 100px 20px;
+    position: relative;
+  }
+  
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,

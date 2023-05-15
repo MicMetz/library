@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { NavigationBar, NavigationList, NavigationListItem } from '../../styles/NavigationStyledComponents.js'
+import DefaultLayout from '../components/layouts/DefaultLayout.js'
 
 
 

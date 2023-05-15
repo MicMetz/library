@@ -2,9 +2,9 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
-import { ArticleMapBody, ArticleMapMain } from '../../styles/ArticleMapStyledComponents.js'
-import { Layout } from '../../components/Layout.js'
-import { SideBar } from '../../components/SideBar.js'
+import { ArticleMapBody, ArticleMapMain } from '../styles/ArticleMapStyledComponents.js'
+import  DefaultLayout  from '../components/layouts/DefaultLayout.js'
+import { SideBar } from '../components/SideBar.js'
 
 
 
@@ -12,7 +12,7 @@ import { SideBar } from '../../components/SideBar.js'
 export default function ArticleMap () {
   return (
     <>
-    <Layout >
+    <DefaultLayout >
       <Head >
         <title >Article Map</title >
         <meta name = "description" content = "initial-scale=1.0, width=device-width"/>
@@ -25,7 +25,7 @@ export default function ArticleMap () {
       <ArticleMapMain >
 
       </ArticleMapMain >
-    </Layout >
+    </DefaultLayout >
     </>
   )
 }

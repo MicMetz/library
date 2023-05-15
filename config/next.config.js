@@ -1,22 +1,35 @@
-const withMDX = require('@next/mdx')({
+const { promisify } = require('util')
+const fs            = require('fs')
+const withMDX       = require('@next/mdx')({
   extension: /\.mdx?$/,
   options  : {
+    // If you use remark-gfm, you'll need to use next.config.mjs
+    // as the package is ESM only
     // https://github.com/remarkjs/remark-gfm#install
     remarkPlugins: [],
     rehypePlugins: [],
+    // If you use `MDXProvider`, uncomment the following line.
+    // providerImportSource: "@mdx-js/react",
   },
 })
 
 /** @type {import('next').NextConfig} */
 const nextConfig = async () => {
-
+  const fs                  = require('fs')
+  const path                = require('path')
+  const { promisify }       = require('util')
+  const copyFile            = promisify(fs.copyFile)
+  const withFonts           = require('next-fonts')
+  const images              = require('remark-images')
+  const emoji               = require('remark-emoji')
+  const withOptimizedImages = require('next-optimized-images')
   return {
     reactStrictMode: true,
     assetPrefix    : process.env.NODE_ENV === 'production' ? '/Library' : '',
     basePath       : process.env.NODE_ENV === 'production' ? '/Library' : '',
     baseUrl        : process.env.NODE_ENV === 'production' ? '/Library' : '',
     url            : process.env.NODE_ENV === 'production' ? '/Library' : '',
-    hostnames      : ['micmetz.github.io/Library', 'localhost', 'raw.githubusercontent.com', 'github.com', 'githubusercontent.com', 'Library'],
+    hostnames      : ['micmetz.github.io', 'localhost', 'raw.githubusercontent.com', 'github.com'],
     types          : ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'ico', 'bmp', 'tiff', 'glb', 'gltf'],
     loader         : 'file-loader',
     options        : {
@@ -27,7 +40,6 @@ const nextConfig = async () => {
       loader     : 'custom',
       loaderFile : 'src/utilities/imageLoader.js',
       unoptimized: true,
-      loading    : 'eager',
       types      : ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'ico', 'bmp', 'tiff']
     }
 

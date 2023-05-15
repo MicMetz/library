@@ -40,17 +40,17 @@ export const Navigation = () => {
           </Link >
         </NavigationListItem >
         <NavigationListItem active = {active === 'ReadingRoom'}>
-          <Link href = "/ReadingRoom/ReadingRoom">
+          <Link href = "/ReadingRoom">
             <span >Reading Room</span >
           </Link >
         </NavigationListItem >
-        <NavigationListItem active = {active === 'Articles'}>
-          <Link href = "/Articles/ArticleMap">
+        <NavigationListItem active = {active === 'Articlespage'}>
+          <Link href = "/ArticleMap">
             <span >Articles</span >
           </Link >
         </NavigationListItem >
         <NavigationListItem active = {active === 'Wall'}>
-          <Link href = "/TheWall/TheWall.js">
+          <Link href = "/TheWall.js">
             <span >The Wall</span >
           </Link >
         </NavigationListItem >

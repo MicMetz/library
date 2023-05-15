@@ -1,0 +1,22 @@
+config:
+  author: Michael Metzger
+  siteName: micmetz.github.io
+  siteDescription: The Library
+  defaultPageTitle: The Library
+  articleTitle: The Library
+  baseUrl: micmetz.github.io
+
+  websiteLogo: ""
+
+  # This is list is used to create the links in the navigation panel
+  navigation:
+    - { text: Home, link: / }
+    - { text: Readings, link: /ReadingRoom/ReadingRoom }
+    - { text: Articles, link: /Articlespage/ArticleMap }
+
+  css:
+    primaryColor: "#536DFE"
+    accentColor: "#455A64"
+    lightGray: "#eeeeee"
+    backgroundColor: "#ffffff"
+    black: "#333"

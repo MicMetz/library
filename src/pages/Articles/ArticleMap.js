@@ -4,7 +4,7 @@ import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 import { ArticleMapBody, ArticleMapMain } from '../../styles/ArticleMapStyledComponents.js'
 import { Layout } from '../components/Layout.js'
-import { SideBar } from '../components/Sidebar.js'
+import { SideBar } from '../components/SideBar.js'
 
 
 

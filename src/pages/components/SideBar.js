@@ -32,17 +32,20 @@ export const SideBar = ({ header, chapters }) => {
   }, [scrollTop])
 
   return (
-    <>
-      <SidebarMenuButtonOverlay onClick = {() => setMenu(!menu)}>
+    <SidebarMenuButtonOverlay onClick = {() => setMenu(!menu)}>
       {menu ?
         <SideMenuOpened >
           <SideMenuHeader >
-            <h1 >{header.title}</h1 >
+            <h1 >{header?.title}</h1 >
             {/* <h2 >{header?.subtitle}</h2 > */}
           </SideMenuHeader >
           <ToC >
-            <ToCHeader>
-              Chapter List
+            <ToCHeader >
+              {header !== 'Article Map' && chapters !== null ?
+                'Chapter List'
+                :
+                ' '
+              }
             </ToCHeader >
             {chapters?.map(({ id, chapterTitle }) => (
               <ToCItem key = {id} active = {activeChapter === id}>
@@ -57,12 +60,11 @@ export const SideBar = ({ header, chapters }) => {
         :
         <SideMenuClosed >
           <SidebarHeader >
-            <h1 >{header.title}</h1 >
+            <h1 >{header?.title}</h1 >
             {/* <h2 >{header?.subtitle}</h2 > */}
           </SidebarHeader >
         </SideMenuClosed >
       }
-      </SidebarMenuButtonOverlay >
-      </>
+    </SidebarMenuButtonOverlay >
   )
 }

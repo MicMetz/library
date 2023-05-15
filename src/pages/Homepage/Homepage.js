@@ -1,12 +1,12 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 import { Layout } from '../components/Layout.js'
 import { SideBar } from '../components/SideBar.js'
 import { ArticleByline, ArticleSubtitle, ArticleTitle } from '../../styles/ArticleStyledComponents.js'
-import { HomeArticleFeaturedAtrribution, HomeArticleFeaturedCoverImage, HomeArticleFeaturedDetails, HomeBody, HomeFooter, HomeMain } from '../../styles/HomepageStyledComponents.js'
 
-import Image from 'next/image'
+import { HomeArticleFeaturedAtrribution, HomeArticleFeaturedCoverImage, HomeArticleFeaturedDetails, HomeBody, HomeFooter, HomeMain } from '../../styles/HomepageStyledComponents.js'
 import KillAnythingThatMovesCover from '/public/images/readings/KillAnythingThatMoves.jpg'
 import { CurrentReadings } from '/public/datasets/CurrentReadings.js'
 

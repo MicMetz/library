@@ -5,7 +5,7 @@ export const Readings = {
     author   : 'William Blum',
     date     : '2003',
     publisher: 'Zed Books',
-    cover    : '.static/images/KillingHope.jpg',
+    cover    : './images/KillingHope.jpg',
     link     : 'https://www.cia.gov/library/abbottabad-compound/13/130AEF1531746AAD6AC03EF59F91E1A1_Killing_Hope_Blum_William.pdf',
     chapters : [
       {
@@ -70,7 +70,7 @@ export const Readings = {
     author   : 'William Blum',
     date     : '2003',
     publisher: 'Zed Books',
-    cover    : '.static/images/KillingHope.jpg',
+    cover    : './images/KillingHope.jpg',
     link     : 'https://www.cia.gov/library/abbottabad-compound/13/130AEF1531746AAD6AC03EF59F91E1A1_Killing_Hope_Blum_William.pdf',
     chapters : [
       {
@@ -97,7 +97,7 @@ export const Readings = {
     author   : 'Vincent Bevins',
     date     : '2020',
     publisher: 'PublicAffairs',
-    cover    : '.static/images/TheJakartaMethod.jpg',
+    cover    : './images/TheJakartaMethod.jpg',
     link     : 'https://www.hachettebookgroup.com/titles/vincent-bevins/the-jakarta-method/9781541724013/?lens=publicaffairs',
     chapters : []
   },
@@ -109,7 +109,7 @@ export const Readings = {
     author2  : 'Noam Chomsky',
     date     : '1988',
     publisher: 'The Bodley Head London',
-    cover    : '.static/images/ManufacturingConsent.jpg',
+    cover    : './images/ManufacturingConsent.jpg',
     link     : 'https://edisciplinas.usp.br/pluginfile.php/5537300/mod_resource/content/1/Noam%20Chomsky_%20Edward%20S.%20Herman%20-%20Manufacturing%20Consent_%20The%20Political%20Economy%20of%20the%20Mass%20Media-Bodley%20Head%20%282008%29.pdf',
     chapters : []
   },

@@ -1,5 +1,3 @@
-const { promisify } = require('util')
-const fs            = require('fs')
 const withMDX       = require('@next/mdx')({
   extension     : /\.mdx?$/,
   options       : {
@@ -16,8 +14,6 @@ const withMDX       = require('@next/mdx')({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = async () => {
-  const fs                  = require('fs')
-  const path                = require('path')
 
   return {
     reactStrictMode: true,
@@ -26,7 +22,6 @@ const nextConfig = async () => {
     baseUrl        : process.env.NODE_ENV === 'production' ? '/Library' : '',
     url            : process.env.NODE_ENV === 'production' ? '/Library' : '',
     hostnames      : ['micmetz.github.io', 'localhost', 'raw.githubusercontent.com', 'github.com'],
-    exclude        : path.resolve(__dirname, 'src/pages/articles/**/*'),
     types          : ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'ico', 'bmp', 'tiff', 'glb', 'gltf'],
     loader         : 'file-loader',
     options        : {

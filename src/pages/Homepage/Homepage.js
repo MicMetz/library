@@ -6,7 +6,7 @@ import { SideBar } from '../../components/SideBar.js'
 import { ArticleByline, ArticleSubtitle, ArticleTitle } from '../../styles/ArticleStyledComponents.js'
 
 import { HomeArticleFeaturedAtrribution, HomeArticleFeaturedCoverImage, HomeArticleFeaturedDetails, HomeBody, HomeFooter, HomeMain } from '../../styles/HomepageStyledComponents.js'
-import KillAnythingThatMovesCover from '/public/images/readings/KillAnythingThatMoves.jpg'
+import KillAnythingThatMovesCover from '/public/images/KillAnythingThatMoves.jpg'
 import { CurrentReadings } from '/public/datasets/CurrentReadings.js'
 
 

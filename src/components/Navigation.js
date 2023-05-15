@@ -51,7 +51,7 @@ export const Navigation = () => {
         </NavigationListItem >
         <NavigationListItem active = {active === 'Wall'}>
           <Link href = "/TheWall/TheWall.js">
-            <span >Wall</span >
+            <span >The Wall</span >
           </Link >
         </NavigationListItem >
       </NavigationList >

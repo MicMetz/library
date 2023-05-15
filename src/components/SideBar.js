@@ -28,7 +28,7 @@ export const SideBar = ({ header, chapters }) => {
     }
     window.addEventListener('scroll', onScroll)
 
-    return () => window.removeEventListener('scroll', onScroll)
+    window.removeEventListener('scroll', onScroll)
   }, [scrollTop])
 
   return (

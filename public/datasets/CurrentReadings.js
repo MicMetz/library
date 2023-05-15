@@ -10,7 +10,7 @@ export const CurrentReadings =
                    author     : 'Nick Turse',
                    date       : '2013',
                    publisher  : 'Picador',
-                   cover      : './images/readings/KillAnythingThatMoves.jpg',
+                   cover      : 'public/images/readings/KillAnythingThatMoves.jpg',
                    description: [
                      'Based on classified documents and first-person interviews, a startling history of the American war on Vietnamese civilians. \n\n',
                      'The American Empire Project\n\n',

@@ -14,6 +14,21 @@ import { ContentBlock } from '../styles/StyledComponents.js'
 
 
 export default function Homepage () {
+  const [readings, setReadings] = useState()
+
+  useEffect(() => {
+    setReadings(CurrentReadings)
+  }, [])
+
+  const loadCurrentReading = () => {
+    let cur = {}
+    for (let i = 0; i < CurrentReadings.length; i++) {
+      cur.push(CurrentReadings[ i ])
+
+    }
+    setReadings(cur)
+  }
+
 
   function loadCurrentReadingDescription (book, index) {
     return (
@@ -59,21 +74,19 @@ export default function Homepage () {
         />
         <HomeMain >
 
-          {CurrentReadings.map((book, index) => {
+          {readings?.map((book, index) => {
+
             return (
-              <div key = {index}>
-                <ContentBlock >
+              <ContentBlock key = {index}>
 
-                  {loadCurrentReadingDescription(book, index)}
-
-                  <HomeArticleFeaturedCoverImage src = {book.cover} alt = {book.header.title} width = {300} height = {300}/>
-                  <HomeArticleFeaturedAtrribution >
-                    <ArticleTitle >{book.header.title}</ArticleTitle >
-                    <ArticleSubtitle >{book.header?.subtitle}</ArticleSubtitle >
-                    <ArticleByline >{book.author}</ArticleByline >
-                  </HomeArticleFeaturedAtrribution >
-                </ContentBlock >
-              </div >
+                {loadCurrentReadingDescription(book, index)}
+                <HomeArticleFeaturedAtrribution >
+                  <ArticleTitle >{book.header.title}</ArticleTitle >
+                  <ArticleSubtitle >{book.header.subtitle}</ArticleSubtitle >
+                  <ArticleByline >{book.author}</ArticleByline >
+                </HomeArticleFeaturedAtrribution >
+                <HomeArticleFeaturedCoverImage src = {book.cover} alt = {book.header.title} width = {300} height = {350}/>
+              </ContentBlock >
             )
           })}
         </HomeMain >

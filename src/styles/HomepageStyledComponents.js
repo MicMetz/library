@@ -16,7 +16,7 @@ export const HomeBody = styled.div`
 `
 
 export const HomeMain = styled.main`
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: space-around;
   //height: calc(100vh - 9rem);
@@ -92,13 +92,13 @@ export const HomeArticleFeaturedAtrribution = styled.section`
 export const HomeArticleFeaturedCoverImage = styled.img`
   display: inline-block;
   position: relative;
-  
+
   margin: 6rem auto;
 
   width: 100%;
   height: 100%;
   max-width: 35%;
-  
+
   max-height: calc(100vh - 18rem);
   border-radius: 2px 1px 1px 2px;
   mix-blend-mode: normal;

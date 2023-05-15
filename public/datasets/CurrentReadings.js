@@ -34,7 +34,7 @@ export const CurrentReadings = [
     author     : 'Nick Turse',
     date       : Date.parse('2013-01-15'),
     publisher  : 'Picador',
-    cover      : './images/KillAnythingThatMoves.jpg',
+    cover      : '.static/images/KillAnythingThatMoves.jpg',
     description: [
       'Based on classified documents and first-person interviews, a startling history of the American war on Vietnamese civilians. \n\n',
       'The American Empire Project \n\n',
@@ -86,7 +86,7 @@ export const CurrentReadings = [
     author     : 'Ryan Grim',
     date       : Date.parse('May 23, 2019'),
     publisher  : 'Strong Arm Press',
-    cover      : '/images/WeGotPeople.jpg',
+    cover      : '.static/images/WeGotPeople.jpg',
     description: [
       'Alexandria Ocasio-Cortez may seem like she came from nowhere, but the movement that propelled her to office – and to global political stardom – has been building for 30 years. \n\n' +
       'We’ve Got People is the story of that movement, which first exploded into public view with the largely forgotten presidential run of the Rev. Jesse Jackson, a campaign that came dangerously close to winning. \n\n' +

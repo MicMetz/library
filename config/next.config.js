@@ -18,12 +18,7 @@ const withMDX       = require('@next/mdx')({
 const nextConfig = async () => {
   const fs                  = require('fs')
   const path                = require('path')
-  const { promisify }       = require('util')
-  const copyFile            = promisify(fs.copyFile)
-  const withFonts           = require('next-fonts')
-  const images              = require('remark-images')
-  const emoji               = require('remark-emoji')
-  const withOptimizedImages = require('next-optimized-images')
+
   return {
     reactStrictMode: true,
     assetPrefix    : process.env.NODE_ENV === 'production' ? '/Library' : '',

@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from 'react'
 import DefaultLayout from '../components/layouts/DefaultLayout.js'
 import { SideBar } from '../components/SideBar.js'
 import { ArticleByline, ArticleSubtitle, ArticleTitle } from '../styles/ArticleStyledComponents.js'
-
 import { HomeArticleFeaturedAtrribution, HomeArticleFeaturedCoverImage, HomeArticleFeaturedDetails, HomeBody, HomeFooter, HomeMain } from '../styles/HomepageStyledComponents.js'
 import KillAnythingThatMovesCover from '/public/images/KillAnythingThatMoves.jpg'
 import { CurrentReadings } from '/public/datasets/CurrentReadings.js'
@@ -14,7 +13,9 @@ import { ContentBlock } from '../styles/StyledComponents.js'
 
 
 export default function Homepage () {
-  const [readings, setReadings] = useState()
+  const [readings, setReadings]             = useState()
+  const [scrollPosition, setScrollPosition] = useState(0)
+  const [activeFeature, setActiveFeature]   = useState(0)
 
   useEffect(() => {
     setReadings(CurrentReadings)
@@ -50,14 +51,6 @@ export default function Homepage () {
       </HomeArticleFeaturedDetails >
     )
   }
-
-
-
-  //
-  // useEffect(() => {
-  //   loadCurrentReading()
-  // }, [])
-
 
 
   return (

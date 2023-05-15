@@ -12,7 +12,7 @@ export default function Document () {
           rel = "stylesheet"
         />
       </Head >
-      <body className = "overflow-x-hidden antialiased">
+      <body>
         <Main />
         <NextScript />
       </body >

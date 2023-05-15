@@ -31,7 +31,7 @@ export const SidebarHeader = styled.header`
   line-height: 1;
   height: 2em;
   width: 25rem;
-  
+
   padding: 1.5rem 1rem;
   z-index: 100;
   align-items: center;
@@ -39,7 +39,7 @@ export const SidebarHeader = styled.header`
 
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 600;
     text-transform: uppercase;
     overflow: hidden;
@@ -50,7 +50,7 @@ export const SidebarHeader = styled.header`
   }
 
   h2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 400;
     text-transform: uppercase;
     overflow: hidden;
@@ -266,27 +266,3 @@ export const ArticleContainer = styled.article`
     word-spacing: 0.005em
   }
 `
-
-export const PageHeader = styled.header`
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 2rem auto;
-  padding: 0 2rem;
-  max-width: 30rem;
-  text-align: center;
-`
-
-export const PageHeaderTitle = styled.h1`
-  font-size: 3rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  margin: 0 auto;
-  -webkit-font-smoothing: subpixel-antialiased;
-  -moz-osx-font-smoothing: auto;
-`
-
-
-

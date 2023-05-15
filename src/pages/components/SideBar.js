@@ -10,7 +10,7 @@ function NavLink (props) {
 }
 
 
-export const SideBar = ({ title, chapters }) => {
+export const SideBar = ({ header, chapters }) => {
   const [menu, setMenu]                   = useState(false)
   const [activeChapter, setActiveChapter] = useState()
   const [scroll, setScrolling]            = useState(false)
@@ -37,7 +37,8 @@ export const SideBar = ({ title, chapters }) => {
       {menu ?
         <SideMenuOpened >
           <SideMenuHeader >
-            <h1 className = "text-6xl font-bold">{title}</h1 >
+            {header.title}
+            {/* <h1 className = "text-6xl font-bold">{title}</h1 > */}
           </SideMenuHeader >
           <ToC >
             {chapters?.map(({ id, chapterTitle }) => (
@@ -53,7 +54,8 @@ export const SideBar = ({ title, chapters }) => {
         :
         <SideMenuClosed >
           <SidebarHeader >
-            <h1 className = "text-6xl font-bold">{title}</h1 >
+            <h1 >{header.title}</h1 >
+            {/* <h2 >{header?.subtitle}</h2 > */}
           </SidebarHeader >
         </SideMenuClosed >
       }

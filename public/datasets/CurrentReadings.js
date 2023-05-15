@@ -3,12 +3,14 @@ export const CurrentReadings =
                  0: {
 
                    id         : 1,
-                   title      : 'Kill Anything That Moves',
-                   subtitle   : 'The Real American War in Vietnam',
+                   header     : {
+                     title   : 'Kill Anything That Moves',
+                     subtitle: 'The Real American War in Vietnam'
+                   },
                    author     : 'Nick Turse',
                    date       : '2013',
                    publisher  : 'Picador',
-                   cover      : './images/KillAnythingThatMoves.jpg',
+                   cover      : './images/readings/KillAnythingThatMoves.jpg',
                    description: [
                      'Based on classified documents and first-person interviews, a startling history of the American war on Vietnamese civilians. \n\n',
                      'The American Empire Project\n\n',

@@ -1,13 +1,13 @@
+import Head from 'next/head'
 import Link from 'next/link'
 import React, { useEffect, useRef, useState } from 'react'
 import { Layout } from '../components/Layout.js'
 import { SideBar } from '../components/SideBar.js'
 import { ArticleByline, ArticleSubtitle, ArticleTitle } from '../../styles/ArticleStyledComponents.js'
-import { PageHeader, PageHeaderTitle } from '../../styles/StyledComponents.js'
-import { HomeArticleFeatured, HomeArticleFeaturedAtrribution, HomeArticleFeaturedCover, HomeArticleFeaturedCoverImage, HomeArticleFeaturedDetails, HomeBody, HomeFooter, HomeMain } from '../../styles/HomepageStyledComponents.js'
+import { HomeArticleFeaturedAtrribution, HomeArticleFeaturedCoverImage, HomeArticleFeaturedDetails, HomeBody, HomeFooter, HomeMain } from '../../styles/HomepageStyledComponents.js'
 
 import Image from 'next/image'
-import KillAnythingThatMovesCover from '/public/images/KillAnythingThatMoves.jpg'
+import KillAnythingThatMovesCover from '/public/images/readings/KillAnythingThatMoves.jpg'
 import { CurrentReadings } from '/public/datasets/CurrentReadings.js'
 
 
@@ -17,11 +17,15 @@ export default function Homepage () {
 
   return (
     <Layout >
+      <Head >
+        <title >Home</title >
+        <meta name = "description" content = "initial-scale=1.0, width=device-width"/>
+      </Head >
+
       <HomeBody >
         <SideBar
-          title = {CurrentReadings[ 0 ].title}
+          header = {CurrentReadings[ 0 ].header}
           chapters = {CurrentReadings[ 0 ].chapters}
-
         />
         <HomeMain >
 
@@ -45,8 +49,8 @@ export default function Homepage () {
 
           <HomeArticleFeaturedAtrribution >
 
-            <ArticleTitle >{CurrentReadings[ 0 ].title}</ArticleTitle >
-            <ArticleSubtitle >{CurrentReadings[ 0 ].subtitle}</ArticleSubtitle >
+            <ArticleTitle >{CurrentReadings[ 0 ].header.title}</ArticleTitle >
+            <ArticleSubtitle >{CurrentReadings[ 0 ].header?.subtitle}</ArticleSubtitle >
             <ArticleByline >{CurrentReadings[ 0 ].author}</ArticleByline >
 
           </HomeArticleFeaturedAtrribution >

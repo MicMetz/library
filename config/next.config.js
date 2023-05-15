@@ -31,6 +31,7 @@ const nextConfig = async () => {
     baseUrl        : process.env.NODE_ENV === 'production' ? '/Library' : '',
     url            : process.env.NODE_ENV === 'production' ? '/Library' : '',
     hostnames      : ['micmetz.github.io', 'localhost', 'raw.githubusercontent.com', 'github.com'],
+    exclude        : path.resolve(__dirname, 'src/pages/articles/**/*'),
     types          : ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'ico', 'bmp', 'tiff', 'glb', 'gltf'],
     loader         : 'file-loader',
     options        : {

@@ -11,6 +11,7 @@ import { SideBar } from '../../components/SideBar.js'
 
 export default function ArticleMap () {
   return (
+    <>
     <Layout >
       <Head >
         <title >Article Map</title >
@@ -25,5 +26,6 @@ export default function ArticleMap () {
 
       </ArticleMapMain >
     </Layout >
+    </>
   )
 }

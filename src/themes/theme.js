@@ -7,7 +7,7 @@ import GlobalStyles from '../styles/globals.js'
 
 
 const Theme = ({ children }) => (
-  <ThemeProvider theme = {theme}>
+  <ThemeProvider theme = {defaultTheme}>
     <GlobalStyles />
     {children}
   </ThemeProvider >

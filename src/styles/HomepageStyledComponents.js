@@ -81,6 +81,7 @@ export const HomeArticleFeaturedAtrribution = styled.section`
   flex-direction: column;
   align-items: flex-start;
   justify-content: left;
+  margin-top: 6rem;
 
   position: relative;
   max-width: calc(100vw - 80vw);

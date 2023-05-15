@@ -65,22 +65,6 @@ export default function Homepage () {
                 <ContentBlock >
 
                   {loadCurrentReadingDescription(book, index)}
-                  {/* <HomeArticleFeaturedDetails > */}
-                  {/*   {book.description.map((paragraph, i) => { */}
-                  {/*       return ( */}
-                  {/*         <p key = {i}> */}
-                  {/*           {paragraph.split('\n').map((item, key) => { */}
-                  {/*             return ( */}
-                  {/*               <span key = {key}> */}
-                  {/*                 {item} */}
-                  {/*                 <br /> */}
-                  {/*               </span > */}
-                  {/*             ) */}
-                  {/*           })}</p > */}
-                  {/*       ) */}
-                  {/*     } */}
-                  {/*   )} */}
-                  {/* </HomeArticleFeaturedDetails > */}
 
                   <HomeArticleFeaturedCoverImage src = {book.cover} alt = {book.header.title} width = {300} height = {350}/>
                   <HomeArticleFeaturedAtrribution >

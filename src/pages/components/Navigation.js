@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+
 import Link from 'next/link'
 import { NavigationBar, NavigationList, NavigationListItem } from '../../styles/NavigationStyledComponents.js'
 
@@ -30,6 +31,7 @@ export const Navigation = () => {
   // }, [active])
 
   return (
+    <>
     <NavigationBar >
       <NavigationList >
         <NavigationListItem active = {active === 'Home'}>
@@ -54,6 +56,7 @@ export const Navigation = () => {
         </NavigationListItem >
       </NavigationList >
     </NavigationBar >
+    </>
   )
 }
 

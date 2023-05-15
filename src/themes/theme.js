@@ -1,6 +1,6 @@
 import { ThemeProvider } from 'styled-components'
 
-import defaultTheme from '../themes/defaultTheme.js'
+import { defaultTheme } from './defaultTheme.js'
 import GlobalStyles from '../styles/globals.js'
 
 

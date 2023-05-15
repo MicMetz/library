@@ -32,6 +32,7 @@ export const SideBar = ({ header, chapters }) => {
   }, [scrollTop])
 
   return (
+    <>
     <SidebarMenuButtonOverlay onClick = {() => setMenu(!menu)}>
       {menu ?
         <SideMenuOpened >
@@ -66,5 +67,6 @@ export const SideBar = ({ header, chapters }) => {
         </SideMenuClosed >
       }
     </SidebarMenuButtonOverlay >
+      </>
   )
 }

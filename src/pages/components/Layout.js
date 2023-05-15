@@ -1,3 +1,4 @@
+import React from 'react'
 import { Navigation } from './Navigation.js'
 import { SideBar } from './SideBar.js'
 

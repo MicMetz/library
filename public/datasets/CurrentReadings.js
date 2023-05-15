@@ -24,8 +24,8 @@
  */
 
 
-export const CurrentReadings = {
-  0: {
+export const CurrentReadings = [
+  {
     id         : 0,
     header     : {
       title   : 'Kill Anything That Moves',
@@ -76,24 +76,6 @@ export const CurrentReadings = {
         pages       : '136-168'
       }
     ]
-  },
-  1: {
-    id         : 1,
-    header     : {
-      title   : 'We\'ve Got People',
-      subtitle: 'From Jesse Jackson to AOC, the End of Big Money and the Rise of a Movement'
-    },
-    author     : 'Ryan Grim',
-    date       : Date.parse('May 23, 2019'),
-    publisher  : 'Strong Arm Press',
-    cover      : '/images/WeGotPeople.jpg',
-    description: [
-      'Alexandria Ocasio-Cortez may seem like she came from nowhere, but the movement that propelled her to office – and to global political stardom – has been building for 30 years. \n\n' +
-      'We’ve Got People is the story of that movement, which first exploded into public view with the largely forgotten presidential run of the Rev. Jesse Jackson, a campaign that came dangerously close to winning. \n\n' +
-      'With the party and the nation at a crossroads, this timely and original book offers new insight into how we’ve gotten where we are – and where we\'re headed. \n\n'
-    ],
-    link       : 'https://www.amazon.com/Weve-Got-People-Jackson-Movement/dp/1947492381',
-    chapters   : []
-  },
-}
+  }
+]
 

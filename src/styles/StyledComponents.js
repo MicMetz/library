@@ -233,6 +233,23 @@ export const SideMenuHeaderOpen = styled.header`
   -moz-osx-font-smoothing: auto;
 `
 
+export const ContentBlock = styled.div`
+  display: flex;
+  height: fit-content;
+  position: relative;
+  width: 100%;
+
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+
+`
+
 export const ArticleContainer = styled.article`
   margin: 2rem auto;
   padding: 0 2rem;

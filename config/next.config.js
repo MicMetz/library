@@ -1,8 +1,8 @@
 const { promisify } = require('util')
 const fs            = require('fs')
 const withMDX       = require('@next/mdx')({
-  extension: /\.mdx?$/,
-  options  : {
+  extension     : /\.mdx?$/,
+  options       : {
     // If you use remark-gfm, you'll need to use next.config.mjs
     // as the package is ESM only
     // https://github.com/remarkjs/remark-gfm#install
@@ -11,6 +11,7 @@ const withMDX       = require('@next/mdx')({
     // If you use `MDXProvider`, uncomment the following line.
     // providerImportSource: "@mdx-js/react",
   },
+  pageExtensions: ['js', 'jsx', 'md', 'mdx']
 })
 
 /** @type {import('next').NextConfig} */

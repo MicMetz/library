@@ -1,7 +1,7 @@
 import React from 'react'
 import Article from '../components/Article.js'
-import SearchLayout from '../components/layouts/SearchLayout'
-import ArticleListing from '../components/ArticleListing'
+import SearchLayout from '../components/layouts/SearchLayout.js'
+import ArticleListing from '../components/ArticleListing.js'
 
 
 

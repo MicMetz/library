@@ -11,16 +11,20 @@ export const HomeBody = styled.div`
   line-height: 24px;
   //background-size: 100px 100px;
   background-blend-mode: multiply;
+  min-height: 100vh;
+  max-width: 100vw;
 `
 
 export const HomeMain = styled.main`
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: calc(100vh - 9rem);
+  //align-items: center;
+  //justify-content: space-around;
+  //height: calc(100vh - 9rem);
   margin: 0 auto;
-  max-width: 95vw;
+  //max-width: 99vw;
   width: 100%;
+  height: 100%;
+  
 `
 
 export const HomeBlockQuote = styled.blockquote`
@@ -28,11 +32,11 @@ export const HomeBlockQuote = styled.blockquote`
   padding: 0 1rem;
 
   &first-child {
-    order: 1;
+    //order: 1;
   }
 
   &last-child {
-    order: 3;
+    //order: 3;
   }
 `
 
@@ -52,18 +56,19 @@ export const HomeFooter = styled.footer`
 `
 
 export const HomeArticleFeaturedDetails = styled.section`
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   align-items: flex-start;
   justify-content: left;
   position: relative;
-  width: 100%;
-  height: calc(100vh - 9rem);
+  max-width: 30%;
+  //height: calc(100vh - 9rem);
   order: 1;
   padding: 0 2rem;
   margin-top: 6rem;
   text-align: left;
-  top: calc(10% - 3rem);
+  //top: calc(10% - 3rem);
+  
 
   p {
     font-size: 1.2em;
@@ -72,22 +77,31 @@ export const HomeArticleFeaturedDetails = styled.section`
 `
 
 export const HomeArticleFeaturedAtrribution = styled.section`
+  display: inline-block;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: left;
+
   position: relative;
-  width: calc(40% + 4rem);
+  max-width: calc(100vw - 80vw);
+  top: calc(0 + 10rem);
   padding: 0 2rem;
   order: 3;
 `
 
 export const HomeArticleFeaturedCoverImage = styled.img`
-  display: block;
-  margin: 4rem;
+  display: inline-block;
+  margin: 1rem auto;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   width: 100%;
   height: 100%;
-  max-width: calc(100vw - 20rem);
-  max-height: calc(100vh - 15rem);
+  max-width: 35%;
+  
+  max-height: calc(100vh - 9rem);
   border-radius: 2px 1px 1px 2px;
   mix-blend-mode: normal;
   box-shadow: 0 0 10px 0 rgba(40, 42, 47, 0.1), -10px 10px 24px 10px rgba(40, 42, 47, 0.05), -30px 40px 30px 0 rgba(40, 42, 47, 0.1), -10px 10px 10px -5px rgba(40, 42, 47, 0.1);

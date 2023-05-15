@@ -1,18 +1,49 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import React, { useEffect, useRef, useState } from 'react'
-import DefaultLayout  from '../components/layouts/DefaultLayout.js'
+import DefaultLayout from '../components/layouts/DefaultLayout.js'
 import { SideBar } from '../components/SideBar.js'
 import { ArticleByline, ArticleSubtitle, ArticleTitle } from '../styles/ArticleStyledComponents.js'
 
 import { HomeArticleFeaturedAtrribution, HomeArticleFeaturedCoverImage, HomeArticleFeaturedDetails, HomeBody, HomeFooter, HomeMain } from '../styles/HomepageStyledComponents.js'
 import KillAnythingThatMovesCover from '/public/images/KillAnythingThatMoves.jpg'
 import { CurrentReadings } from '/public/datasets/CurrentReadings.js'
+import { ContentBlock } from '../styles/StyledComponents.js'
 
 
 
 
 export default function Homepage () {
+
+  function loadCurrentReadingDescription (book, index) {
+    return (
+      <HomeArticleFeaturedDetails key = {index}>
+        {book.description.map((paragraph, i) => {
+            return (
+              <p key = {i}>
+                {paragraph.split('\n').map((item, key) => {
+                  return (
+                    <span key = {key}>
+                      {item}
+                      <br />
+                    </span >
+                  )
+                })}</p >
+            )
+          }
+        )}
+      </HomeArticleFeaturedDetails >
+    )
+  }
+
+
+
+  //
+  // useEffect(() => {
+  //   loadCurrentReading()
+  // }, [])
+
+
 
   return (
     <DefaultLayout >
@@ -28,41 +59,43 @@ export default function Homepage () {
         />
         <HomeMain >
 
+          {CurrentReadings.map((book, index) => {
+            return (
+              <div key = {index}>
+                <ContentBlock >
 
-          <HomeArticleFeaturedDetails >
-            {CurrentReadings[ 0 ].description.map((paragraph, index) => {
-                return (
-                  <p key = {index}>{paragraph.split('\n').map((item, key) => {
-                    return (
-                      <span key = {key}>
-                        {item}
-                        <br />
-                      </span >
-                    )
-                  })}</p >
-                )
-              }
-            )}
-          </HomeArticleFeaturedDetails >
+                  {loadCurrentReadingDescription(book, index)}
+                  {/* <HomeArticleFeaturedDetails > */}
+                  {/*   {book.description.map((paragraph, i) => { */}
+                  {/*       return ( */}
+                  {/*         <p key = {i}> */}
+                  {/*           {paragraph.split('\n').map((item, key) => { */}
+                  {/*             return ( */}
+                  {/*               <span key = {key}> */}
+                  {/*                 {item} */}
+                  {/*                 <br /> */}
+                  {/*               </span > */}
+                  {/*             ) */}
+                  {/*           })}</p > */}
+                  {/*       ) */}
+                  {/*     } */}
+                  {/*   )} */}
+                  {/* </HomeArticleFeaturedDetails > */}
 
-
-          <HomeArticleFeaturedAtrribution >
-
-            <ArticleTitle >{CurrentReadings[ 0 ].header.title}</ArticleTitle >
-            <ArticleSubtitle >{CurrentReadings[ 0 ].header?.subtitle}</ArticleSubtitle >
-            <ArticleByline >{CurrentReadings[ 0 ].author}</ArticleByline >
-
-          </HomeArticleFeaturedAtrribution >
-
-          <HomeArticleFeaturedCoverImage src = {CurrentReadings[ 0 ].cover} alt = {CurrentReadings[ 0 ].header.title} width = {300} height = {350}/>
-
+                  <HomeArticleFeaturedCoverImage src = {book.cover} alt = {book.header.title} width = {300} height = {350}/>
+                  <HomeArticleFeaturedAtrribution >
+                    <ArticleTitle >{book.header.title}</ArticleTitle >
+                    <ArticleSubtitle >{book.header?.subtitle}</ArticleSubtitle >
+                    <ArticleByline >{book.author}</ArticleByline >
+                  </HomeArticleFeaturedAtrribution >
+                </ContentBlock >
+              </div >
+            )
+          })}
         </HomeMain >
-
-        <HomeFooter >
-
-        </HomeFooter >
       </HomeBody >
     </DefaultLayout >
+
   )
 }
 

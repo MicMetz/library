@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import '../styles/globals.css'
 import { useRouter } from 'next/router'
-
 import { Navigation } from '../components/Navigation.js'
 import Theme from '../themes/theme.js'
+
 
 
 

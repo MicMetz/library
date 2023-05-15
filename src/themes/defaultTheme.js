@@ -10,7 +10,6 @@ export default {
     background : '#1A1E23FF',
     background1: '#d6d8de',
     primary1   : '#d3743a',
-    // primary2   :
     accent1    : 'hsl(34.9,98.6%,72.9%)',
     button     : '#FF1847FF',
     background2: 'hsl(232.7,27.3%,23.7%)',

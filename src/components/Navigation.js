@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import Link from 'next/link'
-import { NavigationBar, NavigationList, NavigationListItem } from '../../styles/NavigationStyledComponents.js'
+import { NavigationBar, NavigationList, NavigationListItem } from '../styles/NavigationStyledComponents.js'
 
 
 

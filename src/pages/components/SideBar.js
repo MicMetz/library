@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { SidebarHeader, SidebarMenuButtonOverlay, ToC, ToCItem, SideMenuClosed, SideMenuOpened, SideMenuHeader } from '../../styles/StyledComponents.js'
+import { SidebarHeader, SidebarMenuButtonOverlay, ToC, ToCItem, SideMenuClosed, SideMenuOpened, SideMenuHeader, ToCHeader } from '../../styles/StyledComponents.js'
 
 
 
@@ -37,10 +37,13 @@ export const SideBar = ({ header, chapters }) => {
       {menu ?
         <SideMenuOpened >
           <SideMenuHeader >
-            {header.title}
-            {/* <h1 className = "text-6xl font-bold">{title}</h1 > */}
+            <h1 >{header.title}</h1 >
+            {/* <h2 >{header?.subtitle}</h2 > */}
           </SideMenuHeader >
           <ToC >
+            <ToCHeader>
+              Chapter List
+            </ToCHeader >
             {chapters?.map(({ id, chapterTitle }) => (
               <ToCItem key = {id} active = {activeChapter === id}>
                 <a href = {`#${id}`}>

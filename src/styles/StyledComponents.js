@@ -3,8 +3,6 @@ import styled from 'styled-components'
 
 
 
-
-
 export const SideMenuClosed = styled.div`
   padding: 1.5rem 1rem;
   background-color: white;
@@ -29,8 +27,8 @@ export const SidebarHeader = styled.header`
   left: 4rem;
   top: calc(50vh - 12rem);
   line-height: 1;
-  height: 2em;
   width: 25rem;
+  height: 2em;
 
   padding: 1.5rem 1rem;
   z-index: 100;
@@ -81,23 +79,23 @@ export const SideMenuHeader = styled(SidebarHeader)`
   left: 0;
   top: 0;
   line-height: 1;
-  width: 100%;
-  height: 3rem;
+  width: fit-content;
+  height: fit-content;
   margin: 0 1em;
-  padding: 0 1rem;
   display: flex;
-  align-items: center;
+  //align-items: center;
+  padding: 1.5rem 1rem;
   justify-content: space-between;
-  z-index: 100;
 
   h1 {
-    font-size: 1.8rem;
+    display: block;
+    font-size: 2rem;
     font-weight: 600;
     text-transform: uppercase;
-
   }
 
   h2 {
+    display: block;
     font-size: 1.4rem;
     font-weight: 400;
     text-transform: uppercase;
@@ -121,6 +119,7 @@ export const SidebarMenuButtonOverlay = styled.button`
 
 export const ToC = styled.ul`
   list-style: none;
+  width: 100%;
 
   li {
     margin: 2.5rem 1rem;
@@ -140,6 +139,66 @@ export const ToC = styled.ul`
     font-size: 0.75rem;
     font-family: "PitchWeb", Courier, monospace;
     color: rgba(0, 0, 0, 0.5);
+  }
+`
+
+export const ToCHeader = styled.span`
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: fit-content;
+  padding: 2rem 1rem;
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: underline;
+  color: #d3743a;
+`
+
+export const ToCItem = styled.li`
+  margin: 5rem 1rem;
+  padding: 1.5rem 0;
+  position: relative;
+
+  a {
+    font-size: 1.125rem;
+    background-image: none;
+  }
+
+  a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.125rem;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    background-color: #d3743a;
+    transform-origin: bottom left;
+    transition: transform 0.25s ease-out;
+  }
+
+  a:hover {
+    //text-decoration: underline;
+    //color: #d3743a;
+  }
+
+  a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  a span {
+    display: block;
+    font-size: 0.75rem;
+    color: transparent;
   }
 `
 
@@ -172,27 +231,6 @@ export const SideMenuHeaderOpen = styled.header`
   text-transform: uppercase;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
-`
-
-export const ToCItem = styled.li`
-  margin: 2.5rem 1rem;
-
-
-  a {
-    font-size: 1.125rem;
-    background-image: none;
-  }
-
-  a:hover {
-
-  }
-
-  a span {
-    display: block;
-    font-size: 0.75rem;
-    font-family: "PitchWeb", Courier, monospace;
-    color: rgba(0, 0, 0, 0.5);
-  }
 `
 
 export const ArticleContainer = styled.article`

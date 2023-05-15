@@ -10,9 +10,6 @@ import { Heading, Text, Code } from './MDXComponents.js'
 
 
 
-const ResponsiveImage = (props) => (
-  <Image alt = {props.alt} layout = "responsive" {...props} />
-)
 
 const components = {
   h1: (props) => <Heading level = {1} {...props} />,
@@ -30,7 +27,6 @@ const components = {
   code  : (props) => <Code {...props} />,
   a     : (props) => <Text type = "a" {...props} />,
 
-  Image: (props) => <ResponsiveImage {...props} />,
 
   pre: (props) => <pre {...props} />,
 }

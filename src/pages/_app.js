@@ -4,7 +4,6 @@ import { useRouter } from 'next/router'
 
 import { Navigation } from '../components/Navigation.js'
 import Theme from '../themes/theme.js'
-import { renderLayout } from '../utilities/render-layout.js'
 
 
 

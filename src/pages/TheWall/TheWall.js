@@ -5,7 +5,7 @@ import { NavigationBar, NavigationList, NavigationListItem } from '../../styles/
 
 
 
-export default function Wall () {
+export default function TheWall () {
   return (
     <div >
       <h1 >Wall of Misery</h1 >

@@ -17,14 +17,14 @@ export const HomeBody = styled.div`
 
 export const HomeMain = styled.main`
   display: flex;
-  //align-items: center;
-  //justify-content: space-around;
+  align-items: center;
+  justify-content: space-around;
   //height: calc(100vh - 9rem);
   margin: 0 auto;
   //max-width: 99vw;
   width: 100%;
   height: 100%;
-  
+
 `
 
 export const HomeBlockQuote = styled.blockquote`
@@ -57,18 +57,16 @@ export const HomeFooter = styled.footer`
 
 export const HomeArticleFeaturedDetails = styled.section`
   display: inline-block;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: left;
   position: relative;
-  max-width: 30%;
-  //height: calc(100vh - 9rem);
+
+  max-width: 40%;
   order: 1;
   padding: 0 2rem;
-  margin-top: 6rem;
   text-align: left;
-  //top: calc(10% - 3rem);
-  
+  margin-top: 8rem;
+
+  width: 100%;
+  height: 100%;
 
   p {
     font-size: 1.2em;
@@ -79,30 +77,29 @@ export const HomeArticleFeaturedDetails = styled.section`
 export const HomeArticleFeaturedAtrribution = styled.section`
   display: inline-block;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: left;
+
+  width: 100%;
+  height: 100%;
   margin-top: 6rem;
 
   position: relative;
   max-width: calc(100vw - 80vw);
-  top: calc(0 + 10rem);
+  //top: calc(0 + 10rem);
   padding: 0 2rem;
   order: 3;
 `
 
 export const HomeArticleFeaturedCoverImage = styled.img`
   display: inline-block;
-  margin: 1rem auto;
   position: relative;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  
+  margin: 6rem auto;
 
   width: 100%;
   height: 100%;
   max-width: 35%;
   
-  max-height: calc(100vh - 9rem);
+  max-height: calc(100vh - 18rem);
   border-radius: 2px 1px 1px 2px;
   mix-blend-mode: normal;
   box-shadow: 0 0 10px 0 rgba(40, 42, 47, 0.1), -10px 10px 24px 10px rgba(40, 42, 47, 0.05), -30px 40px 30px 0 rgba(40, 42, 47, 0.1), -10px 10px 10px -5px rgba(40, 42, 47, 0.1);

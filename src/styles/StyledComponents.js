@@ -235,8 +235,8 @@ export const SideMenuHeaderOpen = styled.header`
 
 export const ContentBlock = styled.div`
   display: flex;
-  height: fit-content;
   position: relative;
+  height: 100%;
   width: 100%;
 
 

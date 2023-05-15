@@ -66,7 +66,7 @@ export default function Homepage () {
 
                   {loadCurrentReadingDescription(book, index)}
 
-                  <HomeArticleFeaturedCoverImage src = {book.cover} alt = {book.header.title} width = {300} height = {350}/>
+                  <HomeArticleFeaturedCoverImage src = {book.cover} alt = {book.header.title} width = {300} height = {300}/>
                   <HomeArticleFeaturedAtrribution >
                     <ArticleTitle >{book.header.title}</ArticleTitle >
                     <ArticleSubtitle >{book.header?.subtitle}</ArticleSubtitle >

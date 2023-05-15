@@ -1,7 +1,5 @@
 import Link from 'next/link'
-import { serialize } from 'next-mdx-remote/serialize'
-import { MDXRemote } from 'next-mdx-remote'
-import { MDXProvider } from '@mdx-js/react'
+
 import { Page, PageBody, PageFooter, PageHeader, PageHeaderTitle } from '../styles/PageStyledComponents.js'
 import { ArticleContainer } from '../styles/StyledComponents.js'
 import ArticleLayout from './layouts/ArticleLayout.js'
@@ -49,21 +47,7 @@ export default function Article ({ article }) {
               <PageHeaderTitle >{title}</PageHeaderTitle >
             </PageHeader >
             <PageBody >
-              <MDXProvider components = {components}>
-                {content.map((paragraph, index) => {
-                    return (
-                      <p key = {index}>{paragraph.split('\n').map((item, key) => {
-                        return (
-                          <span key = {key}>
-                            {item}
-                            <br />
-                          </span >
-                        )
-                      })}</p >
-                    )
-                  }
-                )}
-              </MDXProvider >
+
             </PageBody >
             <PageFooter >
               <Link href = {`/articles/${id}`} passHref>

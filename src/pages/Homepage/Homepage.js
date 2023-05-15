@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 import { Layout } from '../../components/Layout.js'
 import { SideBar } from '../../components/SideBar.js'
@@ -55,7 +54,7 @@ export default function Homepage () {
 
           </HomeArticleFeaturedAtrribution >
 
-          <HomeArticleFeaturedCoverImage src = {CurrentReadings[ 0 ].cover} alt = {CurrentReadings[ 0 ].title} width = {300} height = {350}/>
+          <HomeArticleFeaturedCoverImage src = {CurrentReadings[ 0 ].cover} alt = {CurrentReadings[ 0 ].header.title} width = {300} height = {350}/>
 
         </HomeMain >
 

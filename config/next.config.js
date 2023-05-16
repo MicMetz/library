@@ -17,10 +17,10 @@ const nextConfig = async () => {
 
   return {
     reactStrictMode: true,
-    assetPrefix    : process.env.NODE_ENV === 'production' ? '/Library' : '',
-    basePath       : process.env.NODE_ENV === 'production' ? '/Library' : '',
-    baseUrl        : process.env.NODE_ENV === 'production' ? '/Library' : '',
-    url            : process.env.NODE_ENV === 'production' ? '/Library' : '',
+    assetPrefix    : process.env.NODE_ENV === 'production' ? '/library' : '',
+    basePath       : process.env.NODE_ENV === 'production' ? '/library' : '',
+    baseUrl        : process.env.NODE_ENV === 'production' ? '/library' : '',
+    url            : process.env.NODE_ENV === 'production' ? '/library' : '',
     hostnames      : ['micmetz.github.io', 'localhost', 'raw.githubusercontent.com', 'github.com'],
     types          : ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'ico', 'bmp', 'tiff', 'glb', 'gltf'],
     loader         : 'file-loader',

@@ -44,7 +44,7 @@ export const HomeHeader = styled.header`
   font-family: 'PitchWeb', Courier, monospace
 `
 
-export const HomeFooter = styled.footer`
+export const HomeArticleFeaturedFooter = styled.footer`
   max-width: 100%;
   margin: 0 auto;
   border-top: 1px solid rgba(0, 0, 0, 0.1);

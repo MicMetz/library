@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import DefaultLayout from '../components/layouts/DefaultLayout.js'
 import { SideBar } from '../components/SideBar.js'
 import { ArticleByline, ArticleSubtitle, ArticleTitle } from '../styles/ArticleStyledComponents.js'
-import { HomeArticleFeaturedAtrribution, HomeArticleFeaturedCoverImage, HomeArticleFeaturedDetails, HomeBody, HomeFooter, HomeMain } from '../styles/HomepageStyledComponents.js'
+import { HomeArticleFeaturedAtrribution, HomeArticleFeaturedCoverImage, HomeArticleFeaturedDetails, HomeBody, HomeArticleFeaturedFooter, HomeMain } from '../styles/HomepageStyledComponents.js'
 import KillAnythingThatMovesCover from '/public/images/KillAnythingThatMoves.jpg'
 import { CurrentReadings } from '/public/datasets/CurrentReadings.js'
 import { ContentBlock } from '../styles/StyledComponents.js'
@@ -79,6 +79,11 @@ export default function Homepage () {
                   <ArticleByline >{book.author}</ArticleByline >
                 </HomeArticleFeaturedAtrribution >
                 <HomeArticleFeaturedCoverImage src = {book.cover} alt = {book.header.title} width = {300} height = {350}/>
+                <HomeArticleFeaturedFooter >
+                  <Link href = {book.link} >
+                    <a >Read More</a >
+                  </Link >
+                </HomeArticleFeaturedFooter >
               </ContentBlock >
             )
           })}

@@ -335,7 +335,7 @@ export const SectionTitle = styled.h2`
   max-width: 100%;
   background: linear-gradient(121.57deg, #171748 18.77%, rgba(0, 0, 0, 0.75) 60.15%);
   -webkit-background-clip: text;
-  margin-bottom: 1rem;
+  margin-top: 4rem;
   padding: ${(props) => props.main ? '58px 0 16px' : '0'};
 
   @media ${props => props.theme.breakpoints.md} {

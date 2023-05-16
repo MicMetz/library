@@ -65,10 +65,9 @@ export default function Homepage () {
           header = {CurrentReadings[ 0 ].header}
           chapters = {CurrentReadings[ 0 ].chapters}
         />
-        <SectionTitle main>Current Reading</SectionTitle >
-
         <HomeMain >
 
+          <SectionTitle main >Current Reading</SectionTitle >
           {readings?.map((book, index) => {
 
             return (

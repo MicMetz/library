@@ -8,6 +8,7 @@ export const Readings = [
     publisher: 'Zed Books',
     cover    : './images/KillingHope.jpg',
     link     : 'https://www.cia.gov/library/abbottabad-compound/13/130AEF1531746AAD6AC03EF59F91E1A1_Killing_Hope_Blum_William.pdf',
+    linkGroup: [],
     chapters : [
       {
         chapter     : 1,
@@ -74,6 +75,7 @@ export const Readings = [
     publisher: 'Zed Books',
     cover    : './images/KillingHope.jpg',
     link     : 'https://www.cia.gov/library/abbottabad-compound/13/130AEF1531746AAD6AC03EF59F91E1A1_Killing_Hope_Blum_William.pdf',
+    linkGroup: [],
     chapters : [
       {
         chapter     : 35,
@@ -102,6 +104,7 @@ export const Readings = [
     publisher: 'PublicAffairs',
     cover    : './images/TheJakartaMethod.jpg',
     link     : 'https://www.hachettebookgroup.com/titles/vincent-bevins/the-jakarta-method/9781541724013/?lens=publicaffairs',
+    linkGroup: [],
     chapters : []
   },
   {
@@ -115,6 +118,7 @@ export const Readings = [
     publisher: 'The Bodley Head London',
     cover    : './images/ManufacturingConsent.jpg',
     link     : 'https://edisciplinas.usp.br/pluginfile.php/5537300/mod_resource/content/1/Noam%20Chomsky_%20Edward%20S.%20Herman%20-%20Manufacturing%20Consent_%20The%20Political%20Economy%20of%20the%20Mass%20Media-Bodley%20Head%20%282008%29.pdf',
+    linkGroup: [],
     chapters : []
   },
   {
@@ -136,6 +140,7 @@ export const Readings = [
       'Thousands of Vietnam books later, Kill Anything That Moves, devastating and definitive, finally brings us face-to-face with the truth of a war that haunts Americans to this day. \n\n'
     ],
     link       : 'http://www.amazon.com/Kill-Anything-That-Moves-American/dp/1250045061/ref=sr_1_1?ie=UTF8&qid=1452120004&sr=8-1&keywords=kill+anything+that+moves',
+    linkGroup  : [],
     chapters   : [
       {
         chapter     : 1,
@@ -185,6 +190,7 @@ export const Readings = [
       'With the party and the nation at a crossroads, this timely and original book offers new insight into how we’ve gotten where we are – and where we\'re headed. \n\n'
     ],
     link       : 'https://www.amazon.com/Weve-Got-People-Jackson-Movement/dp/1947492381',
+    linkGroup  : [],
     chapters   : []
   },
   {
@@ -204,6 +210,7 @@ export const Readings = [
       'The conference was also attended by a slew of strange societies, many of which were fronts, and behind them was the CIA. The CIA was in favor of the end of the British Empire but a pan-African independence movement, one susceptible to Soviet entreaties, looked like a security threat. Through original research and unparalleled insight, Susan Williams reveals how the CIA\'s baleful influence was felt from South Africa to the Congo as the agency prepared to move in as Africa\'s colonizers moved out. \n\n'
     ],
     link       : 'https://www.hachettebookgroup.com/titles/susan-williams/white-malice/9781541768284/?lens=publicaffairs',
+    linkGroup  : [],
     chapters   : [
       {
         chapter     : 1,

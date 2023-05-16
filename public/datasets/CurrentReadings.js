@@ -44,6 +44,7 @@ export const CurrentReadings = [
       'Thousands of Vietnam books later, Kill Anything That Moves, devastating and definitive, finally brings us face-to-face with the truth of a war that haunts Americans to this day. \n\n'
     ],
     link       : 'http://www.amazon.com/Kill-Anything-That-Moves-American/dp/1250045061/ref=sr_1_1?ie=UTF8&qid=1452120004&sr=8-1&keywords=kill+anything+that+moves',
+    linkGroup: [],
     chapters   : [
       {
         chapter     : 1,
@@ -92,7 +93,8 @@ export const CurrentReadings = [
       'We’ve Got People is the story of that movement, which first exploded into public view with the largely forgotten presidential run of the Rev. Jesse Jackson, a campaign that came dangerously close to winning. \n\n' +
       'With the party and the nation at a crossroads, this timely and original book offers new insight into how we’ve gotten where we are – and where we\'re headed. \n\n'
     ],
-    link       : 'https://www.amazon.com/Weve-Got-People-Jackson-Movement/dp/1947492381',
+    link       : 'https://www.c-span.org/video/?462677-1/weve-people',
+    linkGroup  : [],
     chapters   : []
   },
   {
@@ -112,6 +114,7 @@ export const CurrentReadings = [
       'The conference was also attended by a slew of strange societies, many of which were fronts, and behind them was the CIA. The CIA was in favor of the end of the British Empire but a pan-African independence movement, one susceptible to Soviet entreaties, looked like a security threat. Through original research and unparalleled insight, Susan Williams reveals how the CIA\'s baleful influence was felt from South Africa to the Congo as the agency prepared to move in as Africa\'s colonizers moved out. \n\n'
     ],
     link       : 'https://www.hachettebookgroup.com/titles/susan-williams/white-malice/9781541768284/?lens=publicaffairs',
+    linkGroup: [],
     chapters   : [
       {
         chapter     : 1,

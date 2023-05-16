@@ -35,7 +35,7 @@ export const Navigation = () => {
     <>
     <NavigationBar >
       <NavigationListItem >
-        <Link href = "../micmetz.github.io">
+        <a href = "https://micmetz.github.io">
           <span
             style = {{
               display   : 'flex', alignItems: 'center', color: 'rgba(0, 0, 0, 0.75)', fontSize: '1.0rem',
@@ -45,7 +45,7 @@ export const Navigation = () => {
           >
             <TiChartPie size = "1.5rem"/> Michael Metzjer
           </span >
-        </Link >
+        </a >
       </NavigationListItem >
       <NavigationList >
         <NavigationListItem active = {active === 'Home'}>

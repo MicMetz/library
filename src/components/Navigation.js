@@ -35,7 +35,7 @@ export const Navigation = () => {
     <>
     <NavigationBar >
       <NavigationListItem >
-        <Link href = "../">
+        <Link href = "../micmetz.github.io">
           <span
             style = {{
               display   : 'flex', alignItems: 'center', color: 'rgba(0, 0, 0, 0.75)', fontSize: '1.0rem',

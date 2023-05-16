@@ -94,7 +94,81 @@ export const CurrentReadings = [
     ],
     link       : 'https://www.amazon.com/Weve-Got-People-Jackson-Movement/dp/1947492381',
     chapters   : []
-  }
+  },
+  {
+    id         : 2,
+    header     : {
+      title   : 'White Malice',
+      subtitle: 'The CIA and the Covert Recolonization of Africa'
+    },
+    author     : 'Susan Williams',
+    date       : Date.parse('2022-01-01'),
+    publisher  : 'Public Affairs',
+    cover      : './images/WhiteMalice.jpg',
+    description: [
+      'A revelatory new history of post-colonial African independence movements shows how they were systematically undermined by one nation: the US. This is the untold story of how, over a few vital years, African Independence was strangled at birth. \n\n',
+      'In 1958 in Accra, Ghana, the Hands Off Africa conference brought together the leading figures of African independence in a public show of political strength and purpose. It was inspired by the example of Ghana itself which, under the charismatic leadership of Kwame Nkrumah, had just thrown off the British colonial yoke - the first African nation to do so. It was moment heady with promise for independence movements across Africa, and for all those who believed colonialism was a moral aberration. \n\n',
+      'Among the supporters of African independence were some of the leading figures of the American Civil Rights movement. Malcolm X was in Accra and Martin Luther King used Nkrumah\'s speech as the basis for his own "Free At Last" speech, so clear were the parallels between their own struggle for political equality in the US with that of the African nations. W. E. B. Du Bois moved to Ghana, inspired by the future of independent Africa. Yet among the many official messages of support received by the conference the United States was conspicuously quiet, despite its historic and public opposition to colonialism. Vice President Nixon did attend the celebrations in Ghana and asked a group of black people, "How does it feel to be free?"They answered: "We wouldn\'t know. We\'re from Alabama". \n\n',
+      'The conference was also attended by a slew of strange societies, many of which were fronts, and behind them was the CIA. The CIA was in favor of the end of the British Empire but a pan-African independence movement, one susceptible to Soviet entreaties, looked like a security threat. Through original research and unparalleled insight, Susan Williams reveals how the CIA\'s baleful influence was felt from South Africa to the Congo as the agency prepared to move in as Africa\'s colonizers moved out. \n\n'
+    ],
+    link       : 'https://www.hachettebookgroup.com/titles/susan-williams/white-malice/9781541768284/?lens=publicaffairs',
+    chapters   : [
+      {
+        chapter     : 1,
+        chapterTitle: 'The United States and Africa',
+        pages       : ''
+      },
+      {
+        chapter     : 2,
+        chapterTitle: 'The CIA',
+        pages       : ''
+      },
+      {
+        chapter     : 3,
+        chapterTitle: 'African Jazz',
+        pages       : ''
+      },
+      {
+        chapter     : 4,
+        chapterTitle: 'America and Africa',
+        pages       : ''
+      },
+      {
+        chapter     : 5,
+        chapterTitle: 'Independance Cha Cha',
+        pages       : ''
+      },
+      {
+        chapter     : 6,
+        chapterTitle: 'YQPROP',
+        pages       : ''
+      },
+      {
+        chapter     : 7,
+        chapterTitle: 'The Global Game',
+        pages       : ''
+      },
+      {
+        chapter     : 8,
+        chapterTitle: 'Carrot and Stick',
+        pages       : ''
+      },
+      {
+        chapter     : 9,
+        chapterTitle: 'The Turning Point',
+        pages       : ''
+      },
+      {
+        chapter     : 10,
+        chapterTitle: 'The Seeds are Sown',
+        pages       : ''
+      },
+      {
+        chapter     : 11,
+        chapterTitle: 'Dark Days',
+        pages       : ''
+      }
+    ]
+  },
 
 ]
-

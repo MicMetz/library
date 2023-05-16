@@ -80,7 +80,7 @@ export const HomeArticleFeaturedAtrribution = styled.section`
 
   width: 100%;
   height: 100%;
-  margin-top: 6rem;
+  margin-top: 5rem;
 
   position: relative;
   max-width: calc(100vw - 80vw);

@@ -13,6 +13,10 @@ export const NavigationList = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
+  
+  @media ${props => props.theme.breakpoints.sm} {
+    display: none;
+  }
 `
 
 export const NavigationListItem = styled.li`

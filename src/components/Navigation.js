@@ -7,7 +7,7 @@ import { NavigationBar, NavigationList, NavigationListItem } from '../styles/Nav
 
 
 
-export const Navigation = () => {
+export const Navigation = ({ href }) => {
   const [active, setActive] = useState('Home')
 
   // useEffect(() => {
@@ -32,10 +32,10 @@ export const Navigation = () => {
   // }, [active])
 
   return (
-    <>
+
     <NavigationBar >
       <NavigationListItem >
-        <a href = "https://micmetz.github.io">
+        <Link href = "https://micmetz.github.io">
           <span
             style = {{
               display   : 'flex', alignItems: 'center', color: 'rgba(0, 0, 0, 0.75)', fontSize: '1.0rem',
@@ -43,11 +43,13 @@ export const Navigation = () => {
               float     : 'left', position: 'absolute', left: '0', top: '0', height: '100%', width: '100%'
             }}
           >
-            <TiChartPie size = "1.5rem"/> Michael Metzjer
+            <TiChartPie size = "1.5rem"/>
+            Michael Metzjer
           </span >
-        </a >
+        </Link >
       </NavigationListItem >
       <NavigationList >
+
         <NavigationListItem active = {active === 'Home'}>
           <Link href = "/">
             <span >Home</span >
@@ -70,7 +72,7 @@ export const Navigation = () => {
         </NavigationListItem >
       </NavigationList >
     </NavigationBar >
-    </>
+
   )
 }
 

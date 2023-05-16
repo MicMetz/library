@@ -57,7 +57,6 @@ export default function Homepage () {
     <DefaultLayout >
       <Head >
         <title >Home</title >
-        <meta name = "description" content = "initial-scale=1.0, width=device-width"/>
       </Head >
 
       <HomeBody >
@@ -67,11 +66,12 @@ export default function Homepage () {
         />
         <HomeMain >
 
-          <SectionTitle main >Current Reading</SectionTitle >
+          <SectionTitle main>Current Reading</SectionTitle >
           {readings?.map((book, index) => {
 
             return (
-              <ContentBlock key = {index}>
+              <ContentBlock >
+              {/* <ContentBlock key = {index}> */}
 
                 {loadCurrentReadingDescription(book, index)}
                 <HomeArticleFeaturedAtrribution >
@@ -81,7 +81,7 @@ export default function Homepage () {
                 </HomeArticleFeaturedAtrribution >
                 <HomeArticleFeaturedCoverImage src = {book.cover} alt = {book.header.title} width = {300} height = {350}/>
                 <HomeArticleFeaturedFooter >
-                  <Link href = {book.link} >
+                  <Link href = {book.link}>
                     <a >Read More</a >
                   </Link >
                 </HomeArticleFeaturedFooter >

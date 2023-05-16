@@ -164,7 +164,7 @@ export const ToCHeader = styled.span`
 
 export const ToCItem = styled.li`
   margin: 5rem 1rem;
-  padding: 1.5rem 0;
+  //padding: 1.5rem 0;
   position: relative;
 
   a {
@@ -238,14 +238,15 @@ export const ContentBlock = styled.div`
   //position: absolute;
   height: fit-content;
   width: 100%;
-  margin: 15rem auto;
+  margin: 8rem auto;
+  padding: 0;
 
 
-  :first-child {
+  &:first-child {
     margin-top: 0;
   }
 
-  :last-child {
+  &:last-child {
     margin-bottom: 0;
   }
 
@@ -327,16 +328,16 @@ export const ArticleContainer = styled.article`
 
 export const SectionTitle = styled.h2`
   font-weight: 700;
-  font-size: ${(props) => props.main ? '6rem' : '4rem'};
+  font-size: ${(props) => props.main ? '3rem' : '2rem'};
   line-height: ${(props) => props.main ? '72px' : '56px'};
   width: max-content;
   height: fit-content;
-  color: #d3743a !important;
+  color: #d3743a;
   max-width: 100%;
   background: linear-gradient(121.57deg, #171748 18.77%, rgba(0, 0, 0, 0.75) 60.15%);
   -webkit-background-clip: text;
   margin-top: 4rem;
-  padding: ${(props) => props.main ? '58px 0 16px' : '0'};
+  padding: ${(props) => props.main ? '1rem 0 0.5rem' : '0'};
 
   @media ${props => props.theme.breakpoints.md} {
     font-size: ${(props) => props.main ? '56px' : '48px'};

@@ -15,6 +15,7 @@
 				"@mdx-js/react": "^2.3.0",
 				"@next/mdx": "^13.4.2",
 				"axios": "^1.4.0",
+				"babel-plugin-styled-components": "^2.1.1",
 				"gray-matter": "^4.0.3",
 				"js-yaml": "^3.13.1",
 				"js-yaml-loader": "^1.2.2",

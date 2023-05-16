@@ -5,10 +5,6 @@ import { SidebarHeader, SidebarMenuButtonOverlay, ToC, ToCItem, SideMenuClosed, 
 
 
 
-function NavLink (props) {
-  return null
-}
-
 
 export const SideBar = ({ header, chapters }) => {
   const [menu, setMenu]                   = useState(false)
@@ -21,15 +17,15 @@ export const SideBar = ({ header, chapters }) => {
     setScrolling(eve.target.documentElement.scrollTop > scrollTop)
   }
 
-  useEffect(() => {
-    const onScroll = (eve) => {
-      setScrollTop(eve.target.documentElement.scrollTop)
-      setScrolling(eve.target.documentElement.scrollTop > scrollTop)
-    }
-    window.addEventListener('scroll', onScroll)
-
-    window.removeEventListener('scroll', onScroll)
-  }, [scrollTop])
+  // useEffect(() => {
+  //   const onScroll = (eve) => {
+  //     setScrollTop(eve.target.documentElement.scrollTop)
+  //     setScrolling(eve.target.documentElement.scrollTop > scrollTop)
+  //   }
+  //   window.addEventListener('scroll', onScroll)
+  //
+  //   window.removeEventListener('scroll', onScroll)
+  // }, [scrollTop])
 
   return (
     <>

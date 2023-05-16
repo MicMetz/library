@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export const HomeBody = styled.div`
   //margin-left: calc(100vw - 80vw) !important;
-  margin-left: 8vw !important;
+  margin-left: 4vw !important;
   padding: 4rem 2rem 0 !important;
   line-height: 24px;
   //background-size: 100px 100px;
@@ -64,7 +64,7 @@ export const HomeArticleFeaturedDetails = styled.section`
   padding: 0 2rem;
   text-align: left;
   margin-top: 8rem;
-
+  margin-right: 6rem;
   width: 100%;
   height: 100%;
 

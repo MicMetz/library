@@ -4,7 +4,7 @@
 		"private": true,
 		"author": "",
 		"scripts": {
-				"dev": "concurrently \"npm:next:dev\" ",
+				"dev": "next dev",
 				"next:dev": "next",
 				"build": "next build",
 				"start": "next start",

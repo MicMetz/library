@@ -7,7 +7,7 @@ import { ArticleByline, ArticleSubtitle, ArticleTitle } from '../styles/ArticleS
 import { HomeArticleFeaturedAtrribution, HomeArticleFeaturedCoverImage, HomeArticleFeaturedDetails, HomeBody, HomeArticleFeaturedFooter, HomeMain } from '../styles/HomepageStyledComponents.js'
 import KillAnythingThatMovesCover from '/public/images/KillAnythingThatMoves.jpg'
 import { CurrentReadings } from '/public/datasets/CurrentReadings.js'
-import { ContentBlock } from '../styles/StyledComponents.js'
+import { ContentBlock, SectionTitle } from '../styles/StyledComponents.js'
 
 
 
@@ -67,6 +67,7 @@ export default function Homepage () {
         />
         <HomeMain >
 
+          <SectionTitle main >Current Reading</SectionTitle >
           {readings?.map((book, index) => {
 
             return (

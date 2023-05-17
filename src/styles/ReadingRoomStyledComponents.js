@@ -65,7 +65,8 @@ export const ReadingRoomBookAtrribution = styled.div`
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  padding: 0.5rem 1rem 0;
+  padding: 0 1rem 0;
+  //padding: 0.5rem 1rem 0;
   border-top: none;
 
   @media ${props => props.theme.breakpoints.sm} {
@@ -93,8 +94,7 @@ export const ReadingRoomBookDetails = styled.div`
   order: 1;
   padding: 0 2rem;
   text-align: left;
-  margin-top: 8rem;
-  margin-right: 6rem;
+  margin: 0 auto;
   width: 100%;
   height: 100%;
 

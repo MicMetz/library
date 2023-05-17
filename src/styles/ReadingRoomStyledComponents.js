@@ -114,5 +114,35 @@ export const ReadingRoomBookContainer = styled.section`
   width: 100%;
   margin: 8rem auto;
   padding: 0;
+  
+  &button {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    max-width: calc(100vw - 10rem);
+    height: 100%;
+    margin: 0 auto;
+    padding: 0.5rem 1rem 0;
+    
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem 0.25rem #000000FF;
+    border-top: none;
+    background-color: #000000FF;
+    color: #FFFFFFFF;
+    
+    &:hover {
+      background-color: #000000FF;
+      color: #FFFFFFFF;
+      
+      &::after {
+        background-color: #000000FF;
+        color: #FFFFFFFF;
+      }
+      
+      &::before {
+        
+      }
+    }
+  }
 `
 

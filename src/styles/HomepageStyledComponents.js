@@ -55,7 +55,7 @@ export const HomeArticleFeaturedFooter = styled.footer`
 
 `
 
-export const HomeArticleFeaturedDetails = styled.section`
+export const HomeArticleFeaturedDetails = styled.div`
   display: inline-block;
   position: relative;
 
@@ -74,7 +74,7 @@ export const HomeArticleFeaturedDetails = styled.section`
   }
 `
 
-export const HomeArticleFeaturedAtrribution = styled.section`
+export const HomeArticleFeaturedAtrribution = styled.div`
   display: inline-block;
   flex-direction: column;
 

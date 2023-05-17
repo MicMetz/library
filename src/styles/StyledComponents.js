@@ -233,7 +233,7 @@ export const SideMenuHeaderOpen = styled.header`
   -moz-osx-font-smoothing: auto;
 `
 
-export const ContentBlock = styled.div`
+export const ContentBlock = styled.section`
   display: flex;
   //position: absolute;
   height: fit-content;

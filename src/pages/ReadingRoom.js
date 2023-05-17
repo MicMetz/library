@@ -70,17 +70,17 @@ export default function ReadingRoom () {
           {readings?.map((book, index) => {
 
             return (
-              <ReadingRoomBookContainer >
+              <ReadingRoomBookContainer key = {index}>
                 {/* <ContentBlock key = {index}> */}
 
                 {loadCurrentReadingDescription(book, index)}
-                <ReadingRoomBookAtrribution >
-                  <ArticleTitle >{book.header.title}</ArticleTitle >
-                  <ArticleSubtitle >{book.header.subtitle}</ArticleSubtitle >
-                  <ArticleByline >{book.author}</ArticleByline >
+                <ReadingRoomBookAtrribution key = {index}>
+                  <ArticleTitle key = {index}>{book.header.title}</ArticleTitle >
+                  <ArticleSubtitle key = {index}>{book.header.subtitle}</ArticleSubtitle >
+                  <ArticleByline key = {index}>{book.author}</ArticleByline >
                 </ReadingRoomBookAtrribution >
-                <ReadingRoomBookCoverImage src = {book.cover} alt = {book.header.title} width = {300} height = {350}/>
-                <ReadingRoomBookFooter >
+                <ReadingRoomBookCoverImage src = {book.cover} alt = {book.header.title} width = {300} height = {350} key = {index}/>
+                <ReadingRoomBookFooter key = {index}>
                   <Link href = {book.link}>
                     <a >Read More</a >
                   </Link >

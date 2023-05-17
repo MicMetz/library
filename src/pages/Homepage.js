@@ -70,17 +70,17 @@ export default function Homepage () {
           {readings?.map((book, index) => {
 
             return (
-              <ContentBlock >
+              <ContentBlock key = {index}>
               {/* <ContentBlock key = {index}> */}
 
                 {loadCurrentReadingDescription(book, index)}
-                <HomeArticleFeaturedAtrribution >
-                  <ArticleTitle >{book.header.title}</ArticleTitle >
-                  <ArticleSubtitle >{book.header.subtitle}</ArticleSubtitle >
-                  <ArticleByline >{book.author}</ArticleByline >
+                <HomeArticleFeaturedAtrribution key = {index}>
+                  <ArticleTitle key = {index}>{book.header.title}</ArticleTitle >
+                  <ArticleSubtitle key = {index}>{book.header.subtitle}</ArticleSubtitle >
+                  <ArticleByline key = {index}>{book.author}</ArticleByline >
                 </HomeArticleFeaturedAtrribution >
-                <HomeArticleFeaturedCoverImage src = {book.cover} alt = {book.header.title} width = {300} height = {350}/>
-                <HomeArticleFeaturedFooter >
+                <HomeArticleFeaturedCoverImage src = {book.cover} alt = {book.header.title} width = {300} height = {350} key = {index}/>
+                <HomeArticleFeaturedFooter key = {index}>
                   <Link href = {book.link}>
                     <a >Read More</a >
                   </Link >

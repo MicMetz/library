@@ -61,8 +61,8 @@ export default function Homepage () {
 
       <HomeBody >
         <SideBar
-          header = {readings[0]?.header}
-          chapters = {readings[ 0 ]?.chapters}
+          header = {CurrentReadings[ 0 ].header}
+          chapters = {CurrentReadings[ 0 ].chapters}
         />
         <HomeMain >
 

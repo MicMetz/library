@@ -27,22 +27,22 @@ export default function App ({ Component, pageProps }) {
 
 
 export const getStaticProps = async () => {
-  let books = []
+  let articles = []
   try {
     // await the promise
     const querySnapshot = await FirebaseStorage
-    .collection('books')
+    .bucket('gs://leftward-spin.appspot.com')
 
 
     querySnapshot.forEach(function (doc) {
       console.log(doc.data().title)
       console.log(doc.data().id)
-      books.push({
+      articles.push({
         id   : doc.data().id,
         title: doc.data().title,
       })
     })
-    console.log(books)
+    console.log(articles)
   } catch (error) {
     // catch part using try/catch
     console.log('Error getting documents: ', error)
@@ -51,7 +51,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      books
+      articles
     }
   }
 }

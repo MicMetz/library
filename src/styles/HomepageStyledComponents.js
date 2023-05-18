@@ -24,7 +24,6 @@ export const HomeMain = styled.main`
   //max-width: 99vw;
   width: 100%;
   height: 100%;
-
 `
 
 export const HomeBlockQuote = styled.blockquote`

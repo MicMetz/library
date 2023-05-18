@@ -39,7 +39,7 @@ export default function Search (props) {
         {/* Articles tagged: {props.router.query.q} */}
       </h1 >
 
-    </SearchLayout>
+    </SearchLayout >
 
   )
 }

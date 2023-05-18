@@ -60,10 +60,7 @@ export default function ReadingRoom () {
       </Head >
 
       <ReadingRoomBody >
-        <SideBar
-          header = {Readings[ 0 ].header}
-          chapters = {Readings[ 0 ].chapters}
-        />
+        <SideBar header = {Readings[ 0 ].header} chapters = {Readings[ 0 ].chapters}/>
         <ReadingRoomMain >
 
           <SectionTitle main>Current Reading</SectionTitle >

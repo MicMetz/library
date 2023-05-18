@@ -1,18 +1,19 @@
-import { initializeApp, getApps } from 'firebase/app'
-import serviceAccount from './.serviceKey.json'
+import { initializeApp } from 'firebase/app'
+import { getStorage } from 'firebase/storage'
+import serviceKey from '../../../.serviceKey.json'
 
 
 
 
 const firebaseConfig = {
-  apiKey           : process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain       : process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId        : process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket    : process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId            : process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-  measurementId    : process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
+  apiKey           : serviceKey.apiKey,
+  authDomain       : serviceKey.authDomain,
+  projectId        : serviceKey.projectId,
+  storageBucket    : serviceKey.storageBucket,
+  messagingSenderId: serviceKey.messagingSenderId,
+  appId            : serviceKey.appId,
 }
 
+const firebaseApp = initializeApp(firebaseConfig)
 
-export default firebaseConfig
+export const FirebaseStorage = getStorage(firebaseApp)

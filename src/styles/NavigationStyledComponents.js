@@ -1,3 +1,5 @@
+import { IconType } from 'react-icons/lib'
+import { TiChartPie } from 'react-icons/ti'
 import styled from 'styled-components'
 
 
@@ -9,14 +11,29 @@ export const NavigationActive = styled.div`
 
 export const NavigationList = styled.ul`
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  min-width: 100vw;
+  
   position: relative;
   list-style: none;
   margin: 0;
   padding: 0;
-  
+
   @media ${props => props.theme.breakpoints.sm} {
     display: none;
   }
+
+  @media ${props => props.theme.breakpoints.md} {
+    display: none;
+  }
+
+  li:first-child {
+    left: 0 !important;
+  }
+
+
 `
 
 export const NavigationListItem = styled.li`
@@ -32,6 +49,7 @@ export const NavigationListItem = styled.li`
   font-weight: 700;
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
+
 
 
   span {
@@ -56,13 +74,36 @@ export const NavigationListItem = styled.li`
 
   }
 
-  &:last-child {
-    margin-right: 0;
+  &Logo {
+
   }
 
-  &:first-child {
-    margin-left: 0;
+`
+
+export const NavLogoItem = styled(NavigationListItem)`
+  display: inline-block;
+  //margin: 0;
+  left: 0;
+  position: relative;
+  //margin-left: -5rem;
+  padding-right: 5rem;
+  padding-left: 0.5rem;
+
+  ${TiChartPie} {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    
+    color: cornsilk !important;
   }
+
+  
+  // Minify to icon in mobile
+  @media ${props => props.theme.breakpoints.sm} {
+    display: none;
+  }
+    
+
 
 `
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import Link from 'next/link'
 import { TiChartPie } from 'react-icons/ti'
-import { NavigationBar, NavigationList, NavigationListItem } from '../styles/NavigationStyledComponents.js'
+import { NavigationBar, NavigationList, NavigationListItem, NavLogoItem } from '../styles/NavigationStyledComponents.js'
 
 
 
@@ -34,22 +34,16 @@ export const Navigation = ({ href }) => {
   return (
 
     <NavigationBar >
-      <NavigationListItem >
-        <Link href = "https://micmetz.github.io">
-          <span
-            style = {{
-              display   : 'flex', alignItems: 'center', color: 'rgba(0, 0, 0, 0.75)', fontSize: '1.0rem',
-              lineHeight: '32px', transition: '0.4s ease', paddingRight: '5rem',
-              float     : 'left', position: 'absolute', left: '0', top: '0', height: '100%', width: 'fit-content'
-            }}
-          >
-            <TiChartPie size = "1.5rem"/>
-            Michael Metzjer
-          </span >
-        </Link >
-      </NavigationListItem >
-      <NavigationList >
 
+      <NavigationList >
+        <NavLogoItem >
+          <Link href = "https://micmetz.github.io">
+            <span >
+              <TiChartPie size = "1em"/>
+              Michael Metzjer
+            </span >
+          </Link >
+        </NavLogoItem >
         <NavigationListItem active = {active === 'Home'}>
           <Link href = "/">
             <span >Home</span >

@@ -3,13 +3,21 @@ export const Readings = [
     id         : 0,
     header     : {
       title   : 'Killing Hope',
-      subtitle: 'Killing Hope U.S. Military and CIA Interventions Since World War II – Part I'
+      subtitle: 'Killing Hope U.S. Military and CIA Interventions Since World War II – Part 1&2'
     },
     author     : 'William Blum',
     date       : '2003',
     publisher  : 'Zed Books',
     cover      : './images/KillingHope.jpg',
-    description: [],
+    description: [
+      'Is the United States a force for democracy? \n',
+      'In this classic and unique volume that answers this question, William Blum serves up a forensic overview of U.S. foreign policy spanning sixty years. \n',
+      'For those who want the details on our most famous actions (Chile, Cuba, Vietnam, to name a few), and for those who want to learn about our lesser-known efforts (France, China, Bolivia, Brazil, for example), this book provides a window on what our foreign policy goals really are.\n',
+      'If you flip over the rock of American foreign policy of the past century, this is what crawls out…\n',
+      'invasions …\n bombings …\n overthrowing governments …\n occupations …\n suppressing movements for social change …\n assassinating political leaders …\n perverting elections …\n manipulating labor unions …\n manufacturing “news” …\n death squads …\n torture …\n biological warfare …\n depleted uranium …\n drug trafficking …\n mercenaries …\n',
+      'It’s not a pretty picture.\n',
+      'It is enough to give imperialism a bad name.\n',
+    ],
     link       : 'https://www.cia.gov/library/abbottabad-compound/13/130AEF1531746AAD6AC03EF59F91E1A1_Killing_Hope_Blum_William.pdf',
     tags       : [],
     chapters   : [
@@ -79,7 +87,15 @@ export const Readings = [
     date       : '2003',
     publisher  : 'Zed Books',
     cover      : './images/KillingHope.jpg',
-    description: [],
+    description: [
+      'Is the United States a force for democracy? \n',
+      'In this classic and unique volume that answers this question, William Blum serves up a forensic overview of U.S. foreign policy spanning sixty years. \n',
+      'For those who want the details on our most famous actions (Chile, Cuba, Vietnam, to name a few), and for those who want to learn about our lesser-known efforts (France, China, Bolivia, Brazil, for example), this book provides a window on what our foreign policy goals really are.\n',
+      'If you flip over the rock of American foreign policy of the past century, this is what crawls out…\n',
+      'invasions …\n bombings …\n overthrowing governments …\n occupations …\n suppressing movements for social change …\n assassinating political leaders …\n perverting elections …\n manipulating labor unions …\n manufacturing “news” …\n death squads …\n torture …\n biological warfare …\n depleted uranium …\n drug trafficking …\n mercenaries …\n',
+      'It’s not a pretty picture.\n',
+      'It is enough to give imperialism a bad name.\n',
+    ],
     link       : 'https://www.cia.gov/library/abbottabad-compound/13/130AEF1531746AAD6AC03EF59F91E1A1_Killing_Hope_Blum_William.pdf',
     tags       : [],
     chapters   : [

@@ -156,7 +156,7 @@ export const ArticleFeaturedCoverImage = styled.img`
 
   width: 100%;
   height: 100%;
-  max-width: 30%;
+  max-width: 28%;
 
   max-height: calc(100vh - 18rem);
   border-radius: 2px 1px 1px 2px;

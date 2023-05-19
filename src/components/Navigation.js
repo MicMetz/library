@@ -37,12 +37,12 @@ export const Navigation = ({ href }) => {
 
       <NavigationList >
         <NavLogoItem >
-          <Link href = "https://micmetz.github.io">
+          <a href = "https://micmetz.github.io">
             <span >
               <TiChartPie size = "1em"/>
               Michael Metzjer
             </span >
-          </Link >
+          </a >
         </NavLogoItem >
         <NavigationListItem active = {active === 'Home'}>
           <Link href = "/">

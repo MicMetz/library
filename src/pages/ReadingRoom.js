@@ -35,14 +35,14 @@ export default function ReadingRoom () {
   return (
     <DefaultLayout >
       <Head >
-        <title >Home</title >
+        <title >Favorite Reads</title >
       </Head >
 
       <ReadingRoomBody >
         <SideBar header = {Readings[ 0 ].header} chapters = {Readings[ 0 ].chapters}/>
         <ReadingRoomMain >
 
-          <SectionTitle main>Current Reading</SectionTitle >
+          <SectionTitle main>Favorite Reads</SectionTitle >
           {readings?.map(book => {
 
             return (

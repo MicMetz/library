@@ -43,20 +43,20 @@ export default function ReadingRoom () {
         <ReadingRoomMain >
 
           <SectionTitle main>Current Reading</SectionTitle >
-          {readings?.map((book, index) => {
+          {readings?.map(book => {
 
             return (
-              <ReadingRoomBookContainer key = {index}>
+              <ReadingRoomBookContainer key = {book.id}>
                 {/* <ContentBlock key = {index}> */}
 
-                {ArticleFeaturedDescription(book, index)}
-                <ArticleFeaturedAtrribution key = {index}>
-                  <ArticleTitle key = {index}>{book.header.title}</ArticleTitle >
-                  <ArticleSubtitle key = {index}>{book.header.subtitle}</ArticleSubtitle >
-                  <ArticleByline key = {index}>{book.author}</ArticleByline >
+                {ArticleFeaturedDescription(book)}
+                <ArticleFeaturedAtrribution >
+                  <ArticleTitle >{book.header.title}</ArticleTitle >
+                  <ArticleSubtitle >{book.header.subtitle}</ArticleSubtitle >
+                  <ArticleByline >{book.author}</ArticleByline >
                 </ArticleFeaturedAtrribution >
-                <ArticleFeaturedCoverImage src = {book.cover} alt = {book.header.title} width = {300} height = {350} key = {index}/>
-                <ArticleFeaturedFooter key = {index}>
+                <ArticleFeaturedCoverImage src = {book.cover} alt = {book.header.title}/>
+                <ArticleFeaturedFooter >
                   <Link href = {book.link}>
                     <a >Read More</a >
                   </Link >

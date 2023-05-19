@@ -97,7 +97,7 @@ export const Current = [
       'With the party and the nation at a crossroads, this timely and original book offers new insight into how we’ve gotten where we are – and where we\'re headed. \n\n'
     ],
     link       : 'https://www.c-span.org/video/?462677-1/weve-people',
-    tags       : [{ name: 'https://www.c-span.org/video/?462677-1/weve-people', link: 'https://www.amazon.com/Weve-Got-People-Jackson-Movement/dp/1947492381' }],
+    tags: [{ name: 'C-Span Talk', link: 'https://www.amazon.com/Weve-Got-People-Jackson-Movement/dp/1947492381' }, { name: 'Author Biography', link: 'https://theintercept.com/staff/ryangrim/' }],
     chapters   : []
   },
   {

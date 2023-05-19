@@ -5,9 +5,10 @@ import DefaultLayout from '../components/layouts/DefaultLayout.js'
 import { SideBar } from '../components/SideBar.js'
 import Image from 'next/image'
 import { Readings } from '/public/datasets/Readings.js'
-import { ArticleByline, ArticlePage, ArticleSubtitle, ArticleTitle } from '../styles/ArticleStyledComponents.js'
-import { ReadingRoomBody, ReadingRoomBookAtrribution, ReadingRoomBookContainer, ReadingRoomBookCoverImage, ReadingRoomBookFooter, ReadingRoomMain, ReadingRoomBookDetails } from '../styles/ReadingRoomStyledComponents.js'
+import { ArticleByline, ArticleFeaturedAtrribution, ArticleFeaturedCoverImage, ArticleFeaturedFooter, ArticlePage, ArticleSubtitle, ArticleTitle } from '../styles/ArticleStyledComponents.js'
+import { ReadingRoomBody, ReadingRoomBookContainer, ReadingRoomMain } from '../styles/ReadingRoomStyledComponents.js'
 import { ContentBlock, SectionTitle } from '../styles/StyledComponents.js'
+import { ArticleFeaturedDescription } from '../tools/DescriptionParser.js'
 
 
 
@@ -31,28 +32,6 @@ export default function ReadingRoom () {
   }
 
 
-  function loadCurrentReadingDescription (book, index) {
-    return (
-      <ReadingRoomBookDetails key = {index}>
-        {book.description.map((paragraph, i) => {
-            return (
-              <p key = {i}>
-                {paragraph.split('\n').map((item, key) => {
-                  return (
-                    <span key = {key}>
-                      {item}
-                      <br />
-                    </span >
-                  )
-                })}</p >
-            )
-          }
-        )}
-      </ReadingRoomBookDetails >
-    )
-  }
-
-
   return (
     <DefaultLayout >
       <Head >
@@ -70,18 +49,18 @@ export default function ReadingRoom () {
               <ReadingRoomBookContainer key = {index}>
                 {/* <ContentBlock key = {index}> */}
 
-                {loadCurrentReadingDescription(book, index)}
-                <ReadingRoomBookAtrribution key = {index}>
+                {ArticleFeaturedDescription(book, index)}
+                <ArticleFeaturedAtrribution key = {index}>
                   <ArticleTitle key = {index}>{book.header.title}</ArticleTitle >
                   <ArticleSubtitle key = {index}>{book.header.subtitle}</ArticleSubtitle >
                   <ArticleByline key = {index}>{book.author}</ArticleByline >
-                </ReadingRoomBookAtrribution >
-                <ReadingRoomBookCoverImage src = {book.cover} alt = {book.header.title} width = {300} height = {350} key = {index}/>
-                <ReadingRoomBookFooter key = {index}>
+                </ArticleFeaturedAtrribution >
+                <ArticleFeaturedCoverImage src = {book.cover} alt = {book.header.title} width = {300} height = {350} key = {index}/>
+                <ArticleFeaturedFooter key = {index}>
                   <Link href = {book.link}>
                     <a >Read More</a >
                   </Link >
-                </ReadingRoomBookFooter >
+                </ArticleFeaturedFooter >
               </ReadingRoomBookContainer >
             )
           })}

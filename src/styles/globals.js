@@ -6,8 +6,6 @@ import normalize from 'styled-normalize'
 
 const GlobalStyles = createGlobalStyle`
   ${normalize}
-  
-  
   :root {
     --color-primary: #1A1E23FF;
     --color-secondary: #F2F2F2FF;
@@ -15,20 +13,20 @@ const GlobalStyles = createGlobalStyle`
     --color-quaternary: #FFD803FF;
     --color-quinary: #FFA803FF;
     --color-senary: #FFD803FF;
-    
+
     --color-text: #333333FF;
-    
+
     --nav-height: 4vh;
     --nav-width: 100vw;
-    
+
     --footer-height: 20rem;
     --footer-width: 100vw;
-    
+
     --main-height: calc(100vh - var(--nav-height));
-    
+
   }
-  
-  
+
+
   .article-layout {
     display: flex;
     flex-direction: column;
@@ -41,7 +39,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 40px 20px 100px 20px;
     position: relative;
   }
-  
+
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
@@ -77,7 +75,7 @@ const GlobalStyles = createGlobalStyle`
     border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
     text-align: center !important;
     padding: 4rem 1rem 0 !important;
-    
+
   }
 
 

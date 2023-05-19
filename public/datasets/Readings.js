@@ -118,22 +118,22 @@ export const Readings = [
     chapters   : []
   },
   {
-    id       : 3,
-    header   : {
+    id         : 3,
+    header     : {
 
       title   : 'Manufacturing Consent',
       subtitle: 'The Political Economy of the Mass Media'
     },
-    author   : 'Edward S. Herman & Noam Chomsky',
-    author1  : 'Edward S. Herman',
-    author2  : 'Noam Chomsky',
-    date     : '1988',
-    publisher: 'The Bodley Head London',
-    cover    : './images/ManufacturingConsent.jpg',
+    author     : 'Edward S. Herman & Noam Chomsky',
+    author1    : 'Edward S. Herman',
+    author2    : 'Noam Chomsky',
+    date       : '1988',
+    publisher  : 'The Bodley Head London',
+    cover      : './images/ManufacturingConsent.jpg',
     description: [],
-    link     : 'https://edisciplinas.usp.br/pluginfile.php/5537300/mod_resource/content/1/Noam%20Chomsky_%20Edward%20S.%20Herman%20-%20Manufacturing%20Consent_%20The%20Political%20Economy%20of%20the%20Mass%20Media-Bodley%20Head%20%282008%29.pdf',
-    linkGroup: [],
-    chapters : []
+    link       : 'https://edisciplinas.usp.br/pluginfile.php/5537300/mod_resource/content/1/Noam%20Chomsky_%20Edward%20S.%20Herman%20-%20Manufacturing%20Consent_%20The%20Political%20Economy%20of%20the%20Mass%20Media-Bodley%20Head%20%282008%29.pdf',
+    linkGroup  : [],
+    chapters   : []
   },
   {
     id         : 4,

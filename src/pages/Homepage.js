@@ -1,56 +1,61 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 import DefaultLayout from '../components/layouts/DefaultLayout.js'
 import { SideBar } from '../components/SideBar.js'
-import { ArticleByline, ArticleSubtitle, ArticleTitle } from '../styles/ArticleStyledComponents.js'
-import { HomeArticleFeaturedAtrribution, HomeArticleFeaturedCoverImage, HomeArticleFeaturedDetails, HomeBody, HomeArticleFeaturedFooter, HomeMain } from '../styles/HomepageStyledComponents.js'
-import KillAnythingThatMovesCover from '/public/images/KillAnythingThatMoves.jpg'
+import { ArticleByline, ArticleFeaturedAtrribution, ArticleFeaturedCoverImage, ArticleFeaturedDetails, ArticleFeaturedFooter, ArticleSubtitle, ArticleTitle } from '../styles/ArticleStyledComponents.js'
+import { HomeBody, HomeMain } from '../styles/HomepageStyledComponents.js'
 import { CurrentReadings } from '/public/datasets/CurrentReadings.js'
 import { ContentBlock, SectionTitle } from '../styles/StyledComponents.js'
+import { ArticleFeaturedDescription } from '../tools/DescriptionParser.js'
 
 
 
 
 export default function Homepage () {
-  const [readings, setReadings]             = useState()
-  const [scrollPosition, setScrollPosition] = useState(0)
-  const [activeFeature, setActiveFeature]   = useState(0)
+  const [activeFeature, setActiveFeature]   = useState(CurrentReadings[ 0 ])
+  const [scrollPosition, setScrollPosition] = useState()
+  const ref                                 = useRef(null)
+
+
+  const onScreen = (element) => {
+    const rect       = element.getBoundingClientRect()
+    const elemTop    = rect.top
+    const elemBottom = rect.bottom
+
+    // Only completely visible elements return true:
+    const isVisible = ( elemTop >= 0 ) && ( elemBottom <= window.innerHeight )
+    // Partially visible elements return true:
+    //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
+    return isVisible
+  }
 
   useEffect(() => {
-    setReadings(CurrentReadings)
+    window.addEventListener('scroll', handleScroll)
   }, [])
 
-  const loadCurrentReading = () => {
-    let cur = {}
-    for (let i = 0; i < CurrentReadings.length; i++) {
-      cur.push(CurrentReadings[ i ])
 
+  const loadActiveReading = (book) => {
+    if (book === null && activeFeature !== null) {
+      return
+    } else if (book !== null) {
+      setActiveFeature(book)
     }
-    setReadings(cur)
   }
 
 
-  function loadCurrentReadingDescription (book, index) {
-    return (
-      <HomeArticleFeaturedDetails key = {index}>
-        {book.description.map((paragraph, i) => {
-            return (
-              <p key = {i}>
-                {paragraph.split('\n').map((item, key) => {
-                  return (
-                    <span key = {key}>
-                      {item}
-                      <br />
-                    </span >
-                  )
-                })}</p >
-            )
-          }
-        )}
-      </HomeArticleFeaturedDetails >
-    )
+  const handleScroll = () => {
+    const position     = window.pageYOffset
+    const windowHeight = window.innerHeight
+    const content      = document.getElementsByClassName('featured')
+
+    for (let i = 0; i < content.length; i++) {
+      if (onScreen(content[ i ])) {
+        loadActiveReading(CurrentReadings[ i ])
+      }
+    }
   }
+
 
 
   return (
@@ -60,31 +65,27 @@ export default function Homepage () {
       </Head >
 
       <HomeBody >
-        <SideBar
-          header = {CurrentReadings[ 0 ].header}
-          chapters = {CurrentReadings[ 0 ].chapters}
-        />
+        <SideBar header = {activeFeature.header} chapters = {activeFeature.chapters}/>
         <HomeMain >
 
           <SectionTitle main>Current Reading</SectionTitle >
-          {readings?.map((book, index) => {
+          {CurrentReadings?.map(book => {
 
             return (
-              <ContentBlock key = {index}>
-              {/* <ContentBlock key = {index}> */}
+              <ContentBlock key = {book.id} value = {book} className = "featured" ref = {ref}>
 
-                {loadCurrentReadingDescription(book, index)}
-                <HomeArticleFeaturedAtrribution key = {index}>
-                  <ArticleTitle key = {index}>{book.header.title}</ArticleTitle >
-                  <ArticleSubtitle key = {index}>{book.header.subtitle}</ArticleSubtitle >
-                  <ArticleByline key = {index}>{book.author}</ArticleByline >
-                </HomeArticleFeaturedAtrribution >
-                <HomeArticleFeaturedCoverImage src = {book.cover} alt = {book.header.title} width = {300} height = {350} key = {index}/>
-                <HomeArticleFeaturedFooter key = {index}>
+                {ArticleFeaturedDescription(book)}
+                <ArticleFeaturedAtrribution >
+                  <ArticleTitle >{book.header.title}</ArticleTitle >
+                  <ArticleSubtitle >{book.header.subtitle}</ArticleSubtitle >
+                  <ArticleByline >{book.author}</ArticleByline >
+                </ArticleFeaturedAtrribution >
+                <ArticleFeaturedCoverImage src = {book.cover} alt = {book.header.title}/>
+                <ArticleFeaturedFooter >
                   <Link href = {book.link}>
                     <a >Read More</a >
                   </Link >
-                </HomeArticleFeaturedFooter >
+                </ArticleFeaturedFooter >
               </ContentBlock >
             )
           })}

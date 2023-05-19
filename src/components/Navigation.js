@@ -40,7 +40,7 @@ export const Navigation = ({ href }) => {
             style = {{
               display   : 'flex', alignItems: 'center', color: 'rgba(0, 0, 0, 0.75)', fontSize: '1.0rem',
               lineHeight: '32px', transition: '0.4s ease', paddingRight: '5rem',
-              float     : 'left', position: 'absolute', left: '0', top: '0', height: '100%', width: '100%'
+              float     : 'left', position: 'absolute', left: '0', top: '0', height: '100%', width: 'fit-content'
             }}
           >
             <TiChartPie size = "1.5rem"/>

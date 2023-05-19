@@ -6,7 +6,7 @@ import styled from 'styled-components'
 
 
 export const NavigationActive = styled.div`
-  
+
 `
 
 export const NavigationList = styled.ul`
@@ -15,7 +15,7 @@ export const NavigationList = styled.ul`
   justify-content: center;
   flex-direction: row;
   min-width: 100vw;
-  
+
   position: relative;
   list-style: none;
   margin: 0;
@@ -32,16 +32,15 @@ export const NavigationList = styled.ul`
   li:first-child {
     padding-left: 0;
     position: absolute;
-    left: 0; 
+    left: 0;
   }
-  
+
   li:nth-child(2) {
     padding-left: 8em;
   }
-  
-
 
 `
+
 
 export const NavigationListItem = styled.li`
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);

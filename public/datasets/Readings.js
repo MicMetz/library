@@ -133,7 +133,17 @@ export const Readings = [
     date       : '2020',
     publisher  : 'PublicAffairs',
     cover      : './images/TheJakartaMethod.jpg',
-    description: [],
+    description: [
+      'In 1965, the U.S. government helped the Indonesian military kill approximately one million innocent civilians. This was one of the most important turning points of the twentieth century,' +
+      ' eliminating the largest communist party outside China and the Soviet Union and inspiring copycat terror programs in faraway countries like Brazil and Chile. But these events remain widely' +
+      ' overlooked, precisely because the CIA\'s secret interventions were so successful.\n\n' +
+      'In this bold and comprehensive new history, Vincent Bevins builds on his incisive reporting for the Washington Post, using recently declassified documents, archival research and eye-witness' +
+      ' testimony collected across twelve countries to reveal a shocking legacy that spans the globe.\n\n' +
+      ' For decades, it\'s been believed that parts of the developing world passed peacefully into the' +
+      ' U.S.-led capitalist system. The Jakarta Method demonstrates that the brutal extermination of unarmed leftists was a fundamental part of Washington\'s final triumph in the Cold War.\n\n\n',
+      'Vincent Bevins is an award-winning journalist. He reported for the Financial Times in London, then served as the Brazil correspondent for the Los Angeles Times, before covering Southeast Asia' +
+      ' for the Washington Post. He lives in Sao Paulo, Brazil.'
+    ],
     link       : 'https://www.hachettebookgroup.com/titles/vincent-bevins/the-jakarta-method/9781541724013/?lens=publicaffairs',
     tags       : [],
     chapters   : []
@@ -225,7 +235,11 @@ export const Readings = [
     description: [
       'Alexandria Ocasio-Cortez may seem like she came from nowhere, but the movement that propelled her to office – and to global political stardom – has been building for 30 years. \n\n' +
       'We’ve Got People is the story of that movement, which first exploded into public view with the largely forgotten presidential run of the Rev. Jesse Jackson, a campaign that came dangerously close to winning. \n\n' +
-      'With the party and the nation at a crossroads, this timely and original book offers new insight into how we’ve gotten where we are – and where we\'re headed. \n\n'
+      'With the party and the nation at a crossroads, this timely and original book offers new insight into how we’ve gotten where we are – and where we\'re headed. \n\n\n',
+      'Ryan Grim is The Intercept’s D.C. Bureau Chief and the host of the podcast Deconstructed. He authors the newsletter Bad News and was previously the Washington bureau chief for HuffPost, where he led a team that was twice a finalist for the Pulitzer Prize, and won once.\n',
+      'He edited and contributed reporting to groundbreaking investigative project on heroin treatment that not only changed federal and state laws,' +
+      ' but also shifted the culture of the recovery industry. The story, by Jason Cherkis, was a Pulitzer finalist and won a Polk Award.\n\n' +
+      'He has been a staff reporter for Politico and the Washington City Paper and is a co-host of the show Counter Points. He is the author of the books “We’ve Got People” (2019) and “This Is Your Country on Drugs” (2009).'
     ],
     link       : 'https://www.c-span.org/video/?462677-1/weve-people',
     tags       : [{ name: 'C-Span Talk', link: 'https://www.amazon.com/Weve-Got-People-Jackson-Movement/dp/1947492381' }, { name: 'Author Biography', link: 'https://theintercept.com/staff/ryangrim/' }],

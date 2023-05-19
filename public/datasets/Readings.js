@@ -11,7 +11,7 @@ export const Readings = [
     cover      : './images/KillingHope.jpg',
     description: [],
     link       : 'https://www.cia.gov/library/abbottabad-compound/13/130AEF1531746AAD6AC03EF59F91E1A1_Killing_Hope_Blum_William.pdf',
-    linkGroup  : [],
+    tags       : [],
     chapters   : [
       {
         chapter     : 1,
@@ -81,7 +81,7 @@ export const Readings = [
     cover      : './images/KillingHope.jpg',
     description: [],
     link       : 'https://www.cia.gov/library/abbottabad-compound/13/130AEF1531746AAD6AC03EF59F91E1A1_Killing_Hope_Blum_William.pdf',
-    linkGroup  : [],
+    tags       : [],
     chapters   : [
       {
         chapter     : 35,
@@ -114,7 +114,7 @@ export const Readings = [
     cover      : './images/TheJakartaMethod.jpg',
     description: [],
     link       : 'https://www.hachettebookgroup.com/titles/vincent-bevins/the-jakarta-method/9781541724013/?lens=publicaffairs',
-    linkGroup  : [],
+    tags       : [],
     chapters   : []
   },
   {
@@ -132,7 +132,7 @@ export const Readings = [
     cover      : './images/ManufacturingConsent.jpg',
     description: [],
     link       : 'https://edisciplinas.usp.br/pluginfile.php/5537300/mod_resource/content/1/Noam%20Chomsky_%20Edward%20S.%20Herman%20-%20Manufacturing%20Consent_%20The%20Political%20Economy%20of%20the%20Mass%20Media-Bodley%20Head%20%282008%29.pdf',
-    linkGroup  : [],
+    tags       : [],
     chapters   : []
   },
   {
@@ -153,8 +153,11 @@ export const Readings = [
       'Drawing on more than a decade of research in secret Pentagon files and extensive interviews with American veterans and Vietnamese survivors, Turse reveals for the first time how official policies resulted in millions of innocent civilians killed and wounded. In shocking detail, he lays out the workings of a military machine that made crimes in almost every major American combat unit all but inevitable. Kill Anything That Moves takes us from archives filled with Washington\'s long-suppressed war crime investigations to the rural Vietnamese hamlets that bore the brunt of the war; from boot camps where young American soldiers learned to hate all Vietnamese to bloodthirsty campaigns like Operation Speedy Express, in which a general obsessed with body counts led soldiers to commit what one participant called \"a My Lai a month.\" \n\n',
       'Thousands of Vietnam books later, Kill Anything That Moves, devastating and definitive, finally brings us face-to-face with the truth of a war that haunts Americans to this day. \n\n'
     ],
-    link       : 'http://www.amazon.com/Kill-Anything-That-Moves-American/dp/1250045061/ref=sr_1_1?ie=UTF8&qid=1452120004&sr=8-1&keywords=kill+anything+that+moves',
-    linkGroup  : [],
+    link       : 'https://us.macmillan.com/books/9781250045065/killanythingthatmoves',
+    tags       : [
+      { name: 'Amazon', link: 'http://www.amazon.com/Kill-Anything-That-Moves-American/dp/1250045061/ref=sr_1_1?ie=UTF8&qid=1452120004&sr=8-1&keywords=kill+anything+that+moves' },
+      { name: 'Biography', link: 'https://theintercept.com/staff/nick-turse/' }
+    ],
     chapters   : [
       {
         chapter     : 1,
@@ -204,7 +207,7 @@ export const Readings = [
       'With the party and the nation at a crossroads, this timely and original book offers new insight into how we’ve gotten where we are – and where we\'re headed. \n\n'
     ],
     link       : 'https://www.amazon.com/Weve-Got-People-Jackson-Movement/dp/1947492381',
-    linkGroup  : [],
+    tags       : [],
     chapters   : []
   },
   {
@@ -224,7 +227,7 @@ export const Readings = [
       'The conference was also attended by a slew of strange societies, many of which were fronts, and behind them was the CIA. The CIA was in favor of the end of the British Empire but a pan-African independence movement, one susceptible to Soviet entreaties, looked like a security threat. Through original research and unparalleled insight, Susan Williams reveals how the CIA\'s baleful influence was felt from South Africa to the Congo as the agency prepared to move in as Africa\'s colonizers moved out. \n\n'
     ],
     link       : 'https://www.hachettebookgroup.com/titles/susan-williams/white-malice/9781541768284/?lens=publicaffairs',
-    linkGroup  : [],
+    tags       : [],
     chapters   : [
       {
         chapter     : 1,

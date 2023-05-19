@@ -238,7 +238,7 @@ export const ContentBlock = styled.section`
   //position: absolute;
   height: fit-content;
   width: 100%;
-  margin: 8rem auto;
+  margin: 10rem auto;
   padding: 0;
 
 

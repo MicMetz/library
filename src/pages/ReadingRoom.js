@@ -5,7 +5,7 @@ import DefaultLayout from '../components/layouts/DefaultLayout.js'
 import { SideBar } from '../components/SideBar.js'
 import Image from 'next/image'
 import { Readings } from '/public/datasets/Readings.js'
-import { ArticleByline, ArticleFeaturedAtrribution, ArticleFeaturedCoverImage, ArticleFeaturedFooter, ArticlePage, ArticleSubtitle, ArticleTitle } from '../styles/ArticleStyledComponents.js'
+import { ArticleByline, ArticleFeaturedAtrribution, ArticleFeaturedCoverImage, ArticleFeaturedTagline, ArticlePage, ArticleSubtitle, ArticleTitle } from '../styles/ArticleStyledComponents.js'
 import { ReadingRoomBody, ReadingRoomBookContainer, ReadingRoomMain } from '../styles/ReadingRoomStyledComponents.js'
 import { ContentBlock, SectionTitle } from '../styles/StyledComponents.js'
 import { ArticleFeaturedDescription } from '../tools/DescriptionParser.js'
@@ -46,7 +46,7 @@ export default function ReadingRoom () {
           {readings?.map(book => {
 
             return (
-              <ReadingRoomBookContainer key = {book.id}>
+              <ContentBlock key = {book.id} value = {book}>
                 {/* <ContentBlock key = {index}> */}
 
                 {ArticleFeaturedDescription(book)}
@@ -56,12 +56,20 @@ export default function ReadingRoom () {
                   <ArticleByline >{book.author}</ArticleByline >
                 </ArticleFeaturedAtrribution >
                 <ArticleFeaturedCoverImage src = {book.cover} alt = {book.header.title}/>
-                <ArticleFeaturedFooter >
-                  <Link href = {book.link}>
-                    <a >Read More</a >
-                  </Link >
-                </ArticleFeaturedFooter >
-              </ReadingRoomBookContainer >
+                <ArticleFeaturedTagline >
+                  <ul >
+                    <li >
+                      <a href = {book.link} target = "blank">Read More</a >
+                    </li >
+                    {book.tags.map((tag, index) => {
+                      return (
+                        <li key = {index}><a href = {tag.link} target = "blank">{tag.name}</a ></li >
+                      )
+                    })}
+                  </ul >
+
+                </ArticleFeaturedTagline >
+              </ContentBlock >
             )
           })}
         </ReadingRoomMain >

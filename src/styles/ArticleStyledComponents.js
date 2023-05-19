@@ -58,14 +58,54 @@ export const ArticlePage = styled.section`
 
 `
 
-export const ArticleFeaturedFooter = styled.footer`
-  max-width: 100%;
-  margin: 0 auto;
+export const ArticleFeaturedTagline = styled.aside`
+  display: inline-block;
+  position: relative;
+  overflow-wrap: break-word;
+  hyphens: auto;
+
+  max-width: calc(100vw - 95vw);
+  width: 100%;
+
+  margin: 5rem 1rem 0 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   text-align: center;
-  padding: 0.5rem 1rem 0;
-  border-top: none;
-  font-family: 'PitchWeb', Courier, monospace
+  padding: 1rem 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-family: 'PitchWeb', Courier, monospace;
+
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0 auto 2rem;
+    padding: 0;
+    font-family: Courier, monospace;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  li {
+    display: inline-block;
+    margin: 1rem;
+    padding: 0;
+    font-size: 1.025rem;
+    font-family: Courier, monospace;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  a {
+    display: inline-block;
+    margin: 0 1rem;
+    padding: 0;
+    font-size: 1.025rem;
+    font-family: Courier, monospace;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
 
 `
 
@@ -77,8 +117,7 @@ export const ArticleFeaturedDetails = styled.div`
   order: 1;
   padding: 0 2rem;
   text-align: left;
-  margin-top: 8rem;
-  margin-right: 6rem;
+  margin: 5rem 1rem 0 auto;
   width: 100%;
   height: 100%;
 
@@ -91,15 +130,21 @@ export const ArticleFeaturedDetails = styled.div`
 export const ArticleFeaturedAtrribution = styled.div`
   display: inline-block;
   flex-direction: column;
+  //flex-wrap: wrap;
+  position: relative;
+  word-break: break-word;
+  //inline-size: min-content;
+  //text-break: break-all;
+  overflow-wrap: break-word;
+  hyphens: auto;
 
   width: 100%;
   height: 100%;
-  margin-top: 5rem;
+  margin: 5rem auto;
 
-  position: relative;
   max-width: calc(100vw - 80vw);
   //top: calc(0 + 10rem);
-  padding: 0 2rem;
+  padding: 0 1rem;
   order: 3;
 `
 
@@ -107,11 +152,11 @@ export const ArticleFeaturedCoverImage = styled.img`
   display: inline-block;
   position: relative;
 
-  margin: 6rem auto;
+  margin: 5rem auto;
 
   width: 100%;
   height: 100%;
-  max-width: 35%;
+  max-width: 30%;
 
   max-height: calc(100vh - 18rem);
   border-radius: 2px 1px 1px 2px;

@@ -4,8 +4,6 @@ import styled from 'styled-components'
 
 
 export const ReadingRoomBody = styled.div`
-  //margin-left: calc(100vw - 80vw) !important;
-  margin-left: 4vw !important;
   padding: 4rem 2rem 0 !important;
   line-height: 24px;
   //background-size: 100px 100px;
@@ -23,7 +21,6 @@ export const ReadingRoomMain = styled.main`
   //max-width: 99vw;
   width: 100%;
   height: 100%;
-
 `
 
 
@@ -114,7 +111,7 @@ export const ReadingRoomBookContainer = styled.section`
   width: 100%;
   margin: 8rem auto;
   padding: 0;
-  
+
   &button {
     display: inline-block;
     position: relative;
@@ -123,24 +120,24 @@ export const ReadingRoomBookContainer = styled.section`
     height: 100%;
     margin: 0 auto;
     padding: 0.5rem 1rem 0;
-    
+
     border-radius: 0.5rem;
     box-shadow: 0 0 0.5rem 0.25rem #000000FF;
     border-top: none;
     background-color: #000000FF;
     color: #FFFFFFFF;
-    
+
     &:hover {
       background-color: #000000FF;
       color: #FFFFFFFF;
-      
+
       &::after {
         background-color: #000000FF;
         color: #FFFFFFFF;
       }
-      
+
       &::before {
-        
+
       }
     }
   }

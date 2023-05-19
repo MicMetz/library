@@ -3,9 +3,9 @@ import Link from 'next/link'
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import DefaultLayout from '../components/layouts/DefaultLayout.js'
 import { SideBar } from '../components/SideBar.js'
-import { ArticleByline, ArticleFeaturedAtrribution, ArticleFeaturedCoverImage, ArticleFeaturedDetails, ArticleFeaturedFooter, ArticleSubtitle, ArticleTitle } from '../styles/ArticleStyledComponents.js'
+import { ArticleByline, ArticleFeaturedAtrribution, ArticleFeaturedCoverImage, ArticleFeaturedDetails, ArticleFeaturedTagline, ArticleSubtitle, ArticleTitle } from '../styles/ArticleStyledComponents.js'
 import { HomeBody, HomeMain } from '../styles/HomepageStyledComponents.js'
-import { CurrentReadings } from '/public/datasets/CurrentReadings.js'
+import { Current } from '/public/datasets/Current.js'
 import { ContentBlock, SectionTitle } from '../styles/StyledComponents.js'
 import { ArticleFeaturedDescription } from '../tools/DescriptionParser.js'
 
@@ -13,7 +13,7 @@ import { ArticleFeaturedDescription } from '../tools/DescriptionParser.js'
 
 
 export default function Homepage () {
-  const [activeFeature, setActiveFeature]   = useState(CurrentReadings[ 0 ])
+  const [activeFeature, setActiveFeature]   = useState(Current[ 0 ])
   const [scrollPosition, setScrollPosition] = useState()
   const ref                                 = useRef(null)
 
@@ -51,7 +51,7 @@ export default function Homepage () {
 
     for (let i = 0; i < content.length; i++) {
       if (onScreen(content[ i ])) {
-        loadActiveReading(CurrentReadings[ i ])
+        loadActiveReading(Current[ i ])
       }
     }
   }
@@ -69,10 +69,11 @@ export default function Homepage () {
         <HomeMain >
 
           <SectionTitle main>Current Reading</SectionTitle >
-          {CurrentReadings?.map(book => {
+          {Current?.map(book => {
 
             return (
-              <ContentBlock key = {book.id} value = {book} className = "featured" ref = {ref}>
+              <ContentBlock key = {book.id} value = {book}>
+                {/* <ContentBlock key = {index}> */}
 
                 {ArticleFeaturedDescription(book)}
                 <ArticleFeaturedAtrribution >
@@ -81,14 +82,23 @@ export default function Homepage () {
                   <ArticleByline >{book.author}</ArticleByline >
                 </ArticleFeaturedAtrribution >
                 <ArticleFeaturedCoverImage src = {book.cover} alt = {book.header.title}/>
-                <ArticleFeaturedFooter >
-                  <Link href = {book.link}>
-                    <a >Read More</a >
-                  </Link >
-                </ArticleFeaturedFooter >
+                <ArticleFeaturedTagline >
+                  <ul >
+                    <li >
+                      <a href = {book.link} target = "blank">Read More</a >
+                    </li >
+                    {book.tags.map((tag, index) => {
+                      return (
+                        <li key = {index}><a href = {tag.link} target = "blank">{tag.name}</a ></li >
+                      )
+                    })}
+                  </ul >
+
+                </ArticleFeaturedTagline >
               </ContentBlock >
             )
           })}
+
         </HomeMain >
       </HomeBody >
     </DefaultLayout >

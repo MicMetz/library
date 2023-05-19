@@ -6,7 +6,7 @@ import styled from 'styled-components'
 export const PageHeader = styled.header`
   position: absolute;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   margin: 2rem auto;

@@ -141,8 +141,8 @@ export const Readings = [
       ' testimony collected across twelve countries to reveal a shocking legacy that spans the globe.\n\n' +
       ' For decades, it\'s been believed that parts of the developing world passed peacefully into the' +
       ' U.S.-led capitalist system. The Jakarta Method demonstrates that the brutal extermination of unarmed leftists was a fundamental part of Washington\'s final triumph in the Cold War.\n\n\n',
-      'Vincent Bevins is an award-winning journalist. He reported for the Financial Times in London, then served as the Brazil correspondent for the Los Angeles Times, before covering Southeast Asia' +
-      ' for the Washington Post. He lives in Sao Paulo, Brazil.'
+      'Vincent Bevins is an award-winning journalist.\n\n He reported for the Financial Times in London, then served as the Brazil correspondent for the Los Angeles Times, before covering Southeast Asia' +
+      ' for the Washington Post. \n\n He, as of now, lives in Sao Paulo, Brazil.'
     ],
     link       : 'https://www.hachettebookgroup.com/titles/vincent-bevins/the-jakarta-method/9781541724013/?lens=publicaffairs',
     tags       : [],

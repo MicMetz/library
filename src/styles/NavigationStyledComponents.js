@@ -30,8 +30,15 @@ export const NavigationList = styled.ul`
   }
 
   li:first-child {
-    left: 0 !important;
+    padding-left: 0;
+    position: absolute;
+    left: 0; 
   }
+  
+  li:nth-child(2) {
+    padding-left: 8em;
+  }
+  
 
 
 `
@@ -39,7 +46,7 @@ export const NavigationList = styled.ul`
 export const NavigationListItem = styled.li`
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   will-change: width, margin;
-  margin: 0 9rem 0 0;
+  margin: 0 auto;
   padding: 0;
   cursor: pointer;
   opacity: 0.5;
@@ -49,7 +56,6 @@ export const NavigationListItem = styled.li`
   font-weight: 700;
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
-
 
 
   span {
@@ -67,42 +73,83 @@ export const NavigationListItem = styled.li`
     opacity: 1;
 
 
-    > Link > span {
-
-    }
-
-
-  }
-
-  &Logo {
-
-  }
 
 `
 
 export const NavLogoItem = styled(NavigationListItem)`
-  display: inline-block;
+  display: flex;
   //margin: 0;
-  left: 0;
-  position: relative;
   //margin-left: -5rem;
-  padding-right: 5rem;
-  padding-left: 0.5rem;
 
   ${TiChartPie} {
     object-fit: contain;
     width: 100%;
     height: 100%;
-    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    position: relative;
+
     color: cornsilk !important;
   }
 
-  
-  // Minify to icon in mobile
-  @media ${props => props.theme.breakpoints.sm} {
-    display: none;
+  span {
+    font-size: 1.0rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+
   }
-    
+
+
+  // Minify to icon in mobile
+  @media (max-width <= 800px) {
+    ${TiChartPie} {
+      width: 100%;
+      height: 100%;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+
+  @media (max-width: 800px) {
+    ${TiChartPie} {
+      width: 100%;
+      height: 100%;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+
+  @media (max-width: 1024px) {
+    ${TiChartPie} {
+      width: 100%;
+      height: 100%;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  @media (max-width > 800px) {
+    ${TiChartPie} {
+      width: 100%;
+      height: 100%;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
 
 
 `

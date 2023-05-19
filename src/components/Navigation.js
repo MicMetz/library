@@ -39,7 +39,7 @@ export const Navigation = ({ href }) => {
         <NavLogoItem >
           <a href = "https://micmetz.github.io">
             <span >
-              <TiChartPie size = "1em"/>
+              <TiChartPie size = "1.5em"/>
               Michael Metzjer
             </span >
           </a >

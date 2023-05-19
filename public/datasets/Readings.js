@@ -80,24 +80,29 @@ export const Readings = [
   {
     id         : 1,
     header     : {
-      title   : 'Killing Hope',
-      subtitle: 'Killing Hope U.S. Military and CIA Interventions Since World War II – Part 2'
+      title   : 'Operation Paperclip',
+      subtitle: 'The Secret Operation That Brought Nazi Scientists To America',
     },
-    author     : 'William Blum',
-    date       : '2003',
-    publisher  : 'Zed Books',
-    cover      : './images/KillingHope.jpg',
+    author     : 'Annie Jacobsen',
+    date       : 'February 11, 2014',
+    publisher  : 'Little, Brown and Company',
+    cover      : './images/OperationPaperclip.jpg',
     description: [
-      'Is the United States a force for democracy? \n',
-      'In this classic and unique volume that answers this question, William Blum serves up a forensic overview of U.S. foreign policy spanning sixty years. \n',
-      'For those who want the details on our most famous actions (Chile, Cuba, Vietnam, to name a few), and for those who want to learn about our lesser-known efforts (France, China, Bolivia, Brazil, for example), this book provides a window on what our foreign policy goals really are.\n',
-      'If you flip over the rock of American foreign policy of the past century, this is what crawls out…\n',
-      'invasions …\n bombings …\n overthrowing governments …\n occupations …\n suppressing movements for social change …\n assassinating political leaders …\n perverting elections …\n manipulating labor unions …\n manufacturing “news” …\n death squads …\n torture …\n biological warfare …\n depleted uranium …\n drug trafficking …\n mercenaries …\n',
-      'It’s not a pretty picture.\n',
-      'It is enough to give imperialism a bad name.\n',
+      'In the chaos following World War II, the U.S. government faced many difficult decisions, including what to do with the Third Reich\'s scientific minds.',
+      'These were the brains behind the Nazis\' once-indomitable war machine.',
+      'So began Operation Paperclip, a decades-long, covert project to bring Hitler\'s scientists and their families to the United States.\n',
+      'Many of these men were accused of war crimes, and others had stood trial at Nuremberg; one was convicted of mass murder and slavery.',
+      'They were also directly responsible for major advances in rocketry, medical treatments, and the U.S. space program. Was Operation Paperclip a moral outrage, or did it help America win the Cold War?\n',
+      'Drawing on exclusive interviews with dozens of Paperclip family members, colleagues, and interrogators, and with access to German archival documents' +
+      ' (including previously unseen papers made available by direct descendants of the Third Reich\'s ranking members), files obtained through the Freedom of' +
+      ' Information Act, and dossiers discovered in government archives and at Harvard University, Annie Jacobsen follows more than a dozen German scientists through',
+      ' their postwar lives and into a startling, complex, nefarious, and jealously guarded government secret of the twentieth century.'
     ],
-    link       : 'https://www.cia.gov/library/abbottabad-compound/13/130AEF1531746AAD6AC03EF59F91E1A1_Killing_Hope_Blum_William.pdf',
-    tags       : [],
+    link       : 'https://www.hachettebookgroup.com/titles/annie-jacobsen/operation-paperclip/9780316221054/?lens=little-brown',
+    tags       : [
+      { name: 'CIA Review', link: 'https://www.cia.gov/static/943643120807dda05c37d73ba0565ea9/Review-Operation-Paperclip.pdf' },
+      { name: 'NPR Talk', link: 'https://www.npr.org/2014/02/15/275877755/the-secret-operation-to-bring-nazi-scientists-to-america' }
+    ],
     chapters   : [
       {
         chapter     : 35,
@@ -172,7 +177,7 @@ export const Readings = [
     link       : 'https://us.macmillan.com/books/9781250045065/killanythingthatmoves',
     tags       : [
       { name: 'Amazon', link: 'http://www.amazon.com/Kill-Anything-That-Moves-American/dp/1250045061/ref=sr_1_1?ie=UTF8&qid=1452120004&sr=8-1&keywords=kill+anything+that+moves' },
-      { name: 'Biography', link: 'https://theintercept.com/staff/nick-turse/' }
+      { name: 'Author Biography', link: 'https://theintercept.com/staff/nick-turse/' }
     ],
     chapters   : [
       {
@@ -222,8 +227,8 @@ export const Readings = [
       'We’ve Got People is the story of that movement, which first exploded into public view with the largely forgotten presidential run of the Rev. Jesse Jackson, a campaign that came dangerously close to winning. \n\n' +
       'With the party and the nation at a crossroads, this timely and original book offers new insight into how we’ve gotten where we are – and where we\'re headed. \n\n'
     ],
-    link       : 'https://www.amazon.com/Weve-Got-People-Jackson-Movement/dp/1947492381',
-    tags       : [],
+    link       : 'https://www.c-span.org/video/?462677-1/weve-people',
+    tags       : [{ name: 'C-Span Talk', link: 'https://www.amazon.com/Weve-Got-People-Jackson-Movement/dp/1947492381' }, { name: 'Author Biography', link: 'https://theintercept.com/staff/ryangrim/' }],
     chapters   : []
   },
   {
@@ -302,5 +307,59 @@ export const Readings = [
       }
     ]
   },
+  {
+    id         : 7,
+    header     : {
+      title   : 'Walkaway',
+      subtitle: 'A Novel'
+    },
+    author     : 'Cory Doctorow',
+    date       : Date.parse('April 25, 2017'),
+    publisher  : 'Tor Books',
+    cover      : './images/Walkaway.jpg',
+    description: [
+      'Cory Doctorow’s first adult novel in eight years: an epic tale of revolution, love, post-scarcity, and the end of death.\n' +
+      '\n' +
+      'Hubert Vernon Rudolph Clayton Irving Wilson Alva Anton Jeff Harley Timothy Curtis Cleveland Cecil Ollie Edmund Eli Wiley Marvin Ellis Espinoza—known to his friends as Hubert, Etc—was too old to be at that Communist party.\n' +
+      '\n' +
+      'But after watching the breakdown of modern society, he really has no where left to be—except amongst the dregs of disaffected youth who party all night and heap scorn on the sheep they see on the morning commute. After falling in with Natalie, an ultra-rich heiress trying to escape the clutches of her repressive father, the two decide to give up fully on formal society—and walk away.\n' +
+      '\n' +
+      'After all, now that anyone can design and print the basic necessities of life—food, clothing, shelter—from a computer, there seems to be little reason to toil within the system.\n' +
+      '\n' +
+      'It’s still a dangerous world out there, the empty lands wrecked by climate change, dead cities hollowed out by industrial flight, shadows hiding predators animal and human alike. Still, when the initial pioneer walkaways flourish, more people join them. Then the walkaways discover the one thing the ultra-rich have never been able to buy: how to beat death. Now it’s war – a war that will turn the world upside down.\n' +
+      '\n' +
+      'Fascinating, moving, and darkly humorous, Walkaway is a multi-generation SF thriller about the wrenching changes of the next hundred years…and the very human people who will live their consequences.\n'
+    ],
+    link       : 'https://us.macmillan.com/books/9780765392763',
+    tags       : [],
+    chapters   : [],
+  },
+  {
+    id         : 8,
+    header     : {
+      title   : 'The New Jim Crow',
+      subtitle: 'Mass Incarceration in the Age of Colorblindness'
+    },
+    author     : 'Michelle Alexander',
+    date       : Date.parse('January 16, 2010'),
+    publisher  : 'The New Press',
+    cover      : './images/TheNewJimCrow.jpg',
+    link       : 'https://newjimcrow.com/',
+    tags       : [],
+    chapters   : [],
+    description: [
+      '\n' +
+      '\n' +
+      '“One of the most influential books of the last 20 years.”\n' +
+      '—Chronicle of Higher Education\n' +
+      '\n' +
+      '“Two years after Obama’s election, Alexander put the entire criminal justice system on trial, exposing racial discrimination from lawmaking to policing to the denial of voting rights to ex-prisoners. This bestseller struck the spark that would eventually light the fire of Black Lives Matter.”\n' +
+      '—Ibram X. Kendi, The New York Times\n' +
+      '\n' +
+      '“[The New Jim Crow] transformed forever the way thinkers and activists view the phenomenon of mass incarceration.”\n' +
+      '—Slate\n'
+    ]
+
+  }
 ]
 

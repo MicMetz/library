@@ -46,7 +46,7 @@ export const Current = [
     link       : 'https://us.macmillan.com/books/9781250045065/killanythingthatmoves',
     tags       : [
       { name: 'Amazon', link: 'http://www.amazon.com/Kill-Anything-That-Moves-American/dp/1250045061/ref=sr_1_1?ie=UTF8&qid=1452120004&sr=8-1&keywords=kill+anything+that+moves' },
-      { name: 'Biography', link: 'https://theintercept.com/staff/nick-turse/' }
+      { name: 'Author Biography', link: 'https://theintercept.com/staff/nick-turse/' }
     ],
     chapters   : [
       {

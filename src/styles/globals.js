@@ -68,11 +68,12 @@ const GlobalStyles = createGlobalStyle`
 
 
   .underline {
-    height: 2px;
+    display: inline-block;
+    height: 0.1rem;
     position: absolute;
     bottom: 0;
     left: 0;
-    margin: 0.8rem 0;
+    margin: 0.5rem 0;
     padding: 0;
     background: var(--color-secondary);
     transition: animate 0.3s ease-in-out;

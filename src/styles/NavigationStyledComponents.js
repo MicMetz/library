@@ -50,7 +50,7 @@ export const NavigationListItem = styled.li`
   opacity: 0.5;
   text-decoration: none;
   text-transform: uppercase;
-  display: block;
+  display: flex;
   font-weight: 700;
   font-size: 1.0rem;
   letter-spacing: 0.1rem;

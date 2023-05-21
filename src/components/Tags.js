@@ -8,35 +8,13 @@ function tagMaker (tagList) {
   let alphabetizedTags = tagList.sort()
   return (
     <div className = {`tag-container`}>
-      <span >Tags: </span >
-      {alphabetizedTags.map(tag => (
-        <Link key = {`${tag}-link`} href = {`/search?q=${tag}`}>
-          <a key = {tag} className = "tag">
-            {tag}
-          </a >
-        </Link >
-      ))}
-      <style jsx>{`
-        .tag-container {
-          margin-top: 10px;
-        }
-
-        a.tag {
-          margin-left: 10px;
-          background-color: #eee;
-
-          font-size: 14px;
-          padding: 3px 9px;
-          border: 2px solid #ddd;
-          border-radius: 17px;
-          cursor: pointer;
-          text-decoration: none;
-        }
-
-        a.tag:first-of-type {
-          margin-left: 0px;
-        }
-      `}</style >
+      {alphabetizedTags.map((tag, index) => {
+        return (
+          <Link href = {`/tags/${tag}`} key = {index}>
+            <a className = {`tag`}>{tag}</a >
+          </Link >
+        )
+      })}
     </div >
   )
 }
@@ -49,4 +27,4 @@ const TagBlock = props => {
   return tagMaker(props.tags)
 }
 
-export default TagBlock;
+export default TagBlock

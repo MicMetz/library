@@ -29,15 +29,15 @@ export const NavigationList = styled.ul`
     display: none;
   }
 
-  li:first-child {
-    padding-left: 0;
-    position: absolute;
-    left: 0;
-  }
-
-  li:nth-child(2) {
-    padding-left: 8em;
-  }
+  //li:first-child {
+  //  padding-left: 0;
+  //  position: absolute;
+  //  left: 0;
+  //}
+  //
+  //li:nth-child(2) {
+  //  padding-left: 8em;
+  //}
 
 `
 
@@ -53,7 +53,7 @@ export const NavigationListItem = styled.li`
   text-transform: uppercase;
   display: block;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.0rem;
   letter-spacing: 0.1rem;
 
 
@@ -71,42 +71,37 @@ export const NavigationListItem = styled.li`
   &:active {
     opacity: 1;
 
-
-
 `
 
-export const NavLogoItem = styled(NavigationListItem)`
-  display: flex;
-  //margin: 0;
-  //margin-left: -5rem;
+export const NavLogoItem = styled.li`
+  display: inline-block;
+  width: fit-content;
+  top: 0;
+  position: relative;
+  padding-left: 1rem;
 
-  ${TiChartPie} {
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  a {
+    text-decoration: none;
+    color: #b2adad !important;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
 
-    position: relative;
+  svg {
 
-    color: cornsilk !important;
   }
 
   span {
     font-size: 1.0rem;
     font-weight: 700;
-    text-transform: uppercase;
-
 
   }
 
-
-  // Minify to icon in mobile
   @media (max-width <= 800px) {
-    ${TiChartPie} {
-      width: 100%;
-      height: 100%;
+    svg {
+
     }
 
     span {
@@ -116,9 +111,8 @@ export const NavLogoItem = styled(NavigationListItem)`
 
 
   @media (max-width: 800px) {
-    ${TiChartPie} {
-      width: 100%;
-      height: 100%;
+    svg {
+
     }
 
     span {
@@ -128,9 +122,8 @@ export const NavLogoItem = styled(NavigationListItem)`
 
 
   @media (max-width: 1024px) {
-    ${TiChartPie} {
-      width: 100%;
-      height: 100%;
+    svg {
+
     }
 
     span {
@@ -139,19 +132,16 @@ export const NavLogoItem = styled(NavigationListItem)`
   }
 
   @media (max-width > 800px) {
-    ${TiChartPie} {
-      width: 100%;
-      height: 100%;
+    svg {
+
     }
 
     span {
       display: block;
     }
   }
-
-
-
 `
+
 
 export const NavigationBar = styled.nav`
   display: flex;
@@ -159,6 +149,8 @@ export const NavigationBar = styled.nav`
   z-index: 110;
   top: 0;
   left: 0;
+  right: 0;
+
   width: 100vw;
   height: 100%;
   max-height: 4vh;
@@ -166,8 +158,53 @@ export const NavigationBar = styled.nav`
   background: #1A1E23FF !important;
 
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+`
 
+
+export const Underline = styled.div`
+  position: absolute;
+  //bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.2rem;
+  //width: 100%;
+  background: #FFD700FF;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: width, margin;
+`
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+export const MobileNavigation = styled.div`
 
 `
 
+
+export const MobileNavigationDropdown = styled.div`
+  display: none;
+  position: fixed;
+  z-index: 110;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: #1A1E23FF !important;
+
+  align-items: center;
+  justify-content: space-around;
+
+
+  @media ${props => props.theme.breakpoints.sm} {
+    display: flex;
+  }
+
+  @media ${props => props.theme.breakpoints.md} {
+    display: flex;
+  }
+`

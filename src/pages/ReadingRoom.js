@@ -39,15 +39,14 @@ export default function ReadingRoom () {
       </Head >
 
       <ReadingRoomBody >
-        <SideBar header = {Readings[ 0 ].header} chapters = {Readings[ 0 ].chapters}/>
+        <SideBar header = {readings?.[ activeFeature ]?.header} chapters = {readings?.[ activeFeature ]?.chapters}/>
         <ReadingRoomMain >
 
           <SectionTitle main>Favorite Reads</SectionTitle >
-          {readings?.map(book => {
+          {readings?.map((book, index) => {
 
             return (
-              <ContentBlock key = {book.id} value = {book}>
-                {/* <ContentBlock key = {index}> */}
+              <ContentBlock key = {index} value = {book}>
 
                 {ArticleFeaturedDescription(book)}
                 <ArticleFeaturedAtrribution >

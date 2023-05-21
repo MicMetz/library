@@ -1,68 +1,60 @@
+import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
-
 import Link from 'next/link'
 import { TiChartPie } from 'react-icons/ti'
-import { NavigationBar, NavigationList, NavigationListItem, NavLogoItem } from '../styles/NavigationStyledComponents.js'
+import styled from 'styled-components'
+import { NavigationBar, NavigationList, NavigationListItem, NavLogoItem, Underline } from '../styles/NavigationStyledComponents.js'
 
 
 
 
-export const Navigation = ({ href }) => {
-  const [active, setActive] = useState('Home')
+export const Navigation = ({ ref }) => {
+  const router                  = useRouter()
+  const [href, setHref]         = useState(ref)
+  const [showMenu, setShowMenu] = useState(false)
 
-  // useEffect(() => {
-  //   let currentURL = window.location.href
-  //   console.log(currentURL)
-  //   if (currentURL.endsWith('/')) {
-  //     setActive('Home')
-  //     return
-  //   }
-  //   if (currentURL.endsWith('/ReadingRoom')) {
-  //     setActive('ReadingRoom')
-  //     return
-  //   }
-  //   if (currentURL.endsWith('/About')) {
-  //     setActive('About')
-  //     return
-  //   }
-  //   if (currentURL.endsWith('/Contact')) {
-  //     setActive('Contact')
-  //     return
-  //   }
-  // }, [active])
+
+  const toggleDropDownMenu = () => {
+    setShowMenu(!showMenu)
+  }
+
+  const handleRoute = (ref) => {
+    setHref(ref)
+    router.push(`/${ref}`)
+
+    var nav = styled(Underline)
+
+
+
+  }
+
+
 
   return (
-
     <NavigationBar >
-
+      <Underline />
       <NavigationList >
         <NavLogoItem >
           <a href = "https://micmetz.github.io">
+            <TiChartPie size = "1.5em"/>
             <span >
-              <TiChartPie size = "1.5em"/>
               Michael Metzjer
             </span >
           </a >
         </NavLogoItem >
-        <NavigationListItem active = {active === 'Home'}>
+        <NavigationListItem onClick = {() => handleRoute('/')}>
           <Link href = "/">
             <span >Home</span >
           </Link >
         </NavigationListItem >
-        <NavigationListItem active = {active === 'ReadingRoom'}>
-          <Link href = "/ReadingRoom">
-            <span >Reading Room</span >
-          </Link >
+        <NavigationListItem onClick = {() => handleRoute('ReadingRoom')}>
+          <span >Reading Room</span >
         </NavigationListItem >
-        <NavigationListItem active = {active === 'Articlespage'}>
-          <Link href = "/ArticleMap">
-            <span >Articles</span >
-          </Link >
+        <NavigationListItem onClick = {() => handleRoute('Articles')}>
+          <span >Articles</span >
         </NavigationListItem >
-        <NavigationListItem active = {active === 'Wall'}>
-          <Link href = "/TheWall.js">
-            <span >The Wall</span >
-          </Link >
+        <NavigationListItem onClick = {() => handleRoute('TheWall')}>
+          <span >The Wall</span >
         </NavigationListItem >
       </NavigationList >
     </NavigationBar >

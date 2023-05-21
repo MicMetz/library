@@ -16,7 +16,7 @@ export default function App ({ Component, pageProps }) {
   return (
     <>
 			<Theme >
-        <Navigation />
+        <Navigation ref = {router}/>
         <Component Component key = {router.asPath} {...pageProps} />
         {/* {renderLayout({ Component, router }, pageProps)} */}
 			</Theme >

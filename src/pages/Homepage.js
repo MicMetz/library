@@ -45,15 +45,23 @@ export default function Homepage () {
 
 
   const handleScroll = () => {
-    const position     = window.pageYOffset
-    const windowHeight = window.innerHeight
-    const content      = document.getElementsByClassName('featured')
+    // const position     = window.pageYOffset
 
-    for (let i = 0; i < content.length; i++) {
-      if (onScreen(content[ i ])) {
-        loadActiveReading(Current[ i ])
+    const observer = new IntersectionObserver(intersections => {
+      intersections.forEach((intersection) => {
+        if (intersection.intersectionRatio > 0.5) {
+          loadActiveReading(Current[ intersection.target.id ])
+        }
+      })
+    }, {
+      threshold: 0.5
+    })
+
+    document.querySelectorAll('section[id]').forEach((section) => {
+      if (section !== null) {
+        observer.observe(section)
       }
-    }
+    })
   }
 
 
@@ -69,10 +77,10 @@ export default function Homepage () {
         <HomeMain >
 
           <SectionTitle main>Current Reading</SectionTitle >
-          {Current?.map(book => {
+          {Current?.map((book, index) => {
 
             return (
-              <ContentBlock key = {book.id} value = {book}>
+              <ContentBlock key = {index} value = {book} id = {index}>
                 {/* <ContentBlock key = {index}> */}
 
                 {ArticleFeaturedDescription(book)}

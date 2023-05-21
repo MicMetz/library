@@ -43,7 +43,6 @@ export const NavigationList = styled.ul`
 
 
 export const NavigationListItem = styled.li`
-  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   will-change: width, margin;
   margin: 0 auto;
   padding: 0;
@@ -55,6 +54,10 @@ export const NavigationListItem = styled.li`
   font-weight: 700;
   font-size: 1.0rem;
   letter-spacing: 0.1rem;
+  transition: all 0.4s ease;
+
+  width: fit-content;
+  height: fit-content;
 
 
   span {
@@ -162,11 +165,11 @@ export const NavigationBar = styled.nav`
 `
 
 
-export const Underline = styled.div`
-  position: absolute;
-  //bottom: 0;
+export const Underline = styled.ins`
+  position: static;
+  bottom: 0;
   left: 0;
-  width: 0;
+  width: 100%;
   height: 0.2rem;
   //width: 100%;
   background: #FFD700FF;

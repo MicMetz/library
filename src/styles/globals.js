@@ -7,8 +7,8 @@ import normalize from 'styled-normalize'
 const GlobalStyles = createGlobalStyle`
   ${normalize}
   :root {
-    --color-primary: #1A1E23FF;
-    --color-secondary: #F2F2F2FF;
+    --color-primary: #d3743a;
+    --color-secondary: #FF1847;
     --color-tertiary: #333333FF;
     --color-quaternary: #FFD803FF;
     --color-quinary: #FFA803FF;
@@ -18,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
 
     --nav-height: 4vh;
     --nav-width: 100vw;
-    
+
     --sidebar-width: 20vw;
     --sidebar-height: 100vh;
 
@@ -29,6 +29,9 @@ const GlobalStyles = createGlobalStyle`
 
   }
 
+  [data-collapsible="true"].bg-white + [data-collapsible="true"].bg-white {
+  @apply pt-0 md: pt-0;
+  }
 
   .article-layout {
     display: flex;
@@ -64,10 +67,41 @@ const GlobalStyles = createGlobalStyle`
   }
 
 
+  .underline {
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0.8rem 0;
+    padding: 0;
+    background: var(--color-secondary);
+    transition: animate 0.3s ease-in-out;
+    //transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  /*.underline::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1rem;
+    background: var(--color-secondary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+  }*/
+
+  //.underline:hover::before {
+  //  transform: scaleX(1);
+  //}
+
+
   body {
     color: #333;
     font-family: Lyon, Georgia, serif;
-
+    -webkit-font-smoothing: antialiased;
     background-repeat: no-repeat
 
   }

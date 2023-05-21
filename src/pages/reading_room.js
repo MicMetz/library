@@ -13,7 +13,7 @@ import { ArticleFeaturedDescription } from '../tools/DescriptionParser.js'
 
 
 
-export default function ReadingRoom () {
+export default function Reading_room () {
   const [activeReading, setActiveReading] = useState(Readings.find((book) => book.id === 0))
 
   useEffect(() => {

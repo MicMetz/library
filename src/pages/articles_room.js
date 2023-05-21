@@ -9,7 +9,7 @@ import { Sidebar } from '../components/Sidebar.js'
 
 
 
-export default function ArticleMap () {
+export default function Articles_room () {
   return (
     <>
     <DefaultLayout >

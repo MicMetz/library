@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import Homepage from './Homepage.js'
-import ReadingRoom from './ReadingRoom.js'
+import Reading_room from './reading_room.js'
 
 
 

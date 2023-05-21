@@ -8,13 +8,15 @@ import { SidebarHeader, SidebarMenuButtonOverlay, ToC, ToCItem, SideMenuClosed, 
 export const Sidebar = ({ header, chapters }) => {
   const [menu, setMenu]                   = useState(false)
   const [activeChapter, setActiveChapter] = useState()
-  const [scroll, setScrolling]            = useState(false)
-  const [scrollTop, setScrollTop]         = useState(0)
 
-  const onScroll = (eve) => {
-    setScrollTop(eve.target.documentElement.scrollTop)
-    setScrolling(eve.target.documentElement.scrollTop > scrollTop)
-  }
+  useEffect(() => {
+    let isMounted = true
+    if (isMounted) {
+      setActiveChapter(window.location.hash.slice(1))
+    }
+    return () => { isMounted = false }
+  }, [])
+
 
 
   return (

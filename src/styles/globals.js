@@ -7,14 +7,16 @@ import normalize from 'styled-normalize'
 const GlobalStyles = createGlobalStyle`
   ${normalize}
   :root {
-    --color-primary: #d3743a;
-    --color-secondary: #FF1847;
+    --color-primary: #e88448FF;
+    --color-secondary: #FF1847FF;
     --color-tertiary: #333333FF;
     --color-quaternary: #FFD803FF;
     --color-quinary: #FFA803FF;
     --color-senary: #FFD803FF;
 
     --color-text: #333333FF;
+    --color-button: #FF1847FF;
+    --inferface-color: #1a1e23FF;
 
     --nav-height: 4vh;
     --nav-width: 100vw;
@@ -75,7 +77,7 @@ const GlobalStyles = createGlobalStyle`
     left: 0;
     margin: 0.5rem 0;
     padding: 0;
-    background: var(--color-secondary);
+    background: var(--color-button);
     transition: animate 0.3s ease-in-out;
     //transform: scaleX(0);
     transform-origin: left;

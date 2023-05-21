@@ -9,9 +9,10 @@ export const defaultTheme = {
   colors: {
     background : '#1A1E23FF',
     background1: '#d6d8de',
-    primary    : '#d3743a',
-    accent1    : 'hsl(34.9,98.6%,72.9%)',
+    primary    : '#e88448FF',
     button     : '#FF1847FF',
+    interface  : '#1a1e23FF',
+    accent1    : 'hsl(34.9,98.6%,72.9%)',
     background2: 'hsl(232.7,27.3%,23.7%)',
   },
   // Breakpoints for responsive design

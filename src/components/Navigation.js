@@ -32,7 +32,7 @@ export const Navigation = () => {
     underline.classList.add('underline')
     nav.appendChild(underline)
     activeItem = document.getElementById(`${href}`)
-    // console.log(activeItem)
+
     if (activeItem) {
       activeItemPosition    = activeItem.getBoundingClientRect()
       activeItemWidth       = activeItemPosition.width

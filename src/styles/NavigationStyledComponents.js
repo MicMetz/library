@@ -158,7 +158,8 @@ export const NavigationBar = styled.nav`
   height: 100%;
   max-height: 4vh;
   margin-bottom: 4rem;
-  background: #1A1E23FF !important;
+  //background: #1A1E23FF !important;
+  background: #1a1e23FF !important;
 
   align-items: center;
   justify-content: space-around;
@@ -172,7 +173,7 @@ export const Underline = styled.ins`
   width: 100%;
   height: 0.2rem;
   //width: 100%;
-  background: #FFD700FF;
+  background: var(--button-color);
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   will-change: width, margin;
 `

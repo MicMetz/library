@@ -14,23 +14,41 @@ import { ArticleFeaturedDescription } from '../tools/DescriptionParser.js'
 
 
 export default function ReadingRoom () {
-  const [readings, setReadings]             = useState()
-  const [scrollPosition, setScrollPosition] = useState(0)
-  const [activeFeature, setActiveFeature]   = useState(0)
+  const [activeReading, setActiveReading] = useState(Readings.find((book) => book.id === 0))
 
   useEffect(() => {
-    setReadings(Readings)
+    window.addEventListener('scroll', handleScroll)
   }, [])
 
-  const loadCurrentReading = () => {
-    let cur = {}
-    for (let i = 0; i < Readings.length; i++) {
-      cur.push(Readings[ i ])
 
+  const loadActiveReading = (book) => {
+    if (book === null && activeReading !== null) {
+      return
+    } else if (book !== null) {
+      setActiveReading(book)
     }
-    setReadings(cur)
   }
 
+
+  const handleScroll = () => {
+    // const position     = window.pageYOffset
+
+    const observer = new IntersectionObserver(intersections => {
+      intersections.forEach((intersection) => {
+        if (intersection.intersectionRatio > 0.5) {
+          loadActiveReading(Readings[ intersection.target.id ])
+        }
+      })
+    }, {
+      threshold: 0.5
+    })
+
+    document.querySelectorAll('section[id]').forEach((section) => {
+      if (section !== null) {
+        observer.observe(section)
+      }
+    })
+  }
 
   return (
     <DefaultLayout >
@@ -39,14 +57,14 @@ export default function ReadingRoom () {
       </Head >
 
       <ReadingRoomBody >
-        <SideBar header = {readings?.[ activeFeature ]?.header} chapters = {readings?.[ activeFeature ]?.chapters}/>
+        <SideBar header = {activeReading.header} chapters = {activeReading.chapters}/>
         <ReadingRoomMain >
 
           <SectionTitle main>Favorite Reads</SectionTitle >
-          {readings?.map((book, index) => {
+          {Readings.map((book, index) => {
 
             return (
-              <ContentBlock key = {index} value = {book}>
+              <ContentBlock key = {index} value = {book} id = {index}>
 
                 {ArticleFeaturedDescription(book)}
                 <ArticleFeaturedAtrribution >
@@ -60,9 +78,9 @@ export default function ReadingRoom () {
                     <li >
                       <a href = {book.link} target = "blank">Read More</a >
                     </li >
-                    {book.tags.map((tag, index) => {
+                    {book.tags.map((tag, id) => {
                       return (
-                        <li key = {index}><a href = {tag.link} target = "blank">{tag.name}</a ></li >
+                        <li key = {id}><a href = {tag.link} target = "blank">{tag.name}</a ></li >
                       )
                     })}
                   </ul >

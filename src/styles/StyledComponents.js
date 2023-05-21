@@ -86,16 +86,21 @@ export const SideMenuHeader = styled(SidebarHeader)`
   //align-items: center;
   padding: 1.5rem 1rem;
   justify-content: space-between;
+  
+  flex-direction: column;
 
   h1 {
-    display: block;
+    position: relative;
+    //display: block;
     font-size: 2rem;
     font-weight: 600;
     text-transform: uppercase;
+    padding-bottom: 2rem;
   }
 
   h2 {
-    display: block;
+    position: relative;
+    //display: block;
     font-size: 1.4rem;
     font-weight: 400;
     text-transform: uppercase;

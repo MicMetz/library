@@ -15,20 +15,6 @@ import { ArticleFeaturedDescription } from '../tools/DescriptionParser.js'
 export default function Homepage () {
   const [activeFeature, setActiveFeature]   = useState(Current[ 0 ])
   const [scrollPosition, setScrollPosition] = useState()
-  const ref                                 = useRef(null)
-
-
-  const onScreen = (element) => {
-    const rect       = element.getBoundingClientRect()
-    const elemTop    = rect.top
-    const elemBottom = rect.bottom
-
-    // Only completely visible elements return true:
-    const isVisible = ( elemTop >= 0 ) && ( elemBottom <= window.innerHeight )
-    // Partially visible elements return true:
-    //isVisible = elemTop < window.innerHeight && elemBottom >= 0;
-    return isVisible
-  }
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)

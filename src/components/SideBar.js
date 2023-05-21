@@ -17,15 +17,6 @@ export const SideBar = ({ header, chapters }) => {
     setScrolling(eve.target.documentElement.scrollTop > scrollTop)
   }
 
-  // useEffect(() => {
-  //   const onScroll = (eve) => {
-  //     setScrollTop(eve.target.documentElement.scrollTop)
-  //     setScrolling(eve.target.documentElement.scrollTop > scrollTop)
-  //   }
-  //   window.addEventListener('scroll', onScroll)
-  //
-  //   window.removeEventListener('scroll', onScroll)
-  // }, [scrollTop])
 
   return (
     <>
@@ -34,7 +25,7 @@ export const SideBar = ({ header, chapters }) => {
         <SideMenuOpened >
           <SideMenuHeader >
             <h1 >{header?.title}</h1 >
-            {/* <h2 >{header?.subtitle}</h2 > */}
+            <h2 >{header?.subtitle}</h2 >
           </SideMenuHeader >
           <ToC >
             <ToCHeader >

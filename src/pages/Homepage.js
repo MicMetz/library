@@ -17,7 +17,13 @@ export default function Homepage () {
   const [scrollPosition, setScrollPosition] = useState()
 
   useEffect(() => {
+    let isMounted = true
     window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      isMounted = false
+    }
   }, [])
 
 
@@ -81,9 +87,9 @@ export default function Homepage () {
                     <li >
                       <a href = {book.link} target = "blank">Read More</a >
                     </li >
-                    {book.tags.map((tag, index) => {
+                    {book.tags.map((tag, id) => {
                       return (
-                        <li key = {index}><a href = {tag.link} target = "blank">{tag.name}</a ></li >
+                        <li key = {id}><a href = {tag.link} target = "blank">{tag.name}</a ></li >
                       )
                     })}
                   </ul >

@@ -8,11 +8,15 @@ import { NavigationBar, NavigationList, NavigationListItem, NavLogoItem, Underli
 
 
 
-export const Navigation = ({ ref }) => {
+export const Navigation = () => {
   const router                  = useRouter()
-  const [href, setHref]         = useState(ref)
+  const [href, setHref]         = useState()
   const [showMenu, setShowMenu] = useState(false)
 
+
+  useEffect(() => {
+    setHref(router.pathname)
+  }, [router.pathname])
 
   const toggleDropDownMenu = () => {
     setShowMenu(!showMenu)
@@ -23,8 +27,6 @@ export const Navigation = ({ ref }) => {
     router.push(`/${ref}`)
 
     var nav = styled(Underline)
-
-
 
   }
 
@@ -38,14 +40,12 @@ export const Navigation = ({ ref }) => {
           <a href = "https://micmetz.github.io">
             <TiChartPie size = "1.5em"/>
             <span >
-              Michael Metzjer
+              {'Michael Metzjer'}
             </span >
           </a >
         </NavLogoItem >
         <NavigationListItem onClick = {() => handleRoute('/')}>
-          <Link href = "/">
-            <span >Home</span >
-          </Link >
+          <span >Home</span >
         </NavigationListItem >
         <NavigationListItem onClick = {() => handleRoute('ReadingRoom')}>
           <span >Reading Room</span >

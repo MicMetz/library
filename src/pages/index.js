@@ -9,6 +9,7 @@ import ReadingRoom from './ReadingRoom.js'
 export default function Index ({ page, navigation, settings }) {
   return (
     <>
+
       <Homepage />
     </ >
   )

@@ -17,7 +17,13 @@ export default function ReadingRoom () {
   const [activeReading, setActiveReading] = useState(Readings.find((book) => book.id === 0))
 
   useEffect(() => {
+    let isMounted = true
     window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      isMounted = false
+    }
   }, [])
 
 
@@ -64,7 +70,7 @@ export default function ReadingRoom () {
           {Readings.map((book, index) => {
 
             return (
-              <ContentBlock key = {index} value = {book} id = {index}>
+              <ContentBlock key = {index} value = {book} id = {index} innerRef = {c => this.myRef = c}>
 
                 {ArticleFeaturedDescription(book)}
                 <ArticleFeaturedAtrribution >
@@ -92,7 +98,6 @@ export default function ReadingRoom () {
         </ReadingRoomMain >
       </ReadingRoomBody >
     </DefaultLayout >
-
   )
 }
 

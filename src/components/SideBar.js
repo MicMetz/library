@@ -5,7 +5,6 @@ import { SidebarHeader, SidebarMenuButtonOverlay, ToC, ToCItem, SideMenuClosed, 
 
 
 
-
 export const SideBar = ({ header, chapters }) => {
   const [menu, setMenu]                   = useState(false)
   const [activeChapter, setActiveChapter] = useState()
@@ -19,7 +18,7 @@ export const SideBar = ({ header, chapters }) => {
 
 
   return (
-    <>
+
     <SidebarMenuButtonOverlay onClick = {() => setMenu(!menu)}>
       {menu ?
         <SideMenuOpened >
@@ -35,14 +34,16 @@ export const SideBar = ({ header, chapters }) => {
                 ' '
               }
             </ToCHeader >
-            {chapters?.map(({ id, chapterTitle }) => (
-              <ToCItem key = {id} active = {activeChapter === id}>
-                <a href = {`#${id}`}>
-                  <span ></span >
-                  {chapterTitle}
-                </a >
-              </ToCItem >
-            ))}
+            <ul >
+              {chapters?.map(({ chapterTitle }, id) => (
+                <ToCItem key = {id} active = {activeChapter === id}>
+                  <a href = {`#${id}`}>
+                    <span ></span >
+                    {chapterTitle}
+                  </a >
+                </ToCItem >
+              ))}
+            </ul >
           </ToC >
         </SideMenuOpened >
         :
@@ -54,6 +55,5 @@ export const SideBar = ({ header, chapters }) => {
         </SideMenuClosed >
       }
     </SidebarMenuButtonOverlay >
-      </>
   )
 }

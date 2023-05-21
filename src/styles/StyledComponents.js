@@ -8,7 +8,7 @@ export const SideMenuClosed = styled.div`
   background-color: white;
   z-index: 100;
   position: fixed;
-  top: 0;
+  top: calc(0 + var(--nav-height + 1rem));
   left: -2rem;
   bottom: 0;
   display: flex;
@@ -61,14 +61,14 @@ export const SidebarHeader = styled.header`
 
 export const SideMenuOpened = styled(SideMenuClosed)`
   left: 0;
-  max-width: 45vw;
+  top: calc(var(--nav-height));
+  max-width: 55vw;
+  min-height: fit-content;
   width: fit-content;
   padding: 1.5rem 2rem;
   border-right: 1px solid #f0f0f0;
   border-top: none;
   border-bottom: none;
-  overflow-y: auto;
-
   transition: all 0.7s ease-in-out;
 `
 
@@ -83,10 +83,10 @@ export const SideMenuHeader = styled(SidebarHeader)`
   height: fit-content;
   margin: 0 1em;
   display: flex;
-  //align-items: center;
+  align-items: center;
   padding: 1.5rem 1rem;
   justify-content: space-between;
-  
+
   flex-direction: column;
 
   h1 {
@@ -111,7 +111,8 @@ export const SidebarMenuButtonOverlay = styled.button`
   position: absolute;
   width: fit-content;
   height: fit-content;
-  top: 0;
+  top: calc(var(--nav-height));
+
   left: 0;
   bottom: 0;
   right: 0;
@@ -122,16 +123,33 @@ export const SidebarMenuButtonOverlay = styled.button`
   z-index: 100;
 `
 
-export const ToC = styled.ul`
-  list-style: none;
+export const ToC = styled.div`
+  margin: 0;
   width: 100%;
+  height: 100vh;
+
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #d3743a #f0f0f0;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+
+  padding-bottom: 2rem;
+  max-font-size: 1.125rem;
+  font-family: "PitchWeb", Courier, monospace;
+
+  ul {
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
   li {
-    margin: 2.5rem 1rem;
+    margin: 2.5rem 1.5rem;
   }
 
   a {
-    font-size: 1.125rem;
     background-image: none;
   }
 
@@ -207,27 +225,6 @@ export const ToCItem = styled.li`
   }
 `
 
-export const MenuHeader = styled.div`
-  font-weight: 600;
-  text-transform: uppercase;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-after-overflow: '...';
-  -webkit-font-smoothing: subpixel-antialiased;
-  -moz-osx-font-smoothing: auto;
-  max-height: 3rem;
-  height: fit-content;
-  cursor: none;
-  margin: 0 1rem;
-
-  h1 {
-    font-size: 3.5rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-`
 
 export const SideMenuHeaderOpen = styled.header`
   display: none;
@@ -255,78 +252,6 @@ export const ContentBlock = styled.section`
     margin-bottom: 0;
   }
 
-`
-
-export const ArticleContainer = styled.article`
-  margin: 2rem auto;
-  padding: 0 2rem;
-
-  blockquote {
-    margin: 4rem auto;
-    font-style: italic;
-  }
-
-  img {
-    max-width: 100%;
-  }
-
-  img:first-child {
-    mix-blend-mode: multiply
-  }
-
-  ul {
-    font-family: "PitchWeb", Courier, monospace;
-    list-style: disc;
-    max-width: 30rem;
-    margin: 3rem auto;
-    font-size: 1.25rem;
-    -webkit-font-smoothing: subpixel-antialiased !important;
-    -moz-osx-font-smoothing: auto;
-  }
-
-  ul li {
-    padding-left: 1rem;
-  }
-
-
-  blockquote cite {
-    display: block;
-    font-style: normal;
-    text-transform: uppercase;
-    font-size: 80%;
-    letter-spacing: 0.05em;
-  }
-
-
-  h2 {
-    margin: 4rem auto 2rem;
-    color: #d3743a
-  }
-
-  h2 span {
-    color: #374151;
-    display: block;
-    font-size: 1.05rem;
-    font-family: "PitchWeb", Courier, monospace;
-    -webkit-font-smoothing: subpixel-antialiased;
-    -moz-osx-font-smoothing: auto;
-  }
-
-  h3 {
-    margin: 0 auto 0;
-  }
-
-
-  p, h2, h3 {
-    margin: 0 auto;
-    max-width: 30em;
-    font-size: 20px;
-    line-height: 30px;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    letter-spacing: 0.001em;
-    word-spacing: 0.005em
-  }
 `
 
 

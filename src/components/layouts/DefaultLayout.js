@@ -5,7 +5,6 @@ import { SideBar } from '../SideBar.js'
 
 
 
-
 export default function DefaultLayout ({ children }) {
   return (
     <div >

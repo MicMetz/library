@@ -18,6 +18,9 @@ const GlobalStyles = createGlobalStyle`
 
     --nav-height: 4vh;
     --nav-width: 100vw;
+    
+    --sidebar-width: 20vw;
+    --sidebar-height: 100vh;
 
     --footer-height: 20rem;
     --footer-width: 100vw;

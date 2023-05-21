@@ -4,7 +4,7 @@ import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 import { ArticleMapBody, ArticleMapMain } from '../styles/ArticleMapStyledComponents.js'
 import  DefaultLayout  from '../components/layouts/DefaultLayout.js'
-import { SideBar } from '../components/SideBar.js'
+import { Sidebar } from '../components/Sidebar.js'
 
 
 
@@ -18,7 +18,7 @@ export default function ArticleMap () {
         <meta name = "description" content = "initial-scale=1.0, width=device-width"/>
       </Head >
       <ArticleMapBody >
-        <SideBar header = {'Article Map'} chapters = {[]}/>
+        <Sidebar header = {'Article Map'} chapters = {[]}/>
 
       </ArticleMapBody >
 

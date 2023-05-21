@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import React, { useEffect, useRef, useState } from 'react'
 import DefaultLayout from '../components/layouts/DefaultLayout.js'
-import { SideBar } from '../components/SideBar.js'
+import { Sidebar } from '../components/Sidebar.js'
 import Image from 'next/image'
 import { Readings } from '/public/datasets/Readings.js'
 import { ArticleByline, ArticleFeaturedAtrribution, ArticleFeaturedCoverImage, ArticleFeaturedTagline, ArticlePage, ArticleSubtitle, ArticleTitle } from '../styles/ArticleStyledComponents.js'
@@ -37,8 +37,6 @@ export default function ReadingRoom () {
 
 
   const handleScroll = () => {
-    // const position     = window.pageYOffset
-
     const observer = new IntersectionObserver(intersections => {
       intersections.forEach((intersection) => {
         if (intersection.intersectionRatio > 0.5) {
@@ -63,7 +61,7 @@ export default function ReadingRoom () {
       </Head >
 
       <ReadingRoomBody >
-        <SideBar header = {activeReading.header} chapters = {activeReading.chapters}/>
+        <Sidebar header = {activeReading.header} chapters = {activeReading.chapters}/>
         <ReadingRoomMain >
 
           <SectionTitle main>Favorite Reads</SectionTitle >

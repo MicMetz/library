@@ -105,7 +105,7 @@ export const Current = [
     chapters   : []
   },
   {
-    id         : 2,
+    id         : 3,
     header     : {
       title   : 'White Malice',
       subtitle: 'The CIA and the Covert Recolonization of Africa'
@@ -180,5 +180,6 @@ export const Current = [
       }
     ]
   },
+
 
 ]

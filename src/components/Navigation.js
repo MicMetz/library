@@ -24,7 +24,7 @@ export const Navigation = () => {
 
   const handleRoute = (ref) => {
     setHref(ref)
-    router.push(`/${ref}`)
+    router.push(`${ref}`)
 
     var nav = styled(Underline)
 

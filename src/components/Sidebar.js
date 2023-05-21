@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { SidebarHeader, SidebarMenuButtonOverlay, ToC, ToCItem, SideMenuClosed, SideMenuOpened, SideMenuHeader, ToCHeader } from '../styles/StyledComponents.js'
+import { SidebarHeader, SidebarMenuButtonOverlay, ToC, ToCItem, SideMenuClosed, SideMenuOpened, SideMenuHeader, ToCHeader } from '../styles/SidebarStyledComponents.js'
 
 
 
 
-export const SideBar = ({ header, chapters }) => {
+export const Sidebar = ({ header, chapters }) => {
   const [menu, setMenu]                   = useState(false)
   const [activeChapter, setActiveChapter] = useState()
   const [scroll, setScrolling]            = useState(false)
@@ -29,9 +29,9 @@ export const SideBar = ({ header, chapters }) => {
           <ToC >
             <ToCHeader >
               {header !== 'Article Map' && chapters !== null ?
-                'Chapter List'
+                <h3 >Chapter List</h3 >
                 :
-                ' '
+                <h3 ></h3 >
               }
             </ToCHeader >
             <ul >

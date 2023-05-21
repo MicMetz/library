@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import React, { useEffect, useMemo, useRef, useState } from 'react'
+import { Readings } from '../../public/datasets/Readings.js'
 import DefaultLayout from '../components/layouts/DefaultLayout.js'
-import { SideBar } from '../components/SideBar.js'
+import { Sidebar } from '../components/Sidebar.js'
 import { ArticleByline, ArticleFeaturedAtrribution, ArticleFeaturedCoverImage, ArticleFeaturedDetails, ArticleFeaturedTagline, ArticleSubtitle, ArticleTitle } from '../styles/ArticleStyledComponents.js'
 import { HomeBody, HomeMain } from '../styles/HomepageStyledComponents.js'
 import { Current } from '/public/datasets/Current.js'
@@ -16,6 +17,7 @@ export default function Homepage () {
   const [activeFeature, setActiveFeature]   = useState(Current[ 0 ])
   const [scrollPosition, setScrollPosition] = useState()
 
+
   useEffect(() => {
     let isMounted = true
     window.addEventListener('scroll', handleScroll)
@@ -27,22 +29,20 @@ export default function Homepage () {
   }, [])
 
 
-  const loadActiveReading = (book) => {
-    if (book === null && activeFeature !== null) {
+  const loadActiveReading = (feature) => {
+    if (feature === null && activeFeature !== null) {
       return
-    } else if (book !== null) {
-      setActiveFeature(book)
+    } else if (feature !== null) {
+      setActiveFeature(feature)
     }
   }
 
 
   const handleScroll = () => {
-    // const position     = window.pageYOffset
-
     const observer = new IntersectionObserver(intersections => {
       intersections.forEach((intersection) => {
         if (intersection.intersectionRatio > 0.5) {
-          loadActiveReading(Current[ intersection.target.id ])
+          loadActiveReading(Readings[ intersection.target.id ])
         }
       })
     }, {
@@ -65,7 +65,7 @@ export default function Homepage () {
       </Head >
 
       <HomeBody >
-        <SideBar header = {activeFeature.header} chapters = {activeFeature.chapters}/>
+        <Sidebar header = {activeFeature.header} chapters = {activeFeature.chapters}/>
         <HomeMain >
 
           <SectionTitle main>Current Reading</SectionTitle >

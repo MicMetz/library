@@ -1,14 +1,17 @@
 import React from 'react'
 import { Navigation } from '../Navigation.js'
-import { SideBar } from '../SideBar.js'
+import { Sidebar } from '../Sidebar.js'
 
 
 
 
 export default function DefaultLayout ({ children }) {
   return (
-    <div >
-      <main >{children}</main >
+    <div className = "flex flex-col justify-between h-screen">
+      <Navigation />
+      {/* <SideBar /> */}
+      {children}
+
     </div >
   )
 }

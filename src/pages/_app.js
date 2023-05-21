@@ -16,7 +16,6 @@ export default function App ({ Component, pageProps }) {
   return (
     <>
 			<Theme >
-        <Navigation />
         <Component Component key = {router.asPath} {...pageProps} />
         {/* {renderLayout({ Component, router }, pageProps)} */}
 			</Theme >
@@ -26,6 +25,7 @@ export default function App ({ Component, pageProps }) {
 
 
 
+/*
 export const getStaticProps = async () => {
   let articles = []
   try {
@@ -55,3 +55,4 @@ export const getStaticProps = async () => {
     }
   }
 }
+*/

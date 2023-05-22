@@ -48,8 +48,6 @@ export const MenuItem = ({ i, link, text }) => {
     }
   }, [active])
 
-
-
   return (
     <motion.li
       variants = {variants}

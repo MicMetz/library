@@ -17,10 +17,10 @@ export default function App ({ Component, pageProps }) {
   return (
     <>
 			<Theme >
-        <AnimatePresence mode = 'wait' onExitComplete = {handleExitComplete}>
+      <AnimatePresence mode = 'wait' initial = {false}>
         <Component Component key = {router.route} {...pageProps} />
-          {/* <Component Component key = {router.asPath} {...pageProps} /> */}
-          {/* {renderLayout({ Component, router }, pageProps)} */}
+        {/* <Component Component key = {router.asPath} {...pageProps} /> */}
+        {/* {renderLayout({ Component, router }, pageProps)} */}
         </AnimatePresence >
 			</Theme >
 		</>

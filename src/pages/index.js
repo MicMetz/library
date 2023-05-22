@@ -38,9 +38,7 @@ export default function Index ({ page, navigation, settings }) {
 
   // if (error) console.log(error);
   const onComplete = () => {
-    // console.log('start')
-    setShowAnimation(false)
-    // refScroll.current.showAnimation = false
+    refScroll.current.animation = true
   }
 
 
@@ -57,11 +55,9 @@ export default function Index ({ page, navigation, settings }) {
   useEffect(() => {
 
     if (!refScroll.current) {
-      // refScroll.current.showAnimation = true
       return
     }
 
-    // refScroll.current.showAnimation = false
     window.addEventListener('load', () => {
       let image      = document.querySelector('img')
       const isLoaded = ( image?.complete && image?.naturalHeight !== 0 )
@@ -104,17 +100,17 @@ export default function Index ({ page, navigation, settings }) {
     <div className = "flex flex-col justify-between h-screen" data-scroll-container id = "main-target" ref = {refScroll}>
       <motion.div
         ref = {refScroll}
-        animate = {!refScroll.current ? 'visible' : 'disabled'}
+        animate = {refScroll.current?.animation ? 'disabled' : 'visible'}
         variants = {variants}
         data-scroll
         data-scroll-sticky
         data-scroll-target = "#main-target"
         className = "preloader__forwards"
-        // onAnimationComplete = {definition => {
-        //   if (definition === 'visible') {
-        //     onComplete()
-        //   }
-        // }}
+        onAnimationComplete = {definition => {
+          if (definition === 'visible') {
+            onComplete()
+          }
+        }}
       >
         <div className = "preloader__forwards__wrapper">
           <motion.div

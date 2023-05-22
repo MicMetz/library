@@ -48,18 +48,24 @@ export const MenuItem = ({ i, link, text }) => {
     }
   }, [active])
 
+  
+
   return (
     <motion.li
       variants = {variants}
+      initial = {{
+        textDecoration : `none`,
+        opacity        : 0.5,
+        transformOrigin: `left`,
+      }}
       whileHover = {{
-        transition             : `all 1.2s ease-in-out`,
-        textDecoration         : `underline`,
-        textDecorationColor    : `var(--color-secondary)`,
-        textDecorationThickness: `0.05rem`,
-        textDecorationStyle    : `solid`,
-        textDecorationSkipInk  : `none`,
-        textDecorationLine     : `underline`,
-        transformOrigin        : `left`,
+        transition           : `all 0.5s ease-out`,
+        textDecoration       : `underline`,
+        textDecorationColor  : `var(--color-secondary)`,
+        textDecorationStyle  : `solid`,
+        textDecorationSkipInk: `none`,
+        textDecorationLine   : `underline`,
+        opacity              : 1,
       }}
       // onClick={() => }
       whileTap = {{ scale: 0.95 }}

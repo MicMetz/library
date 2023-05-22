@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import React, { useEffect, useMemo, useRef, useState } from 'react'
+import { Navigation } from '../components/Navigation.js'
 import { Readings } from './api/Readings.js'
 import DefaultLayout from '../components/layouts/DefaultLayout.js'
 import { Sidebar } from '../components/Sidebar.js'
@@ -13,10 +14,11 @@ import { ArticleFeaturedDescription } from '../tools/DescriptionParser.js'
 
 
 
-export default function Homepage () {
+export default function Homepage (isToggleOpen, toggleOpen, isIntro) {
   const [activeFeature, setActiveFeature]   = useState(Current[ 0 ])
   const [scrollPosition, setScrollPosition] = useState()
-
+  const navRef                              = useRef({isToggleOpen, toggleOpen})
+  const introRef                            = useRef(isIntro)
 
   useEffect(() => {
     let isMounted = true
@@ -60,8 +62,11 @@ export default function Homepage () {
 
   return (
     <DefaultLayout >
+      <Navigation isOpen = {isToggleOpen} toggleOpen = {toggleOpen} isIntro = {isIntro} forwardRef = {navRef}/>
       <Head >
         <title >Home</title >
+        <link rel = "icon" href = "/icons/logo.svg"/>
+
       </Head >
 
       <HomeBody >

@@ -145,10 +145,7 @@ export default function Index ({ page, navigation, settings }) {
         </div >
       </motion.div >
       <div className = "cursor"></div >
-      <DefaultLayout >
-        <Navigation isOpen = {isToggleOpen} toggleOpen = {() => toggleBodyScroll(isToggleOpen)}/>
-        <Homepage />
-      </DefaultLayout >
+      <Homepage isOpen = {isToggleOpen} toggleOpen = {() => toggleBodyScroll(isToggleOpen)} isIntro = {showAnimation}/>
     </div >
   )
 }

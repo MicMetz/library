@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import React, { useEffect, useRef, useState } from 'react'
 import DefaultLayout from '../components/layouts/DefaultLayout.js'
+import { Navigation } from '../components/Navigation.js'
 import { Sidebar } from '../components/Sidebar.js'
 import Image from 'next/image'
 import { Readings } from '/src/pages/api/Readings.js'
@@ -13,8 +14,11 @@ import { ArticleFeaturedDescription } from '../tools/DescriptionParser.js'
 
 
 
-export default function Reading_room () {
+export default function Reading_room (isToggleOpen, toggleOpen, isIntro) {
   const [activeReading, setActiveReading] = useState(Readings.find((book) => book.id === 0))
+
+  const navRef   = useRef({ isToggleOpen, toggleOpen })
+  const introRef = useRef(isIntro)
 
   useEffect(() => {
     let isMounted = true
@@ -56,15 +60,18 @@ export default function Reading_room () {
 
   return (
     <DefaultLayout >
+      <Navigation isOpen = {isToggleOpen} toggleOpen = {toggleOpen} isIntro = {isIntro} forwardRef = {navRef}/>
+
       <Head >
-        <title >Favorite Reads</title >
+        <title >Reading List</title >
+        <link rel = "icon" href = "/icons/logo.svg"/>
       </Head >
 
       <ReadingRoomBody >
         <Sidebar header = {activeReading.header} chapters = {activeReading.chapters}/>
         <ReadingRoomMain >
 
-          <SectionTitle main>Favorite Reads</SectionTitle >
+          <SectionTitle main>Reading List</SectionTitle >
           {Readings.map((book, index) => {
 
             return (

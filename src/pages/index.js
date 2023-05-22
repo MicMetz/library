@@ -11,20 +11,6 @@ import { inView, motion, useInView } from 'framer-motion'
 
 
 
-const transition = ({ duration, ease }) => {
-  return {
-    duration: duration || 1.5,
-    ease    : ease || [0.87, 0.1, -0.13, 1]
-  }
-}
-
-
-
-const variants = {
-  visible : { top: '-100vh', transition: { ...transition, delay: 9 } },
-  disabled: { top: '-100vh', display: 'none' }
-}
-
 export default function Index ({ page, navigation, settings }) {
   const router                            = useRouter()
   const [isToggleOpen, setIsToggleOpen]   = useState(false)
@@ -149,6 +135,22 @@ export default function Index ({ page, navigation, settings }) {
     </div >
   )
 }
+
+
+
+const transition = ({ duration, ease }) => {
+  return {
+    duration: duration || 1.5,
+    ease    : ease || [0.87, 0.1, -0.13, 1]
+  }
+}
+
+
+const variants = {
+  visible : { top: '-100vh', transition: { ...transition, delay: 9 } },
+  disabled: { top: '-100vh', display: 'none' }
+}
+
 
 
 //

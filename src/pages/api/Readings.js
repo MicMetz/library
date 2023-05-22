@@ -6,7 +6,7 @@ export const Readings = [
       subtitle: 'Killing Hope U.S. Military and CIA Interventions Since World War II – Part 1&2'
     },
     author     : 'William Blum',
-    date       : '2003',
+    date       : Date.parse('October 1, 1995'),
     publisher  : 'Zed Books',
     cover      : './images/KillingHope.jpg',
     description: [
@@ -84,7 +84,7 @@ export const Readings = [
       subtitle: 'The Secret Operation That Brought Nazi Scientists To America',
     },
     author     : 'Annie Jacobsen',
-    date       : 'February 11, 2014',
+    date       : Date.parse('February 11, 2014'),
     publisher  : 'Little, Brown and Company',
     cover      : './images/OperationPaperclip.jpg',
     description: [
@@ -130,7 +130,7 @@ export const Readings = [
       subtitle: 'Washington\'s Anticommunist Crusade and the Mass Murder Program that Shaped Our World'
     },
     author     : 'Vincent Bevins',
-    date       : '2020',
+    date       : Date.parse('May 19, 2020'),
     publisher  : 'PublicAffairs',
     cover      : './images/TheJakartaMethod.jpg',
     description: [
@@ -163,7 +163,9 @@ export const Readings = [
     cover      : './images/ManufacturingConsent.jpg',
     description: [],
     link       : 'https://edisciplinas.usp.br/pluginfile.php/5537300/mod_resource/content/1/Noam%20Chomsky_%20Edward%20S.%20Herman%20-%20Manufacturing%20Consent_%20The%20Political%20Economy%20of%20the%20Mass%20Media-Bodley%20Head%20%282008%29.pdf',
-    tags       : [],
+    tags       : [
+      { name: 'The 5 Filters', link: 'https://www.youtube.com/watch?v=34LGPIXvU5M' },
+    ],
     chapters   : []
   },
   {
@@ -397,5 +399,34 @@ export const Readings = [
       'Based on her unprecedented level of access to the School of the Americas, Gill describes the School’s mission and training methods and reveals how its students, alumni, and officers perceive themselves in relation to the dirty wars that have raged across Latin America. Assessing' +
       ' the School’s role in U.S. empire-building, she shows how Latin America’s brightest and most ambitious military officers are indoctrinated into a stark good-versus-evil worldview, seduced by consumer society and the “American dream,” and enlisted as proxies in Washington’s war against drugs and “subversion.”'
     ],
-  }
+
+  },
+  {
+    id         : 10,
+    header     : {
+      title   : 'The Shock Doctrine',
+      subtitle: 'The Rise of Disaster Capitalism'
+    },
+    author     : 'Naomi Klein',
+    date       : Date.parse('September 4, 2007'),
+    publisher  : 'Metropolitan Books',
+    cover      : './images/TheShockDoctrineCover.jpg',
+    link       : 'https://www.naomiklein.org/shock-doctrine',
+    tags       : [
+      { name: 'The Book', link: 'https://www.powells.com/book/shock-doctrine-the-rise-of-disaster-capitalism-9780805079838' },
+      { name: 'The Film', link: 'https://www.youtube.com/watch?v=B3B5qt6gsxY' },
+      { name: 'Talk', link: 'https://www.youtube.com/watch?v=hA736oK9FPg' }
+    ],
+    chapters   : [],
+    description: [
+      'Based on breakthrough historical research and four years of on-the-ground reporting in disaster zones, The Shock Doctrine vividly shows how disaster capitalism – the rapid-fire corporate reengineering of societies still reeling from shock – did not begin with September 11, 2001.\n',
+      'The book traces its origins back fifty years, to the University of Chicago under Milton Friedman, which produced many of the leading neo-conservative and neo-liberal thinkers whose influence is still profound in Washington today. New, surprising connections are drawn between economic policy, “shock and awe” warfare and covert CIA-funded experiments in electroshock and sensory deprivation in the 1950s, research that helped write the torture manuals used today in Guantanamo Bay.\n',
+      'The Shock Doctrine follows the application of these ideas through our contemporary history, showing in riveting detail how well-known events of the recent past have been deliberate, active theatres for the shock doctrine, among them:\n',
+      'Pinochet’s coup in Chile in 1973, the Falklands War in 1982, the Tiananmen Square Massacre in 1989, the collapse of the Soviet Union in 1991, the Asian Financial crisis in 1997 and Hurricane Mitch in 1998. '
+    ]
+  }/* ,
+  {
+    id         : 11,
+
+  } */
 ]

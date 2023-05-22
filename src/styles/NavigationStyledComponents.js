@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 
 export const NavigationWrapper = styled.div`
   position: relative;
-  z-index: 9999;
+  z-index: 9990;
 `
 
 
@@ -23,7 +23,7 @@ export const NavigationList = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
-  
+
   li {
     will-change: width, margin;
     margin: 0 2rem;
@@ -38,7 +38,7 @@ export const NavigationList = styled.ul`
     letter-spacing: 0.1rem;
     transition: all 0.4s ease;
   }
-  
+
   li:hover {
     opacity: 1;
   }

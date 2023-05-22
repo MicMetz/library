@@ -32,6 +32,95 @@ const GlobalStyles = createGlobalStyle`
 
   }
 
+
+  .preloader__forwards {
+    width: 100vw;
+    height: 100vh;
+    background-color: #10101a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: grid;
+    place-content: center;
+  }
+
+  .preloader__forwards__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .preloader__forwards__left {
+    margin-right: 1rem;
+  }
+
+  .preloader__forwards__right {
+    margin-left: 1rem;
+    width: max-content;
+    height: 4rem;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(to bottom,
+      #10101a 5%,
+      rgba(#10101a, 0) 30%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(to top,
+      #10101a 5%,
+      rgba(#10101a, 0) 30%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+
+
+  .preloader__forwards__text {
+    font-family: $font-tertiary;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 210%;
+    letter-spacing: 0.19em;
+    color: var(--color-white);
+    animation: preloaderforwardsTextAnimation 15s forwards;
+    animation-delay: 3s;
+    height: 100%;
+  }
+
+  .preloader__forwards__text__stop {
+
+  }
+
+  @keyframes preloaderforwardsTextAnimation {
+    0% {
+      transform: translateY(0%);
+    }
+    50%, 100% {
+      transform: translateY(-600%);
+    }
+    to {
+      animation-play-state: paused;
+    }
+  }
+
+
   [data-collapsible="true"].bg-white + [data-collapsible="true"].bg-white {
   @apply pt-0 md: pt-0;
   }

@@ -16,7 +16,6 @@ export const ArticlePage = styled.section`
   background-color: white;
   border-radius: 2rem;
   box-shadow: 0 0 10px 0 transparentization(black, 0.9), 0 0 0 4px transparentization(black, 0.85);
-  $zease: cubic-bezier(0.165, 0.84, 0.44, 1);
 
 
   [data-scroll] {

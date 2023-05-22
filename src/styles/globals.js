@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
     --color-quaternary: #FFD803FF;
     --color-quinary: #FFA803FF;
     --color-senary: #FFD803FF;
+    --color-white: #FFFFFFFF;
 
     --color-text: #333333FF;
     --color-button: #FF1847FF;

@@ -1,13 +1,16 @@
 import { IconType } from 'react-icons/lib'
 import { TiChartPie } from 'react-icons/ti'
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 
 
 
-export const NavigationActive = styled.div`
-
+export const NavigationWrapper = styled.div`
+  position: relative;
+  z-index: 9999;
 `
+
 
 export const NavigationList = styled.ul`
   display: flex;
@@ -20,6 +23,25 @@ export const NavigationList = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
+  
+  li {
+    will-change: width, margin;
+    margin: 0 2rem;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0.5;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    font-weight: 700;
+    font-size: 1.0rem;
+    letter-spacing: 0.1rem;
+    transition: all 0.4s ease;
+  }
+  
+  li:hover {
+    opacity: 1;
+  }
 
   @media ${props => props.theme.breakpoints.sm} {
     display: none;
@@ -42,64 +64,43 @@ export const NavigationList = styled.ul`
 `
 
 
-export const NavigationListItem = styled.li`
-  will-change: width, margin;
-  margin: 0 auto;
-  padding: 0;
-  cursor: pointer;
-  opacity: 0.5;
-  text-decoration: none;
-  text-transform: uppercase;
-  display: flex;
-  font-weight: 700;
-  font-size: 1.0rem;
-  letter-spacing: 0.1rem;
-  transition: all 0.4s ease;
+export const NavigationListItem = styled.a`
+  
+  color: cornsilk !important;
 
   width: fit-content;
   height: fit-content;
-
-
-  span {
-    text-decoration: none;
-    color: cornsilk !important;
-    text-transform: uppercase;
-  }
-
-  &:hover {
-    opacity: 1;
-
-  }
-
-  &:active {
-    opacity: 1;
-
 `
 
-export const NavLogoItem = styled.li`
-  display: inline-block;
-  width: fit-content;
-  top: 0;
-  position: relative;
-  padding-left: 1rem;
+export const NavLogoItem = styled.div`
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  left: 1rem;
+  margin: 0 2rem;
+  padding: 0;
+  cursor: pointer;
+
 
   a {
     text-decoration: none;
-    color: #b2adad !important;
+    color: cornsilk !important;
     text-transform: uppercase;
     align-items: center;
     justify-content: center;
     display: flex;
   }
 
-  svg {
+   svg {
 
   }
 
   span {
     font-size: 1.0rem;
     font-weight: 700;
-
+    animation: logoLeftAnim 15s linear infinite;
+    overflow: hidden;
   }
 
   @media (max-width <= 800px) {
@@ -174,7 +175,7 @@ export const Underline = styled.ins`
   height: 0.2rem;
   //width: 100%;
   background: var(--button-color);
-  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation: logoLeftAnim 15s linear infinite;
   will-change: width, margin;
 `
 
@@ -182,33 +183,36 @@ export const Underline = styled.ins`
 
 
 export const MobileNavigation = styled.div`
-
-`
-
-
-export const MobileNavigationDropdown = styled.div`
   display: none;
   position: fixed;
-  z-index: 110;
+  // position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-
-  width: 100vw;
+  width: 100%;
+  overflow: hidden;
   height: 100vh;
+  background-color: var(--interface-color);
+  color: var(--color-senary);
+  overflow-y: scroll;
 
-  background: #1A1E23FF !important;
-
-  align-items: center;
-  justify-content: space-around;
+`
 
 
-  @media ${props => props.theme.breakpoints.sm} {
-    display: flex;
-  }
+export const ToggleButton = styled.button`
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+`
 
-  @media ${props => props.theme.breakpoints.md} {
-    display: flex;
+
+export const ToggleButtonWrapper = styled.div`
+@include centerContent;
+  color: var(--color-gray);
+  font-family: $font-tertiary;
+
+  ${ToggleButton} {
+
   }
 `
+

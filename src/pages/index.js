@@ -38,7 +38,7 @@ export default function Index ({ page, navigation, settings }) {
 
   // if (error) console.log(error);
   const onComplete = () => {
-    refScroll.current.animation = true
+    setShowAnimation(false)
   }
 
 
@@ -53,6 +53,13 @@ export default function Index ({ page, navigation, settings }) {
 
 
   useEffect(() => {
+    document.addEventListener('onkeypress', (e) => {
+      if (e.key === 'Space') {
+        e.preventDefault()
+        setShowAnimation(false)
+        document.querySelector('.preloader__forwards').style.display = 'none'
+      }
+    })
 
     if (!refScroll.current) {
       return
@@ -99,8 +106,8 @@ export default function Index ({ page, navigation, settings }) {
   return (
     <div className = "flex flex-col justify-between h-screen" data-scroll-container id = "main-target" ref = {refScroll}>
       <motion.div
-        ref = {refScroll}
-        animate = {refScroll.current?.animation ? 'disabled' : 'visible'}
+        ref = {ref}
+        animate = {showAnimation ? 'visible' : 'disabled'}
         variants = {variants}
         data-scroll
         data-scroll-sticky
@@ -111,6 +118,7 @@ export default function Index ({ page, navigation, settings }) {
             onComplete()
           }
         }}
+
       >
         <div className = "preloader__forwards__wrapper">
           <motion.div
@@ -118,7 +126,7 @@ export default function Index ({ page, navigation, settings }) {
             animate = {{ x: 0, opacity: 1, transition: { ...transition } }}
             className = "preloader__forwards__left"
           >
-            <img src = "/static/icons/logo.svg" alt = "logo"/>
+            <img src = "/icons/logo.svg" alt = "logo"/>
           </motion.div >
           <motion.div
             initial = {{ x: 10, opacity: 0 }}
@@ -132,6 +140,7 @@ export default function Index ({ page, navigation, settings }) {
             <p className = "preloader__forwards__text"></p >
             <p className = "preloader__forwards__text">Architecture of the mind</p >
 
+            {hasBeenViewed}
           </motion.div >
         </div >
       </motion.div >

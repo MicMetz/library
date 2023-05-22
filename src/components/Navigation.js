@@ -104,6 +104,8 @@ export const Navigation = () => {
    }
    */
 
+
+
   return (
     <NavigationWrapper
       initial = {false}
@@ -118,7 +120,7 @@ export const Navigation = () => {
       >
         <NavigationList >
           <NavLogoItem >
-            {/* <NavigationListItem onClick = {() => handleRoute('/https://micmetz.github.io')} id = "/" className = " "> */}
+            {/* <NavigationListItem io')} id = "/" className = " "> */}
 
             <a href = "https://micmetz.github.io">
               <TiChartPie size = "1.5em"/>
@@ -128,10 +130,10 @@ export const Navigation = () => {
               {/* </NavigationListItem> */}
             </a >
           </NavLogoItem >
-          <MenuItem i = {0} text = "Home" link = {'/'}/>
-          <MenuItem i = {1} text = "Reading Room" link = {'/reading_room'}/>
-          <MenuItem i = {2} text = "Articles Room" link = {'/articles_room'}/>
-          <MenuItem i = {3} text = "The Wall" link = {'/the_wall'}/>
+          <MenuItem i = {0} text = "Home" link = {'/'}  />
+          <MenuItem i = {1} text = "Reading Room" link = {'/reading_room'}  />
+          <MenuItem i = {2} text = "Articles Room" link = {'/articles_room'}  />
+          <MenuItem i = {3} text = "The Wall" link = {'/the_wall'}  />
         </NavigationList >
       </NavigationBar >
       <MobileNavigationbar variants = {variants} isOpen = {isOpen} isMobile = {false}/>

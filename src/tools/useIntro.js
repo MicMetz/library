@@ -12,7 +12,7 @@ export const useHasBeenViewed = () => {
   const hasBeenViewed   = prevInView.current || inView
   useEffect(() => {
     prevInView.current = inView
-  })
+  }, [inView])
 
   return [hasBeenViewed, ref]
 }

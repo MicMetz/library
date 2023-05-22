@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import * as React from 'react'
 import { motion, useMotionValue, useMotionValueEvent } from 'framer-motion'
@@ -25,6 +26,7 @@ const variants = {
 
 
 export const MenuItem = ({ i, link, text }) => {
+  const router                            = useRouter()
   const [active, setActive]               = useState(false)
   const [hover, setHover]                 = useState(false)
   const [currentActive, setCurrentActive] = useState(false)
@@ -48,6 +50,14 @@ export const MenuItem = ({ i, link, text }) => {
     }
   }, [active])
 
+
+  function handleRoute (ref) {
+    router.push(ref)
+
+  }
+
+
+
   return (
     <motion.li
       variants = {variants}
@@ -69,7 +79,10 @@ export const MenuItem = ({ i, link, text }) => {
       whileTap = {{ scale: 0.95 }}
       // whileActive = {{ textDecoration: `underline`, textDecorationColor: `#FF008C` }}
     >
-      <NavigationListItem href = {link} style = {active ? variants.active : variants.inactive} id = {link}>{text}</NavigationListItem >
+      {/* <NavigationListItem id = {link} > */}
+      {/*   <a href = {link}>{text}</a > */}
+      {/* </NavigationListItem > */}
+      <NavigationListItem style = {active ? variants.active : variants.inactive} id = {link} onClick = {() => handleRoute(link)}>{text}</NavigationListItem >
     </motion.li >
   )
 }

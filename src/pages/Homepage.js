@@ -14,11 +14,11 @@ import { ArticleFeaturedDescription } from '../tools/DescriptionParser.js'
 
 
 
-export default function Homepage (isToggleOpen, toggleOpen, isIntro) {
+export default function Homepage (forwardRef, open, toggle) {
   const [activeFeature, setActiveFeature]   = useState(Current[ 0 ])
   const [scrollPosition, setScrollPosition] = useState()
-  const navRef                              = useRef({isToggleOpen, toggleOpen})
-  const introRef                            = useRef(isIntro)
+  const navRef                              = useRef({ open, toggle })
+  const ref                                 = useRef(forwardRef)
 
   useEffect(() => {
     let isMounted = true
@@ -62,7 +62,7 @@ export default function Homepage (isToggleOpen, toggleOpen, isIntro) {
 
   return (
     <DefaultLayout >
-      <Navigation isOpen = {isToggleOpen} toggleOpen = {toggleOpen} isIntro = {isIntro} forwardRef = {navRef}/>
+      <Navigation open = {open} toggle = {toggle} forwardRef = {ref}/>
       <Head >
         <title >Home</title >
         <link rel = "icon" href = "/icons/logo.svg"/>

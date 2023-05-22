@@ -10,15 +10,18 @@ import { ArticleByline, ArticleFeaturedAtrribution, ArticleFeaturedCoverImage, A
 import { ReadingRoomBody, ReadingRoomBookContainer, ReadingRoomMain } from '../styles/ReadingRoomStyledComponents.js'
 import { ContentBlock, SectionTitle } from '../styles/StyledComponents.js'
 import { ArticleFeaturedDescription } from '../tools/DescriptionParser.js'
+import { Current } from './api/Current.js'
 
 
 
 
-export default function Reading_room (isToggleOpen, toggleOpen, isIntro) {
-  const [activeReading, setActiveReading] = useState(Readings.find((book) => book.id === 0))
+export default function Reading_room (forwardRef, open, toggle) {
+  const [activeFeature, setActiveFeature]   = useState(Current[ 0 ])
+  const [scrollPosition, setScrollPosition] = useState()
+  const navRef                              = useRef({ open, toggle })
+  const ref                                 = useRef(forwardRef)
+  const [activeReading, setActiveReading]   = useState(Readings.find((book) => book.id === 0))
 
-  const navRef   = useRef({ isToggleOpen, toggleOpen })
-  const introRef = useRef(isIntro)
 
   useEffect(() => {
     let isMounted = true
@@ -60,7 +63,7 @@ export default function Reading_room (isToggleOpen, toggleOpen, isIntro) {
 
   return (
     <DefaultLayout >
-      <Navigation isOpen = {isToggleOpen} toggleOpen = {toggleOpen} isIntro = {isIntro} forwardRef = {navRef}/>
+      <Navigation open = {open} toggle = {toggle} forwardRef = {ref}/>
 
       <Head >
         <title >Reading List</title >

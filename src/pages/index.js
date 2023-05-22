@@ -1,31 +1,31 @@
 import { useRouter } from 'next/router'
-import React, { Component, useEffect, useRef, useState } from 'react'
+import React, { Component, useEffect, useMemo, useRef, useState } from 'react'
 import Head from 'next/head'
 import DefaultLayout from '../components/layouts/DefaultLayout.js'
 import { Navigation } from '../components/Navigation.js'
 import { useHasBeenViewed } from '../tools/useIntro.js'
 import Homepage from './Homepage.js'
 import Reading_room from './reading_room.js'
-import { inView, motion, useInView } from 'framer-motion'
+import { inView, motion, useAnimation } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
 
 
 
 
 export default function Index ({ page, navigation, settings }) {
-  const router                            = useRouter()
-  const [isToggleOpen, setIsToggleOpen]   = useState(false)
-  const refScroll                         = useRef(null)
-  const [hasBeenViewed, ref]              = useHasBeenViewed()
-  const [showAnimation, setShowAnimation] = useState(true)
-  // const { ref, inView }                 = useInView({
-  //   threshold: .8
-  // })
+  const router                          = useRouter()
+  const [isToggleOpen, setIsToggleOpen] = useState(false)
+  const controls                        = useAnimation()
+  const [ref, inView]                   = useInView()
 
 
-  // if (error) console.log(error);
-  const onComplete = () => {
-    setShowAnimation(false)
-  }
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible')
+    } else {
+      controls.start('disabled')
+    }
+  }, [controls, inView])
 
 
   function toggleBodyScroll (isToggleOpen) {
@@ -37,74 +37,15 @@ export default function Index ({ page, navigation, settings }) {
   }
 
 
-
-  useEffect(() => {
-    document.addEventListener('onkeypress', (e) => {
-      if (e.key === 'Space') {
-        e.preventDefault()
-        setShowAnimation(false)
-        document.querySelector('.preloader__forwards').style.display = 'none'
-      }
-    })
-
-    if (!refScroll.current) {
-      return
-    }
-
-    window.addEventListener('load', () => {
-      let image      = document.querySelector('img')
-      const isLoaded = ( image?.complete && image?.naturalHeight !== 0 )
-    })
-
-    // header cursor
-    const cursor       = document.querySelector('.cursor')
-    window.onmousemove = (e) => {
-      cursor?.setAttribute('style', `top: ${e.pageY}px; left: ${e.pageX}px;`)
-    }
-    // image hover effect
-    Array.from(document.querySelectorAll('.content')).forEach(
-      (el) => {
-        const imgs = Array.from(el.querySelectorAll('img'))
-        imgs.forEach((img) => {
-            img.addEventListener('mouseenter', () => {
-              cursor.classList.add('activeImg')
-            })
-            img.addEventListener('mouseleave', () => {
-              cursor.classList.remove('activeImg')
-            })
-          }
-        )
-
-      })
-
-    return () => {
-      window.removeEventListener('load', () => {
-        let image      = document.querySelector('img')
-        const isLoaded = ( image?.complete && image?.naturalHeight !== 0 )
-      })
-      window.onmousemove = null
-
-      // setShowAnimation(true)
-    }
-
-  }, [])
-
   return (
-    <div className = "flex flex-col justify-between h-screen" data-scroll-container id = "main-target" ref = {refScroll}>
+    <div className = "flex flex-col justify-between h-screen" ref = {ref}>
       <motion.div
         ref = {ref}
-        animate = {showAnimation ? 'visible' : 'disabled'}
+        initial = {{ top: 0 }}
+        animate = {controls}
         variants = {variants}
-        data-scroll
-        data-scroll-sticky
-        data-scroll-target = "#main-target"
+        id = "main-target-animation"
         className = "preloader__forwards"
-        onAnimationComplete = {definition => {
-          if (definition === 'visible') {
-            onComplete()
-          }
-        }}
-
       >
         <div className = "preloader__forwards__wrapper">
           <motion.div
@@ -112,7 +53,7 @@ export default function Index ({ page, navigation, settings }) {
             animate = {{ x: 0, opacity: 1, transition: { ...transition } }}
             className = "preloader__forwards__left"
           >
-            <img src = "/icons/logo.svg" alt = "logo"/>
+            <img src = "./icons/logo.svg" alt = "logo"/>
           </motion.div >
           <motion.div
             initial = {{ x: 10, opacity: 0 }}
@@ -126,12 +67,12 @@ export default function Index ({ page, navigation, settings }) {
             <p className = "preloader__forwards__text"></p >
             <p className = "preloader__forwards__text">Architecture of the mind</p >
 
-            {hasBeenViewed}
+            {/* {hasBeenViewed} */}
           </motion.div >
         </div >
       </motion.div >
       <div className = "cursor"></div >
-      <Homepage isOpen = {isToggleOpen} toggleOpen = {() => toggleBodyScroll(isToggleOpen)} isIntro = {showAnimation}/>
+      <Homepage isOpen = {isToggleOpen} toggleOpen = {() => toggleBodyScroll(isToggleOpen)} contentRef = {ref}/>
     </div >
   )
 }
@@ -147,8 +88,8 @@ const transition = ({ duration, ease }) => {
 
 
 const variants = {
-  visible : { top: '-100vh', transition: { ...transition, delay: 9 } },
-  disabled: { top: '-100vh', display: 'none' }
+  visible: { top: '-100vh', transition: { ...transition, delay: 9 } },
+  hidden : { opacity: 0, display: 'none' },
 }
 
 

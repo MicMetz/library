@@ -39,9 +39,10 @@ const Path = (props) => (
   />
 )
 
-export const Navigation = () => {
+export const Navigation = (forwardRef, open, toggle) => {
   const router               = useRouter()
-  const [isOpen, toggleOpen] = useCycle(false, true)
+  const [isOpen, toggleOpen] = useCycle(open, toggle)
+  const ref                  = useRef(forwardRef)
 
   useEffect(() => {
 
@@ -111,6 +112,7 @@ export const Navigation = () => {
       initial = {false}
       animate = {isOpen ? 'open' : 'closed'}
       mobile = {false}
+      ref = {ref}
     >
 
       <NavigationBar
@@ -130,10 +132,10 @@ export const Navigation = () => {
               {/* </NavigationListItem> */}
             </a >
           </NavLogoItem >
-          <MenuItem i = {0} text = "Home" link = {'/'}  />
-          <MenuItem i = {1} text = "Reading Room" link = {'/reading_room'}  />
-          <MenuItem i = {2} text = "Articles Room" link = {'/articles_room'}  />
-          <MenuItem i = {3} text = "The Wall" link = {'/the_wall'}  />
+          <MenuItem i = {0} text = "Home" link = "/"/>
+          <MenuItem i = {1} text = "Reading Room" link = "/reading_room"/>
+          <MenuItem i = {2} text = "Articles Room" link = "/articles_room"/>
+          <MenuItem i = {3} text = "The Wall" link = "/the_wall"/>
         </NavigationList >
       </NavigationBar >
       <MobileNavigationbar variants = {variants} isOpen = {isOpen} isMobile = {false}/>

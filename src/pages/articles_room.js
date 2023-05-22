@@ -12,14 +12,15 @@ import { Current } from './api/Current.js'
 
 
 
-export default function Articles_room (isToggleOpen, toggleOpen, isIntro) {
+export default function Articles_room (forwardRef, open, toggle) {
   const [scrollPosition, setScrollPosition] = useState()
-  const navRef                              = useRef({ isToggleOpen, toggleOpen })
-  const introRef                            = useRef(isIntro)
+  const navRef                              = useRef({ open, toggle })
+  const ref                                 = useRef(forwardRef)
+
 
   return (
     <DefaultLayout >
-      <Navigation isOpen = {isToggleOpen} toggleOpen = {toggleOpen} isIntro = {isIntro} forwardRef = {navRef}/>
+      <Navigation open = {open} toggle = {toggle} forwardRef = {ref}/>
 
       <Head >
         <title >Article List</title >

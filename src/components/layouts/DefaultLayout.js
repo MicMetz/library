@@ -6,13 +6,11 @@ import { Sidebar } from '../Sidebar.js'
 
 
 
-export default function DefaultLayout ({children}) {
+export default function DefaultLayout ({ children }) {
 
   return (
-    <>
-      {/* <Navigation isOpen = {isToggleOpen} toggleOpen = {toggleOpen}/> */}
-      {/* <Sidebar /> */}
+    <div className = "flex flex-col justify-between h-screen">
       {children}
-    </>
+    </div >
   )
 }

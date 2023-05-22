@@ -4,15 +4,15 @@ import { useEffect, useRef } from 'react'
 
 
 
-const useHasBeenViewed = () => {
-  const [ref, inView] = useInView();
-  const prevInView    = useRef(false);
-  const hasBeenViewed = prevInView.current || inView;
+export const useHasBeenViewed = () => {
+  const { ref, inView } = useInView({
+    threshold: .8
+  })
+  const prevInView      = useRef(false)
+  const hasBeenViewed   = prevInView.current || inView
   useEffect(() => {
-    prevInView.current = inView;
-  });
+    prevInView.current = inView
+  })
 
-  return [hasBeenViewed, ref];
+  return [hasBeenViewed, ref]
 }
-
-export default useHasBeenViewed

@@ -3,25 +3,13 @@ import React, { Component, useEffect, useRef, useState } from 'react'
 import Head from 'next/head'
 import DefaultLayout from '../components/layouts/DefaultLayout.js'
 import { Navigation } from '../components/Navigation.js'
+import { useHasBeenViewed } from '../tools/useIntro.js'
 import Homepage from './Homepage.js'
 import Reading_room from './reading_room.js'
-import { motion, useInView } from 'framer-motion'
+import { inView, motion, useInView } from 'framer-motion'
 
 
 
-
-const useHasBeenViewed = () => {
-  const { ref, inView } = useInView({
-    threshold: .8
-  })
-  const prevInView      = useRef(false)
-  const hasBeenViewed   = prevInView.current || inView
-  useEffect(() => {
-    prevInView.current = inView
-  })
-
-  return [hasBeenViewed, ref]
-}
 
 const transition = ({ duration, ease }) => {
   return {
@@ -30,18 +18,30 @@ const transition = ({ duration, ease }) => {
   }
 }
 
+
+
+const variants = {
+  visible : { top: '-100vh', transition: { ...transition, delay: 9 } },
+  disabled: { top: '-100vh', display: 'none' }
+}
+
 export default function Index ({ page, navigation, settings }) {
-  const router                          = useRouter()
-  const [isToggleOpen, setIsToggleOpen] = useState(false)
-  const refScroll                       = useRef(null)
-  const [hasBeenViewed, ref]            = useHasBeenViewed()
-  // const showAnimation                   = useIntro()
+  const router                            = useRouter()
+  const [isToggleOpen, setIsToggleOpen]   = useState(false)
+  const refScroll                         = useRef(null)
+  const [hasBeenViewed, ref]              = useHasBeenViewed()
+  const [showAnimation, setShowAnimation] = useState(true)
   // const { ref, inView }                 = useInView({
   //   threshold: .8
   // })
 
 
   // if (error) console.log(error);
+  const onComplete = () => {
+    // console.log('start')
+    setShowAnimation(false)
+    // refScroll.current.showAnimation = false
+  }
 
 
   function toggleBodyScroll (isToggleOpen) {
@@ -57,10 +57,11 @@ export default function Index ({ page, navigation, settings }) {
   useEffect(() => {
 
     if (!refScroll.current) {
+      // refScroll.current.showAnimation = true
       return
     }
 
-
+    // refScroll.current.showAnimation = false
     window.addEventListener('load', () => {
       let image      = document.querySelector('img')
       const isLoaded = ( image?.complete && image?.naturalHeight !== 0 )
@@ -87,26 +88,32 @@ export default function Index ({ page, navigation, settings }) {
 
       })
 
+    return () => {
+      window.removeEventListener('load', () => {
+        let image      = document.querySelector('img')
+        const isLoaded = ( image?.complete && image?.naturalHeight !== 0 )
+      })
+      window.onmousemove = null
+
+      // setShowAnimation(true)
+    }
+
   }, [])
 
   return (
-    <div className = "flex flex-col justify-between h-screen" data-scroll-container ref = {refScroll} id = "main-target">
+    <div className = "flex flex-col justify-between h-screen" data-scroll-container id = "main-target" ref = {refScroll}>
       <motion.div
-        ref = {ref}
-        initial = "hidden"
-        viewport = {{ once: true }}
+        ref = {refScroll}
+        animate = {!refScroll.current ? 'visible' : 'disabled'}
+        variants = {variants}
         data-scroll
         data-scroll-sticky
         data-scroll-target = "#main-target"
-        animate = {{ top: '-100vh', transition: { ...transition, delay: 9 } }}
-        // animate = {{ top: '-100vh', transition: { ...transition, delay: 9 } }}
-        variants = {{
-          visible: { opacity: 1, scale: 1 },
-          hidden : { opacity: 0, scale: 0 }
-        }}
         className = "preloader__forwards"
-        // afterchildren = {() => {
-        //   document.querySelector('.preloader__forwards').style.display = 'none'
+        // onAnimationComplete = {definition => {
+        //   if (definition === 'visible') {
+        //     onComplete()
+        //   }
         // }}
       >
         <div className = "preloader__forwards__wrapper">
@@ -129,7 +136,6 @@ export default function Index ({ page, navigation, settings }) {
             <p className = "preloader__forwards__text"></p >
             <p className = "preloader__forwards__text">Architecture of the mind</p >
 
-            {hasBeenViewed}
           </motion.div >
         </div >
       </motion.div >

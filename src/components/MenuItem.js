@@ -15,7 +15,8 @@ const variants = {
     textDecorationSkipInk  : `none`,
     textDecorationLine     : `underline`,
     transformOrigin        : `left`,
-    opacity                : `1 !important`
+    opacity                : `1 !important`,
+    transition             : `all 0.2s ease-in-out`,
   },
   inactive: {
     textDecoration: `none`
@@ -38,10 +39,29 @@ export const MenuItem = ({ i, link, text }) => {
   }, [])
 
 
+  useEffect(() => {
+    if (currentActive) {
+      currentActive.classList.remove(`active`)
+    }
+    if (active) {
+      document.getElementById(link).classList.add(`active`)
+    }
+  }, [active])
+
   return (
     <motion.li
       variants = {variants}
-      whileHover = {{ scale: 1.05 }}
+      whileHover = {{
+        transition             : `all 1.2s ease-in-out`,
+        textDecoration         : `underline`,
+        textDecorationColor    : `var(--color-secondary)`,
+        textDecorationThickness: `0.05rem`,
+        textDecorationStyle    : `solid`,
+        textDecorationSkipInk  : `none`,
+        textDecorationLine     : `underline`,
+        transformOrigin        : `left`,
+      }}
+      // onClick={() => }
       whileTap = {{ scale: 0.95 }}
       // whileActive = {{ textDecoration: `underline`, textDecorationColor: `#FF008C` }}
     >

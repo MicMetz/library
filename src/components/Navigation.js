@@ -134,7 +134,7 @@ export const Navigation = () => {
           <MenuItem i = {3} text = "The Wall" link = {'/the_wall'}/>
         </NavigationList >
       </NavigationBar >
-      {/* <MobileNavigationbar variants = {variants} isOpen = {isOpen}/> */}
+      <MobileNavigationbar variants = {variants} isOpen = {isOpen} isMobile = {false}/>
     </NavigationWrapper >
 
   )

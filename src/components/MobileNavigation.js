@@ -30,20 +30,30 @@ const closedTansition = {
 }
 
 
-export const MobileNavigationbar = ({ variants, isOpen }) => (
-  <motion.nav
-    animate = {isOpen ? 'open' : 'closed'}
-    variants = {variants}
-  >
-    <MenuToggle toggle = {() => isOpen = !isOpen}/>
-    <ul className = "mobile-navigation__list">
-      <MenuItem i = {0} text = "Home" link = {'/'}/>
-      <MenuItem i = {1} text = "Reading Room" link = {'/reading_room'}/>
-      <MenuItem i = {2} text = "Articles Room" link = {'/articles_room'}/>
-      <MenuItem i = {3} text = "The Wall" link = {'/the_wall'}/>
-    </ul >
-  </motion.nav >
-)
+export const MobileNavigationbar = ({ variants, isOpen, isMobile }) => {
+
+
+  return (
+    <>
+    {isMobile ?
+      <motion.nav
+        animate = {isOpen ? 'open' : 'closed'}
+        variants = {variants}
+      >
+        <MenuToggle toggle = {() => isOpen = !isOpen}/>
+        <ul className = "mobile-navigation__list">
+          <MenuItem i = {0} text = "Home" link = {'/'}/>
+          <MenuItem i = {1} text = "Reading Room" link = {'/reading_room'}/>
+          <MenuItem i = {2} text = "Articles Room" link = {'/articles_room'}/>
+          <MenuItem i = {3} text = "The Wall" link = {'/the_wall'}/>
+        </ul >
+      </motion.nav >
+      : null}
+    </>
+
+  )
+}
+
 
 
 

@@ -50,10 +50,10 @@ export const SocialIcons = styled.a`
   padding: 8px;
 
   &:hover {
-    background-color: #8d9ab4;
-    transform: scale(1.2);
+    background-color: var(--color-secondary);
+    transform: scale(1.1);
     cursor: pointer;
-
+    color: var(--color-tertiary);
   }
 `
 
@@ -102,11 +102,16 @@ export const LinkColumn = styled.div`
   max-width: calc(100% / 3);
   width: 100%;
 `
-export const LinkTitle  = styled.h4`
+
+
+export const LinkTitle = styled.h2`
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
   line-height: 24px;
+  left: 0;
+  position: relative;
+
   text-transform: uppercase;
   color: var(--color-primary);
   //color: rgba(255, 255, 255, 0.4);
@@ -130,7 +135,7 @@ export const LinkItem = styled.a`
   left: 0;
 
   &:hover {
-    color: #fff;
+    color: var(--color-secondary);
     left: 1.5rem;
     cursor: pointer;
   }
@@ -172,7 +177,7 @@ export const CompanyContainer = styled.div`
   align-items: baseline;
   position: relative;
   margin-bottom: 16px;
-  
+
   @media ${props => props.theme.breakpoints.md} {
     flex-direction: column;
     margin-bottom: 0;

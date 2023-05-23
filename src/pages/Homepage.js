@@ -27,20 +27,13 @@ export default function Homepage(forwardRef, open, toggle) {
   const [scrollPosition, setScrollPosition] = useState()
   const navRef                              = useRef({open, toggle})
   const ref                                 = useRef(forwardRef)
-  // const [staticData, dynamicData, revalidatedData] = await Promise.all([
-  //   fetch(`https://...`),
-  // fetch(`https://...`, {cache: 'no-store'}),
-  // fetch(`https://...`, {next: {revalidate: 10}}),
-  // ])
+
 
 
   useEffect(() => {
-    let isMounted = true
     window.addEventListener('scroll', handleScroll)
-
     return () => {
       window.removeEventListener('scroll', handleScroll)
-      isMounted = false
     }
   }, [])
 

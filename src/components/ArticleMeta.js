@@ -23,7 +23,6 @@ export default class ArticleMeta extends Component {
           {formatDisplayDate(formattedPublishDate)}
         </small >
         <TagBlock tags = {postData.tags}/>
-        {articleSEO(postData)}
       </React.Fragment >
     )
   }

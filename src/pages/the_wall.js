@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import React, {useRef, useState} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import Link from 'next/link'
 import DefaultLayout from '../components/layouts/DefaultLayout.js'
 import {Navigation} from '../components/nav/Navigation.js'

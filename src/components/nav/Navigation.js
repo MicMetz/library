@@ -60,63 +60,6 @@ export const Navigation = (forwardRef, open, toggle) => {
   }, [])
 
 
-  /*
-   const [href, setHref]         = useState()
-   const [showMenu, setShowMenu] = useState(false)
-   var activeItem         = null
-   var underline          = null
-   var activeItemPosition = 0
-   var activeItemWidth    = 0
-   const handleRoute = (ref) => {
-
-   var nav = document.getElementById('nav')
-   var e   = document.getElementById(`${ref}`)
-   // console.log(e)
-
-   // nav.addEventListener('click', (e) => {
-
-   if (!nav.classList.contains('animate')) {
-   // console.log('clicked')
-   // if (!e.classList.contains('active') && e.tagName === 'li' && !nav.classList.contains('animate')) {
-   nav.classList.add('animate')
-   let position = e.getBoundingClientRect()
-   let width    = e.style.width
-   if (position.left >= activeItemPosition) {
-   underline.animate({
-   width: ( ( position.left - activeItemPosition ) + width )
-   }, 400, () => {
-   underline.animate({
-   left : position.left,
-   width: width
-   }, 200, () => {
-   nav.classList.remove('animate')
-   })
-   e.classList.add('active')
-   })
-   } else {
-   underline.animate({
-   left : position.left,
-   width: ( ( activeItemPosition - position.left ) + activeItemWidth )
-   }, 400, () => {
-   underline.animate({
-   width: width
-   }, 200, () => {
-   nav.classList.remove('animate')
-   })
-   e.classList.add('active')
-   })
-   }
-   }
-
-
-   router.push(ref)
-   setHref(ref)
-
-   }
-   */
-
-
-
   return (
     <NavigationWrapper
       initial={false}
@@ -146,6 +89,7 @@ export const Navigation = (forwardRef, open, toggle) => {
           <MenuItem i={1} text="Reading Room" link="/reading_room"/>
           <MenuItem i={2} text="Articles Room" link="/articles_room"/>
           <MenuItem i={3} text="The Wall" link="/the_wall"/>
+          <MenuItem i={4} text="About" link="/about"/>
         </NavigationList>
       </NavigationBar>
       <MobileNavigationbar variants={variants} isOpen={isOpen} isMobile={false}/>

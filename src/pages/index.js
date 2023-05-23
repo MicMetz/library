@@ -63,7 +63,7 @@ export default function Index({page, navigation, settings}) {
             animate={{x: 0, opacity: 1, transition: {...transition}}}
             className="preloader__forwards__left"
           >
-            <img src="/icons/logo.svg" alt="logo"/>
+            <img src="/icons/favicon.svg" alt="logo"/>
           </motion.div>
           <motion.div
             initial={{x: 10, opacity: 0}}
@@ -75,8 +75,6 @@ export default function Index({page, navigation, settings}) {
             <p className="preloader__forwards__text">where nothing happens;</p>
             <p className="preloader__forwards__text">and there are weeks</p>
             <p className="preloader__forwards__text">where decades happen.</p>
-
-
           </motion.div>
         </div>
       </motion.div>

@@ -19,6 +19,7 @@ import {ReadingRoomBody, ReadingRoomBookContainer, ReadingRoomMain} from '../sty
 import {ContentBlock, SectionTitle} from '../styles/StyledComponents.js'
 import {ArticleFeaturedDescription} from '../tools/DescriptionParser.js'
 import {Current} from './api/Current.js'
+import Footer from '../components/Footer';
 
 
 
@@ -76,7 +77,7 @@ export default function ReadingRoom(forwardRef, open, toggle) {
 
       <Head>
         <title>Reading List</title>
-        <link rel="icon" href="/icons/logo.svg"/>
+        <link rel="icon" href="/icons/favicon.svg"/>
       </Head>
 
       <ReadingRoomBody>
@@ -112,6 +113,8 @@ export default function ReadingRoom(forwardRef, open, toggle) {
           })}
         </ReadingRoomMain>
       </ReadingRoomBody>
+
+      <Footer/>
     </DefaultLayout>
   )
 }

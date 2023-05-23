@@ -4,6 +4,7 @@ import Link from 'next/link'
 import DefaultLayout from '../components/layouts/DefaultLayout.js'
 import { Navigation } from '../components/nav/Navigation.js'
 import { SectionTitle } from '../styles/StyledComponents.js'
+import Footer from '../components/Footer';
 
 
 
@@ -20,9 +21,12 @@ export default function TheWall (forwardRef, open, toggle) {
 
       <Head>
         <title>Wall of Misery</title>
-        <link rel="icon" href="/icons/logo.svg" />
+        <link rel="icon" href="/icons/favicon.svg" />
       </Head>
       <SectionTitle main>Wall of Misery</SectionTitle>
+
+
+      <Footer/>
     </DefaultLayout >
   )
 }

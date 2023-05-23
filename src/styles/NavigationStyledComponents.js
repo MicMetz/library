@@ -159,8 +159,7 @@ export const NavigationBar = styled.nav`
   height: 100%;
   max-height: 4vh;
   margin-bottom: 4rem;
-  //background: #1A1E23FF !important;
-  background: #1a1e23FF !important;
+  background: #1a1e23FF;
 
   align-items: center;
   justify-content: space-around;

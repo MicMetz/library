@@ -18,6 +18,7 @@ import {HomeBody, HomeMain} from '../styles/HomepageStyledComponents.js'
 import {Current} from '/src/pages/api/Current.js'
 import {ContentBlock, SectionTitle} from '../styles/StyledComponents.js'
 import {ArticleFeaturedDescription} from '../tools/DescriptionParser.js'
+import Footer from '../components/Footer';
 
 
 
@@ -79,7 +80,7 @@ export default function Homepage(forwardRef, open, toggle) {
       <Navigation open={open} toggle={toggle} forwardRef={ref}/>
       <Head>
         <title>Home</title>
-        <link rel="icon" href="/icons/logo.svg"/>
+        <link rel="icon" href="/icons/favicon.svg"/>
       </Head>
 
       <HomeBody>
@@ -117,6 +118,8 @@ export default function Homepage(forwardRef, open, toggle) {
           })}
         </HomeMain>
       </HomeBody>
+
+      <Footer/>
     </DefaultLayout>
 
   )

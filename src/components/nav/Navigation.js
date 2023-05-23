@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { TiChartPie } from 'react-icons/ti'
 import styled from 'styled-components'
-import { MobileNavigation, NavigationBar, NavigationList, NavigationListItem, NavigationWrapper, NavLogoItem, ToggleButton, ToggleButtonWrapper } from '../styles/NavigationStyledComponents.js'
+import { MobileNavigation, NavigationBar, NavigationList, NavigationListItem, NavigationWrapper, NavLogoItem, ToggleButton, ToggleButtonWrapper } from '../../styles/NavigationStyledComponents.js'
 import { MenuItem } from './MenuItem.js'
 import { MobileNavigationbar } from './MobileNavigation.js'
 

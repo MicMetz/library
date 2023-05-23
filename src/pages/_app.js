@@ -1,38 +1,34 @@
 import React from 'react'
-import { AnimatePresence } from 'framer-motion'
+import {AnimatePresence} from 'framer-motion'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { Navigation } from '../components/Navigation.js'
+import {useRouter} from 'next/router'
+import {Navigation} from '../components/nav/Navigation.js'
 import Theme from '../themes/theme.js'
-import { FirebaseStorage } from '../tools/database/config.js'
+import {FirebaseStorage} from '../tools/database/config.js'
 
 
 
 
-export default function App ({ Component, pageProps }) {
+export default function App({Component, pageProps}) {
   const router = useRouter()
 
 
 
   return (
     <>
-			<Theme >
-      <AnimatePresence mode = 'wait' initial = {true}>
-        <Component Component key = {router.route} {...pageProps} />
-        {/* <Component Component key = {router.asPath} {...pageProps} /> */}
-        {/* {renderLayout({ Component, router }, pageProps)} */}
-        </AnimatePresence >
-			</Theme >
-		</>
+      <Theme>
+        <AnimatePresence mode='wait' initial={true}>
+          <Component Component key={router.route} {...pageProps} />
+          {/* <Component Component key = {router.asPath} {...pageProps} /> */}
+          {/* {renderLayout({ Component, router }, pageProps)} */}
+        </AnimatePresence>
+      </Theme>
+    </>
   )
 }
 
 
-function handleExitComplete () {
-  if (typeof window !== 'undefined') {
-    window.scrollTo({ top: 0 })
-  }
-}
+
 
 
 /*

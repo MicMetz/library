@@ -2,7 +2,7 @@ import Head from 'next/head'
 import React, { useRef, useState } from 'react'
 import Link from 'next/link'
 import DefaultLayout from '../components/layouts/DefaultLayout.js'
-import { Navigation } from '../components/Navigation.js'
+import { Navigation } from '../components/nav/Navigation.js'
 import { SectionTitle } from '../styles/StyledComponents.js'
 
 

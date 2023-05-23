@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import * as React from 'react'
 import { motion, useMotionValue, useMotionValueEvent } from 'framer-motion'
-import { NavigationListItem } from '../styles/NavigationStyledComponents.js'
+import { NavigationListItem } from '../../styles/NavigationStyledComponents.js'
 
 
 

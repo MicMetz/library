@@ -80,7 +80,6 @@ export default function Homepage(forwardRef, open, toggle) {
       <Head>
         <title>Home</title>
         <link rel="icon" href="/icons/logo.svg"/>
-
       </Head>
 
       <HomeBody>
@@ -112,12 +111,10 @@ export default function Homepage(forwardRef, open, toggle) {
                       )
                     })}
                   </ul>
-
                 </ArticleFeaturedTagline>
               </ContentBlock>
             )
           })}
-
         </HomeMain>
       </HomeBody>
     </DefaultLayout>

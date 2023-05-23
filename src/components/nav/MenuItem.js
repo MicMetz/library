@@ -1,23 +1,24 @@
-import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
+import {useRouter} from 'next/router'
+import {useEffect, useState} from 'react'
 import * as React from 'react'
-import { motion, useMotionValue, useMotionValueEvent } from 'framer-motion'
-import { NavigationListItem } from '../../styles/NavigationStyledComponents.js'
+import {motion, useMotionValue, useMotionValueEvent} from 'framer-motion'
+import {NavigationListItem} from '../../styles/NavigationStyledComponents.js'
+import Link from 'next/link';
 
 
 
 
 const variants = {
-  active  : {
-    textDecoration         : `underline`,
-    textDecorationColor    : `var(--color-primary)`,
+  active: {
+    textDecoration: `underline`,
+    textDecorationColor: `var(--color-primary)`,
     textDecorationThickness: `0.2rem`,
-    textDecorationStyle    : `solid`,
-    textDecorationSkipInk  : `none`,
-    textDecorationLine     : `underline`,
-    transformOrigin        : `left`,
-    opacity                : `1 !important`,
-    transition             : `all 0.2s ease-in-out`,
+    textDecorationStyle: `solid`,
+    textDecorationSkipInk: `none`,
+    textDecorationLine: `underline`,
+    transformOrigin: `left`,
+    opacity: `1 !important`,
+    transition: `all 0.2s ease-in-out`,
   },
   inactive: {
     textDecoration: `none`
@@ -25,7 +26,7 @@ const variants = {
 }
 
 
-export const MenuItem = ({ i, link, text }) => {
+export const MenuItem = ({i, link, text}) => {
   const router                            = useRouter()
   const [active, setActive]               = useState(false)
   const [hover, setHover]                 = useState(false)
@@ -36,7 +37,7 @@ export const MenuItem = ({ i, link, text }) => {
     if (window.location.pathname === link) {
       setActive(true)
     } else {
-      setCurrentActive(document.getElementsByClassName(`active`)[ 0 ])
+      setCurrentActive(document.getElementsByClassName(`active`)[0])
     }
   }, [])
 
@@ -51,7 +52,7 @@ export const MenuItem = ({ i, link, text }) => {
   }, [active])
 
 
-  function handleRoute (ref) {
+  function handleRoute(ref) {
     router.push(ref)
 
   }
@@ -60,29 +61,32 @@ export const MenuItem = ({ i, link, text }) => {
 
   return (
     <motion.li
-      variants = {variants}
-      initial = {{
-        textDecoration : `none`,
-        opacity        : 0.5,
+      variants={variants}
+      initial={{
+        textDecoration: `none`,
+        opacity: 0.5,
         transformOrigin: `left`,
       }}
-      whileHover = {{
-        transition           : `all 0.5s ease-out`,
-        textDecoration       : `underline`,
-        textDecorationColor  : `var(--color-secondary)`,
-        textDecorationStyle  : `solid`,
+      whileHover={{
+        transition: `all 0.5s ease-out`,
+        textDecoration: `underline`,
+        textDecorationColor: `var(--color-secondary)`,
+        textDecorationStyle: `solid`,
         textDecorationSkipInk: `none`,
-        textDecorationLine   : `underline`,
-        opacity              : 1,
+        textDecorationLine: `underline`,
+        opacity: 1,
       }}
       // onClick={() => }
-      whileTap = {{ scale: 0.95 }}
+      whileTap={{scale: 0.95}}
       // whileActive = {{ textDecoration: `underline`, textDecorationColor: `#FF008C` }}
     >
       {/* <NavigationListItem id = {link} > */}
       {/*   <a href = {link}>{text}</a > */}
       {/* </NavigationListItem > */}
-      <NavigationListItem style = {active ? variants.active : variants.inactive} id = {link} onClick = {() => handleRoute(link)}>{text}</NavigationListItem >
-    </motion.li >
+      <Link href={link}>
+        <NavigationListItem style={active ? variants.active : variants.inactive} id={link}
+                            onClick={() => handleRoute(link)}>{text}</NavigationListItem>
+      </Link>
+    </motion.li>
   )
 }

@@ -18,6 +18,7 @@ export default function Index({page, navigation, settings}) {
   const [ref, inView]                   = useInView()
   let firstLoad                         = false
 
+  /*
   useEffect(() => {
     if (firstLoad === false) {
       firstLoad = true
@@ -26,6 +27,7 @@ export default function Index({page, navigation, settings}) {
       }, 1000)
     }
   }, [])
+  */
 
   useEffect(() => {
     if (inView) {
@@ -69,10 +71,11 @@ export default function Index({page, navigation, settings}) {
             className="preloader__forwards__right"
           >
             <p className="preloader__forwards__text">Michael Metzger</p>
-            {/*<p className="preloader__forwards__text">Kill</p>*/}
-            {/*<p className="preloader__forwards__text">Your</p>*/}
-            {/*<p className="preloader__forwards__text">Self</p>*/}
-            {/*<p className="preloader__forwards__text">Kill Your Self</p>*/}
+            <p className="preloader__forwards__text">There are decades</p>
+            <p className="preloader__forwards__text">where nothing happens;</p>
+            <p className="preloader__forwards__text">and there are weeks</p>
+            <p className="preloader__forwards__text">where decades happen.</p>
+
 
           </motion.div>
         </div>

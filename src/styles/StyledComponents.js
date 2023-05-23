@@ -3,6 +3,62 @@ import styled from 'styled-components'
 
 
 
+export const DefaultBody = styled.div`
+  padding: 4rem 2rem 0 !important;
+  line-height: 24px;
+  //background-size: 100px 100px;
+  background-blend-mode: multiply;
+  min-height: 100vh;
+  max-width: 100vw;
+`
+
+export const DefaultMain = styled.main`
+  display: block;
+  align-items: center;
+  justify-content: space-around;
+  //height: calc(100vh - 9rem);
+  margin: 0 auto;
+  //max-width: 99vw;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+`
+
+
+export const DefaultBlockQuote = styled.blockquote`
+  max-width: calc(100vw - 20rem);
+  margin: 0 auto;
+  padding: 0 2rem;
+  `
+
+export const DefaultQuoteText = styled.p`
+  font-family: 'PitchWeb', Courier, monospace;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  color: var(--color-quinary);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+
+  @media ${props => props.theme.breakpoints.md} {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  @media ${props => props.theme.breakpoints.sm} {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+`
+
+export const DefaultHeader = styled.header`
+  font-family: 'PitchWeb', Courier, monospace
+`
+
+
 export const ContentBlock = styled.section`
   display: flex;
   //position: absolute;

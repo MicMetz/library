@@ -8,7 +8,14 @@ import {
   LinkTitle, Slogan, SocialContainer, SocialIcons,
   SocialIconsContainer
 } from '../styles/FooterStyledComponents';
-import {AiFillGithub, AiFillInstagram, AiFillLinkedin, AiFillTwitterSquare} from 'react-icons/ai';
+import {
+  AiFillGithub,
+  AiFillInstagram,
+  AiFillLinkedin,
+  AiFillMail,
+  AiFillPhone,
+  AiFillTwitterSquare
+} from 'react-icons/ai';
 
 
 
@@ -19,11 +26,11 @@ export default function Footer({isMobile, isInitiallyLoaded}) {
       <FooterContainer isMobile={isMobile} isInitiallyLoaded={isInitiallyLoaded}>
         <LinkList>
           <LinkColumn>
-            <LinkTitle>Call</LinkTitle>
+            <LinkTitle>Call <AiFillPhone size="10px"/></LinkTitle>
             <LinkItem href="tel:314-343-3432">
               631-241-6006
             </LinkItem>
-            <LinkTitle>Email</LinkTitle>
+            <LinkTitle>Email <AiFillMail size="10px"/></LinkTitle>
             <LinkItem href="mailto:mime9599@colorado.edu">
               mime9599@colorado.edu
             </LinkItem>

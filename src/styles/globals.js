@@ -14,11 +14,11 @@ const GlobalStyles = createGlobalStyle`
     --color-quinary: #FFA803FF;
     --color-senary: #FFD803FF;
     --color-white: #FFFFFFFF;
-    --background-color: #1A1E23FF;
 
     --color-text: #333333FF;
     --color-button: #FF1847FF;
-    --inferface-color: #1a1e23FF;
+    --inferface-color: #1A1E23FF;
+    --background-color: #d6d8deDD;
 
     --nav-height: 4vh;
     --nav-width: 100vw;
@@ -193,7 +193,8 @@ const GlobalStyles = createGlobalStyle`
 
 
   body {
-    color: #333;
+    background-color: var(--color-background);
+    color: var(--color-text);
     font-family: Lyon, Georgia, serif;
     -webkit-font-smoothing: antialiased;
     background-repeat: no-repeat

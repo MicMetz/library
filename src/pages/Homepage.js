@@ -14,9 +14,8 @@ import {
   ArticleSubtitle,
   ArticleTitle
 } from '../styles/ArticleStyledComponents.js'
-import {HomeBody, HomeMain} from '../styles/HomepageStyledComponents.js'
 import {Current} from '/src/pages/api/Current.js'
-import {ContentBlock, SectionTitle} from '../styles/StyledComponents.js'
+import {ContentBlock, DefaultBody, DefaultMain, SectionTitle} from '../styles/StyledComponents.js'
 import {ArticleFeaturedDescription} from '../tools/DescriptionParser.js'
 import Footer from '../components/Footer';
 
@@ -73,6 +72,13 @@ export default function Homepage(forwardRef, open, toggle) {
     })
   }
 
+  const handleFeature = (index) => {
+    setActiveFeature(index)
+  }
+
+  const handleNav = () => {
+    navRef.current.toggle()
+  }
 
 
   return (
@@ -83,9 +89,10 @@ export default function Homepage(forwardRef, open, toggle) {
         <link rel="icon" href="/icons/favicon.svg"/>
       </Head>
 
-      <HomeBody>
-        <Sidebar header={activeFeature.header} chapters={activeFeature.chapters}/>
-        <HomeMain>
+      <DefaultBody>
+        <Sidebar header={activeFeature.header} chapters={activeFeature.chapters} open={open} toggle={toggle}
+                 forwardRef={ref}/>
+        <DefaultMain>
 
           <SectionTitle main>Current Reading</SectionTitle>
           {Current?.map((book, index) => {
@@ -116,8 +123,8 @@ export default function Homepage(forwardRef, open, toggle) {
               </ContentBlock>
             )
           })}
-        </HomeMain>
-      </HomeBody>
+        </DefaultMain>
+      </DefaultBody>
 
       <Footer/>
     </DefaultLayout>

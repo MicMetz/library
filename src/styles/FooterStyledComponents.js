@@ -18,7 +18,7 @@ export const FooterContainer = styled.footer`
   align-items: center;
   justify-content: space-between;
 
-  background-color: var(--background-color);
+  background-color: var(--inferface-color);
   color: cornsilk !important;
 
   padding: 5em;
@@ -200,6 +200,7 @@ export const Slogan = styled.p`
   font-size: 18px;
   line-height: 30px;
   padding: 1rem;
+  position: relative;
 
 
   @media ${props => props.theme.breakpoints.md} {

@@ -49,9 +49,9 @@ const Path = (props) => (
 )
 
 export const Navigation = (forwardRef, open, toggle) => {
-  const router = useRouter()
+  const router               = useRouter()
   const [isOpen, toggleOpen] = useCycle(open, toggle)
-  const ref = useRef(forwardRef)
+  const ref                  = useRef(forwardRef)
 
   useEffect(() => {
 
@@ -133,8 +133,6 @@ export const Navigation = (forwardRef, open, toggle) => {
         <NavigationList>
           <Link href="https://micmetz.github.io">
             <NavLogoItem>
-              {/* <NavigationListItem io')} id = "/" className = " "> */}
-
               <a href="https://micmetz.github.io">
                 <TiChartPie size="1.5em"/>
                 <span>

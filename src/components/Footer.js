@@ -32,13 +32,13 @@ export default function Footer({isMobile, isInitiallyLoaded}) {
 
         <CompanyContainer>
           <Slogan>
-            "There are decades
+            <span>"There are decades</span>
             <br/>
-            where nothing happens;
+            <span>where nothing happens;</span>
             <br/>
-            and there are weeks
+            <span>and there are weeks</span>
             <br/>
-            where decades happen."
+            <span>where decades happen."</span>
           </Slogan>
         </CompanyContainer>
 

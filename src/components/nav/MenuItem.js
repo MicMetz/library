@@ -2,7 +2,7 @@ import {useRouter} from 'next/router'
 import {useEffect, useState} from 'react'
 import * as React from 'react'
 import {motion, useMotionValue, useMotionValueEvent} from 'framer-motion'
-import {NavigationListItem} from '../../styles/NavigationStyledComponents.js'
+import {LinkListItem} from '../../styles/NavigationStyledComponents.js'
 import Link from 'next/link';
 
 
@@ -80,12 +80,12 @@ export const MenuItem = ({i, link, text}) => {
       whileTap={{scale: 0.95}}
       // whileActive = {{ textDecoration: `underline`, textDecorationColor: `#FF008C` }}
     >
-      {/* <NavigationListItem id = {link} > */}
+      {/* <LinkListItem id = {link} > */}
       {/*   <a href = {link}>{text}</a > */}
-      {/* </NavigationListItem > */}
+      {/* </LinkListItem > */}
       <Link href={link}>
-        <NavigationListItem style={active ? variants.active : variants.inactive} id={link}
-                            onClick={() => handleRoute(link)}>{text}</NavigationListItem>
+        <LinkListItem style={active ? variants.active : variants.inactive} id={link}
+                            onClick={() => handleRoute(link)}>{text}</LinkListItem>
       </Link>
     </motion.li>
   )

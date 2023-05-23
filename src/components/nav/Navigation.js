@@ -8,7 +8,7 @@ import {
   MobileNavigation,
   NavigationBar,
   NavigationList,
-  NavigationListItem,
+  LinkListItem,
   NavigationWrapper,
   NavLogoItem,
   ToggleButton,

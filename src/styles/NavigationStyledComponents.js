@@ -50,22 +50,11 @@ export const NavigationList = styled.ul`
   @media ${props => props.theme.breakpoints.md} {
     display: none;
   }
-
-  //li:first-child {
-  //  padding-left: 0;
-  //  position: absolute;
-  //  left: 0;
-  //}
-  //
-  //li:nth-child(2) {
-  //  padding-left: 8em;
-  //}
-
 `
 
 
-export const NavigationListItem = styled.a`
-  
+export const LinkListItem = styled.a`
+
   color: cornsilk !important;
 
   width: fit-content;

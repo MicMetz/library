@@ -24,48 +24,6 @@ export default function TheWall(forwardRef, open, toggle) {
   const navRef                              = useRef({open, toggle})
   const ref                                 = useRef(forwardRef)
 
-
-  useEffect(() => {
-    let isMounted = true
-    window.addEventListener('scroll', handleScroll)
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-      isMounted = false
-    }
-  }, [])
-
-  const handleScroll = () => {
-    const observer = new IntersectionObserver(intersections => {
-      intersections.forEach((intersection) => {
-        if (intersection.intersectionRatio > 0.5) {
-
-          const id = intersection.target.getAttribute('id')
-          setActiveFeature(`#${id}`)
-        }
-      })
-    }, {
-      threshold: [0.5]
-    })
-
-
-    document.querySelectorAll('section[id]').forEach((section) => {
-      if (section !== null) {
-        observer.observe(section)
-      }
-    })
-  }
-
-  const handleFeature = (index) => {
-    setActiveFeature(index)
-  }
-
-  const handleNav = () => {
-    navRef.current.toggle()
-  }
-
-
-
   return (
     <DefaultLayout>
       <Navigation open={open} toggle={toggle} forwardRef={ref}/>
@@ -74,8 +32,9 @@ export default function TheWall(forwardRef, open, toggle) {
         <link rel="icon" href="/icons/favicon.svg"/>
       </Head>
       <DefaultBody>
-        <Sidebar header={'About'} open={open} toggle={toggle} forwardRef={ref} chapters={[]}/>
+        <Sidebar header={""} chapters={[]} open={open} toggle={toggle} forwardRef={ref}/>
         <DefaultMain>
+
           <SectionTitle main>The Wall</SectionTitle>
 
         </DefaultMain>

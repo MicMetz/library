@@ -30,13 +30,11 @@ export default function Articles_room(forwardRef, open, toggle) {
       </Head>
 
       <ArticleMapBody>
-        <Sidebar header={'Article Map'} chapters={[]}/>
+        <Sidebar header={'Article Map'} chapters={[]} open={open} toggle={toggle} forwardRef={ref}/>
         <SectionTitle main>Article List</SectionTitle>
       </ArticleMapBody>
 
-      <ArticleMapMain>
 
-      </ArticleMapMain>
 
       <Footer/>
     </DefaultLayout>

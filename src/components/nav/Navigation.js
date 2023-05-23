@@ -54,72 +54,66 @@ export const Navigation = (forwardRef, open, toggle) => {
   const ref                  = useRef(forwardRef)
 
   useEffect(() => {
-    const handleRouteChange = (url) => {
-      if (url !== href) {
-        toggleOpen()
-      }
-    }
-
-    router.events.on('routeChangeStart', handleRouteChange)
 
     return () => {
-      router.events.off('routeChangeStart', handleRouteChange)
     }
-  }, [router.events, href])
+  }, [])
 
 
-  const [href, setHref]         = useState()
-  const [showMenu, setShowMenu] = useState(false)
-  var activeItem                = null
-  var underline                 = null
-  var activeItemPosition        = 0
-  var activeItemWidth           = 0
-  const handleRoute             = (ref) => {
+  /*
+   const [href, setHref]         = useState()
+   const [showMenu, setShowMenu] = useState(false)
+   var activeItem         = null
+   var underline          = null
+   var activeItemPosition = 0
+   var activeItemWidth    = 0
+   const handleRoute = (ref) => {
 
-    var nav = document.getElementById('nav')
-    var e   = document.getElementById(`${ref}`)
-    // console.log(e)
+   var nav = document.getElementById('nav')
+   var e   = document.getElementById(`${ref}`)
+   // console.log(e)
 
-    // nav.addEventListener('click', (e) => {
+   // nav.addEventListener('click', (e) => {
 
-    if (!nav.classList.contains('animate')) {
-      // console.log('clicked')
-      // if (!e.classList.contains('active') && e.tagName === 'li' && !nav.classList.contains('animate')) {
-      nav.classList.add('animate')
-      let position = e.getBoundingClientRect()
-      let width    = e.style.width
-      if (position.left >= activeItemPosition) {
-        underline.animate({
-          width: ((position.left - activeItemPosition) + width)
-        }, 400, () => {
-          underline.animate({
-            left: position.left,
-            width: width
-          }, 200, () => {
-            nav.classList.remove('animate')
-          })
-          e.classList.add('active')
-        })
-      } else {
-        underline.animate({
-          left: position.left,
-          width: ((activeItemPosition - position.left) + activeItemWidth)
-        }, 400, () => {
-          underline.animate({
-            width: width
-          }, 200, () => {
-            nav.classList.remove('animate')
-          })
-          e.classList.add('active')
-        })
-      }
-    }
+   if (!nav.classList.contains('animate')) {
+   // console.log('clicked')
+   // if (!e.classList.contains('active') && e.tagName === 'li' && !nav.classList.contains('animate')) {
+   nav.classList.add('animate')
+   let position = e.getBoundingClientRect()
+   let width    = e.style.width
+   if (position.left >= activeItemPosition) {
+   underline.animate({
+   width: ( ( position.left - activeItemPosition ) + width )
+   }, 400, () => {
+   underline.animate({
+   left : position.left,
+   width: width
+   }, 200, () => {
+   nav.classList.remove('animate')
+   })
+   e.classList.add('active')
+   })
+   } else {
+   underline.animate({
+   left : position.left,
+   width: ( ( activeItemPosition - position.left ) + activeItemWidth )
+   }, 400, () => {
+   underline.animate({
+   width: width
+   }, 200, () => {
+   nav.classList.remove('animate')
+   })
+   e.classList.add('active')
+   })
+   }
+   }
 
 
-    router.push(ref)
-    setHref(ref)
+   router.push(ref)
+   setHref(ref)
 
-  }
+   }
+   */
 
 
 

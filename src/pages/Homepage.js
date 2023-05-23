@@ -92,8 +92,6 @@ export default function Homepage(forwardRef, open, toggle) {
 
             return (
               <ContentBlock key={index} value={book} id={index}>
-                {/* <ContentBlock key = {index}> */}
-
                 {ArticleFeaturedDescription(book)}
                 <ArticleFeaturedAtrribution>
                   <ArticleTitle>{book.header.title}</ArticleTitle>

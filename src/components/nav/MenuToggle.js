@@ -4,18 +4,15 @@ import React from 'react'
 
 
 
-const Path = React.forwardRef((props, ref) => {
-  const {content} = props
-  return (
-    <motion.path
-      fill="transparent"
-      strokeWidth="3"
-      stroke="hsl(0, 0%, 18%)"
-      strokeLinecap="round"
-      {...content}
-    />
-  )
-})
+const Path = (props) => (
+  <motion.path
+    fill="transparent"
+    strokeWidth="3"
+    stroke="hsl(0, 0%, 18%)"
+    strokeLinecap="round"
+    {...props}
+  />
+)
 
 
 export const MenuToggle = ({toggle}) => (

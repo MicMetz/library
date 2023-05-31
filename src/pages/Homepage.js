@@ -51,7 +51,7 @@ export default function Homepage(forwardRef, open, toggle) {
     const observer = new IntersectionObserver(intersections => {
       intersections.forEach((intersection) => {
         if (intersection.intersectionRatio > 0.5) {
-          loadActiveReading(Readings[intersection.target.id])
+          loadActiveReading(Current[intersection.target.id])
         }
       })
     }, {
@@ -79,11 +79,13 @@ export default function Homepage(forwardRef, open, toggle) {
       <Navigation open={open} toggle={toggle} forwardRef={ref}/>
       <Head>
         <title>Home</title>
-        <link rel="icon" href="/icons/favicon.svg"/>
+        <link rel="icon" href="/favicon.svg"/>
       </Head>
 
       <DefaultBody>
-        <Sidebar header={activeFeature.header} chapters={activeFeature.chapters} open={open} toggle={toggle}
+        <Sidebar header={activeFeature.header}
+                 chapters={activeFeature.chapters}
+                 open={open} toggle={toggle}
                  forwardRef={ref}/>
         <DefaultMain>
 

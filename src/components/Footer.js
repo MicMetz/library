@@ -54,7 +54,7 @@ export default function Footer({isMobile, isInitiallyLoaded}) {
             <SocialIcons href="https://github.com/MicMetz">
               <AiFillGithub size="40px"/>
             </SocialIcons>
-            <SocialIcons href="https://www.linkedin.com/in/michael-metzjer/">
+            <SocialIcons href="https://www.linkedin.com/in/michael-metzger/">
               <AiFillLinkedin size="40px"/>
             </SocialIcons>
             <SocialIcons href="https://bsky.app/">

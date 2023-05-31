@@ -79,7 +79,7 @@ export const Navigation = (forwardRef, open, toggle) => {
               <a href="https://micmetz.github.io">
                 <TiChartPie size="1.5em"/>
                 <span>
-                {'Michael Metzjer'}
+                {'Michael Metzger'}
               </span>
                 {/* </NavigationListItem> */}
               </a>

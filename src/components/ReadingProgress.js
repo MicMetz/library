@@ -1,11 +1,11 @@
-import { Component, useEffect } from 'react'
+import {Component, useEffect} from 'react'
 import ScrollProgress from 'scrollprogress'
-// import config from '../../config/config.yml'
+import {motion} from 'framer-motion'
 
 
 
-export default function ReadingProgress () {
-  let  state = {
+export default function ReadingProgress() {
+  let state = {
     progress: 0
   }
 
@@ -17,17 +17,30 @@ export default function ReadingProgress () {
     })
   })
 
-  const styles = {
-    backgroundColor: '#ff0000',
-    height         : '5px',
-    position       : 'fixed',
-    top            : 0,
-    bottom         : 0,
-    left           : 0,
-    width          : `${this.state.progress}%`
+  const variants = {
+    hidden: {opacity: 0},
+    visible: {opacity: 1},
   }
 
   return (
-    <div style={styles} className="reading-progress" />
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={variants}
+    >
+      <div className="progress-bar" style={{width: `${state.progress}%`}}></div>
+    </motion.div>
   )
+
 }
+
+
+const ProgressBar = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  z-index: 100;
+  background-color: var(--color-primary);
+`

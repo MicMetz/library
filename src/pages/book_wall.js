@@ -80,7 +80,7 @@ export default function ReadingWall( forwardRef, open, toggle ) {
 
 						<Head >
 								<title >Reading List</title >
-								<link rel = "icon" href = "/icons/favicon.svg" />
+								<link rel = "icon" href = "/favicon.svg" />
 						</Head >
 
 						<ReadingWallBody >

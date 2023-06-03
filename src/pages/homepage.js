@@ -78,7 +78,7 @@ export default function Homepage( forwardRef, open, toggle ) {
 						<Navigation open = {open} toggle = {toggle} forwardRef = {ref} />
 						<Head >
 								<title >Home</title >
-								<link rel = "icon" href = "/icons/favicon.svg" />
+								<link rel = "icon" href = "/favicon.svg" />
 						</Head >
 
 						<DefaultBody >

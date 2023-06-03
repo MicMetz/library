@@ -71,7 +71,7 @@ export default function ArticlesRoom( forwardRef, open, toggle ) {
 						<Head >
 								<title >Article Room</title >
 								<meta name = "" content = "initial-scale=1.0, width=device-width" />
-								<link rel = "icon" href = "/icons/favicon.svg" />
+								<link rel = "icon" href = "/favicon.svg" />
 						</Head >
 						<DefaultBody >
 								<Sidebar

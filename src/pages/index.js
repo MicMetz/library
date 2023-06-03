@@ -62,7 +62,7 @@ export default function Index({page, navigation, settings}) {
             animate={{x: 0, opacity: 1, transition: {...transition}}}
             className="preloader__forwards__left"
           >
-            <img src="/icons/favicon.svg" alt="logo"/>
+            <img src="/favicon.svg" alt="logo"/>
           </motion.div>
           <motion.div
             initial={{x: 10, opacity: 0}}

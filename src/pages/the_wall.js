@@ -29,7 +29,7 @@ export default function TheWall(forwardRef, open, toggle) {
       <Navigation open={open} toggle={toggle} forwardRef={ref}/>
       <Head>
         <title>The Wall</title>
-        <link rel="icon" href="/icons/favicon.svg"/>
+        <link rel="icon" href="/favicon.svg"/>
       </Head>
       <DefaultBody>
         <Sidebar header={""} chapters={[]} open={open} toggle={toggle} forwardRef={ref}/>

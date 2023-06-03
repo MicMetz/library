@@ -1,4 +1,5 @@
 import Document from 'next/document'
+import React from "react";
 import { ServerStyleSheet } from 'styled-components'
 import { Html, Head, Main, NextScript } from 'next/document'
 
@@ -36,7 +37,7 @@ export default class MyDocument extends Document {
 				return (
 						<Html lang = "en" >
 								<Head >
-										<meta content = "width=device-width, initial-scale=1" />
+										<meta content = "width=device-width, initial-scale=1.0" name = "viewport" />
 										<link rel = "icon" href = "/icons/logo-hook-white.svg" type = "image/svg" />
 										<link rel = "manifest" href = "/static/manifest.json" />
 										<link rel = "preconnect" href = "https://fonts.googleapis.com" />

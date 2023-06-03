@@ -70,7 +70,6 @@ export default function ArticlesRoom( forwardRef, open, toggle ) {
 
 						<Head >
 								<title >Article List</title >
-								<meta name = "" content = "initial-scale=1.0, width=device-width" />
 						</Head >
 						<DefaultBody >
 								<Sidebar

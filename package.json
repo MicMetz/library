@@ -12,6 +12,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@svgr/webpack": "^8.0.1",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "babel-plugin-styled-components": "^2.1.1",
     "firebase": "^9.22.0",

@@ -28,7 +28,7 @@ import Footer from '../components/Footer';
 
 
 export default function ReadingWall( forwardRef, open, toggle ) {
-		const [ activeFeature, setActiveFeature ]   = useState( Current[ 0 ] )
+		const [ activeFeature, setActiveFeature ]   = useState( Readings[ 0 ] )
 		const [ scrollPosition, setScrollPosition ] = useState()
 		const navRef                                = useRef( { open, toggle } )
 		const ref                                   = useRef( forwardRef )

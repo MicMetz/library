@@ -37,7 +37,7 @@ export default class MyDocument extends Document {
 						<Html lang = "en" >
 								<Head >
 										<meta content = "width=device-width, initial-scale=1" />
-										<link rel = "icon" href = "/icons/logo-hook.svg" type = "image/png" />
+										<link rel = "icon" href = "/icons/logo-hook.svg" type = "image/svg" />
 										<link rel = "manifest" href = "/static/manifest.json" />
 										<link rel = "preconnect" href = "https://fonts.googleapis.com" />
 										<link rel = "preconnect" href = "https://fonts.gstatic.com" crossOrigin = "true" />
@@ -46,7 +46,8 @@ export default class MyDocument extends Document {
 																rel = "stylesheet" />
 
 										<meta name = "apple-mobile-web-app-title" content = "The Hook" />
-										<link rel = "apple-touch-icon" sizes = "152x152" href = "/icons/logo-hook.svg" />
+										<link rel = "apple-touch-icon"
+																type = "image/png" sizes = "152x152" href = "/icons/logo-hook.svg" />
 										<meta name = "msapplication-TileImage" content = "/icons/logo-hook.svg" />
 
 								</Head >

@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import React, { Component, useEffect, useMemo, useRef, useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image';
-import LogoHook from '/public/icons/logo-hook.svg'
+import LogoHookWhite from '/public/icons/logo-hook-white.svg'
 import DefaultLayout from '../components/layouts/DefaultLayout.js'
 import { Navigation } from '../components/nav/Navigation.js'
 import { useHasBeenViewed } from '../tools/useIntro.js'
@@ -64,7 +64,7 @@ export default function Index( { page, navigation, settings } ) {
 												animate = {{ x: 0, opacity: 1, transition: { ...transition } }}
 												className = "preloader__forwards__left"
 										>
-												<Image src = {LogoHook} alt = "Logo" />
+												<Image src = {LogoHookWhite} alt = "Logo" style = {{ color: 'white' }} />
 										</motion.div >
 										<motion.div
 												initial = {{ x: 10, opacity: 0 }}

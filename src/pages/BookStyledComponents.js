@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 
 
-export const ArticlePage = styled.section`
+export const BookPage = styled.section`
   display: flex;
   position: relative;
   max-width: 70rem;
@@ -56,7 +56,7 @@ export const ArticlePage = styled.section`
 
 `
 
-export const ArticleTagline = styled.aside`
+export const BookTagline = styled.aside`
   display: inline-block;
   position: relative;
   overflow-wrap: break-word;
@@ -107,8 +107,25 @@ export const ArticleTagline = styled.aside`
 
 `
 
+export const BookDetails = styled.div`
+  display: inline-block;
+  position: relative;
 
-export const ArticleAtrribution = styled.div`
+  max-width: 40%;
+  order: 1;
+  padding: 0 2rem;
+  text-align: left;
+  margin: 5rem 1rem 0 auto;
+  width: 100%;
+  height: 100%;
+
+  p {
+    font-size: 1.2em;
+    line-height: 1.2em;
+  }
+`
+
+export const BookAtrribution = styled.div`
   display: inline-block;
   flex-direction: column;
   //flex-wrap: wrap;
@@ -129,7 +146,7 @@ export const ArticleAtrribution = styled.div`
   order: 3;
 `
 
-export const ArticleCoverImage = styled.img`
+export const BookCoverImage = styled.img`
   display: inline-block;
   position: relative;
 
@@ -146,7 +163,7 @@ export const ArticleCoverImage = styled.img`
 `
 
 
-export const ArticleTitle = styled.h1`
+export const BookTitle = styled.h1`
   font-size: 3.5rem;
   margin: 2rem 0;
   font-family: Courier, monospace;
@@ -157,7 +174,7 @@ export const ArticleTitle = styled.h1`
 `
 
 
-export const ArticleSubtitle = styled.h2`
+export const BookSubtitle = styled.h2`
   font-size: 2rem;
   margin: 2rem 0;
   font-family: Courier, monospace;
@@ -167,14 +184,14 @@ export const ArticleSubtitle = styled.h2`
   -moz-osx-font-smoothing: auto;
 `
 
-export const ArticleByline = styled.p`
+export const BookByline = styled.p`
   font-size: 1.125rem;
   font-family: Courier, monospace;
   color: rgba(0, 0, 0, 0.5);
   margin: 0 0 2rem;
 `
 
-export const ArticleContent = styled.section`
+export const BookContent = styled.section`
   width: 100%;
   order: 1;
   padding: 0 2rem;

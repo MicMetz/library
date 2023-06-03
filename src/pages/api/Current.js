@@ -34,7 +34,7 @@ export const Current = [
     author: 'Nick Turse',
     date: Date.parse('2013-01-15'),
     publisher: 'Picador',
-    cover: './images/KillAnythingThatMoves.jpg',
+    cover: '/images/KillAnythingThatMoves.jpg',
     description: [
       'Based on classified documents and first-person interviews, a startling history of the American war on Vietnamese civilians. \n\n',
       'The American Empire Project \n\n',
@@ -93,7 +93,7 @@ export const Current = [
     author: 'Ryan Grim',
     date: Date.parse('May 23, 2019'),
     publisher: 'Strong Arm Press',
-    cover: './images/WeGotPeople.jpg',
+    cover: '/images/WeGotPeople.jpg',
     description: [
       'Alexandria Ocasio-Cortez may seem like she came from nowhere, but the movement that propelled her to office – and to global political stardom – has been building for 30 years. \n\n' +
       'We’ve Got People is the story of that movement, which first exploded into public view with the largely forgotten presidential run of the Rev. Jesse Jackson, a campaign that came dangerously close to winning. \n\n' +
@@ -119,7 +119,7 @@ export const Current = [
     author: 'Susan Williams',
     date: Date.parse('2022-01-01'),
     publisher: 'Public Affairs',
-    cover: './images/WhiteMalice.jpg',
+    cover: '/images/WhiteMalice.jpg',
     description: [
       'A revelatory new history of post-colonial African independence movements shows how they were systematically undermined by one nation: the US. This is the untold story of how, over a few vital years, African Independence was strangled at birth. \n\n',
       'In 1958 in Accra, Ghana, the Hands Off Africa conference brought together the leading figures of African independence in a public show of political strength and purpose. It was inspired by the example of Ghana itself which, under the charismatic leadership of Kwame Nkrumah, had just thrown off the British colonial yoke - the first African nation to do so. It was moment heady with promise for independence movements across Africa, and for all those who believed colonialism was a moral aberration. \n\n',

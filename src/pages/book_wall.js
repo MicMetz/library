@@ -7,22 +7,18 @@ import { Sidebar } from '../components/Sidebar.js'
 import Image from 'next/image'
 import { Readings } from '/src/pages/api/Readings.js'
 import {
-		ArticleByline,
-		ArticleFeaturedAtrribution,
-		ArticleFeaturedCoverImage,
-		ArticleFeaturedTagline,
-		ArticlePage,
-		ArticleSubtitle,
-		ArticleTitle
-} from '../styles/ArticleStyledComponents.js'
-import {
-		ReadingWallBody,
-		ReadingWallBookContainer,
-		ReadingWallMain
-} from '../styles/ReadingWallStyledComponents.js'
+		BookByline,
+		BookAtrribution,
+		BookCoverImage,
+		BookTagline,
+		BookPage,
+		BookSubtitle,
+		BookTitle
+} from '../styles/BookStyledComponents.js'
+import { ReadingWallBody, ReadingWallMain } from "../styles/ReadingWallStyledComponents.js";
+
 import { ContentBlock, SectionTitle } from '../styles/StyledComponents.js'
-import { ArticleFeaturedDescription } from '../tools/DescriptionParser.js'
-import { Current } from './api/Current.js'
+import { DescriptionParser } from '../tools/DescriptionParser.js'
 import Footer from '../components/Footer';
 
 
@@ -91,14 +87,14 @@ export default function ReadingWall( forwardRef, open, toggle ) {
 												return (
 														<ContentBlock key = {index} value = {book} id = {index} innerRef = {c => this.myRef = c} >
 
-																{ArticleFeaturedDescription( book )}
-																<ArticleFeaturedAtrribution >
-																		<ArticleTitle >{book.header.title}</ArticleTitle >
-																		<ArticleSubtitle >{book.header.subtitle}</ArticleSubtitle >
-																		<ArticleByline >{book.author}</ArticleByline >
-																</ArticleFeaturedAtrribution >
-																<ArticleFeaturedCoverImage src = {book.cover} alt = {book.header.title} />
-																<ArticleFeaturedTagline >
+																{DescriptionParser( book )}
+																<BookAtrribution >
+																		<BookTitle >{book.header.title}</BookTitle >
+																		<BookSubtitle >{book.header.subtitle}</BookSubtitle >
+																		<BookByline >{book.author}</BookByline >
+																</BookAtrribution >
+																<BookCoverImage src = {book.cover} alt = {book.header.title} />
+																<BookTagline >
 																		<ul >
 																				<li >
 																						<a href = {book.link} target = "blank" >Read More</a >
@@ -111,7 +107,7 @@ export default function ReadingWall( forwardRef, open, toggle ) {
 																						)
 																				} )}
 																		</ul >
-																</ArticleFeaturedTagline >
+																</BookTagline >
 														</ContentBlock >
 												)
 										} )}

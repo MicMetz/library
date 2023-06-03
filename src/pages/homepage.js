@@ -1,23 +1,22 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image';
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { Navigation } from '../components/nav/Navigation.js'
 import { Readings } from './api/Readings.js'
 import DefaultLayout from '../components/layouts/DefaultLayout.js'
 import { Sidebar } from '../components/Sidebar.js'
 import {
-		ArticleByline,
-		ArticleFeaturedAtrribution,
-		ArticleFeaturedCoverImage,
-		ArticleFeaturedDetails,
-		ArticleFeaturedTagline,
-		ArticleSubtitle,
-		ArticleTitle
-} from '../styles/ArticleStyledComponents.js'
+		BookByline,
+		BookAtrribution,
+		BookCoverImage,
+		BookDetails,
+		BookTagline,
+		BookSubtitle,
+		BookTitle
+} from '../styles/BookStyledComponents.js'
 import { Current } from '/src/pages/api/Current.js'
 import { ContentBlock, DefaultBody, DefaultMain, SectionTitle } from '../styles/StyledComponents.js'
-import { ArticleFeaturedDescription } from '../tools/DescriptionParser.js'
+import { DescriptionParser } from '../tools/DescriptionParser.js'
 import Footer from '../components/Footer';
 
 
@@ -93,14 +92,14 @@ export default function Homepage( forwardRef, open, toggle ) {
 
 												return (
 														<ContentBlock key = {index} value = {book} id = {index} >
-																{ArticleFeaturedDescription( book )}
-																<ArticleFeaturedAtrribution >
-																		<ArticleTitle >{book.header.title}</ArticleTitle >
-																		<ArticleSubtitle >{book.header.subtitle}</ArticleSubtitle >
-																		<ArticleByline >{book.author}</ArticleByline >
-																</ArticleFeaturedAtrribution >
-																<ArticleFeaturedCoverImage src = {book.cover} alt = {book.header.title} />
-																<ArticleFeaturedTagline >
+																{DescriptionParser( book )}
+																<BookAtrribution >
+																		<BookTitle >{book.header.title}</BookTitle >
+																		<BookSubtitle >{book.header.subtitle}</BookSubtitle >
+																		<BookByline >{book.author}</BookByline >
+																</BookAtrribution >
+																<BookCoverImage src = {book.cover} alt = {book.header.title} />
+																<BookTagline >
 																		<ul >
 																				<li >
 																						<a href = {book.link} target = "blank" >Read More</a >
@@ -113,7 +112,7 @@ export default function Homepage( forwardRef, open, toggle ) {
 																						)
 																				} )}
 																		</ul >
-																</ArticleFeaturedTagline >
+																</BookTagline >
 														</ContentBlock >
 												)
 										} )}

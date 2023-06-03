@@ -24,6 +24,24 @@ export const DefaultMain = styled.main`
 `
 
 
+export const DefaultDetails = styled.div`
+  display: inline-block;
+  position: relative;
+
+  max-width: 40%;
+  order: 1;
+  padding: 0 2rem;
+  text-align: left;
+  margin: 5rem 1rem 0 auto;
+  width: 100%;
+  height: 100%;
+
+  p {
+    font-size: 1.2em;
+    line-height: 1.2em;
+  }
+`
+
 export const DefaultBlockQuote = styled.blockquote`
   max-width: calc(100vw - 20rem);
   margin: 0 auto;

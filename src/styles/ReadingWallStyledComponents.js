@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import Image from 'next/image'
 
 
 export const ReadingWallBody = styled.div`
@@ -22,8 +22,8 @@ export const ReadingWallMain = styled.main`
   height: 100%;
 `
 
-
-export const ReadingWallBookCoverImage = styled.img`
+// export const ReadingWallBookCoverImage = styled.img`
+export const ReadingWallBookCoverImage = styled( Image )`
   display: inline-block;
   position: relative;
   width: 100%;

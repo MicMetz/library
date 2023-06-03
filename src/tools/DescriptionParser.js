@@ -1,12 +1,12 @@
 import React from 'react'
-import { ArticleFeaturedDetails } from '../styles/ArticleStyledComponents.js'
+import { DefaultDetails } from "../styles/StyledComponents.js";
 
 
 
 
-export function ArticleFeaturedDescription (book) {
+export function DescriptionParser (book) {
   return (
-    <ArticleFeaturedDetails key = {book.id}>
+    <DefaultDetails key = {book.id}>
       {book.description.map((paragraph, i) => {
           return (
             <p key = {i}>
@@ -21,6 +21,6 @@ export function ArticleFeaturedDescription (book) {
           )
         }
       )}
-    </ArticleFeaturedDetails >
+    </DefaultDetails >
   )
 }

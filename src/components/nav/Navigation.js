@@ -76,15 +76,12 @@ export const Navigation = ( forwardRef, open, toggle ) => {
 								<NavigationList >
 										<Link href = "https://micmetz.github.io" >
 												<NavLogoItem >
-														<Link href = "https://micmetz.github.io" >
-																<NavLink >
-																		<TiChartPie size = "1.5em" />
-																		<span >
-																				{'Michael Metzger'}
-																		</span >
-																		{/* </NavigationListItem> */}
-																</NavLink >
-														</Link >
+														<TiChartPie size = "1.5em" />
+														<NavLink >
+																<span >
+																		{'Michael Metzger'}
+																</span >
+														</NavLink >
 												</NavLogoItem >
 										</Link >
 										<MenuItem i = {0} text = "Home" link = "/" />

@@ -37,7 +37,6 @@ export default class MyDocument extends Document {
 				return (
 						<Html lang = "en" >
 								<Head >
-										<meta content = "width=device-width, initial-scale=1.0" name = "viewport" />
 										<link rel = "icon" href = "/icons/logo-hook-white.svg" type = "image/svg" />
 										<link rel = "manifest" href = "/static/manifest.json" />
 										<link rel = "preconnect" href = "https://fonts.googleapis.com" />

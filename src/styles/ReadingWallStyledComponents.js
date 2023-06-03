@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Image from 'next/image'
 
 
+
 export const ReadingWallBody = styled.div`
   padding: 4rem 2rem 0 !important;
   line-height: 24px;
@@ -23,7 +24,7 @@ export const ReadingWallMain = styled.main`
 `
 
 // export const ReadingWallBookCoverImage = styled.img`
-export const ReadingWallBookCoverImage = styled( Image )`
+export const ReadingWallBookCoverImage = styled.img`
   display: inline-block;
   position: relative;
   width: 100%;

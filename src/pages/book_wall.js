@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from 'react'
 import DefaultLayout from '../components/layouts/DefaultLayout.js'
 import { Navigation } from '../components/nav/Navigation.js'
 import { Sidebar } from '../components/Sidebar.js'
-import Image from 'next/image'
 import { Readings } from '/src/pages/api/Readings.js'
 import {
 		BookByline,
@@ -16,7 +15,6 @@ import {
 		BookTitle
 } from '../styles/BookStyledComponents.js'
 import { ReadingWallBody, ReadingWallMain } from "../styles/ReadingWallStyledComponents.js";
-
 import { ContentBlock, SectionTitle } from '../styles/StyledComponents.js'
 import { DescriptionParser } from '../tools/DescriptionParser.js'
 import Footer from '../components/Footer';

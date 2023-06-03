@@ -2,9 +2,9 @@ import Head from 'next/head'
 import Link from 'next/link'
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { Navigation } from '../components/nav/Navigation.js'
-import { Readings } from './api/Readings.js'
 import DefaultLayout from '../components/layouts/DefaultLayout.js'
 import { Sidebar } from '../components/Sidebar.js'
+import Image from 'next/image'
 import {
 		BookByline,
 		BookAtrribution,
@@ -98,7 +98,7 @@ export default function Homepage( forwardRef, open, toggle ) {
 																		<BookSubtitle >{book.header.subtitle}</BookSubtitle >
 																		<BookByline >{book.author}</BookByline >
 																</BookAtrribution >
-																<BookCoverImage src = {book.cover} alt = {book.header.title} />
+																<BookCoverImage src = {book.cover} alt = {book.header.title}  />
 																<BookTagline >
 																		<ul >
 																				<li >

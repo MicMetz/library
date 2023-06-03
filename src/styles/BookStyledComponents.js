@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import styled from 'styled-components'
+import  Image  from 'next/image';
+import styled from 'styled-components';
 
 
 
@@ -52,9 +52,8 @@ export const BookPage = styled.section`
   transparentization($color, $amount) {
   rgba($color, $amount);
 }
+`;
 
-
-`
 
 export const BookTagline = styled.aside`
   display: inline-block;
@@ -146,7 +145,7 @@ export const BookAtrribution = styled.div`
   order: 3;
 `
 
-export const BookCoverImage = styled.img`
+export const BookCoverImage = styled.img`	
   display: inline-block;
   position: relative;
 
@@ -154,6 +153,9 @@ export const BookCoverImage = styled.img`
   width: 100%;
   height: 100%;
   max-width: 28%;
+		
+		object-fit: cover;
+		object-position: center;
 
   max-height: calc(100vh - 18rem);
   border-radius: 0 0.8em 0.8em 0;
@@ -161,7 +163,6 @@ export const BookCoverImage = styled.img`
   box-shadow: 0 0 10px 0 rgba(40, 42, 47, 0.1), -10px 10px 24px 10px rgba(40, 42, 47, 0.05), -30px 40px 30px 0 rgba(40, 42, 47, 0.1), -10px 10px 10px -5px rgba(40, 42, 47, 0.1);
   order: 2;
 `
-
 
 export const BookTitle = styled.h1`
   font-size: 3.5rem;
@@ -171,7 +172,7 @@ export const BookTitle = styled.h1`
   text-transform: uppercase;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
-`
+`;
 
 
 export const BookSubtitle = styled.h2`
@@ -182,14 +183,16 @@ export const BookSubtitle = styled.h2`
   text-transform: uppercase;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: auto;
-`
+`;
+
 
 export const BookByline = styled.p`
   font-size: 1.125rem;
   font-family: Courier, monospace;
   color: rgba(0, 0, 0, 0.5);
   margin: 0 0 2rem;
-`
+`;
+
 
 export const BookContent = styled.section`
   width: 100%;
@@ -372,5 +375,4 @@ export const BookContent = styled.section`
     background: rgba(0, 0, 0, 0.1);
     margin: 2rem 0;
   }
-
-`
+`;

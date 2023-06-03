@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image';
 import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { Navigation } from '../components/nav/Navigation.js'
 import { Readings } from './api/Readings.js'
@@ -78,7 +79,7 @@ export default function Homepage( forwardRef, open, toggle ) {
 						<Navigation open = {open} toggle = {toggle} forwardRef = {ref} />
 						<Head >
 								<title >Home</title >
-								<link rel = "icon" href = "/favicon.svg" />
+								<link rel = "icon" href = "/icons/logo-hook.svg" />
 						</Head >
 
 						<DefaultBody >

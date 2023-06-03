@@ -38,7 +38,7 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta content="width=device-width, initial-scale=1"/>
-          <link rel="icon" href="/favicon.svg"/>
+          <link rel="icon" href="/icons/logo-hook.svg"/>
           <link rel="manifest" href="/static/manifest.json"/>
           <link rel="preconnect" href="https://fonts.googleapis.com"/>
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>

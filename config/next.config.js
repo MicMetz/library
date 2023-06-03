@@ -34,7 +34,17 @@ const nextConfig = async () => {
 						unoptimized: true,
 						types      : [ 'png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'ico', 'bmp', 'tiff' ]
 				},
-				use            : [ '@svgr/webpack' ],
+				use: [
+						{
+								loader : '@svgr/webpack',
+								options: {
+										prettier  : false,
+										svgo      : true,
+										svgoConfig: { plugins: [ { removeViewBox: false } ] },
+										titleProp : true,
+								},
+						},
+				],
 				async redirects() {
 						return [
 								{

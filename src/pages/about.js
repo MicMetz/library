@@ -74,7 +74,7 @@ export default function About(forwardRef, open, toggle) {
       <Navigation open={open} toggle={toggle} forwardRef={ref}/>
       <Head>
         <title>About</title>
-        <link rel="icon" href="/favicon.svg"/>
+        <link rel="icon" href="/icons/logo-hook.svg"/>
       </Head>
       <DefaultBody>
         <Sidebar header={'About'} open={open} toggle={toggle} forwardRef={ref} chapters={[]}/>

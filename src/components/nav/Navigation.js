@@ -12,7 +12,8 @@ import {
 		NavigationWrapper,
 		NavLogoItem,
 		ToggleButton,
-		ToggleButtonWrapper
+		ToggleButtonWrapper,
+		NavLink
 } from '../../styles/NavigationStyledComponents.js'
 import { MenuItem } from './MenuItem.js'
 import { MobileNavigationbar } from './MobileNavigation.js'
@@ -76,13 +77,13 @@ export const Navigation = ( forwardRef, open, toggle ) => {
 										<Link href = "https://micmetz.github.io" >
 												<NavLogoItem >
 														<Link href = "https://micmetz.github.io" >
-																<a href = "https://micmetz.github.io" >
+																<NavLink >
 																		<TiChartPie size = "1.5em" />
 																		<span >
 																				{'Michael Metzger'}
 																		</span >
 																		{/* </NavigationListItem> */}
-																</a >
+																</NavLink >
 														</Link >
 												</NavLogoItem >
 										</Link >

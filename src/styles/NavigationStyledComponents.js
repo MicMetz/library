@@ -154,6 +154,30 @@ export const NavigationBar = styled.nav`
 `
 
 
+export const NavLink = styled.a`
+  font-size: 1.5rem;
+  line-height: 32px;
+  color: rgba(0, 0, 0, 0.75);
+  transition: 0.4s ease;
+  padding-right: 5rem;
+  white-space: nowrap;
+
+
+  &:hover {
+    color: #3b4fb6;
+    opacity: 1;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: 0.4s ease;
+  }
+
+  @media ${( props ) => props.theme.breakpoints.sm} {
+    padding: 0.5rem;
+  }
+`
+
+
+
 export const Underline = styled.ins`
   position: static;
   bottom: 0;

@@ -79,8 +79,7 @@ export default function ReadingWall( forwardRef, open, toggle ) {
 						<Navigation open = {open} toggle = {toggle} forwardRef = {ref} />
 
 						<Head >
-								<title >Reading List</title >
-								<link rel = "icon" href = "/icons/logo-hook.svg" />
+								<title >Book List</title >
 						</Head >
 
 						<ReadingWallBody >

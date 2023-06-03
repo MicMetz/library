@@ -69,9 +69,8 @@ export default function ArticlesRoom( forwardRef, open, toggle ) {
 						<Navigation open = {open} toggle = {toggle} forwardRef = {ref} />
 
 						<Head >
-								<title >Article Room</title >
+								<title >Article List</title >
 								<meta name = "" content = "initial-scale=1.0, width=device-width" />
-								<link rel = "icon" href = "/icons/logo-hook.svg" />
 						</Head >
 						<DefaultBody >
 								<Sidebar

@@ -50,7 +50,7 @@ export default function Index( { page, navigation, settings } ) {
 
 		return (
 				<>
-						<motion.div
+						{/* <motion.div
 								ref = {ref}
 								initial = {{ top: 0 }}
 								animate = {controls}
@@ -78,7 +78,7 @@ export default function Index( { page, navigation, settings } ) {
 												<p className = "preloader__forwards__text" >where decades happen.</p >
 										</motion.div >
 								</div >
-						</motion.div >
+						</motion.div > */}
 						<Homepage isOpen = {isToggleOpen}
 																toggleOpen = {() => toggleBodyScroll( isToggleOpen )}
 																contentRef = {ref} />

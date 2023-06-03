@@ -74,16 +74,14 @@ export const Navigation = ( forwardRef, open, toggle ) => {
 								data-scroll-target = "nav" id = "nav"
 						>
 								<NavigationList >
-										<Link href = "https://micmetz.github.io" >
-												<NavLogoItem >
+										<NavLogoItem >
+												<NavLink href = "https://micmetz.github.io" >
 														<TiChartPie size = "1.5em" />
-														<NavLink >
-																<span >
-																		{'Michael Metzger'}
-																</span >
-														</NavLink >
-												</NavLogoItem >
-										</Link >
+														<span >
+																{'Michael Metzger'}
+														</span >
+												</NavLink >
+										</NavLogoItem >
 										<MenuItem i = {0} text = "Home" link = "/" />
 										<MenuItem i = {1} text = "Books" link = "/book_wall" />
 										<MenuItem i = {2} text = "Articles" link = "/article_wall" />

@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 
 
-
 export const ArticlePage = styled.section`
   display: flex;
   position: relative;

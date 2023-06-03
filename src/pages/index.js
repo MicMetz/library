@@ -4,8 +4,7 @@ import Head from 'next/head'
 import DefaultLayout from '../components/layouts/DefaultLayout.js'
 import {Navigation} from '../components/nav/Navigation.js'
 import {useHasBeenViewed} from '../tools/useIntro.js'
-import Homepage from './Homepage.js'
-import Reading_room from './reading_room.js'
+import Homepage from './homepage.js'
 import {inView, motion, useAnimation} from 'framer-motion'
 import {useInView} from 'react-intersection-observer'
 
@@ -63,7 +62,7 @@ export default function Index({page, navigation, settings}) {
             animate={{x: 0, opacity: 1, transition: {...transition}}}
             className="preloader__forwards__left"
           >
-            <img src="/favicon.svg" alt="logo"/>
+            <img src="/icons/favicon.svg" alt="logo"/>
           </motion.div>
           <motion.div
             initial={{x: 10, opacity: 0}}

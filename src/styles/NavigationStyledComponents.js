@@ -5,7 +5,6 @@ import { motion } from 'framer-motion'
 
 
 
-
 export const NavigationWrapper = styled.div`
   position: relative;
   z-index: 9990;
@@ -81,7 +80,7 @@ export const NavLogoItem = styled.div`
     display: flex;
   }
 
-   svg {
+  svg {
 
   }
 

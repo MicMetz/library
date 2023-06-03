@@ -86,8 +86,8 @@ export const Navigation = (forwardRef, open, toggle) => {
             </NavLogoItem>
           </Link>
           <MenuItem i={0} text="Home" link="/"/>
-          <MenuItem i={1} text="Reading Room" link="/reading_room"/>
-          <MenuItem i={2} text="Articles Room" link="/articles_room"/>
+          <MenuItem i={1} text="Books" link="/book_wall"/>
+          <MenuItem i={2} text="Articles" link="/article_wall"/>
           <MenuItem i={3} text="The Wall" link="/the_wall"/>
           <MenuItem i={4} text="About" link="/about"/>
         </NavigationList>

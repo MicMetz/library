@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 
 
-
 export const SideMenuClosed = styled.div`
   padding: 1.5rem 1rem;
   background-color: white;
@@ -17,7 +16,7 @@ export const SideMenuClosed = styled.div`
 
   width: 7rem;
   max-width: 20vw;
-  border-right: 1px solid #eee;
+  border-right: 1px solid rgba(93, 88, 88, 0.26);
   height: 100vh;
 `
 
@@ -59,7 +58,7 @@ export const SidebarHeader = styled.header`
   }
 `
 
-export const SideMenuOpened = styled(SideMenuClosed)`
+export const SideMenuOpened = styled( SideMenuClosed )`
   left: 0;
   top: calc(var(--nav-height));
   min-width: var(--sidebar-width);
@@ -67,13 +66,13 @@ export const SideMenuOpened = styled(SideMenuClosed)`
   min-height: fit-content;
   width: 100%;
   padding: 1.5rem 2rem;
-  border-right: 1px solid #f0f0f0;
+  border-right: 1px solid rgba(93, 88, 88, 0.26);
   border-top: none;
   border-bottom: none;
   transition: all 0.7s ease-in-out;
 `
 
-export const SideMenuHeader = styled(SidebarHeader)`
+export const SideMenuHeader = styled( SidebarHeader )`
   transition: all 0.7s ease-in-out;
   transform: rotate(0deg);
   position: relative;

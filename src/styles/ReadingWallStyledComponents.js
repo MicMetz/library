@@ -2,8 +2,7 @@ import styled from 'styled-components'
 
 
 
-
-export const ReadingRoomBody = styled.div`
+export const ReadingWallBody = styled.div`
   padding: 4rem 2rem 0 !important;
   line-height: 24px;
   //background-size: 100px 100px;
@@ -12,7 +11,7 @@ export const ReadingRoomBody = styled.div`
   max-width: 100vw;
 `
 
-export const ReadingRoomMain = styled.main`
+export const ReadingWallMain = styled.main`
   display: block;
   align-items: center;
   justify-content: space-around;
@@ -24,7 +23,7 @@ export const ReadingRoomMain = styled.main`
 `
 
 
-export const ReadingRoomBookCoverImage = styled.img`
+export const ReadingWallBookCoverImage = styled.img`
   display: inline-block;
   position: relative;
   width: 100%;
@@ -50,11 +49,11 @@ export const ReadingRoomBookCoverImage = styled.img`
   }
 `
 
-export const ReadingRoomBookFooter = styled.footer`
+export const ReadingWallBookFooter = styled.footer`
 
 `
 
-export const ReadingRoomBookAtrribution = styled.div`
+export const ReadingWallBookAtrribution = styled.div`
   display: inline-block;
   flex-direction: column;
   order: 3;
@@ -83,7 +82,7 @@ export const ReadingRoomBookAtrribution = styled.div`
 `
 
 
-export const ReadingRoomBookDetails = styled.div`
+export const ReadingWallBookDetails = styled.div`
   display: inline-block;
   position: relative;
 
@@ -104,7 +103,7 @@ export const ReadingRoomBookDetails = styled.div`
 
 
 
-export const ReadingRoomBookContainer = styled.section`
+export const ReadingWallBookContainer = styled.section`
   display: flex;
   //position: absolute;
   height: fit-content;

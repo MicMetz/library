@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import React from 'react'
+import ArticlesRoom from "../../pages/article_wall.js";
 import { MenuItem } from './MenuItem.js'
 import { MenuToggle } from './MenuToggle.js'
 
@@ -43,8 +44,8 @@ export const MobileNavigationbar = ({ variants, isOpen, isMobile }) => {
         <MenuToggle toggle = {() => isOpen = !isOpen}/>
         <ul className = "mobile-navigation__list">
           <MenuItem i = {0} text = "Home" link = {'/'}/>
-          <MenuItem i = {1} text = "Reading Room" link = {'/reading_room'}/>
-          <MenuItem i = {2} text = "Articles Room" link = {'/articles_room'}/>
+          <MenuItem i = {1} text = "Books" link = {'/reading_room'}/>
+          <MenuItem i = {2} text = "Articles" link = {'/articles_room'}/>
           <MenuItem i = {3} text = "The Wall" link = {'/the_wall'}/>
         </ul >
       </motion.nav >

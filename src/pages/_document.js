@@ -53,6 +53,7 @@ export default class MyDocument extends Document {
           <meta name="apple-mobile-web-app-title"/>
           <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon_180.png"/>
           <meta name="msapplication-TileImage" content="/static/icons/icon_150.png"/>
+
         </Head>
 
 

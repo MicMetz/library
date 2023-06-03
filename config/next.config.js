@@ -15,29 +15,38 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = async () => {
 
-  return {
-    reactStrictMode: true,
-    assetPrefix    : process.env.NODE_ENV === 'production' ? '/library' : '',
-    basePath       : process.env.NODE_ENV === 'production' ? '/library' : '',
-    baseUrl        : process.env.NODE_ENV === 'production' ? '/library' : '',
-    url            : process.env.NODE_ENV === 'production' ? '/library' : '',
-    hostnames      : ['micmetz.github.io', 'localhost', 'raw.githubusercontent.com', 'github.com'],
-    types          : ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'ico', 'bmp', 'tiff', 'glb', 'gltf'],
-    loader         : 'file-loader',
-    options        : {
-      publicPath: '/_next/static/images', // the path access the assets via url
-      outputPath: 'static/images/', // where to store on disk
-    },
-    images         : {
-      loader     : 'custom',
-      loaderFile : 'src/utilities/imageLoader.js',
-      unoptimized: true,
-      types      : ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'ico', 'bmp', 'tiff']
-    }
+	return {
+		reactStrictMode: true,
+		assetPrefix: process.env.NODE_ENV === 'production' ? '/library' : '',
+		basePath: process.env.NODE_ENV === 'production' ? '/library' : '',
+		baseUrl: process.env.NODE_ENV === 'production' ? '/library' : '',
+		url: process.env.NODE_ENV === 'production' ? '/library' : '',
+		hostnames: ['micmetz.github.io', 'localhost', 'raw.githubusercontent.com', 'github.com'],
+		types: ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'ico', 'bmp', 'tiff', 'glb', 'gltf'],
+		loader: 'file-loader',
+		options: {
+			publicPath: '/_next/static/images', // the path access the assets via url
+			outputPath: 'static/images/', // where to store on disk
+		},
+		images: {
+			loader: 'custom',
+			loaderFile: 'src/utilities/imageLoader.js',
+			unoptimized: true,
+			types: ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'ico', 'bmp', 'tiff']
+		},
+		async redirects() {
+			return [
+				{
+					source: '/library',
+					destination: '/library/',
+					permanent: true,
+				},
+			]
+		},
 
-  }
+	}
 
 }
 
-module.exports = ( nextConfig )
+module.exports = (nextConfig)
 // module.exports = withMDX(nextConfig)

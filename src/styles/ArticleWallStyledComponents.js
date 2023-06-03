@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 
 
-
 export const ArticleMapBody = styled.div`
   margin-left: 8vw !important;
   padding: 4rem 2rem 0 !important;

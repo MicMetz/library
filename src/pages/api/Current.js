@@ -1,32 +1,32 @@
 /**
  Template Format:
- 
+
  (1) id: number,
- 
+
  (2) header: {
     title: string,
     subtitle: string || null
   },
- 
+
  (3) author: string,
- 
+
  (4) date: Date || null,
- 
+
  (5) publisher: string || null,
- 
+
  (6) cover: url,
- 
+
  (7) description: string[] || null,
- 
+
  (8) chapters: { Object[ { title: string, subtitle: string, description?: string[] || null } ] }
- 
- 
+
+
  */
 
 
 export const Current = [
   {
-    id: 0,
+    id: 1,
     header: {
       title: 'Kill Anything That Moves',
       subtitle: 'The Real American War in Vietnam'

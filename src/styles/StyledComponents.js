@@ -6,8 +6,8 @@ import styled from 'styled-components'
 
 
 export const StyledLayout = styled( motion.main )`
-  max-width: 1400px;
-  margin: var(--space-l) auto var(--space-128);
+  max-width: 96vw;
+  margin: var(--space-l) 0 var(--space-128);
   padding: 0 var(--space-l);
   @media (max-width: 768px) {
     margin: var(--space-s) auto var(--space-2xl);

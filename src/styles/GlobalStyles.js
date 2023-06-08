@@ -700,14 +700,14 @@ const GlobalStyles = createGlobalStyle`
       width: 24rem;
       height: 2em
     }
-
-    footer {
-      max-width: 43rem;
-      margin: 0 auto;
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
-      text-align: center;
-      padding: 4rem 1rem 0
-    }
+    //
+    //footer {
+    //  max-width: 43rem;
+    //  margin: 0 auto;
+    //  border-top: 1px solid rgba(0, 0, 0, 0.1);
+    //  text-align: center;
+    //  padding: 4rem 1rem 0
+    //}
 
 
   }

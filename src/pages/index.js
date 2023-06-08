@@ -1,87 +1,132 @@
-import { useRouter } from 'next/router'
-import React, { Component, useEffect, useMemo, useRef, useState } from 'react'
-import Head from 'next/head'
-import Image from 'next/image';
-import LogoHookWhite from '/public/icons/logo-hook-white.svg'
-import DefaultLayout from '../components/layouts/DefaultLayout.js'
-import { Navigation } from '../components/nav/Navigation.js'
-import { useHasBeenViewed } from '../tools/useIntro.js'
-import Homepage from './homepage.js'
-import { inView, motion, useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
+import React, { useEffect, useRef, useState } from 'react'
+import { Current } from "../../posts/data/Current.js";
+import Header from "../components/Layouts/Header.js";
+import { Layout } from "../components/Layouts/Layout.js";
+import { Sidebar } from "../components/Sidebar.js";
+import { BookAtrribution, BookByline, BookCoverImage, BookSubtitle, BookTagline, BookTitle } from "../styles/BookStyledComponents.js";
+import { ContentBlock, DefaultBody, DefaultMain, SectionTitle } from "../styles/StyledComponents.js";
+import { DescriptionParser } from "../tools/DescriptionParser.js";
 
 
-
-export default function Index( { page, navigation, settings } ) {
-		const router                            = useRouter()
-		const [ isToggleOpen, setIsToggleOpen ] = useState( false )
-		const controls                          = useAnimation()
-		const [ ref, inView ]                   = useInView()
-		let firstLoad                           = false
-
-		/*
-			useEffect(() => {
-			if (firstLoad === false) {
-			firstLoad = true
-			setTimeout(() => {
-			controls.start('hidden')
-			}, 1000)
-			}
-			}, [])
-			*/
+export default function Homepage() {
+		const [ activeFeature, setActiveFeature ]   = useState( Current[ 0 ] )
+		const [ scrollPosition, setScrollPosition ] = useState()
+		const [ isToggleOpen, setIsToggleOpen ]     = useState( false )
+		const [ isSidebarOpen, setIsSidebarOpen ]   = useState( false )
 
 		useEffect( () => {
-				if ( inView ) {
-						controls.start( 'visible' )
-				} else {
-						controls.start( 'disabled' )
+				window.addEventListener( 'scroll', handleScroll )
+				return () => {
+						window.removeEventListener( 'scroll', handleScroll )
 				}
-		}, [ controls, inView ] )
+		}, [] )
 
 
-		function toggleBodyScroll( isToggleOpen ) {
-				if ( isToggleOpen === false ) {
-						setIsToggleOpen( true )
-				} else if ( isToggleOpen === true ) {
-						setIsToggleOpen( false )
+		const loadActiveReading = ( feature ) => {
+				if ( feature === null && activeFeature !== null ) {
+						return
+				} else if ( feature !== null ) {
+						setActiveFeature( feature )
 				}
+		}
+
+
+		const handleScroll = () => {
+				const observer = new IntersectionObserver( intersections => {
+						intersections.forEach( ( intersection ) => {
+								if ( intersection.intersectionRatio > 0.5 ) {
+										loadActiveReading( Current[ intersection.target.id ] )
+								}
+						} )
+				}, {
+						threshold: 0.5
+				} )
+
+				document.querySelectorAll( 'section[id]' ).forEach( ( section ) => {
+						if ( section !== null ) {
+								observer.observe( section )
+						}
+				} )
+		}
+
+		const handleFeature = ( index ) => {
+				setActiveFeature( index )
 		}
 
 
 		return (
 				<>
 						{/* <motion.div
-								ref = {ref}
-								initial = {{ top: 0 }}
-								animate = {controls}
-								variants = {variants}
-								id = "main-target-animation"
-								className = "preloader__forwards"
-						>
-								<div className = "preloader__forwards__wrapper" >
-										<motion.div
-												initial = {{ x: -10, opacity: 0 }}
-												animate = {{ x: 0, opacity: 1, transition: { ...transition } }}
-												className = "preloader__forwards__left"
-										>
-												<Image src = {LogoHookWhite} alt = "Logo" style = {{ color: 'white' }} />
-										</motion.div >
-										<motion.div
-												initial = {{ x: 10, opacity: 0 }}
-												animate = {{ x: 0, opacity: 1, transition: { ...transition } }}
-												className = "preloader__forwards__right"
-										>
-												<p className = "preloader__forwards__text" >Michael Metzger</p >
-												<p className = "preloader__forwards__text" >There are decades</p >
-												<p className = "preloader__forwards__text" >where nothing happens;</p >
-												<p className = "preloader__forwards__text" >and there are weeks</p >
-												<p className = "preloader__forwards__text" >where decades happen.</p >
-										</motion.div >
-								</div >
-						</motion.div > */}
-						<Homepage isOpen = {isToggleOpen}
-																toggleOpen = {() => toggleBodyScroll( isToggleOpen )}
-																contentRef = {ref} />
+							ref = {ref}
+							initial = {{ top: 0 }}
+							animate = {controls}
+							variants = {variants}
+							id = "main-target-animation"
+							className = "preloader__forwards"
+							>
+							<div className = "preloader__forwards__wrapper" >
+							<motion.div
+							initial = {{ x: -10, opacity: 0 }}
+							animate = {{ x: 0, opacity: 1, transition: { ...transition } }}
+							className = "preloader__forwards__left"
+							>
+							<Image src = {LogoHookWhite} alt = "Logo" style = {{ color: 'white' }} />
+							</motion.div >
+							<motion.div
+							initial = {{ x: 10, opacity: 0 }}
+							animate = {{ x: 0, opacity: 1, transition: { ...transition } }}
+							className = "preloader__forwards__right"
+							>
+							<p className = "preloader__forwards__text" >Michael Metzger</p >
+							<p className = "preloader__forwards__text" >There are decades</p >
+							<p className = "preloader__forwards__text" >where nothing happens;</p >
+							<p className = "preloader__forwards__text" >and there are weeks</p >
+							<p className = "preloader__forwards__text" >where decades happen.</p >
+							</motion.div >
+							</div >
+							</motion.div > */}
+						<Header title = "Michael Metzger | Library" />
+						<Layout >
+								<DefaultBody >
+										<Sidebar header = {activeFeature.header}
+																			chapters = {activeFeature.chapters}
+																			open = {isSidebarOpen} toggle = {setIsSidebarOpen}
+																			/>
+										<DefaultMain >
+
+												<SectionTitle main >Currently Reading</SectionTitle >
+												{Current?.map( ( book, index ) => {
+
+														return (
+																<ContentBlock key = {index} value = {book} id = {index} >
+																		{DescriptionParser( book )}
+																		<BookAtrribution >
+																				<BookTitle >{book.header.title}</BookTitle >
+																				<BookSubtitle >{book.header.subtitle}</BookSubtitle >
+																				<BookByline >{book.author}</BookByline >
+																		</BookAtrribution >
+																		<BookCoverImage src = {book.cover} alt = {book.header.title} />
+																		<BookTagline >
+																				<ul >
+																						<li >
+																								<a href = {book.link} target = "blank" >Read More</a >
+																						</li >
+																						{book.tags.map( ( tag, id ) => {
+																								return (
+																										<li key = {id} >
+																												<a href = {tag.link} target = "blank" >{tag.name}</a >
+																										</li >
+																								)
+																						} )}
+																				</ul >
+																		</BookTagline >
+																</ContentBlock >
+														)
+												} )}
+										</DefaultMain >
+								</DefaultBody >
+
+						</Layout >
 				</ >
 		)
 }

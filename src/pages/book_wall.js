@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import React, { useEffect, useRef, useState } from 'react'
-import DefaultLayout from '../components/layouts/DefaultLayout.js'
+import DefaultLayout from '../components/Layouts/DefaultLayout.js'
 import { Navigation } from '../components/nav/Navigation.js'
 import { Sidebar } from '../components/Sidebar.js'
 import { Readings } from '/posts/data/Readings.js'
@@ -17,7 +17,7 @@ import {
 import { ReadingWallBody, ReadingWallMain } from "../styles/ReadingWallStyledComponents.js";
 import { ContentBlock, SectionTitle } from '../styles/StyledComponents.js'
 import { DescriptionParser } from '../tools/DescriptionParser.js'
-import Footer from '../components/Footer';
+import Footer from '../components/Layouts/Footer.js';
 
 
 

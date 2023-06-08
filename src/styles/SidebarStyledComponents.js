@@ -60,7 +60,7 @@ export const SidebarHeader = styled.header`
 
 export const SideMenuOpened = styled( SideMenuClosed )`
   left: 0;
-  top: calc(var(--nav-height));
+  top: 0;
   min-width: var(--sidebar-width);
   max-width: 55vw;
   min-height: fit-content;

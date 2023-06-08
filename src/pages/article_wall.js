@@ -3,11 +3,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 import { Navigation } from '../components/nav/Navigation.js'
-import DefaultLayout from '../components/layouts/DefaultLayout.js'
+import DefaultLayout from '../components/Layouts/DefaultLayout.js'
 import { Sidebar } from '../components/Sidebar.js'
 import { DefaultBody, DefaultMain, SectionTitle } from '../styles/StyledComponents.js'
 import { Articles } from '../../posts/data/Articles.js'
-import Footer from '../components/Footer';
+import Footer from '../components/Layouts/Footer.js';
 
 
 

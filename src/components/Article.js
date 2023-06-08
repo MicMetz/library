@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 import {Page, PageBody, PageFooter, PageHeader, PageHeaderTitle} from '../styles/PageStyledComponents.js'
-import ArticleLayout from './layouts/ArticleLayout.js'
+import ArticleLayout from './Layouts/ArticleLayout.js'
 
 
 import {Heading, Text, Code} from './MDXComponents.js'

@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import Link from 'next/link';
 import {Current} from '../../posts/data/Current.js';
 import Head from 'next/head';
-import DefaultLayout from '../components/layouts/DefaultLayout';
+import DefaultLayout from '../components/Layouts/DefaultLayout';
 import {Navigation} from '../components/nav/Navigation';
 import {Sidebar} from '../components/Sidebar';
 import {
@@ -13,7 +13,7 @@ import {
   DefaultQuoteText,
   SectionTitle
 } from '../styles/StyledComponents';
-import Footer from '../components/Footer';
+import Footer from '../components/Layouts/Footer.js';
 import {Readings} from '../../posts/data/Readings.js';
 import * as observer from 'react-intersection-observer';
 import {motion} from 'framer-motion';

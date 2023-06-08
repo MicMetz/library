@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
-import DefaultLayout from '../components/layouts/DefaultLayout.js'
+import DefaultLayout from '../components/Layouts/DefaultLayout.js'
 import { Navigation } from '../components/nav/Navigation.js'
 import {
 		ContentBlock,
@@ -12,7 +12,7 @@ import {
 		SectionTitle
 } from '../styles/StyledComponents.js'
 import {Essays} from '../../posts/data/Essays.js'
-import Footer from '../components/Footer';
+import Footer from '../components/Layouts/Footer.js';
 import { Sidebar } from '../components/Sidebar';
 import { motion } from 'framer-motion';
 

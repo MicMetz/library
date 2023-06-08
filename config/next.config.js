@@ -17,10 +17,10 @@ const nextConfig = async () => {
 
 		return {
 				reactStrictMode: true,
-				assetPrefix    : process.env.NODE_ENV === 'production' ? '/theHook' : '',
-				basePath       : process.env.NODE_ENV === 'production' ? '/theHook' : '',
-				baseUrl        : process.env.NODE_ENV === 'production' ? '/theHook' : '',
-				url            : process.env.NODE_ENV === 'production' ? '/theHook' : '',
+				assetPrefix    : process.env.NODE_ENV === 'production' ? '/library' : '',
+				basePath       : process.env.NODE_ENV === 'production' ? '/library' : '',
+				baseUrl        : process.env.NODE_ENV === 'production' ? '/library' : '',
+				url            : process.env.NODE_ENV === 'production' ? '/library' : '',
 				hostnames      : [ 'micmetz.github.io', 'localhost', 'raw.githubusercontent.com', 'github.com' ],
 				types          : [ 'png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'ico', 'bmp', 'tiff', 'glb', 'gltf' ],
 				loader         : 'file-loader',
@@ -34,7 +34,7 @@ const nextConfig = async () => {
 						unoptimized: true,
 						types      : [ 'png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'ico', 'bmp', 'tiff' ]
 				},
-				use: [
+				use            : [
 						{
 								loader : '@svgr/webpack',
 								options: {
@@ -48,8 +48,8 @@ const nextConfig = async () => {
 				async redirects() {
 						return [
 								{
-										source     : '/theHook',
-										destination: '/theHook/',
+										source     : '/library',
+										destination: '/library/',
 										permanent  : true,
 								},
 						]

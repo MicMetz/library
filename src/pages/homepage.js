@@ -14,7 +14,7 @@ import {
 		BookSubtitle,
 		BookTitle
 } from '../styles/BookStyledComponents.js'
-import { Current } from '/src/pages/api/Current.js'
+import { Current } from '/posts/data/Current.js'
 import { ContentBlock, DefaultBody, DefaultMain, SectionTitle } from '../styles/StyledComponents.js'
 import { DescriptionParser } from '../tools/DescriptionParser.js'
 import Footer from '../components/Footer';

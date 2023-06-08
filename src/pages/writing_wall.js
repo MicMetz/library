@@ -11,7 +11,7 @@ import {
 		DefaultQuoteText,
 		SectionTitle
 } from '../styles/StyledComponents.js'
-import {Essays} from './api/Essays.js'
+import {Essays} from '../../posts/data/Essays.js'
 import Footer from '../components/Footer';
 import { Sidebar } from '../components/Sidebar';
 import { motion } from 'framer-motion';

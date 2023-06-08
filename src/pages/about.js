@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import Link from 'next/link';
-import {Current} from './api/Current';
+import {Current} from '../../posts/data/Current.js';
 import Head from 'next/head';
 import DefaultLayout from '../components/layouts/DefaultLayout';
 import {Navigation} from '../components/nav/Navigation';
@@ -14,7 +14,7 @@ import {
   SectionTitle
 } from '../styles/StyledComponents';
 import Footer from '../components/Footer';
-import {Readings} from './api/Readings';
+import {Readings} from '../../posts/data/Readings.js';
 import * as observer from 'react-intersection-observer';
 import {motion} from 'framer-motion';
 

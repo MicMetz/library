@@ -6,7 +6,7 @@ import { Navigation } from '../components/nav/Navigation.js'
 import DefaultLayout from '../components/layouts/DefaultLayout.js'
 import { Sidebar } from '../components/Sidebar.js'
 import { DefaultBody, DefaultMain, SectionTitle } from '../styles/StyledComponents.js'
-import { Articles } from './api/Articles.js'
+import { Articles } from '../../posts/data/Articles.js'
 import Footer from '../components/Footer';
 
 

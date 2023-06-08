@@ -8,7 +8,7 @@ export const Readings = [
 				author     : 'William Blum',
 				date       : Date.parse( 'October 1, 1995' ),
 				publisher  : 'Zed Books',
-				cover      : './images/KillingHope.jpg',
+				cover      : './images/books/KillingHope.jpg',
 				description: [
 						'Is the United States a force for democracy? \n',
 						'In this classic and unique volume that answers this question, William Blum serves up a forensic overview of U.S. foreign policy spanning sixty years. \n',
@@ -86,7 +86,7 @@ export const Readings = [
 				author     : 'Annie Jacobsen',
 				date       : Date.parse( 'February 11, 2014' ),
 				publisher  : 'Little, Brown and Company',
-				cover      : './images/OperationPaperclip.jpg',
+				cover      : './images/books/OperationPaperclip.jpg',
 				description: [
 						'In the chaos following World War II, the U.S. government faced many difficult decisions, including what to do with the Third Reich\'s scientific minds.' +
 						'These were the brains behind the Nazis\' once-indomitable war machine.' +
@@ -132,7 +132,7 @@ export const Readings = [
 				author     : 'Vincent Bevins',
 				date       : Date.parse( 'May 19, 2020' ),
 				publisher  : 'PublicAffairs',
-				cover      : './images/TheJakartaMethod.jpg',
+				cover      : './images/books/TheJakartaMethod.jpg',
 				description: [
 						'In 1965, the U.S. government helped the Indonesian military kill approximately one million innocent civilians. This was one of the most important turning points of the twentieth century,' +
 						' eliminating the largest communist party outside China and the Soviet Union and inspiring copycat terror programs in faraway countries like Brazil and Chile. But these events remain widely' +
@@ -160,7 +160,7 @@ export const Readings = [
 				author2    : 'Noam Chomsky',
 				date       : '1988',
 				publisher  : 'The Bodley Head London',
-				cover      : './images/ManufacturingConsent.jpg',
+				cover      : './images/books/ManufacturingConsent.jpg',
 				description: [],
 				link       : 'https://edisciplinas.usp.br/pluginfile.php/5537300/mod_resource/content/1/Noam%20Chomsky_%20Edward%20S.%20Herman%20-%20Manufacturing%20Consent_%20The%20Political%20Economy%20of%20the%20Mass%20Media-Bodley%20Head%20%282008%29.pdf',
 				tags       : [
@@ -177,7 +177,7 @@ export const Readings = [
 				author     : 'Nick Turse',
 				date       : Date.parse( '2013-01-15' ),
 				publisher  : 'Picador',
-				cover      : './images/KillAnythingThatMoves.jpg',
+				cover      : './images/books/KillAnythingThatMoves.jpg',
 				description: [
 						'Based on classified documents and first-person interviews, a startling history of the American war on Vietnamese civilians. \n\n',
 						'The American Empire Project \n\n',
@@ -233,7 +233,7 @@ export const Readings = [
 				author     : 'Ryan Grim',
 				date       : Date.parse( 'May 23, 2019' ),
 				publisher  : 'Strong Arm Press',
-				cover      : './images/WeGotPeople.jpg',
+				cover      : './images/books/WeGotPeople.jpg',
 				description: [
 						'Alexandria Ocasio-Cortez may seem like she came from nowhere, but the movement that propelled her to office – and to global political stardom – has been building for 30 years. \n\n' +
 						'We’ve Got People is the story of that movement, which first exploded into public view with the largely forgotten presidential run of the Rev. Jesse Jackson, a campaign that came dangerously close to winning. \n\n' +
@@ -259,7 +259,7 @@ export const Readings = [
 				author     : 'Susan Williams',
 				date       : Date.parse( '2022-01-01' ),
 				publisher  : 'Public Affairs',
-				cover      : './images/WhiteMalice.jpg',
+				cover      : './images/books/WhiteMalice.jpg',
 				description: [
 						'A revelatory new history of post-colonial African independence movements shows how they were systematically undermined by one nation: the US. This is the untold story of how, over a few vital years, African Independence was strangled at birth. \n\n',
 						'In 1958 in Accra, Ghana, the Hands Off Africa conference brought together the leading figures of African independence in a public show of political strength and purpose. It was inspired by the example of Ghana itself which, under the charismatic leadership of Kwame Nkrumah, had just thrown off the British colonial yoke - the first African nation to do so. It was moment heady with promise for independence movements across Africa, and for all those who believed colonialism was a moral aberration. \n\n',
@@ -335,7 +335,7 @@ export const Readings = [
 				author     : 'Cory Doctorow',
 				date       : Date.parse( 'April 25, 2017' ),
 				publisher  : 'Tor Books',
-				cover      : './images/Walkaway.jpg',
+				cover      : './images/books/Walkaway.jpg',
 				description: [
 						'Cory Doctorow’s first adult novel in eight years: an epic tale of revolution, love, post-scarcity, and the end of death.\n' +
 						'\n' +
@@ -362,7 +362,7 @@ export const Readings = [
 				author     : 'Michelle Alexander',
 				date       : Date.parse( 'January 16, 2010' ),
 				publisher  : 'The New Press',
-				cover      : './images/TheNewJimCrow.jpg',
+				cover      : './images/books/TheNewJimCrow.jpg',
 				link       : 'https://newjimcrow.com/',
 				tags       : [],
 				chapters   : [],
@@ -390,7 +390,7 @@ export const Readings = [
 				author     : 'Leslie Gill',
 				date       : Date.parse( 'January 1, 2004' ),
 				publisher  : 'Duke University Press',
-				cover      : './images/SchoolOftheAmerica.jpg',
+				cover      : './images/books/SchoolOftheAmerica.jpg',
 				link       : 'https://muse.jhu.edu/book/70309',
 				tags       : [],
 				chapters   : [],
@@ -413,7 +413,7 @@ export const Readings = [
 				author     : 'Naomi Klein',
 				date       : Date.parse( 'September 4, 2007' ),
 				publisher  : 'Metropolitan Books',
-				cover      : './images/TheShockDoctrineCover.jpg',
+				cover      : './images/books/TheShockDoctrineCover.jpg',
 				link       : 'https://www.naomiklein.org/shock-doctrine',
 				tags       : [
 						{ name: 'The Book', link: 'https://www.powells.com/book/shock-doctrine-the-rise-of-disaster-capitalism-9780805079838' },

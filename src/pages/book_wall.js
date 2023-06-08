@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import DefaultLayout from '../components/layouts/DefaultLayout.js'
 import { Navigation } from '../components/nav/Navigation.js'
 import { Sidebar } from '../components/Sidebar.js'
-import { Readings } from '/src/pages/api/Readings.js'
+import { Readings } from '/posts/data/Readings.js'
 import {
 		BookByline,
 		BookAtrribution,

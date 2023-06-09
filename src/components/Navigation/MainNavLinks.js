@@ -61,8 +61,8 @@ export default function MainNavLinks() {
         <GardenPopoverLinks />
       </AnimatePresence >
       <div className = "outside-dropdown" >
-        <UnderlineHoverLink href = "/book_wall" >Books</UnderlineHoverLink >
-        <UnderlineHoverLink href = "/article_wall" >Articles</UnderlineHoverLink >
+        <UnderlineHoverLink href = "/Books" >Books</UnderlineHoverLink >
+        <UnderlineHoverLink href = "/Articles" >Articles</UnderlineHoverLink >
       </div >
     </MainNav >
   );

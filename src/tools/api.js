@@ -5,7 +5,7 @@ import matter from 'gray-matter'
 
 
 
-const postsDirectory = join(process.cwd(), 'src/pages/Articlespage')
+const postsDirectory = join(process.cwd(), 'posts', 'articles')
 
 
 export function getPostSlugs () {

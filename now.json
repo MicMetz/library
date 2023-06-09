@@ -1,7 +1,7 @@
 {
     "version": 1,
-    "name": "the-library",
-    "alias": "the-library",
+    "name": "library",
+    "alias": "library",
     "builds": [{
         "src": "package.json",
         "use": "@now/static-build"

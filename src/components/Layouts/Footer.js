@@ -12,31 +12,28 @@ export default function Footer() {
         <FooterLinkList >
           <FooterLinkColumn >
             {/* <FooterLinkTitle >Email</FooterLinkTitle > */}
-            <FooterLinkItem href = "mailto:mime9599@colorado.edu" >
+            <FooterLinkItem href = "mailto:mime9599@colorado.edu">
               mime9599@colorado.edu
             </FooterLinkItem >
-          </FooterLinkColumn >
 
-          <FooterLinkColumn >
             <FooterSocialMediaIcons >
-              <FooterLinkItem href = "https://github.com/MicMetz" >
-                <a rel = "me" href = "https://github.com/MicMetz" >
+              <FooterLinkItem href = "https://github.com/MicMetz">
+                <a rel = "me" href = "https://github.com/MicMetz">
                   <GithubIcon />
                 </a >
               </FooterLinkItem >
-              <FooterLinkItem href = "https://www.linkedin.com/in/michael-metzjer/" >
-                <a rel = "me" href = "https://www.linkedin.com/in/michael-metzjer/" >
+              <FooterLinkItem href = "https://www.linkedin.com/in/michael-metzjer/">
+                <a rel = "me" href = "https://www.linkedin.com/in/michael-metzjer/">
                   <LinkedInIcon />
                 </a >
               </FooterLinkItem >
-              <FooterLinkItem href = "https://bsky.app/" >
-                <a rel = "me" href = "https://bsky.app/" >
+              <FooterLinkItem href = "https://bsky.app/">
+                <a rel = "me" href = "https://bsky.app/">
                   <TwitterIcon />
                 </a >
               </FooterLinkItem >
             </FooterSocialMediaIcons >
           </FooterLinkColumn >
-
         </FooterLinkList >
 
         <FooterSitemapList >

@@ -60,7 +60,8 @@ export default function ReadingWall( forwardRef, open, toggle ) {
 
   return (
     <DefaultLayout >
-      <Header title = {activeReading.header.title} subtitle = {activeReading.header.subtitle} />
+      <Header title = "Reading Wall" description = "A collection of books I've read and recommend." />
+      {/* <Header title = {activeReading.header.title} subtitle = {activeReading.header.subtitle} /> */}
 
       <ReadingWallBody >
         <Sidebar header = {activeReading.header} chapters = {activeReading.chapters} />

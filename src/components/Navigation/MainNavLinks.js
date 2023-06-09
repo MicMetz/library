@@ -13,12 +13,12 @@ import { Dropdown, MainNav, StyledChevronDownIcon, StyledPopoverButton } from ".
 
 
 
-function LibraryPopoverLinks() {
+function GardenPopoverLinks() {
   return (
     <Popover style = {{ position: "relative" }} >
-      <Link href = "/Library" >
+      <Link href = "https://micmetz.github.io/Garden" >
         <HoverLink >
-          <span >Library</span >
+          <span >Digital Garden</span >
         </HoverLink >
       </Link >
       <StyledPopoverButton >
@@ -38,13 +38,15 @@ function LibraryPopoverLinks() {
           style = {{ position: "absolute", zIndex: "10" }}
           key = "dropdown"
         >
-          < Link href = "/Essays" >
+          < Link href = "https://micmetz.github.io/Essays" >
             <DropdownLink >Essays</DropdownLink >
           </Link >
-          <Link href = "/Articles" >
-            <DropdownLink >Articles</DropdownLink >
+          <Link href = "https://micmetz.github.io/Notes" >
+            <DropdownLink >Notes</DropdownLink >
           </Link >
-
+          <Link href = "/" >
+            <DropdownLink >Library</DropdownLink >
+          </Link >
         </Dropdown >
       </Popover.Panel >
     </Popover >
@@ -56,7 +58,7 @@ export default function MainNavLinks() {
   return (
     <MainNav >
       <AnimatePresence >
-        <LibraryPopoverLinks />
+        <GardenPopoverLinks />
       </AnimatePresence >
       <div className = "outside-dropdown" >
         <UnderlineHoverLink href = "/book_wall" >Books</UnderlineHoverLink >

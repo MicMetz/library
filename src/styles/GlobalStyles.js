@@ -273,7 +273,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     min-height: 100vh;
     font-size: 1.4rem;
-    line-height: 1.5;
+    line-height: 1.4;
     text-rendering: optimizeSpeed;
 
     background: var(--color-cream);
@@ -500,6 +500,7 @@ const GlobalStyles = createGlobalStyle`
     border: 0;
     font: inherit;
     vertical-align: baseline;
+    
   }
 
 
@@ -619,7 +620,7 @@ const GlobalStyles = createGlobalStyle`
   a {
     color: #333;
     text-decoration: none;
-    background-image: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.25) 50%);
+    //background-image: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.25) 50%);
     background-position: 0px 100%;
     background-repeat: repeat-x;
     background-size: 2px 2px

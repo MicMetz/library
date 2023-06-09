@@ -21,13 +21,11 @@ export const SearchWrapper = styled.div`
   top: 0;
   left: 0;
 
-
   width: 100%;
   min-width: 200px;
   margin-left: var(--space-s);
   margin-right: var(--space-s);
   transition: all 0.3s ease-in-out;
-
 `;
 
 
@@ -101,13 +99,14 @@ export const MainNav = styled.div`
 
 export const StyledNavbar = styled( motion.nav )`
   display: flex;
-		
-  //margin: var(--space-m) var(--space-l);
   flex-direction: row;
   justify-content: space-between;
-		align-items: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
   padding: var(--space-s) var(--space-l);
 `;
+
 
 export const StyledChevronDownIcon = styled( ChevronDownIcon )`
   vertical-align: middle;

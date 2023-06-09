@@ -2,7 +2,7 @@ import Head from 'next/head'
 import React, { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import DefaultLayout from '../components/Layouts/DefaultLayout.js'
-import { Navigation } from '../components/nav/Navigation.js'
+import Header from "../components/Layouts/Header.js";
 import {
 		ContentBlock,
 		DefaultBlockQuote,
@@ -26,10 +26,7 @@ export default function TheWall( forwardRef, open, toggle ) {
 
 		return (
 				<DefaultLayout >
-						<Navigation open = {open} toggle = {toggle} forwardRef = {ref} />
-						<Head >
-								<title >Writing Wall</title >
-						</Head >
+						<Header title={"Articles & Essays"} />
 						<DefaultBody >
 								<Sidebar header = {""} chapters = {[]} open = {open} toggle = {toggle} forwardRef = {ref} />
 								<DefaultMain >

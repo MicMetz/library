@@ -6,131 +6,115 @@ import styled from "styled-components";
 
 
 export default function MobileMenu() {
-		const [ menuOpen, setMenuOpen ] = useState( false );
+  const [ menuOpen, setMenuOpen ] = useState( false );
 
-		return (
-				<StyledMobileMenu >
-						<StyledButton
-								onClick = {() => {
-										setMenuOpen( true );
-								}}
-								aria-label = "open menu"
-						>
-								<svg
-										width = {24}
-										height = {20}
-										viewBox = "0 0 24 24"
-										fill = "var(--color-gray-600)"
-								>
-										<rect width = {24} height = {4} rx = {2} />
-										<rect y = {9} width = {24} height = {4} rx = {2} />
-										<rect y = {18} width = {24} height = {4} rx = {2} />
-								</svg >
-						</StyledButton >
-						<AnimatePresence >
-								{menuOpen && (
-										<FullPageMenu
-												initial = {{
-														opacity: 0,
-												}}
-												animate = {{
-														opacity   : 1,
-														transition: { duration: 0.3, ease: "easeInOut" },
-												}}
-												exit = {{
-														opacity   : 0,
-														transition: { duration: 0.3, ease: "easeInOut" },
-												}}
-										>
-												<LinkContainer >
-														<LinkButton
-																handleClick = {() => {
-																		setMenuOpen( false );
-																}}
-																href = "/Opinion"
-														>
-																Opinion
-														</LinkButton >
-														<LinkButton
-																handleClick = {() => {
-																		setMenuOpen( false );
-																}}
-																href = "/Writings/Essays"
-														>
-																Essays
-														</LinkButton >
-														<LinkButton
-																handleClick = {() => {
-																		setMenuOpen( false );
-																}}
-																href = "/Writings/notes"
-														>
-																Notes
-														</LinkButton >
-														<LinkButton
-																handleClick = {() => {
-																		setMenuOpen( false );
-																}}
-																href = "/library"
-														>
-																Library
-														</LinkButton >
-														<LinkButton
-																handleClick = {() => {
-																		setMenuOpen( false );
-																}}
-																href = "/Contact"
-														>
-																Contact
-														</LinkButton >
-														<LinkButton
-																handleClick = {() => {
-																		setMenuOpen( false );
-																}}
-																href = "/About"
-														>
-																About
-														</LinkButton >
-												</LinkContainer >
-												<StyledButton
-														aria-label = " close menu"
-														onClick = {() => {
-																setMenuOpen( false );
-														}}
-												>
-														<svg width = {21} height = {21} fill = " var(--color-gray-600)" >
-																<rect
-																		x = {4.136}
-																		y = {0.6}
-																		width = {23}
-																		height = {5}
-																		rx = {2}
-																		transform = "rotate(45 4.136 .6)"
-																/>
-																<rect
-																		x = {0.601}
-																		y = {16.864}
-																		width = {23}
-																		height = {5}
-																		rx = {2}
-																		transform = "rotate(-45 .6 16.864)"
-																/>
-														</svg >
-												</StyledButton >
-										</FullPageMenu >
-								)}
-						</AnimatePresence >
-				</StyledMobileMenu >
-		);
+  return (
+    <StyledMobileMenu >
+      <StyledButton
+        onClick = {() => {
+          setMenuOpen( true );
+        }}
+        aria-label = "open menu"
+      >
+        <svg
+          width = {24}
+          height = {20}
+          viewBox = "0 0 24 24"
+          fill = "var(--color-gray-600)"
+        >
+          <rect width = {24} height = {4} rx = {2} />
+          <rect y = {9} width = {24} height = {4} rx = {2} />
+          <rect y = {18} width = {24} height = {4} rx = {2} />
+        </svg >
+      </StyledButton >
+      <AnimatePresence >
+        {menuOpen && (
+          <FullPageMenu
+            initial = {{
+              opacity: 0,
+            }}
+            animate = {{
+              opacity   : 1,
+              transition: { duration: 0.3, ease: "easeInOut" },
+            }}
+            exit = {{
+              opacity   : 0,
+              transition: { duration: 0.3, ease: "easeInOut" },
+            }}
+          >
+            <LinkContainer >
+              <LinkButton
+                handleClick = {() => {
+                  setMenuOpen( false );
+                }}
+                href = "/Opinion"
+              >
+                Opinion
+              </LinkButton >
+              <LinkButton
+                handleClick = {() => {
+                  setMenuOpen( false );
+                }}
+                href = "/Writings/Essays"
+              >
+                Essays
+              </LinkButton >
+              <LinkButton
+                handleClick = {() => {
+                  setMenuOpen( false );
+                }}
+                href = "/Writings/notes"
+              >
+                Notes
+              </LinkButton >
+              <LinkButton
+                handleClick = {() => {
+                  setMenuOpen( false );
+                }}
+                href = "/About"
+              >
+                About
+              </LinkButton >
+            </LinkContainer >
+            <StyledButton
+              aria-label = " close menu"
+              onClick = {() => {
+                setMenuOpen( false );
+              }}
+            >
+              <svg width = {21} height = {21} fill = " var(--color-gray-600)" >
+                <rect
+                  x = {4.136}
+                  y = {0.6}
+                  width = {23}
+                  height = {5}
+                  rx = {2}
+                  transform = "rotate(45 4.136 .6)"
+                />
+                <rect
+                  x = {0.601}
+                  y = {16.864}
+                  width = {23}
+                  height = {5}
+                  rx = {2}
+                  transform = "rotate(-45 .6 16.864)"
+                />
+              </svg >
+            </StyledButton >
+          </FullPageMenu >
+        )}
+      </AnimatePresence >
+    </StyledMobileMenu >
+  );
 }
 
 
 function LinkButton( { href, children, handleClick } ) {
-		return (
-				<Link href = {href} >
-						<button onClick = {handleClick} >{children}</button >
-				</Link >
-		);
+  return (
+    <Link href = {href} >
+      <button onClick = {handleClick} >{children}</button >
+    </Link >
+  );
 }
 
 

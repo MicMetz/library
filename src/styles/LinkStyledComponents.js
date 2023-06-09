@@ -100,7 +100,8 @@ export const HoverLink = styled.span`
   padding-bottom: 0.25rem;
 
   &:focus {
-    outline: 2px solid darkblue;
+    outline: 2px solid var(--color-sea-blue);
+    //outline: 2px solid var(--color-primary);
     border-radius: 2px;
   }
 

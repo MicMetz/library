@@ -122,7 +122,7 @@ export const SidebarMenuButtonOverlay = styled.button`
   z-index: 100;
 `
 
-export const ToC = styled.div`
+export const TableOfContents = styled.div`
   margin: auto 0;
   width: 100%;
   height: 100vh;
@@ -156,10 +156,9 @@ export const ToC = styled.div`
   a:hover {
 
   }
-
 `
 
-export const ToCHeader = styled.span`
+export const TableHeader = styled.span`
   display: block;
   text-align: center;
 
@@ -191,7 +190,7 @@ export const ToCHeader = styled.span`
   }
 `
 
-export const ToCItem = styled.li`
+export const TableItem = styled.li`
   margin: 5rem 1.5rem;
   padding: 0.5rem 0;
   position: relative;

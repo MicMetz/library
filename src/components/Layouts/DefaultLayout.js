@@ -1,7 +1,6 @@
 import Head from "next/head";
 import React, { useState } from 'react'
 import { renderIntoDocument } from 'react-dom/test-utils'
-import { Navigation } from '../nav/Navigation.js'
 import { Sidebar } from '../Sidebar.js'
 
 

@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 
@@ -16,16 +16,17 @@ export default function MobileMenu() {
         }}
         aria-label = "open menu"
       >
-        <svg
-          width = {24}
-          height = {20}
-          viewBox = "0 0 24 24"
-          fill = "var(--color-gray-600)"
-        >
-          <rect width = {24} height = {4} rx = {2} />
-          <rect y = {9} width = {24} height = {4} rx = {2} />
-          <rect y = {18} width = {24} height = {4} rx = {2} />
-        </svg >
+        <img src = "/icons/logo-hook.svg" width = "24" height = "20" xmlns = "http://www.w3.org/2000/svg" />
+        {/* <svg
+         width = {24}
+         height = {20}
+         viewBox = "0 0 24 24"
+         fill = "var(--color-gray-600)"
+         >
+         <rect width = {24} height = {4} rx = {2} />
+         <rect y = {9} width = {24} height = {4} rx = {2} />
+         <rect y = {18} width = {24} height = {4} rx = {2} />
+         </svg > */}
       </StyledButton >
       <AnimatePresence >
         {menuOpen && (

@@ -6,6 +6,7 @@
 
 import Link from 'next/link'
 import React, { useEffect } from 'react'
+import SearchBarAndResults from "../Search/SearchBarAndResults.js";
 // import SearchBarAndResults from "../Search/SearchBarAndResults.js";
 import MainNavLinks from "./MainNavLinks.js";
 import MobileMenu from "./MobileMenu.js";
@@ -29,7 +30,7 @@ export default function Navigation() {
     const search = async () => {
       try {
         const res = await fetch(
-          // `/api/search?q=${searchState.query}`
+          `/api/search?q=${searchState.query}`
         );
 
         const searchResults = await res.json();
@@ -38,7 +39,6 @@ export default function Navigation() {
         console.error( error );
       }
     };
-
     search();
   }, [ searchState.query ] );
 
@@ -51,12 +51,12 @@ export default function Navigation() {
     >
       <Link href = "https://micmetz.github.io/" >
         <a aria-label = "Home" style = {{ display: 'flex', alignItems: 'center', color: 'rgba(0, 0, 0, 0.75)' }} >
-          <img src = "/icons/logo-hook.svg" width = "24" height = "24" xmlns = "http://www.w3.org/2000/svg" />
+          <img src = "/icons/logo-hook.svg" width = "24" height = "20" xmlns = "http://www.w3.org/2000/svg" />
           <span className = "" >Michael Metzger</span >
         </a >
       </Link >
       <RightHandSide >
-        {/* <SearchBarAndResults searchResults = {[]} searchState = {{ query: {} }} /> */}
+        <SearchBarAndResults searchResults = {[]} searchState = {{ query: {} }} />
         <MainNavLinks />
       </RightHandSide >
       <MobileMenu />

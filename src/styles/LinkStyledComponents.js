@@ -1,5 +1,3 @@
-// noinspection CssOverwrittenProperties,CssReplaceWithShorthandSafely
-
 import styled from "styled-components";
 
 
@@ -164,7 +162,7 @@ export const NavLink = styled.a`
   @media ${( props ) => props.theme.breakpoints.sm} {
     padding: 0.5rem;
   }
-`
+`;
 
 
 export const StyledLink = styled.a`

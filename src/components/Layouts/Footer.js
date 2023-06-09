@@ -46,6 +46,7 @@ export default function Footer() {
             { text: "Topics", slug: "/topics" },
             { text: "Library", slug: "/library" },
             { text: "Books", slug: "/library/Books" },
+            { text: "Articles", slug: "/library/Articles" },
             { text: "Projects", slug: "/Projects" },
             { text: "Contact", slug: "/Contact" },
             // { text: "Changelog", slug: "/Changelog" },

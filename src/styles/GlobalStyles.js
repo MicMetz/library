@@ -500,7 +500,7 @@ const GlobalStyles = createGlobalStyle`
     border: 0;
     font: inherit;
     vertical-align: baseline;
-    
+
   }
 
 
@@ -701,6 +701,7 @@ const GlobalStyles = createGlobalStyle`
       width: 24rem;
       height: 2em
     }
+
     //
     //footer {
     //  max-width: 43rem;

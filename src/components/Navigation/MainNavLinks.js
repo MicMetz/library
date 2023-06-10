@@ -44,8 +44,11 @@ function GardenPopoverLinks() {
           <Link href = "https://micmetz.github.io/Notes" >
             <DropdownLink >Notes</DropdownLink >
           </Link >
-          <Link href = "/" >
-            <DropdownLink >Library</DropdownLink >
+          <Link href = "/Books" >
+            <DropdownLink >Books</DropdownLink >
+          </Link >
+          <Link href = "/Articles" >
+            <DropdownLink >Articles</DropdownLink >
           </Link >
         </Dropdown >
       </Popover.Panel >
@@ -62,8 +65,10 @@ export default function MainNavLinks() {
       </AnimatePresence >
       <div className = "outside-dropdown" >
         <UnderlineHoverLink href = "/" >Home</UnderlineHoverLink >
-        <UnderlineHoverLink href = "/Books" >Books</UnderlineHoverLink >
-        <UnderlineHoverLink href = "/Articles" >Articles</UnderlineHoverLink >
+        <UnderlineHoverLink href = "/library" >Library</UnderlineHoverLink >
+        <UnderlineHoverLink href = "/Projects" >Projects</UnderlineHoverLink >
+        <UnderlineHoverLink href = "/About" >About</UnderlineHoverLink >
+        <UnderlineHoverLink href = "/Contact" >Contact</UnderlineHoverLink >
       </div >
     </MainNav >
   );

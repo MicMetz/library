@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React, { useMemo} from "react";
+import React, { useRef, useState } from "react";
 import LogoHookWhite from "../../public/icons/logo-hook-white.svg";
 
 
@@ -20,17 +20,26 @@ const variants = {
 
 
 
-export default function SplashScreen() {
-  const splash = useMemo( () =>
+export default function SplashScreen( { ref } ) {
+  const [ isAlreadyShown, setIsAlreadyShown ] = useState( false )
+  const refSplash                             = useRef( ref )
+
+
+  if ( isAlreadyShown ) {
+    refSplash.current = null
+    return null
+  }
+  return (
     <>
       <motion.div
+        ref = {refSplash}
         initial = {{ opacity: 1 }}
         animate = {{ opacity: 0, display: 'none', transition: { ...transition, delay: 10 } }}
         // transition = {{ duration: 9, delay: 0.1 }}
         style = {{
           position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', backgroundColor: 'black', zIndex: 1000, display: 'flex', justifyContent: 'center', alignItems: 'center'
         }}
-        // onAnimationComplete = {() => setIsAlreadyShown( true )}
+        onAnimationComplete = {() => setIsAlreadyShown( true )}
       >
         <div className = "preloader__forwards__wrapper" >
           <motion.div
@@ -53,8 +62,8 @@ export default function SplashScreen() {
           </motion.div >
         </div >
       </motion.div >
-  </>, [] )
-
-  return splash
+    </>
+  )
 
 }
+

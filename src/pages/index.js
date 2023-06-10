@@ -1,7 +1,7 @@
 import LogoHookWhite from '/public/icons/logo-hook-white.svg'
 import { motion, useAnimation } from "framer-motion";
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { Current } from "../../posts/data/Current.js";
 import Header from "../components/Layouts/Header.js";
@@ -13,17 +13,17 @@ import { BookAtrribution, BookByline, BookCoverImage, BookSubtitle, BookTagline,
 import { ContentBlock, DefaultBody, DefaultMain, SectionTitle } from "../styles/StyledComponents.js";
 import { DescriptionParser } from "../tools/DescriptionParser.js";
 
-const ease = [0.43, 0.13, 0.23, 0.96];
+
+
+let animation;
 
 export default function Homepage() {
   const [ activeFeature, setActiveFeature ]   = useState( Current[ 0 ] )
   const [ scrollPosition, setScrollPosition ] = useState()
   const [ isToggleOpen, setIsToggleOpen ]     = useState( false )
   const [ isSidebarOpen, setIsSidebarOpen ]   = useState( false )
-  const [ ref, inView ]                       = useInView()
-  const controls                              = useAnimation()
+  const container = useRef( null );
 
-  let firstLoad = false
 
   useEffect( () => {
     window.addEventListener( 'scroll', handleScroll )
@@ -68,7 +68,7 @@ export default function Homepage() {
   return (
     <>
       <Header title = "Michael Metzger | Library" />
-      <SplashScreen />
+      <SplashScreen forwardRef = {container} />
       <Layout >
         <DefaultBody >
           <Sidebar header = {activeFeature.header}

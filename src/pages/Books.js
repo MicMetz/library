@@ -1,8 +1,8 @@
 import { Readings } from '/posts/data/Readings.js'
 import React, { useEffect, useRef, useState } from 'react'
 import DefaultLayout from '../components/Layouts/DefaultLayout.js'
-import Footer from '../components/Layouts/Footer.js';
 import Header from "../components/Layouts/Header.js";
+import { Spacer } from "../components/MISC/Spacer.js";
 import { Sidebar } from '../components/Sidebar.js'
 import { BookAtrribution, BookByline, BookCoverImage, BookSubtitle, BookTagline, BookTitle } from '../styles/BookStyledComponents.js'
 import { ReadingWallBody, ReadingWallMain } from "../styles/ReadingWallStyledComponents.js";
@@ -99,7 +99,8 @@ export default function ReadingWall( forwardRef, open, toggle ) {
         </ReadingWallMain >
       </ReadingWallBody >
 
-      <Footer />
+      <Spacer size = "3xlarge" />
+
     </DefaultLayout >
   )
 }

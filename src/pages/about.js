@@ -99,7 +99,6 @@ export default function About( forwardRef, open, toggle ) {
           </motion.div >
         </DefaultMain >
       </DefaultBody >
-      <Footer />
     </DefaultLayout >
   )
 }

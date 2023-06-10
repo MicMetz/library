@@ -79,7 +79,6 @@ export default function ArticlesRoom( forwardRef, open, toggle ) {
         </DefaultMain >
       </DefaultBody >
 
-      <Footer />
     </DefaultLayout >
   );
 }

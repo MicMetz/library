@@ -367,8 +367,6 @@ export const Readings = [
     tags       : [],
     chapters   : [],
     description: [
-      '\n' +
-      '\n' +
       '“One of the most influential books of the last 20 years.”\n' +
       '—Chronicle of Higher Education\n' +
       '\n' +
@@ -447,5 +445,31 @@ export const Readings = [
       ' content of IMF-mandated austerity has changed over time, the organization continues to place a high burden of reform on countries in crisis. These reforms then decrease the availability' +
       ' of important social services and contribute to rises in income inequality and declines in population health.'
     ]
+  },
+  {
+    id         : 12,
+    header     : {
+      title   : 'Dirty Work',
+      subtitle: 'The CIA in Africa'
+    },
+    author     : 'Philip Agee (edit by Ellen Ray & William H. Schaap)',
+    date       : Date.parse( 'January 1, 1978' ),
+    publisher  : 'Zed Books',
+    cover      : './images/books/DirtyWork.jpg',
+    link       : [
+      { name: 'The Book (PDF)', link: 'https://archive.org/details/CIAInAfrica/page/n121/mode/2up' },
+      { name: 'Philip Agee', link: 'https://www.nytimes.com/1974/07/12/archives/the-disillusion-of-a-cia-man-12-years-from-agent-to-radical-wary-of.html' },
+      { name: 'Schaap\'s Expose', link: 'https://www.cia.gov/readingroom/docs/CIA-RDP90-00806R000201110080-8.pdf' }
+    ],
+    tags       : [],
+    chapters   : [],
+    description: [
+      'Philip Burnett Franklin Agee (July 19, 1935 – January 7, 2008) was a Central Intelligence Agency (CIA) case officer and writer, best known as author of the 1975 book, Inside the Company:' +
+      ' CIA Diary, detailing his experiences in the CIA.\n' +
+      'Agee joined the CIA in 1957, and over the following decade had postings in Washington, D.C., Ecuador, Uruguay and Mexico. After resigning from the Agency in 1968, he became a leading' +
+      ' opponent of CIA practices. A co-founder of CovertAction Quarterly, he died in Cuba in January 2008.\n' +
+      'Dirty Work: The CIA in Africa is a 1978 book exploring the \"seamy side of American espionage, done under the guise of national security.\" '
+    ]
   }
+
 ];

@@ -35,7 +35,6 @@ export default function TheWall( forwardRef, open, toggle ) {
 
 								</DefaultMain >
 						</DefaultBody >
-						<Footer />
 				</DefaultLayout >
 		)
 }

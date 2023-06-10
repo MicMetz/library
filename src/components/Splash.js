@@ -40,6 +40,7 @@ export default function SplashScreen( { ref } ) {
           position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', backgroundColor: 'black', zIndex: 1000, display: 'flex', justifyContent: 'center', alignItems: 'center'
         }}
         onAnimationComplete = {() => setIsAlreadyShown( true )}
+        onClick = {() => setIsAlreadyShown( true )}
       >
         <div className = "preloader__forwards__wrapper" >
           <motion.div

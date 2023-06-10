@@ -49,7 +49,16 @@ export default function Navigation() {
       animate = {{ opacity: 1 }}
       transition = {{ duration: 1, delay: 0.1 }}
     >
-      <Link href = "https://micmetz.github.io/" >
+      {/*
+       <a onClick = {() => {
+       if (window.location.href.includes( "localhost" )) { return "http://localhost:3000" }
+       else {
+       if (window.location.href.includes( "library" )) { return "https://micmetz.github.io/Library" }
+       else { return "https://micmetz.github.io" }
+       }
+       }} >
+       */}
+      <Link href = "/" >
         <a aria-label = "Home" style = {{ display: 'flex', alignItems: 'center', color: 'rgba(0, 0, 0, 0.75)' }} >
           <img src = "/icons/logo-hook.svg" width = "24" height = "20" xmlns = "http://www.w3.org/2000/svg" />
           <span className = "" >Michael Metzger</span >

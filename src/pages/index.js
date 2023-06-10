@@ -1,8 +1,4 @@
-import LogoHookWhite from '/public/icons/logo-hook-white.svg'
-import { motion, useAnimation } from "framer-motion";
-import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
-import { useInView } from 'react-intersection-observer'
 import { Current } from "../../posts/data/Current.js";
 import Header from "../components/Layouts/Header.js";
 import { Layout } from "../components/Layouts/Layout.js";
@@ -17,12 +13,12 @@ import { DescriptionParser } from "../tools/DescriptionParser.js";
 
 let animation;
 
-export default function Homepage() {
+export default function Homepage( { forwardRef } ) {
   const [ activeFeature, setActiveFeature ]   = useState( Current[ 0 ] )
   const [ scrollPosition, setScrollPosition ] = useState()
   const [ isToggleOpen, setIsToggleOpen ]     = useState( false )
   const [ isSidebarOpen, setIsSidebarOpen ]   = useState( false )
-  const container = useRef( null );
+  const container                             = useRef( forwardRef )
 
 
   useEffect( () => {
@@ -114,8 +110,6 @@ export default function Homepage() {
     </ >
   )
 }
-
-
 
 
 

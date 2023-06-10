@@ -41,6 +41,7 @@ export default function SplashScreen( { ref } ) {
         }}
         onAnimationComplete = {() => setIsAlreadyShown( true )}
         onClick = {() => setIsAlreadyShown( true )}
+        onTouchStart = {() => setIsAlreadyShown( true )}
       >
         <div className = "preloader__forwards__wrapper" >
           <motion.div

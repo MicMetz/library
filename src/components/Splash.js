@@ -25,8 +25,8 @@ export default function SplashScreen() {
     <>
       <motion.div
         initial = {{ opacity: 1 }}
-        animate = {{ opacity: 0 }}
-        transition = {{ duration: 9, delay: 0.1 }}
+        animate = {{ opacity: 0, display: 'none', transition: { ...transition, delay: 10 } }}
+        // transition = {{ duration: 9, delay: 0.1 }}
         style = {{
           position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', backgroundColor: 'black', zIndex: 1000, display: 'flex', justifyContent: 'center', alignItems: 'center'
         }}

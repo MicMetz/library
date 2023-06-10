@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React from "react";
+import React, { useMemo} from "react";
 import LogoHookWhite from "../../public/icons/logo-hook-white.svg";
-
 
 
 
@@ -21,10 +20,8 @@ const variants = {
 
 
 
-
-export default function SplashScreen(  ) {
-
-  return (
+export default function SplashScreen() {
+  const splash = useMemo( () =>
     <>
       <motion.div
         initial = {{ opacity: 1 }}
@@ -33,6 +30,7 @@ export default function SplashScreen(  ) {
         style = {{
           position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', backgroundColor: 'black', zIndex: 1000, display: 'flex', justifyContent: 'center', alignItems: 'center'
         }}
+        // onAnimationComplete = {() => setIsAlreadyShown( true )}
       >
         <div className = "preloader__forwards__wrapper" >
           <motion.div
@@ -55,45 +53,8 @@ export default function SplashScreen(  ) {
           </motion.div >
         </div >
       </motion.div >
-       {/*  <div style = {{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }} >
-          <Image src = {LogoHookWhite} width = {48} height = {40} />
-          <h1 style = {{ color: 'white', fontSize: '2rem', fontWeight: 400, marginTop: '1rem' }} >Michael Metzger</h1 >
-          <h2 style = {{ color: 'white', fontSize: '1.5rem', fontWeight: 400, marginTop: '1rem' }} >Software Engineer</h2 >
-        </div >
-      </motion.div > */}
-    </>
-  )
+  </>, [] )
+
+  return splash
+
 }
-
-
-
-/*
- <motion.div
- ref = {ref}
- variants = {variants}
- animate = {controls}
- id = "main-target-animation"
- className = "preloader__forwards"
- >
- <div className = "preloader__forwards__wrapper" >
- <motion.div
- initial = {{ x: -10, opacity: 0 }}
- animate = {{ x: 0, opacity: 1, transition: { ...transition } }}
- className = "preloader__forwards__left"
- >
- <Image src = {LogoHookWhite} alt = "Logo" style = {{ color: 'white' }} />
- </motion.div >
- <motion.div
- initial = {{ x: 10, opacity: 0 }}
- animate = {{ x: 0, opacity: 1, transition: { ...transition } }}
- className = "preloader__forwards__right"
- >
- <p className = "preloader__forwards__text" >Michael Metzger</p >
- <p className = "preloader__forwards__text" >There are decades</p >
- <p className = "preloader__forwards__text" >where nothing happens;</p >
- <p className = "preloader__forwards__text" >and there are weeks</p >
- <p className = "preloader__forwards__text" >where decades happen.</p >
- </motion.div >
- </div >
- </motion.div >
- *  */

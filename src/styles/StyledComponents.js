@@ -3,13 +3,11 @@ import styled from 'styled-components'
 
 
 
-
-
 export const StyledLayout = styled( motion.main )`
   max-width: 96vw;
   margin: var(--space-m) 0 var(--space-128);
   padding: 0 var(--space-2xs);
-		
+
 
   @media (max-width: 768px) {
     margin: var(--space-s) auto var(--space-2xl);
@@ -21,6 +19,7 @@ export const StyledLayout = styled( motion.main )`
   }
 `;
 
+
 export const DefaultBody = styled.div`
   padding: 4rem 2rem 0 !important;
   line-height: 24px;
@@ -28,7 +27,8 @@ export const DefaultBody = styled.div`
   background-blend-mode: multiply;
   min-height: 100vh;
   max-width: 100vw;
-`
+`;
+
 
 export const DefaultMain = styled.main`
   display: block;
@@ -40,7 +40,7 @@ export const DefaultMain = styled.main`
   min-height: 100vh;
   width: 100%;
   height: 100%;
-`
+`;
 
 
 export const DefaultDetails = styled.div`
@@ -59,13 +59,15 @@ export const DefaultDetails = styled.div`
     font-size: 1.2em;
     line-height: 1.2em;
   }
-`
+`;
+
 
 export const DefaultBlockQuote = styled.blockquote`
   max-width: calc(100vw - 20rem);
   margin: 0 auto;
   padding: 0 2rem;
-`
+`;
+
 
 export const DefaultQuoteText = styled.p`
   font-family: 'PitchWeb', Courier, monospace;
@@ -88,11 +90,12 @@ export const DefaultQuoteText = styled.p`
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
-`
+`;
+
 
 export const DefaultHeader = styled.header`
   font-family: 'PitchWeb', Courier, monospace
-`
+`;
 
 
 export const ContentBlock = styled.section`
@@ -111,8 +114,7 @@ export const ContentBlock = styled.section`
   &:last-child {
     margin-bottom: 0;
   }
-
-`
+`;
 
 
 
@@ -144,4 +146,4 @@ export const SectionTitle = styled.h2`
     padding: ${( props ) => props.main ? '16px 0 8px' : '0'};
     max-width: 100%;
   }
-`
+`;

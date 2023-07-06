@@ -158,7 +158,7 @@ export const BookCoverImage = styled.img`
 		object-position: center;
 
   max-height: calc(100vh - 18rem);
-  border-radius: 0 0.8em 0.8em 0;
+  border-radius: 0.8em;
   mix-blend-mode: normal;
   box-shadow: 0 0 10px 0 rgba(40, 42, 47, 0.1), -10px 10px 24px 10px rgba(40, 42, 47, 0.05), -30px 40px 30px 0 rgba(40, 42, 47, 0.1), -10px 10px 10px -5px rgba(40, 42, 47, 0.1);
   order: 2;

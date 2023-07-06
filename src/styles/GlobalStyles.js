@@ -517,40 +517,7 @@ const GlobalStyles = createGlobalStyle`
     transform-origin: left;
   }
 
-  /*.underline::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0.1rem;
-    background: var(--color-secondary);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease-in-out;
-  }*/
-
-  //.underline:hover::before {
-  //  transform: scaleX(1);
-  //}
-
-
-  //body {
-  //  background-color: var(--color-background);
-  //  color: var(--color-text);
-  //  font-family: Lyon, Georgia, serif;
-  //  -webkit-font-smoothing: antialiased;
-  //  background-repeat: no-repeat
-  //}
-
-
-  //footer {
-  //  margin: 4rem 2rem 0 !important;
-  //  border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
-  //  text-align: center !important;
-  //  padding: 4rem 1rem 0 !important;
-  //}
-
+  
 
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure,
@@ -601,19 +568,9 @@ const GlobalStyles = createGlobalStyle`
   }
 
 
-  //html {
-  //  font-size: 14px;
-  //  -moz-font-feature-settings: "kern" 1, "onum" 1;
-  //  -ms-font-feature-settings: "kern" 1, "onum" 1;
-  //  -o-font-feature-settings: "kern" 1, "onum" 1;
-  //  -webkit-font-feature-settings: "kern" 1, "onum" 1;
-  //  font-feature-settings: "kern" 1, "onum" 1;
-  //  font-kerning: normal
-  //}
-
 
   header, footer {
-    font-family: "PitchWeb", Courier, monospace
+    font-family: "PitchWeb", Courier, monospace;
   }
 
 
@@ -701,36 +658,9 @@ const GlobalStyles = createGlobalStyle`
       width: 24rem;
       height: 2em
     }
-
-    //
-    //footer {
-    //  max-width: 43rem;
-    //  margin: 0 auto;
-    //  border-top: 1px solid rgba(0, 0, 0, 0.1);
-    //  text-align: center;
-    //  padding: 4rem 1rem 0
-    //}
-
-
   }
 
 
-  @media (min-width: 1200px) {
-    //body {
-    //  margin-left: calc(50vw - 5rem);
-    //  padding: 4rem 2rem 0
-    //}
-    //
-    //
-    //footer {
-    //  margin: 4rem 2rem 0;
-    //  border-top: 1px solid rgba(0, 0, 0, 0.1);
-    //  text-align: center;
-    //  padding: 4rem 1rem 0
-    //}
-
-
-  }
 `
 
 
